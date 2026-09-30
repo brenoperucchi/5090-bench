@@ -29,3 +29,9 @@ results/eikos27-janela-*.log
 .firecrawl/
 dashboard/__pycache__/
 .secrets/
+
+# T87-P1 raw harness metrics: kept on the lab machine, summaries stay in git
+results/t87-p1-*/**/t1_ratelimit.json
+results/t87-p1-*/**/t2_metrics.json
+results/t87-p1-*/**/t3_pipeline.json
+results/t87-p1-*/**/*.checkpoint.jsonl
