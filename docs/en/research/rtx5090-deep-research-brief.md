@@ -7,7 +7,7 @@ research and not authorization to execute experiments.
 **Language:** conduct the research and write the report in English.
 **Local evidence period:** September 4–12, 2026, with later documentation and a
 source-informed test proposal. The recorded server state has not been refreshed.
-**Repository:** https://github.com/brenoperucchi/llm-bench
+**Repository:** https://github.com/brenoperucchi/5090-bench
 **Baseline commit:** `b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0`. Source links below are pinned to this commit so
 the research can identify exactly what it reviewed.
 
@@ -57,7 +57,7 @@ claim that they all have the same cause:
 The research should ask whether instrumentation, evaluation, context handling,
 or the application contract needs repair **before** proposing a larger or faster
 model. Also identify findings that genuinely support our current choices.
-Primary starting points: [S03: All 40 findings and corrections](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/findings.md), [S09: Corrected PT-to-EN finding](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/findings/qwen3-14b-language-template.md), [S12: Corrected concurrency experiment (Portuguese)](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-fase6-numparallel-2026-09-05.md), [S13: Long-context report; read final correction (Portuguese)](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-fase6b-numparallel-contexto-longo-2026-09-12.md), [S14: Valid judge report and methodological corrections (Portuguese)](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-juiz-familia-2026-09-10.md).
+Primary starting points: [S03: All 40 findings and corrections](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/findings.md), [S09: Corrected PT-to-EN finding](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/findings/qwen3-14b-language-template.md), [S12: Corrected concurrency experiment (Portuguese)](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-fase6-numparallel-2026-09-05.md), [S13: Long-context report; read final correction (Portuguese)](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-fase6b-numparallel-contexto-longo-2026-09-12.md), [S14: Valid judge report and methodological corrections (Portuguese)](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-juiz-familia-2026-09-10.md).
 
 ## 2. Deployment and workloads
 
@@ -82,7 +82,7 @@ Primary starting points: [S03: All 40 findings and corrections](https://github.c
 The 14B tag was recorded as a 14.8B Q4_K_M model in the instance A/B.
 Do not conflate **weight quantization** with **KV-cache quantization**. Verify
 model digests, architecture, tokenizer, native context, and renderer before
-comparing models or projecting memory. Sources: [S04: Measured models and hardware separation](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/models.md), [S07: Infrastructure snapshot](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/infrastructure.md), [S11: Production decision and retractions (Portuguese)](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/DECISAO-producao-2026-09-09.md), [S26: Evidence manifest](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/artifacts/manifest.json).
+comparing models or projecting memory. Sources: [S04: Measured models and hardware separation](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/models.md), [S07: Infrastructure snapshot](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/infrastructure.md), [S11: Production decision and retractions (Portuguese)](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/DECISAO-producao-2026-09-09.md), [S26: Evidence manifest](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/artifacts/manifest.json).
 
 ### Actual uses and evidence boundaries
 
@@ -131,7 +131,7 @@ conditional recommendations where possible.
 
 The following ledger covers the documented infrastructure, model, harness,
 and evaluation changes relevant to this research. Detailed corrections and
-all 40 findings remain in [S03: All 40 findings and corrections](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/findings.md). Treat different rows as different experiments.
+all 40 findings remain in [S03: All 40 findings and corrections](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/findings.md). Treat different rows as different experiments.
 
 | Change or choice | Status | Evidence, result, and qualification |
 |---|---|---|
@@ -163,7 +163,7 @@ all 40 findings remain in [S03: All 40 findings and corrections](https://github.
 | NUM_PARALLEL discriminating experiment | Designed only | The overflow-preserving 14B proposal exists; no new instance, restart, or long-prompt experiment was executed. |
 | Git, evidence manifest, English documentation | Completed documentation work | Public evidence now has version history, hash validation, and an English entry point. This is not new experimental validation. |
 
-Core ledger sources: [S02: Benchmark catalog](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/benchmarks.md), [S11: Production decision and retractions (Portuguese)](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/DECISAO-producao-2026-09-09.md), [S12: Corrected concurrency experiment (Portuguese)](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-fase6-numparallel-2026-09-05.md), [S15: Windows migration, disk method, and operations (Portuguese)](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/MIGRACAO-windows-nativo-2026-09-04.md), [S16: Prompt interventions and regression denominators (Portuguese)](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/ACHADO-qwen3-14b-pricing-leak-2026-09-04.md), [S21: Extended-check results and scoring-version warning](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/checks-estendidos-2026-09-10.json), [S23: Corrected multi-turn experiment (Portuguese)](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-fase7-multirodada-schema-2026-09-07.md).
+Core ledger sources: [S02: Benchmark catalog](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/benchmarks.md), [S11: Production decision and retractions (Portuguese)](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/DECISAO-producao-2026-09-09.md), [S12: Corrected concurrency experiment (Portuguese)](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-fase6-numparallel-2026-09-05.md), [S15: Windows migration, disk method, and operations (Portuguese)](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/MIGRACAO-windows-nativo-2026-09-04.md), [S16: Prompt interventions and regression denominators (Portuguese)](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/ACHADO-qwen3-14b-pricing-leak-2026-09-04.md), [S21: Extended-check results and scoring-version warning](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/checks-estendidos-2026-09-10.json), [S23: Corrected multi-turn experiment (Portuguese)](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-fase7-multirodada-schema-2026-09-07.md).
 
 ## 4. Failure modes the research must address
 
@@ -192,7 +192,7 @@ routing from natural-language text; constrained schemas versus actual semantic
 correctness; prompt/example localization; and application-side validation.
 Do not assume valid JSON, an escalation phrase, or hidden reasoning means correct
 behavior. Any prompt intervention needs an independent regression set for both
-unnecessary and missing escalation. Sources: [S09: Corrected PT-to-EN finding](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/findings/qwen3-14b-language-template.md), [S16: Prompt interventions and regression denominators (Portuguese)](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/ACHADO-qwen3-14b-pricing-leak-2026-09-04.md), [S17: Canonical system prompt](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/prompts/system_prompt.txt), [S19: Current quality runner and deterministic checks](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/run_chat.py), [S20: Persisted PT and escalation responses](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/reamostra_pt_escalacao_1789114271.json).
+unnecessary and missing escalation. Sources: [S09: Corrected PT-to-EN finding](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/findings/qwen3-14b-language-template.md), [S16: Prompt interventions and regression denominators (Portuguese)](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/ACHADO-qwen3-14b-pricing-leak-2026-09-04.md), [S17: Canonical system prompt](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/prompts/system_prompt.txt), [S19: Current quality runner and deterministic checks](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/run_chat.py), [S20: Persisted PT and escalation responses](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/reamostra_pt_escalacao_1789114271.json).
 
 ### 4.2 Long context: preserve the actual overflow trigger
 
@@ -216,7 +216,7 @@ Investigate which versions, API routes, renderers, tokenizers, context-shift
 settings, and cache paths actually use this logic; whether newer releases change
 it; and how to detect lost input reliably before returning an answer.
 A merged PR is not proof that the installed build contains a fix. Matching
-arithmetic alone does not establish the executed mechanism. Sources: [S10: Proposed NUM_PARALLEL test — not executed](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/plans/num-parallel-discriminating-test.md), [S13: Long-context report; read final correction (Portuguese)](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-fase6b-numparallel-contexto-longo-2026-09-12.md).
+arithmetic alone does not establish the executed mechanism. Sources: [S10: Proposed NUM_PARALLEL test — not executed](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/plans/num-parallel-discriminating-test.md), [S13: Long-context report; read final correction (Portuguese)](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-fase6b-numparallel-contexto-longo-2026-09-12.md).
 
 ### 4.3 Evaluation: our checker is not independent semantic ground truth
 
@@ -234,7 +234,7 @@ based on the decision and uncertainty, not an arbitrary universal threshold.
 A judge is not the default fix. If proposing one, identify incremental defects
 it detects beyond objective checks and justify its cost, false positives,
 false negatives, family/size confounds, and adjudication against independent
-truth. “Another family” is not a validation method. Sources: [S14: Valid judge report and methodological corrections (Portuguese)](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-juiz-familia-2026-09-10.md), [S18: Current goldset](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/goldset_chat.json), [S21: Extended-check results and scoring-version warning](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/checks-estendidos-2026-09-10.json), [S22: Deterministic check versus judge](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/comparacao-check-vs-juiz-2026-09-10.json).
+truth. “Another family” is not a validation method. Sources: [S14: Valid judge report and methodological corrections (Portuguese)](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-juiz-familia-2026-09-10.md), [S18: Current goldset](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/goldset_chat.json), [S21: Extended-check results and scoring-version warning](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/checks-estendidos-2026-09-10.json), [S22: Deterministic check versus judge](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/comparacao-check-vs-juiz-2026-09-10.json).
 
 ### 4.4 Memory and useful service capacity
 
@@ -248,7 +248,7 @@ halving the documented two-slot KV cost. Two copies total about 25.20 GiB;
 adding the 9B gives about 30.93 GiB, above the documented usable capacity.
 Those are **conditional estimates**, not successful load tests. Shared store
 files do not imply shared GPU weights. Zero planned downtime does not imply
-zero latency interference. Sources: [S10: Proposed NUM_PARALLEL test — not executed](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/plans/num-parallel-discriminating-test.md), [S14: Valid judge report and methodological corrections (Portuguese)](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-juiz-familia-2026-09-10.md), [S24: Concurrency harness and unresolved spill TODO](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/baseline-3080ti/repro/fase6_concurrency.py).
+zero latency interference. Sources: [S10: Proposed NUM_PARALLEL test — not executed](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/plans/num-parallel-discriminating-test.md), [S14: Valid judge report and methodological corrections (Portuguese)](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-juiz-familia-2026-09-10.md), [S24: Concurrency harness and unresolved spill TODO](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/baseline-3080ti/repro/fase6_concurrency.py).
 
 ## 5. Research tracks, in priority order
 
@@ -282,7 +282,7 @@ across runtimes.
 
 ### P1 — Reassess model choices by workload
 
-Use [S04: Measured models and hardware separation](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/models.md) as the local inventory, not as a list of official market releases.
+Use [S04: Measured models and hardware separation](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/models.md) as the local inventory, not as a list of official market releases.
 Verify aliases and identities, especially names such as `qwen3.8:27b`,
 `qwen3.5:9b`, `gemma4:26b`, and `laguna-xs-2.1`; do not silently map them to another
 model. Include release date, official source, architecture, exact checkpoint,
@@ -310,7 +310,7 @@ Assess Windows service robustness, orphan detection, targeted process cleanup,
 log rotation/retention, and correlation of request logs with runtime identity.
 The existing restart script changes multiple machine variables and kills by name
 across the machine; it is unsuitable for managing an isolated test instance as-is.
-Sources: [S07: Infrastructure snapshot](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/infrastructure.md), [S12: Corrected concurrency experiment (Portuguese)](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-fase6-numparallel-2026-09-05.md), [S15: Windows migration, disk method, and operations (Portuguese)](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/MIGRACAO-windows-nativo-2026-09-04.md), [S25: Machine restart script](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/ollama-restart.ps1).
+Sources: [S07: Infrastructure snapshot](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/infrastructure.md), [S12: Corrected concurrency experiment (Portuguese)](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-fase6-numparallel-2026-09-05.md), [S15: Windows migration, disk method, and operations (Portuguese)](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/MIGRACAO-windows-nativo-2026-09-04.md), [S25: Machine restart script](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/ollama-restart.ps1).
 
 ## 6. Evidence standards and boundaries
 
@@ -393,33 +393,33 @@ artifacts. Do not ingest every JSON blindly; select the records relevant to the
 claim being investigated. If GitHub renders a file incompletely, use its raw
 version or report the access limitation.
 
-- **S01** — [English overview](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/README.md)
-- **S02** — [Benchmark catalog](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/benchmarks.md)
-- **S03** — [All 40 findings and corrections](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/findings.md)
-- **S04** — [Measured models and hardware separation](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/models.md)
-- **S05** — [Current documented decisions](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/decisions.md)
-- **S06** — [Methodology and metric definitions](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/methodology.md)
-- **S07** — [Infrastructure snapshot](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/infrastructure.md)
-- **S08** — [Open questions](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/open-questions.md)
-- **S09** — [Corrected PT-to-EN finding](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/findings/qwen3-14b-language-template.md)
-- **S10** — [Proposed NUM_PARALLEL test — not executed](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/plans/num-parallel-discriminating-test.md)
-- **S11** — [Production decision and retractions (Portuguese)](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/DECISAO-producao-2026-09-09.md)
-- **S12** — [Corrected concurrency experiment (Portuguese)](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-fase6-numparallel-2026-09-05.md)
-- **S13** — [Long-context report; read final correction (Portuguese)](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-fase6b-numparallel-contexto-longo-2026-09-12.md)
-- **S14** — [Valid judge report and methodological corrections (Portuguese)](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-juiz-familia-2026-09-10.md)
-- **S15** — [Windows migration, disk method, and operations (Portuguese)](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/MIGRACAO-windows-nativo-2026-09-04.md)
-- **S16** — [Prompt interventions and regression denominators (Portuguese)](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/ACHADO-qwen3-14b-pricing-leak-2026-09-04.md)
-- **S17** — [Canonical system prompt](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/prompts/system_prompt.txt)
-- **S18** — [Current goldset](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/goldset_chat.json)
-- **S19** — [Current quality runner and deterministic checks](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/run_chat.py)
-- **S20** — [Persisted PT and escalation responses](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/reamostra_pt_escalacao_1789114271.json)
-- **S21** — [Extended-check results and scoring-version warning](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/checks-estendidos-2026-09-10.json)
-- **S22** — [Deterministic check versus judge](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/comparacao-check-vs-juiz-2026-09-10.json)
-- **S23** — [Corrected multi-turn experiment (Portuguese)](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-fase7-multirodada-schema-2026-09-07.md)
-- **S24** — [Concurrency harness and unresolved spill TODO](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/baseline-3080ti/repro/fase6_concurrency.py)
-- **S25** — [Machine restart script](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/ollama-restart.ps1)
-- **S26** — [Evidence manifest](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/artifacts/manifest.json)
-- **S27** — [Preserved starting handoff (Portuguese; contains corrected claims)](https://github.com/brenoperucchi/llm-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/history/handoff-2026-09-12.md)
+- **S01** — [English overview](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/README.md)
+- **S02** — [Benchmark catalog](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/benchmarks.md)
+- **S03** — [All 40 findings and corrections](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/findings.md)
+- **S04** — [Measured models and hardware separation](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/models.md)
+- **S05** — [Current documented decisions](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/decisions.md)
+- **S06** — [Methodology and metric definitions](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/methodology.md)
+- **S07** — [Infrastructure snapshot](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/infrastructure.md)
+- **S08** — [Open questions](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/open-questions.md)
+- **S09** — [Corrected PT-to-EN finding](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/findings/qwen3-14b-language-template.md)
+- **S10** — [Proposed NUM_PARALLEL test — not executed](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/en/plans/num-parallel-discriminating-test.md)
+- **S11** — [Production decision and retractions (Portuguese)](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/DECISAO-producao-2026-09-09.md)
+- **S12** — [Corrected concurrency experiment (Portuguese)](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-fase6-numparallel-2026-09-05.md)
+- **S13** — [Long-context report; read final correction (Portuguese)](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-fase6b-numparallel-contexto-longo-2026-09-12.md)
+- **S14** — [Valid judge report and methodological corrections (Portuguese)](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-juiz-familia-2026-09-10.md)
+- **S15** — [Windows migration, disk method, and operations (Portuguese)](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/MIGRACAO-windows-nativo-2026-09-04.md)
+- **S16** — [Prompt interventions and regression denominators (Portuguese)](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/ACHADO-qwen3-14b-pricing-leak-2026-09-04.md)
+- **S17** — [Canonical system prompt](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/prompts/system_prompt.txt)
+- **S18** — [Current goldset](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/goldset_chat.json)
+- **S19** — [Current quality runner and deterministic checks](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/run_chat.py)
+- **S20** — [Persisted PT and escalation responses](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/reamostra_pt_escalacao_1789114271.json)
+- **S21** — [Extended-check results and scoring-version warning](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/checks-estendidos-2026-09-10.json)
+- **S22** — [Deterministic check versus judge](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/comparacao-check-vs-juiz-2026-09-10.json)
+- **S23** — [Corrected multi-turn experiment (Portuguese)](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/results/RESULTADO-fase7-multirodada-schema-2026-09-07.md)
+- **S24** — [Concurrency harness and unresolved spill TODO](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/baseline-3080ti/repro/fase6_concurrency.py)
+- **S25** — [Machine restart script](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/ollama-restart.ps1)
+- **S26** — [Evidence manifest](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/artifacts/manifest.json)
+- **S27** — [Preserved starting handoff (Portuguese; contains corrected claims)](https://github.com/brenoperucchi/5090-bench/blob/b6f8a1dc4b32e71ece4c6151b1ec3dd08858e7d0/docs/history/handoff-2026-09-12.md)
 
 The source pin describes the repository **before this brief was added**. This
 is intentional: it gives the research an immutable baseline rather than a

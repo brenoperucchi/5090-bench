@@ -1,4 +1,4 @@
-# llm-bench — benchmarks da RTX 5090
+# 5090-bench — benchmarks da RTX 5090
 
 [English](README.md) | **Português (Brasil)**
 
