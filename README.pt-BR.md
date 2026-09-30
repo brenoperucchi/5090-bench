@@ -3,8 +3,15 @@
 [English](README.md) | **Português (Brasil)**
 
 Acervo de medições de desempenho, qualidade e comportamento de LLMs locais
-com Ollama na **RTX 5090 de 32 GB**. Reúne experimentos, dados brutos,
-scripts, decisões e correções registrados nesta bancada em setembro de 2026.
+na **RTX 5090 de 32 GB** (Ollama, llama.cpp e, desde 30/09/2026, Strata).
+Reúne experimentos, dados brutos, scripts, decisões e correções registrados
+nesta bancada em setembro de 2026.
+
+> **PRODUÇÃO ATUAL (30/09/2026 em diante)**
+> Windows 11 nativo / [Strata](docs/strata/README.md) v0.1.30 / Swift 1.5 IQ2_XS
+> (fine-tune do Qwen3.8-Flash-Next), provisório. O Flash-Next passou de 16–27
+> tok/s (llama.cpp) para 155–220 tok/s na mesma GPU. O ambiente WSL Arch foi
+> aposentado; o Ollama mantém só o `qwen3-coder:30b`.
 
 O foco é entender o que funciona em cada carga: atendimento PT/EN,
 tool-calling, pesquisa em múltiplas rodadas, concorrência e contexto longo.
@@ -14,6 +21,7 @@ Os resultados pertencem às configurações e amostras descritas nas fontes.
 
 | Quero consultar | Documento |
 |---|---|
+| Qwen3.8-Flash-Next / Swift 1.5 no Strata: velocidade, indicador de qualidade, produção atual | [Trilha do Strata](docs/strata/README.md) · [Relatório software × hardware](results/strata-20260930/relatorio/00-LEIA-PRIMEIRO.md) |
 | Prompt completo para pesquisa profunda no ChatGPT (em inglês) | [Brief da pesquisa](docs/en/research/rtx5090-deep-research-brief.md) |
 | Experimentos, resultados e evidências por fase | [Catálogo de benchmarks](docs/rtx5090/experimentos.md) |
 | Modelos testados e limites de comparação | [Modelos](docs/rtx5090/modelos.md) |
