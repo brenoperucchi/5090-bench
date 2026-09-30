@@ -4,9 +4,13 @@
 
 ## Documentation epochs
 
-> **CURRENT RESEARCH CAMPAIGN — 2026-09-20+**
+> **CURRENT PRODUCTION — 2026-09-30+**
+> Windows 11 native / [Strata](docs/strata/README.md) v0.1.30 / Swift 1.5 IQ2_XS (Qwen3.8-Flash-Next fine-tune),
+> provisional. Flash-Next went from 16–27 tok/s (llama.cpp) to 155–220 tok/s on the same GPU.
+> The WSL Arch environment is retired; Ollama keeps only `qwen3-coder:30b`.
+>
+> **RESEARCH CAMPAIGN — 2026-09-20 → 29**
 > Guardian / WSL Arch / CUDA / llama.cpp forks (Codacus, PrismML) / typed decisions / T87.
-> **Strata track (2026-09-30+):** [Qwen3.8-Flash-Next / Swift 1.5 on Strata, RTX 5090](docs/strata/README.md): 16–27 → 155–220 tok/s on the same GPU; now the local production backend.
 > Latest campaign record: [Guardian synthesis on a local RTX 5090, 2026-09-21 → 24](docs/en/findings/guardian-local-models-2026-09-21-24.md)
 > Previous record: [Public findings record (English)](docs/en/findings/public-record-llm-bench-2026-09-20.md)
 >
@@ -14,7 +18,8 @@
 > Windows native / Ollama / `qwen3:14b` + `qwen3.5:9b`.
 
 A collection of performance, quality, and behavioral measurements of local
-LLMs running on **a 32 GB RTX 5090 with Ollama**. It brings together the
+LLMs running on **a 32 GB RTX 5090** (Ollama, llama.cpp and, since
+2026-09-30, Strata). It brings together the
 experiments, raw results, scripts, findings, decisions, and corrections
 recorded by this lab in September 2026.
 
@@ -26,6 +31,7 @@ Results apply to the configurations and samples described in their sources.
 
 | What you want to read | Document |
 |---|---|
+| Qwen3.8-Flash-Next / Swift 1.5 on Strata: speed, quality indicator, current production | [Strata track](docs/strata/README.md) |
 | Ready-to-use assignment for external deep research | [RTX 5090 research brief](docs/en/research/rtx5090-deep-research-brief.md) |
 | Review of the downloaded research report | [Findings and required revisions](docs/en/research/rtx5090-deep-research-review.md) |
 | Review of the second research report | [Corrections and remaining gaps](docs/en/research/rtx5090-deep-research-report-2-review.md) |
