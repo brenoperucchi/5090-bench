@@ -890,6 +890,12 @@
       "type": "json"
     },
     {
+      "path": "results/quant-ollama-vs-unsloth-20260924.md",
+      "bytes": 3089,
+      "sha256": "26f63a8c0322e445d9e84f73c0768935a54ec266c86504ecdde21c8abd2728d5",
+      "type": "md"
+    },
+    {
       "path": "results/qwen36-runtime-ab-20260918T182534Z/ollama/ollama.json",
       "bytes": 13855,
       "sha256": "39b0bb49758129588cbbe8dcfd4d78f47c1e1057c12761cb42e6c0b6f5be8a56",

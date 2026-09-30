@@ -40,3 +40,12 @@ results/t87-p1-*/**/*.checkpoint.jsonl
 results/strata-20260930/LIMPEZA-E-proposta.md
 results/strata-20260930/strata-iq2_xs.log
 *.local.md
+
+# Kept on the lab machine (raw Guardian evidence, client references, internal agent messages)
+results/quant-ollama-vs-unsloth-20260924/
+results/kl-bonsai-20260919/corpus.txt
+results/typed-decision-probe-20260920-*.json
+results/respostas/
+docs/en/plans/gateway-consumer-coverage-and-product-acceptance.md
+docs/en/plans/t18-owner-acceptance-form.md
+tools/quant_ab_window.sh
