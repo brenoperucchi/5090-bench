@@ -1286,6 +1286,90 @@
       "type": "json"
     },
     {
+      "path": "results/strata-20260930/README.md",
+      "bytes": 4826,
+      "sha256": "169eb687ed0a6cd1f645a47d8bdcfde98accbdf9040e6b46ad7607ca45dc5426",
+      "type": "md"
+    },
+    {
+      "path": "results/strata-20260930/calibrate-v0.1.30.log",
+      "bytes": 3528,
+      "sha256": "6ffbb4257a95df984d728865fb8d168cc3d99d3bdff4cfb34e5faa907a9b2f5b",
+      "type": "log"
+    },
+    {
+      "path": "results/strata-20260930/relatorio/00-LEIA-PRIMEIRO.md",
+      "bytes": 3030,
+      "sha256": "8d8119a4ab6321453b6425dd8ecf0957879c3bff2cfc8194599aa85995b98c19",
+      "type": "md"
+    },
+    {
+      "path": "results/strata-20260930/relatorio/01-flash-next-llamacpp-vs-strata.md",
+      "bytes": 4205,
+      "sha256": "00bbeb1e7d9c93527426373510c231fed942927f693794af142222813ceb7bec",
+      "type": "md"
+    },
+    {
+      "path": "results/strata-20260930/relatorio/02-strata-evolucao-releases.md",
+      "bytes": 3358,
+      "sha256": "98971a6e4ee70c64bc8599d62bcb98031544ef81d0b9f82a8fd1d54310676da0",
+      "type": "md"
+    },
+    {
+      "path": "results/strata-20260930/relatorio/03-panorama-5090-software.md",
+      "bytes": 3037,
+      "sha256": "a567d17cf2002dee646d8eaa5be2e9020aeded5d3802146277385a09e2a0346c",
+      "type": "md"
+    },
+    {
+      "path": "results/strata-20260930/relatorio/04-qualidade-ressalvas-proximos.md",
+      "bytes": 3990,
+      "sha256": "8f32856eb9fb1e3613f765c73b3ebfae842f3faeb93d4b9d960b8861b067bff1",
+      "type": "md"
+    },
+    {
+      "path": "results/strata-20260930/strata-0129-iq2xs-20260930.json",
+      "bytes": 10412,
+      "sha256": "91e36b7f0c9e652d6a8de501a6f33076b79f480774c2e56f9e5a5cd6c54ec877",
+      "type": "json"
+    },
+    {
+      "path": "results/strata-20260930/strata-0130cal-iq2xs-20260930.json",
+      "bytes": 10449,
+      "sha256": "2223fd6f0f1613bb4163750b9f635bab0b73918d6a8d1df3a1e02bd5c72f1444",
+      "type": "json"
+    },
+    {
+      "path": "results/strata-20260930/strata-0130cal-iq2xs-r5-20260930.json",
+      "bytes": 16451,
+      "sha256": "d7437fec99aac3c72c670967233b99c721fffc0181630a035fb81988bb23676c",
+      "type": "json"
+    },
+    {
+      "path": "results/strata-20260930/strata-iq2xs-20260930.json",
+      "bytes": 10366,
+      "sha256": "f4deec42142d1cdf49b60ea268bc1312d9fac464755ea06437f2f9956929dc2c",
+      "type": "json"
+    },
+    {
+      "path": "results/strata-20260930/strata0130cal-iq3xxs-r5-20260930.json",
+      "bytes": 16403,
+      "sha256": "d52d5e762a7c0aa6d8399fbd4543a243b297182b22ef35a1f220bb4850dd66be",
+      "type": "json"
+    },
+    {
+      "path": "results/strata-20260930/strata0130cal-swift-iq2xs-r5-20260930.json",
+      "bytes": 16501,
+      "sha256": "6e7b5520fb4007ba2ac4fab5628166a1e5fddc33db545c6e8742e39d467325c1",
+      "type": "json"
+    },
+    {
+      "path": "results/strata-20260930/strata0130cal-swift-iq3xxs-r5-20260930.json",
+      "bytes": 16521,
+      "sha256": "ed15aaaf4ec70d9b2bf6e19596b4b95f2eb0cd5b76591bda1f0a4bdd75913f23",
+      "type": "json"
+    },
+    {
       "path": "results/t87-p1-v2-2026-09-18-preparation-2/preparation.json",
       "bytes": 3121,
       "sha256": "858ff0d62f6b1e422438e03c9ab47b3ce536f181a6537d73bab05c2e25434e94",
