@@ -1,0 +1,208 @@
+{
+  "ruleset_id": "detector-regression-v1",
+  "cases": [
+    {
+      "case_id": "language-pt-english-fails",
+      "input": {"expected_language": "pt", "response_text": "This response is entirely in English."},
+      "expected": {"language": {"outcome": "fail", "reason": "unexpected_language"}}
+    },
+    {
+      "case_id": "language-marker-poor-tie-is-indeterminate",
+      "input": {"expected_language": "pt", "response_text": "invoice"},
+      "expected": {"language": {"outcome": "indeterminate", "reason": "marker_poor_tie"}}
+    },
+    {
+      "case_id": "language-portuguese-passes",
+      "input": {"expected_language": "pt", "response_text": "Esta é uma resposta para você."},
+      "expected": {"language": {"outcome": "pass", "reason": "language_matches"}}
+    },
+    {
+      "case_id": "escalation-leak",
+      "input": {"expect_escalation": false, "observed_escalation": true},
+      "expected": {"escalation": {"outcome": "fail", "reason": "LEAK"}}
+    },
+    {
+      "case_id": "escalation-miss",
+      "input": {"expect_escalation": true, "observed_escalation": false},
+      "expected": {"escalation": {"outcome": "fail", "reason": "MISS"}}
+    },
+    {
+      "case_id": "escalation-pass",
+      "input": {"expect_escalation": true, "observed_escalation": true},
+      "expected": {"escalation": {"outcome": "pass", "reason": "escalation_matches"}}
+    },
+    {
+      "case_id": "promise-delivered-with-sanitized-portuguese-wording",
+      "input": {
+        "promise": true,
+        "response_text": "Vou abrir um chamado de suporte para você.",
+        "promise_contract": {"required_wording": "Vou abrir um chamado de suporte para você.", "external_delivery_state": "delivered"}
+      },
+      "expected": {"promise": {"outcome": "pass", "reason": "delivered_with_required_wording"}}
+    },
+    {
+      "case_id": "promise-without-external-delivery-state",
+      "input": {
+        "promise": true,
+        "response_text": "Vou abrir um chamado de suporte para você.",
+        "promise_contract": {"required_wording": "Vou abrir um chamado de suporte para você.", "external_delivery_state": "unknown"}
+      },
+      "expected": {"promise": {"outcome": "indeterminate", "reason": "external_delivery_unknown"}}
+    },
+    {
+      "case_id": "promise-not-delivered-with-required-wording",
+      "input": {
+        "promise": true,
+        "response_text": "Vou abrir um chamado de suporte para você.",
+        "promise_contract": {"required_wording": "Vou abrir um chamado de suporte para você.", "external_delivery_state": "not_delivered"}
+      },
+      "expected": {"promise": {"outcome": "fail", "reason": "external_delivery_not_confirmed"}}
+    },
+    {
+      "case_id": "promise-without-required-portuguese-wording",
+      "input": {
+        "promise": true,
+        "response_text": "Seu pedido será tratado.",
+        "promise_contract": {"required_wording": "Vou abrir um chamado de suporte para você.", "external_delivery_state": "delivered"}
+      },
+      "expected": {"promise": {"outcome": "fail", "reason": "required_wording_missing"}}
+    },
+    {
+      "case_id": "reasoning-tagged-leak",
+      "input": {"check_reasoning": true, "response_text": "<think>internal plan</think>Resposta final."},
+      "expected": {"reasoning": {"outcome": "fail", "reason": "tagged_reasoning"}}
+    },
+    {
+      "case_id": "reasoning-pure-visible-leak",
+      "input": {"check_reasoning": true, "response_text": "Primeiro vou comparar as opções antes de responder.", "visible_reasoning": true},
+      "expected": {"reasoning": {"outcome": "fail", "reason": "visible_reasoning"}}
+    },
+    {
+      "case_id": "citation-pass",
+      "input": {
+        "citation_contract": {
+          "required": true,
+          "required_count": 1,
+          "sources": [{"source_id": "source-a", "literal_quote": "A cobrança é mensal.", "finding_id": "F-001"}]
+        },
+        "citations": [{"source_id": "source-a", "quote": "A cobrança é mensal.", "quote_hash": "6fd2989cd75ae60e8b16909df482b924575d0d71a8f7fd28614d5cc12b602995", "finding_id": "F-001"}]
+      },
+      "expected": {"citation": {"outcome": "pass", "reason": "citation_contract_matches"}}
+    },
+    {
+      "case_id": "citation-unoffered-unread",
+      "input": {"citation_contract": {"required": true, "required_count": 1, "sources": []}, "citations": []},
+      "expected": {"citation": {"outcome": "indeterminate", "reason": "required_source_unoffered_or_unread"}}
+    },
+    {
+      "case_id": "citation-wrong-hash",
+      "input": {
+        "citation_contract": {"required": true, "required_count": 1, "sources": [{"source_id": "source-a", "literal_quote": "A cobrança é mensal.", "finding_id": "F-001"}]},
+        "citations": [{"source_id": "source-a", "quote": "A cobrança é mensal.", "quote_hash": "0000", "finding_id": "F-001"}]
+      },
+      "expected": {"citation": {"outcome": "fail", "reason": "quote_hash_mismatch"}}
+    },
+    {
+      "case_id": "citation-nonliteral-quote",
+      "input": {
+        "citation_contract": {"required": true, "required_count": 1, "sources": [{"source_id": "source-a", "literal_quote": "A cobrança é mensal.", "finding_id": "F-001"}]},
+        "citations": [{"source_id": "source-a", "quote": "A cobrança acontece todo mês.", "quote_hash": "a565bb0a7c6bcacc38287f7151710699175922f2764e416e91f2c021d8b03be2", "finding_id": "F-001"}]
+      },
+      "expected": {"citation": {"outcome": "fail", "reason": "quote_not_literal"}}
+    },
+    {
+      "case_id": "citation-bad-second-finding",
+      "input": {
+        "citation_contract": {
+          "required": true,
+          "required_count": 2,
+          "required_source_ids": ["source-a", "source-b"],
+          "sources": [
+            {"source_id": "source-a", "literal_quote": "A cobrança é mensal.", "finding_id": "F-001"},
+            {"source_id": "source-b", "literal_quote": "O prazo é de cinco dias.", "finding_id": "F-002"}
+          ]
+        },
+        "citations": [
+          {"source_id": "source-a", "quote": "A cobrança é mensal.", "quote_hash": "6fd2989cd75ae60e8b16909df482b924575d0d71a8f7fd28614d5cc12b602995", "finding_id": "F-001"},
+          {"source_id": "source-b", "quote": "O prazo é de cinco dias.", "quote_hash": "4d668a4fdc98bb4db78ae87a6cdffe14c884ea1a566f6c140c696044db0d156a", "finding_id": "F-009"}
+        ]
+      },
+      "expected": {"citation": {"outcome": "fail", "reason": "finding_mismatch"}}
+    },
+    {
+      "case_id": "citation-required-fields-enum-and-count",
+      "input": {
+        "citation_contract": {"required": true, "required_count": 1, "sources": [{"source_id": "source-a", "literal_quote": "A cobrança é mensal.", "finding_id": "F-001"}]},
+        "citations": [{"source_id": "source-x", "quote": "A cobrança é mensal.", "finding_id": "F-001"}, {"source_id": "source-a", "quote": "A cobrança é mensal.", "quote_hash": "6fd2989cd75ae60e8b16909df482b924575d0d71a8f7fd28614d5cc12b602995", "finding_id": "F-001"}]
+      },
+      "expected": {"citation": {"outcome": "fail", "reason": "citation_count_mismatch"}}
+    },
+    {
+      "case_id": "citation-required-field-missing",
+      "input": {
+        "citation_contract": {"required": true, "required_count": 1, "sources": [{"source_id": "source-a", "literal_quote": "A cobrança é mensal.", "finding_id": "F-001"}]},
+        "citations": [{"source_id": "source-a", "quote": "A cobrança é mensal.", "finding_id": "F-001"}]
+      },
+      "expected": {"citation": {"outcome": "fail", "reason": "required_citation_field_missing"}}
+    },
+    {
+      "case_id": "citation-source-enum-mismatch",
+      "input": {
+        "citation_contract": {"required": true, "required_count": 1, "sources": [{"source_id": "source-a", "literal_quote": "A cobrança é mensal.", "finding_id": "F-001"}]},
+        "citations": [{"source_id": "source-x", "quote": "A cobrança é mensal.", "quote_hash": "6fd2989cd75ae60e8b16909df482b924575d0d71a8f7fd28614d5cc12b602995", "finding_id": "F-001"}]
+      },
+      "expected": {"citation": {"outcome": "fail", "reason": "source_id_outside_enum"}}
+    },
+    {
+      "case_id": "citation-duplicate-observed-source",
+      "input": {
+        "citation_contract": {
+          "required": true,
+          "required_count": 2,
+          "required_source_ids": ["source-a", "source-b"],
+          "sources": [
+            {"source_id": "source-a", "literal_quote": "A cobrança é mensal.", "finding_id": "F-001"},
+            {"source_id": "source-b", "literal_quote": "O prazo é de cinco dias.", "finding_id": "F-002"}
+          ]
+        },
+        "citations": [
+          {"source_id": "source-a", "quote": "A cobrança é mensal.", "quote_hash": "6fd2989cd75ae60e8b16909df482b924575d0d71a8f7fd28614d5cc12b602995", "finding_id": "F-001"},
+          {"source_id": "source-a", "quote": "A cobrança é mensal.", "quote_hash": "6fd2989cd75ae60e8b16909df482b924575d0d71a8f7fd28614d5cc12b602995", "finding_id": "F-001"}
+        ]
+      },
+      "expected": {"citation": {"outcome": "fail", "reason": "duplicate_citation_source_id"}}
+    },
+    {
+      "case_id": "tool-valid",
+      "input": {
+        "tool_contract": {"supported_tools": ["lookup"], "expected_calls": [{"name": "lookup", "required_arguments": ["invoice_id"], "citation_source_id": "source-a"}]},
+        "tool_calls": [{"name": "lookup", "arguments": {"invoice_id": "demo-001"}, "citation_source_id": "source-a"}]
+      },
+      "expected": {"tool": {"outcome": "pass", "reason": "tool_contract_matches"}}
+    },
+    {
+      "case_id": "tool-unsupported",
+      "input": {
+        "tool_contract": {"supported_tools": ["lookup"], "expected_calls": [{"name": "lookup", "required_arguments": ["invoice_id"]}]},
+        "tool_calls": [{"name": "delete_all", "arguments": {"invoice_id": "demo-001"}}]
+      },
+      "expected": {"tool": {"outcome": "fail", "reason": "unsupported_tool"}}
+    },
+    {
+      "case_id": "tool-missing-argument",
+      "input": {
+        "tool_contract": {"supported_tools": ["lookup"], "expected_calls": [{"name": "lookup", "required_arguments": ["invoice_id", "account"]}]},
+        "tool_calls": [{"name": "lookup", "arguments": {"invoice_id": "demo-001"}}]
+      },
+      "expected": {"tool": {"outcome": "fail", "reason": "missing_required_argument"}}
+    },
+    {
+      "case_id": "tool-citation-mismatch",
+      "input": {
+        "tool_contract": {"supported_tools": ["lookup"], "expected_calls": [{"name": "lookup", "required_arguments": ["invoice_id"], "citation_source_id": "source-a"}]},
+        "tool_calls": [{"name": "lookup", "arguments": {"invoice_id": "demo-001"}, "citation_source_id": "source-b"}]
+      },
+      "expected": {"tool": {"outcome": "fail", "reason": "tool_citation_mismatch"}}
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": "t87-p1-v2-assessment-v1",
+  "status": "invalidated_before_grading",
+  "reason": "The prompt parser dropped each published task heading, including its operational cd ~/lab/<task> instruction.",
+  "evidence": {
+    "all_tasks_reached_cap": true,
+    "all_tasks_final_finish_reason": "tool_calls",
+    "all_tasks_graded": false,
+    "t1_last_commands": "cd ~/lab/ratelimit",
+    "t2_last_commands": "cd ~/lab/reporting-service",
+    "t3_last_commands": "cd ~/lab/pipeline"
+  },
+  "generation_count": 330,
+  "p1_verdict": "unknown",
+  "retry": "not automatic; requires a new hash-addressed packet"
+}

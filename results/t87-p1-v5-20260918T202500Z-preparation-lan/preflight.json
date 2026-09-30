@@ -1,0 +1,79 @@
+{
+  "schema_version": "t87-p1-v2-preflight-v1",
+  "captured_at": "2026-09-18T20:25:26.974037Z",
+  "identity": {
+    "health": {
+      "status": "ok"
+    },
+    "models": {
+      "models": [
+        {
+          "name": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "model": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "modified_at": "",
+          "size": "",
+          "digest": "",
+          "type": "model",
+          "description": "",
+          "tags": [
+            ""
+          ],
+          "capabilities": [
+            "completion"
+          ],
+          "parameters": "",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "",
+            "families": [
+              ""
+            ],
+            "parameter_size": "",
+            "quantization_level": ""
+          }
+        }
+      ],
+      "object": "list",
+      "data": [
+        {
+          "id": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "aliases": [
+            "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf"
+          ],
+          "tags": [],
+          "object": "model",
+          "created": 1789763120,
+          "owned_by": "llamacpp",
+          "meta": {
+            "vocab_type": true,
+            "n_vocab": 248320,
+            "n_ctx": 32768,
+            "n_ctx_train": 262144,
+            "n_embd": 2048,
+            "n_params": 35505251456,
+            "size": 21706498560,
+            "ftype": "Q4_K - Medium"
+          }
+        }
+      ]
+    },
+    "captured_at": "2026-09-18T20:25:26.768710Z",
+    "endpoint": "http://192.168.0.125:18087",
+    "route": {
+      "id": "lan",
+      "scheme": "http",
+      "host": "192.168.0.125",
+      "port": 18087,
+      "request_path": "/v1/chat/completions"
+    },
+    "model": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+    "model_sha256": "d372de8e934898a59e6ccfabc3368474711384d8f1fd4d22d87a3f0a45400cdc",
+    "binary_sha256": "37acf8e80c85f91794d9fa0268d34b40dbfa2f4286527a92bdd13dfefdab689b",
+    "gpu_snapshot": "NVIDIA GeForce RTX 5090, 22825 MiB, 32607 MiB, 1 %, 616.64",
+    "runtime": "thecodacus/llama.cpp",
+    "harness_version": "t87-p1-harness-v5",
+    "benchmark_commit": "776e799c7e0a24271e021aca2ea4b1c1b1f10017",
+    "series_key": "{\"benchmark_commit\":\"776e799c7e0a24271e021aca2ea4b1c1b1f10017\",\"harness_version\":\"t87-p1-harness-v5\",\"model_sha256\":\"d372de8e934898a59e6ccfabc3368474711384d8f1fd4d22d87a3f0a45400cdc\",\"route\":{\"host\":\"192.168.0.125\",\"id\":\"lan\",\"port\":18087,\"request_path\":\"/v1/chat/completions\",\"scheme\":\"http\"},\"runtime\":\"thecodacus/llama.cpp\"}"
+  }
+}

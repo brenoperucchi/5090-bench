@@ -1,0 +1,336 @@
+{
+  "schema": "os-runtime-ab-v1",
+  "label": "apex-wsl-mtp",
+  "base": "http://127.0.0.1:18196",
+  "props": {
+    "model_path": "/mnt/e/llm-bench-t87-runtimes/models/qwen38-35b-apex/Qwen3.8-35B-A3B-Distill.APEX-I-MiniPlus-V2.1.gguf",
+    "n_ctx": 16384,
+    "build_info": "b1-1af554f",
+    "total_slots": 1
+  },
+  "aquecimento": {
+    "wall_s": 0.8368,
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 27,
+      "prompt_ms": 683.352,
+      "prompt_per_token_ms": 25.30933333333333,
+      "prompt_per_second": 39.51111579391002,
+      "predicted_n": 8,
+      "predicted_ms": 148.734,
+      "predicted_per_token_ms": 21.247714285714288,
+      "predicted_per_second": 47.06388586335337,
+      "draft_n": 4,
+      "draft_n_accepted": 4
+    },
+    "usage": {
+      "completion_tokens": 8,
+      "prompt_tokens": 27,
+      "total_tokens": 35,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "finish_reason": "length",
+    "content_sha256": "51ae1072caa15f996d2899a80d1175c2e6460570bf0fa994efa5fe631a27089e"
+  },
+  "chamadas": [
+    {
+      "label": "apex-wsl-mtp",
+      "repeticao": 1,
+      "tamanho": "curto",
+      "timestamp": "2026-09-23T01:44:47.144-03:00",
+      "prompt_sha256": "70b107038d1d67361aac326eb3b255f59d1d2065086bc21749ca5a28305a745c",
+      "wall_s": 0.5897,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 140.097,
+        "prompt_per_token_ms": 5.188777777777778,
+        "prompt_per_second": 192.7236129253303,
+        "predicted_n": 101,
+        "predicted_ms": 446.404,
+        "predicted_per_token_ms": 4.46404,
+        "predicted_per_second": 224.0123296386233,
+        "draft_n": 96,
+        "draft_n_accepted": 54
+      },
+      "usage": {
+        "completion_tokens": 101,
+        "prompt_tokens": 27,
+        "total_tokens": 128,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "content_sha256": "1576023ec4690f245e63b7d65c6d3a7455c1c05164bbbc19b654825346f77ca4"
+    },
+    {
+      "label": "apex-wsl-mtp",
+      "repeticao": 1,
+      "tamanho": "medio",
+      "timestamp": "2026-09-23T01:44:48.844-03:00",
+      "prompt_sha256": "61205cf69b3122670a3a39c124ac4b097cef7e33e5fbd109a3de93b416f9d588",
+      "wall_s": 1.6995,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 2671,
+        "prompt_ms": 569.04,
+        "prompt_per_token_ms": 0.21304380381879445,
+        "prompt_per_second": 4693.870378180796,
+        "predicted_n": 256,
+        "predicted_ms": 971.156,
+        "predicted_per_token_ms": 3.808454901960784,
+        "predicted_per_second": 262.57367508412653,
+        "draft_n": 204,
+        "draft_n_accepted": 152
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 2671,
+        "total_tokens": 2927,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "4249d08810cf3afd7c61306baedc11286c23664c93d7a374cd27a8e886ee460a"
+    },
+    {
+      "label": "apex-wsl-mtp",
+      "repeticao": 1,
+      "tamanho": "longo",
+      "timestamp": "2026-09-23T01:44:50.974-03:00",
+      "prompt_sha256": "fb24d4819ba5977b68a227e9689caccbcd5957822a9717fa921c8dbe77aed71a",
+      "wall_s": 2.1301,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 5952,
+        "prompt_ms": 920.166,
+        "prompt_per_token_ms": 0.15459778225806453,
+        "prompt_per_second": 6468.398093387497,
+        "predicted_n": 256,
+        "predicted_ms": 901.197,
+        "predicted_per_token_ms": 3.534105882352941,
+        "predicted_per_second": 282.9570005226382,
+        "draft_n": 214,
+        "draft_n_accepted": 147
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 5952,
+        "total_tokens": 6208,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "8ed8093202d205c9de4bd634cfc2740243f6cce2db035ab8b155f28dbe91dade"
+    },
+    {
+      "label": "apex-wsl-mtp",
+      "repeticao": 2,
+      "tamanho": "curto",
+      "timestamp": "2026-09-23T01:44:51.862-03:00",
+      "prompt_sha256": "70b107038d1d67361aac326eb3b255f59d1d2065086bc21749ca5a28305a745c",
+      "wall_s": 0.8875,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 129.108,
+        "prompt_per_token_ms": 4.781777777777778,
+        "prompt_per_second": 209.12724230876475,
+        "predicted_n": 101,
+        "predicted_ms": 380.334,
+        "predicted_per_token_ms": 3.80334,
+        "predicted_per_second": 262.92679592147954,
+        "draft_n": 94,
+        "draft_n_accepted": 55
+      },
+      "usage": {
+        "completion_tokens": 101,
+        "prompt_tokens": 27,
+        "total_tokens": 128,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "content_sha256": "1576023ec4690f245e63b7d65c6d3a7455c1c05164bbbc19b654825346f77ca4"
+    },
+    {
+      "label": "apex-wsl-mtp",
+      "repeticao": 2,
+      "tamanho": "medio",
+      "timestamp": "2026-09-23T01:44:53.251-03:00",
+      "prompt_sha256": "61205cf69b3122670a3a39c124ac4b097cef7e33e5fbd109a3de93b416f9d588",
+      "wall_s": 1.3892,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 2671,
+        "prompt_ms": 432.168,
+        "prompt_per_token_ms": 0.16180007487832274,
+        "prompt_per_second": 6180.466855482127,
+        "predicted_n": 256,
+        "predicted_ms": 922.739,
+        "predicted_per_token_ms": 3.6185843137254903,
+        "predicted_per_second": 276.35116755658964,
+        "draft_n": 204,
+        "draft_n_accepted": 152
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 2671,
+        "total_tokens": 2927,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "4249d08810cf3afd7c61306baedc11286c23664c93d7a374cd27a8e886ee460a"
+    },
+    {
+      "label": "apex-wsl-mtp",
+      "repeticao": 2,
+      "tamanho": "longo",
+      "timestamp": "2026-09-23T01:44:55.263-03:00",
+      "prompt_sha256": "fb24d4819ba5977b68a227e9689caccbcd5957822a9717fa921c8dbe77aed71a",
+      "wall_s": 2.0116,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 5952,
+        "prompt_ms": 781.839,
+        "prompt_per_token_ms": 0.13135735887096775,
+        "prompt_per_second": 7612.820542336721,
+        "predicted_n": 256,
+        "predicted_ms": 962.595,
+        "predicted_per_token_ms": 3.7748823529411766,
+        "predicted_per_second": 264.9089180808128,
+        "draft_n": 214,
+        "draft_n_accepted": 147
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 5952,
+        "total_tokens": 6208,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "8ed8093202d205c9de4bd634cfc2740243f6cce2db035ab8b155f28dbe91dade"
+    },
+    {
+      "label": "apex-wsl-mtp",
+      "repeticao": 3,
+      "tamanho": "curto",
+      "timestamp": "2026-09-23T01:44:57.275-03:00",
+      "prompt_sha256": "70b107038d1d67361aac326eb3b255f59d1d2065086bc21749ca5a28305a745c",
+      "wall_s": 2.0116,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 144.874,
+        "prompt_per_token_ms": 5.365703703703703,
+        "prompt_per_second": 186.36884465121415,
+        "predicted_n": 101,
+        "predicted_ms": 375.225,
+        "predicted_per_token_ms": 3.75225,
+        "predicted_per_second": 266.5067626091012,
+        "draft_n": 94,
+        "draft_n_accepted": 55
+      },
+      "usage": {
+        "completion_tokens": 101,
+        "prompt_tokens": 27,
+        "total_tokens": 128,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "content_sha256": "1576023ec4690f245e63b7d65c6d3a7455c1c05164bbbc19b654825346f77ca4"
+    },
+    {
+      "label": "apex-wsl-mtp",
+      "repeticao": 3,
+      "tamanho": "medio",
+      "timestamp": "2026-09-23T01:44:58.659-03:00",
+      "prompt_sha256": "61205cf69b3122670a3a39c124ac4b097cef7e33e5fbd109a3de93b416f9d588",
+      "wall_s": 1.384,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 2671,
+        "prompt_ms": 458.149,
+        "prompt_per_token_ms": 0.17152714339198802,
+        "prompt_per_second": 5829.981076025485,
+        "predicted_n": 256,
+        "predicted_ms": 891.603,
+        "predicted_per_token_ms": 3.496482352941176,
+        "predicted_per_second": 286.00172946928177,
+        "draft_n": 204,
+        "draft_n_accepted": 152
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 2671,
+        "total_tokens": 2927,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "4249d08810cf3afd7c61306baedc11286c23664c93d7a374cd27a8e886ee460a"
+    },
+    {
+      "label": "apex-wsl-mtp",
+      "repeticao": 3,
+      "tamanho": "longo",
+      "timestamp": "2026-09-23T01:45:00.718-03:00",
+      "prompt_sha256": "fb24d4819ba5977b68a227e9689caccbcd5957822a9717fa921c8dbe77aed71a",
+      "wall_s": 2.0589,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 5952,
+        "prompt_ms": 834.27,
+        "prompt_per_token_ms": 0.1401663306451613,
+        "prompt_per_second": 7134.380955805675,
+        "predicted_n": 256,
+        "predicted_ms": 953.273,
+        "predicted_per_token_ms": 3.7383254901960785,
+        "predicted_per_second": 267.49944664330155,
+        "draft_n": 214,
+        "draft_n_accepted": 147
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 5952,
+        "total_tokens": 6208,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "8ed8093202d205c9de4bd634cfc2740243f6cce2db035ab8b155f28dbe91dade"
+    }
+  ],
+  "derivados": {
+    "curto": {
+      "pp_tps_mediana": 192.7236129253303,
+      "tg_tps_mediana": 262.92679592147954,
+      "prompt_n": 27
+    },
+    "medio": {
+      "pp_tps_mediana": 5829.981076025485,
+      "tg_tps_mediana": 276.35116755658964,
+      "prompt_n": 2671
+    },
+    "longo": {
+      "pp_tps_mediana": 7134.380955805675,
+      "tg_tps_mediana": 267.49944664330155,
+      "prompt_n": 5952
+    }
+  },
+  "metrica_principal": "timings do servidor (prompt_per_second, predicted_per_second); wall clock é secundário"
+}

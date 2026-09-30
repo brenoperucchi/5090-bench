@@ -1,0 +1,105 @@
+{
+  "schema_version": "t87-p1-v2-preparation-v1",
+  "status": "prepared_no_generation",
+  "created_at": "2026-09-18T15:57:40.434662Z",
+  "endpoint_identity": {
+    "health": {
+      "status": "ok"
+    },
+    "models": {
+      "models": [
+        {
+          "name": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "model": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "modified_at": "",
+          "size": "",
+          "digest": "",
+          "type": "model",
+          "description": "",
+          "tags": [
+            ""
+          ],
+          "capabilities": [
+            "completion"
+          ],
+          "parameters": "",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "",
+            "families": [
+              ""
+            ],
+            "parameter_size": "",
+            "quantization_level": ""
+          }
+        }
+      ],
+      "object": "list",
+      "data": [
+        {
+          "id": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "aliases": [
+            "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf"
+          ],
+          "tags": [],
+          "object": "model",
+          "created": 1789747054,
+          "owned_by": "llamacpp",
+          "meta": {
+            "vocab_type": true,
+            "n_vocab": 248320,
+            "n_ctx": 32768,
+            "n_ctx_train": 262144,
+            "n_embd": 2048,
+            "n_params": 35505251456,
+            "size": 21706498560,
+            "ftype": "Q4_K - Medium"
+          }
+        }
+      ]
+    },
+    "captured_at": "2026-09-18T15:57:40.015418Z",
+    "endpoint": "http://100.88.95.78:18087",
+    "model": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+    "model_sha256": "d372de8e934898a59e6ccfabc3368474711384d8f1fd4d22d87a3f0a45400cdc",
+    "binary_sha256": "37acf8e80c85f91794d9fa0268d34b40dbfa2f4286527a92bdd13dfefdab689b",
+    "gpu_snapshot": "NVIDIA GeForce RTX 5090, 22697 MiB, 32607 MiB, 0 %, 616.64",
+    "runtime": "thecodacus/llama.cpp",
+    "benchmark_commit": "776e799c7e0a24271e021aca2ea4b1c1b1f10017"
+  },
+  "benchmark_commit": "776e799c7e0a24271e021aca2ea4b1c1b1f10017",
+  "harness_sha256": "1ee22de4284f551afae672211af8e27a2954a047650c6d2b9aa59360236da985",
+  "protocol_sha256": "e4c19e5d691cf6aa781dc66c0ba9e1925f459c52eaac397470596d455903ab20",
+  "dependency_bundle_sha256": "7293488bdf2c6ae0d9cdaef39dd8ef019c841f84641026624d8bc1263176aa7f",
+  "prompt_sha256": "1219567023e57f07b268b3cf15f458e8810331efd33b1937d9bb327ab1a5082f",
+  "task_count": 3,
+  "grader_denominator": 17,
+  "seeds": [
+    1000,
+    1017,
+    1034,
+    1051,
+    1068
+  ],
+  "reference_turn_caps": {
+    "t1_ratelimit": 13,
+    "t2_metrics": 27,
+    "t3_pipeline": 26
+  },
+  "max_generation_count": 330,
+  "sampling": {
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "max_tokens": 4096,
+    "num_ctx": 32768,
+    "cache_prompt": false
+  },
+  "model_post_sent": false,
+  "prompts": {
+    "t1_ratelimit": "d1bd9dea2139a10848fdb6e874a302e4b3492f702e130a7f14b7d1464e890ed7",
+    "t2_metrics": "f408c6f1a7fe3d6356cd09c2bb628a895ab6200cad5ab4838bb1a70ee83382c4",
+    "t3_pipeline": "491a2ab0a61307981e75dc599826381c50d1d453eb537b5b398620543b9c6575"
+  }
+}

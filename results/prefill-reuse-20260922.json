@@ -1,0 +1,910 @@
+{
+  "schema": "prefill-reuse-probe-v1",
+  "endpoint": "http://127.0.0.1:18194/v1/chat/completions",
+  "modelo": "qwen3-coder-30b",
+  "contexto": "results/guardian-synthesis-20260921/snapshots/mfc-exec~Ryzen9~ff6b18a9aaf6.prompt.md",
+  "contexto_sha256": "cd0a0bc7262b79b6e58d79c3e1f46b1a4168dbf47b09e70fa81efa6dd79d0c9a",
+  "ressalva": "servidor de produção compartilhado com o narrador; requisições dele podem despejar o cache entre as nossas",
+  "chamadas": [
+    {
+      "repeticao": 1,
+      "layout": "A",
+      "papel": "sozinha",
+      "pergunta": "estado",
+      "timestamp": "2026-09-22T20:27:36.411-03:00",
+      "prompt_sha256": "cbdd0f39835b14b91a412b15f6b37c21f831f3d0452238c536855df307874b96",
+      "latency_s": 0.6875,
+      "answer": "A",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3908,
+        "total_tokens": 3909,
+        "prompt_tokens_details": {
+          "cached_tokens": 1
+        }
+      },
+      "timings": {
+        "cache_n": 1,
+        "prompt_n": 3907,
+        "prompt_ms": 654.264,
+        "prompt_per_token_ms": 0.1674594317890965,
+        "prompt_per_second": 5971.595563870242,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 1,
+      "layout": "A",
+      "papel": "sequencia",
+      "pergunta": "estado",
+      "timestamp": "2026-09-22T20:27:36.443-03:00",
+      "prompt_sha256": "cbdd0f39835b14b91a412b15f6b37c21f831f3d0452238c536855df307874b96",
+      "latency_s": 0.0317,
+      "answer": "A",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3908,
+        "total_tokens": 3909,
+        "prompt_tokens_details": {
+          "cached_tokens": 3907
+        }
+      },
+      "timings": {
+        "cache_n": 3907,
+        "prompt_n": 1,
+        "prompt_ms": 24.141,
+        "prompt_per_token_ms": 24.141,
+        "prompt_per_second": 41.423304751253056,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 1,
+      "layout": "A",
+      "papel": "sequencia",
+      "pergunta": "pendencia",
+      "timestamp": "2026-09-22T20:27:37.152-03:00",
+      "prompt_sha256": "6b3240563601369cc6350971ad0aba0bfab088d26da24e1278f991fa2461e967",
+      "latency_s": 0.709,
+      "answer": "B",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3913,
+        "total_tokens": 3914,
+        "prompt_tokens_details": {
+          "cached_tokens": 8
+        }
+      },
+      "timings": {
+        "cache_n": 8,
+        "prompt_n": 3905,
+        "prompt_ms": 404.448,
+        "prompt_per_token_ms": 0.10357183098591549,
+        "prompt_per_second": 9655.134899912968,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 1,
+      "layout": "A",
+      "papel": "sequencia",
+      "pergunta": "risco",
+      "timestamp": "2026-09-22T20:27:37.814-03:00",
+      "prompt_sha256": "8a68add4bcc01ffc90765430a3d220b4f6e84516fffe85402ab2c170cede0225",
+      "latency_s": 0.662,
+      "answer": "A",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3908,
+        "total_tokens": 3909,
+        "prompt_tokens_details": {
+          "cached_tokens": 10
+        }
+      },
+      "timings": {
+        "cache_n": 10,
+        "prompt_n": 3898,
+        "prompt_ms": 408.046,
+        "prompt_per_token_ms": 0.10468086198050282,
+        "prompt_per_second": 9552.84453223411,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 1,
+      "layout": "A",
+      "papel": "sequencia",
+      "pergunta": "direcao",
+      "timestamp": "2026-09-22T20:27:38.507-03:00",
+      "prompt_sha256": "94054e48cf432bc3c041792021a476606841adde7ce9e02e05cd1815c815299f",
+      "latency_s": 0.6924,
+      "answer": "B",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3915,
+        "total_tokens": 3916,
+        "prompt_tokens_details": {
+          "cached_tokens": 8
+        }
+      },
+      "timings": {
+        "cache_n": 8,
+        "prompt_n": 3907,
+        "prompt_ms": 415.995,
+        "prompt_per_token_ms": 0.10647427693882774,
+        "prompt_per_second": 9391.939806968834,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 1,
+      "layout": "B",
+      "papel": "sozinha",
+      "pergunta": "estado",
+      "timestamp": "2026-09-22T20:27:39.212-03:00",
+      "prompt_sha256": "b3cdb6ad5bdafb3f51f2f484d1c0933816cfbadf95e23b8a6f6d514026a6246d",
+      "latency_s": 0.7055,
+      "answer": "A",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3908,
+        "total_tokens": 3909,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      },
+      "timings": {
+        "cache_n": 3,
+        "prompt_n": 3905,
+        "prompt_ms": 411.047,
+        "prompt_per_token_ms": 0.1052617157490397,
+        "prompt_per_second": 9500.130155432347,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 1,
+      "layout": "B",
+      "papel": "sequencia",
+      "pergunta": "estado",
+      "timestamp": "2026-09-22T20:27:39.701-03:00",
+      "prompt_sha256": "b3cdb6ad5bdafb3f51f2f484d1c0933816cfbadf95e23b8a6f6d514026a6246d",
+      "latency_s": 0.4883,
+      "answer": "A",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3908,
+        "total_tokens": 3909,
+        "prompt_tokens_details": {
+          "cached_tokens": 3907
+        }
+      },
+      "timings": {
+        "cache_n": 3907,
+        "prompt_n": 1,
+        "prompt_ms": 33.327,
+        "prompt_per_token_ms": 33.327,
+        "prompt_per_second": 30.00570108320581,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 1,
+      "layout": "B",
+      "papel": "sequencia",
+      "pergunta": "pendencia",
+      "timestamp": "2026-09-22T20:27:40.089-03:00",
+      "prompt_sha256": "abdf5d291a6bb7222f3e6846e56dbf017f7215832fa0f5f1cab9dcb44119f60b",
+      "latency_s": 0.3883,
+      "answer": "A",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3913,
+        "total_tokens": 3914,
+        "prompt_tokens_details": {
+          "cached_tokens": 3864
+        }
+      },
+      "timings": {
+        "cache_n": 3864,
+        "prompt_n": 49,
+        "prompt_ms": 28.108,
+        "prompt_per_token_ms": 0.5736326530612245,
+        "prompt_per_second": 1743.2759356766758,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 1,
+      "layout": "B",
+      "papel": "sequencia",
+      "pergunta": "risco",
+      "timestamp": "2026-09-22T20:27:40.483-03:00",
+      "prompt_sha256": "e9e47357fd71733e8c05237173b6e81f512b623bb6efc206ce5088af6c971073",
+      "latency_s": 0.3935,
+      "answer": "D",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3908,
+        "total_tokens": 3909,
+        "prompt_tokens_details": {
+          "cached_tokens": 3866
+        }
+      },
+      "timings": {
+        "cache_n": 3866,
+        "prompt_n": 42,
+        "prompt_ms": 25.91,
+        "prompt_per_token_ms": 0.616904761904762,
+        "prompt_per_second": 1620.9957545349287,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 1,
+      "layout": "B",
+      "papel": "sequencia",
+      "pergunta": "direcao",
+      "timestamp": "2026-09-22T20:27:40.876-03:00",
+      "prompt_sha256": "3908ce1a633a6c8b54e172d69ea4136d79137212a4629baabbe92a15ec84c117",
+      "latency_s": 0.3927,
+      "answer": "A",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3915,
+        "total_tokens": 3916,
+        "prompt_tokens_details": {
+          "cached_tokens": 3864
+        }
+      },
+      "timings": {
+        "cache_n": 3864,
+        "prompt_n": 51,
+        "prompt_ms": 26.088,
+        "prompt_per_token_ms": 0.5115294117647059,
+        "prompt_per_second": 1954.921803127875,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 2,
+      "layout": "A",
+      "papel": "sozinha",
+      "pergunta": "estado",
+      "timestamp": "2026-09-22T20:27:41.277-03:00",
+      "prompt_sha256": "cbdd0f39835b14b91a412b15f6b37c21f831f3d0452238c536855df307874b96",
+      "latency_s": 0.4012,
+      "answer": "A",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3908,
+        "total_tokens": 3909,
+        "prompt_tokens_details": {
+          "cached_tokens": 3907
+        }
+      },
+      "timings": {
+        "cache_n": 3907,
+        "prompt_n": 1,
+        "prompt_ms": 15.556,
+        "prompt_per_token_ms": 15.556,
+        "prompt_per_second": 64.28387760349705,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 2,
+      "layout": "A",
+      "papel": "sequencia",
+      "pergunta": "estado",
+      "timestamp": "2026-09-22T20:27:41.675-03:00",
+      "prompt_sha256": "cbdd0f39835b14b91a412b15f6b37c21f831f3d0452238c536855df307874b96",
+      "latency_s": 0.397,
+      "answer": "A",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3908,
+        "total_tokens": 3909,
+        "prompt_tokens_details": {
+          "cached_tokens": 3907
+        }
+      },
+      "timings": {
+        "cache_n": 3907,
+        "prompt_n": 1,
+        "prompt_ms": 11.76,
+        "prompt_per_token_ms": 11.76,
+        "prompt_per_second": 85.03401360544218,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 2,
+      "layout": "A",
+      "papel": "sequencia",
+      "pergunta": "pendencia",
+      "timestamp": "2026-09-22T20:27:42.063-03:00",
+      "prompt_sha256": "6b3240563601369cc6350971ad0aba0bfab088d26da24e1278f991fa2461e967",
+      "latency_s": 0.3886,
+      "answer": "B",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3913,
+        "total_tokens": 3914,
+        "prompt_tokens_details": {
+          "cached_tokens": 3912
+        }
+      },
+      "timings": {
+        "cache_n": 3912,
+        "prompt_n": 1,
+        "prompt_ms": 14.418,
+        "prompt_per_token_ms": 14.418,
+        "prompt_per_second": 69.35774726036898,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 2,
+      "layout": "A",
+      "papel": "sequencia",
+      "pergunta": "risco",
+      "timestamp": "2026-09-22T20:27:42.444-03:00",
+      "prompt_sha256": "8a68add4bcc01ffc90765430a3d220b4f6e84516fffe85402ab2c170cede0225",
+      "latency_s": 0.3805,
+      "answer": "A",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3908,
+        "total_tokens": 3909,
+        "prompt_tokens_details": {
+          "cached_tokens": 3907
+        }
+      },
+      "timings": {
+        "cache_n": 3907,
+        "prompt_n": 1,
+        "prompt_ms": 13.524,
+        "prompt_per_token_ms": 13.524,
+        "prompt_per_second": 73.94262052647146,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 2,
+      "layout": "A",
+      "papel": "sequencia",
+      "pergunta": "direcao",
+      "timestamp": "2026-09-22T20:27:42.813-03:00",
+      "prompt_sha256": "94054e48cf432bc3c041792021a476606841adde7ce9e02e05cd1815c815299f",
+      "latency_s": 0.3689,
+      "answer": "B",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3915,
+        "total_tokens": 3916,
+        "prompt_tokens_details": {
+          "cached_tokens": 3914
+        }
+      },
+      "timings": {
+        "cache_n": 3914,
+        "prompt_n": 1,
+        "prompt_ms": 12.679,
+        "prompt_per_token_ms": 12.679,
+        "prompt_per_second": 78.87057338906854,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 2,
+      "layout": "B",
+      "papel": "sozinha",
+      "pergunta": "estado",
+      "timestamp": "2026-09-22T20:27:43.245-03:00",
+      "prompt_sha256": "b3cdb6ad5bdafb3f51f2f484d1c0933816cfbadf95e23b8a6f6d514026a6246d",
+      "latency_s": 0.4319,
+      "answer": "A",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3908,
+        "total_tokens": 3909,
+        "prompt_tokens_details": {
+          "cached_tokens": 3865
+        }
+      },
+      "timings": {
+        "cache_n": 3865,
+        "prompt_n": 43,
+        "prompt_ms": 30.452,
+        "prompt_per_token_ms": 0.708186046511628,
+        "prompt_per_second": 1412.0583212925258,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 2,
+      "layout": "B",
+      "papel": "sequencia",
+      "pergunta": "estado",
+      "timestamp": "2026-09-22T20:27:43.637-03:00",
+      "prompt_sha256": "b3cdb6ad5bdafb3f51f2f484d1c0933816cfbadf95e23b8a6f6d514026a6246d",
+      "latency_s": 0.3912,
+      "answer": "A",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3908,
+        "total_tokens": 3909,
+        "prompt_tokens_details": {
+          "cached_tokens": 3907
+        }
+      },
+      "timings": {
+        "cache_n": 3907,
+        "prompt_n": 1,
+        "prompt_ms": 15.387,
+        "prompt_per_token_ms": 15.387,
+        "prompt_per_second": 64.98992656138299,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 2,
+      "layout": "B",
+      "papel": "sequencia",
+      "pergunta": "pendencia",
+      "timestamp": "2026-09-22T20:27:44.043-03:00",
+      "prompt_sha256": "abdf5d291a6bb7222f3e6846e56dbf017f7215832fa0f5f1cab9dcb44119f60b",
+      "latency_s": 0.406,
+      "answer": "A",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3913,
+        "total_tokens": 3914,
+        "prompt_tokens_details": {
+          "cached_tokens": 3864
+        }
+      },
+      "timings": {
+        "cache_n": 3864,
+        "prompt_n": 49,
+        "prompt_ms": 25.768,
+        "prompt_per_token_ms": 0.5258775510204082,
+        "prompt_per_second": 1901.5833592052159,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 2,
+      "layout": "B",
+      "papel": "sequencia",
+      "pergunta": "risco",
+      "timestamp": "2026-09-22T20:27:44.443-03:00",
+      "prompt_sha256": "e9e47357fd71733e8c05237173b6e81f512b623bb6efc206ce5088af6c971073",
+      "latency_s": 0.4,
+      "answer": "D",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3908,
+        "total_tokens": 3909,
+        "prompt_tokens_details": {
+          "cached_tokens": 3866
+        }
+      },
+      "timings": {
+        "cache_n": 3866,
+        "prompt_n": 42,
+        "prompt_ms": 25.684,
+        "prompt_per_token_ms": 0.6115238095238096,
+        "prompt_per_second": 1635.2593054041427,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 2,
+      "layout": "B",
+      "papel": "sequencia",
+      "pergunta": "direcao",
+      "timestamp": "2026-09-22T20:27:44.865-03:00",
+      "prompt_sha256": "3908ce1a633a6c8b54e172d69ea4136d79137212a4629baabbe92a15ec84c117",
+      "latency_s": 0.4215,
+      "answer": "A",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3915,
+        "total_tokens": 3916,
+        "prompt_tokens_details": {
+          "cached_tokens": 3864
+        }
+      },
+      "timings": {
+        "cache_n": 3864,
+        "prompt_n": 51,
+        "prompt_ms": 28.816,
+        "prompt_per_token_ms": 0.5650196078431372,
+        "prompt_per_second": 1769.8500832870627,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 3,
+      "layout": "A",
+      "papel": "sozinha",
+      "pergunta": "estado",
+      "timestamp": "2026-09-22T20:27:49.484-03:00",
+      "prompt_sha256": "cbdd0f39835b14b91a412b15f6b37c21f831f3d0452238c536855df307874b96",
+      "latency_s": 4.6183,
+      "answer": "A",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3908,
+        "total_tokens": 3909,
+        "prompt_tokens_details": {
+          "cached_tokens": 3907
+        }
+      },
+      "timings": {
+        "cache_n": 3907,
+        "prompt_n": 1,
+        "prompt_ms": 32.226,
+        "prompt_per_token_ms": 32.226,
+        "prompt_per_second": 31.030844659591637,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 3,
+      "layout": "A",
+      "papel": "sequencia",
+      "pergunta": "estado",
+      "timestamp": "2026-09-22T20:27:49.960-03:00",
+      "prompt_sha256": "cbdd0f39835b14b91a412b15f6b37c21f831f3d0452238c536855df307874b96",
+      "latency_s": 0.4762,
+      "answer": "A",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3908,
+        "total_tokens": 3909,
+        "prompt_tokens_details": {
+          "cached_tokens": 3907
+        }
+      },
+      "timings": {
+        "cache_n": 3907,
+        "prompt_n": 1,
+        "prompt_ms": 34.756,
+        "prompt_per_token_ms": 34.756,
+        "prompt_per_second": 28.772010588099896,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 3,
+      "layout": "A",
+      "papel": "sequencia",
+      "pergunta": "pendencia",
+      "timestamp": "2026-09-22T20:27:50.415-03:00",
+      "prompt_sha256": "6b3240563601369cc6350971ad0aba0bfab088d26da24e1278f991fa2461e967",
+      "latency_s": 0.4552,
+      "answer": "B",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3913,
+        "total_tokens": 3914,
+        "prompt_tokens_details": {
+          "cached_tokens": 3912
+        }
+      },
+      "timings": {
+        "cache_n": 3912,
+        "prompt_n": 1,
+        "prompt_ms": 21.818,
+        "prompt_per_token_ms": 21.818,
+        "prompt_per_second": 45.833715280960675,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 3,
+      "layout": "A",
+      "papel": "sequencia",
+      "pergunta": "risco",
+      "timestamp": "2026-09-22T20:27:50.823-03:00",
+      "prompt_sha256": "8a68add4bcc01ffc90765430a3d220b4f6e84516fffe85402ab2c170cede0225",
+      "latency_s": 0.4077,
+      "answer": "A",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3908,
+        "total_tokens": 3909,
+        "prompt_tokens_details": {
+          "cached_tokens": 3907
+        }
+      },
+      "timings": {
+        "cache_n": 3907,
+        "prompt_n": 1,
+        "prompt_ms": 12.042,
+        "prompt_per_token_ms": 12.042,
+        "prompt_per_second": 83.04268393954493,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 3,
+      "layout": "A",
+      "papel": "sequencia",
+      "pergunta": "direcao",
+      "timestamp": "2026-09-22T20:27:51.228-03:00",
+      "prompt_sha256": "94054e48cf432bc3c041792021a476606841adde7ce9e02e05cd1815c815299f",
+      "latency_s": 0.4041,
+      "answer": "B",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3915,
+        "total_tokens": 3916,
+        "prompt_tokens_details": {
+          "cached_tokens": 3914
+        }
+      },
+      "timings": {
+        "cache_n": 3914,
+        "prompt_n": 1,
+        "prompt_ms": 21.773,
+        "prompt_per_token_ms": 21.773,
+        "prompt_per_second": 45.928443485050295,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 3,
+      "layout": "B",
+      "papel": "sozinha",
+      "pergunta": "estado",
+      "timestamp": "2026-09-22T20:27:51.628-03:00",
+      "prompt_sha256": "b3cdb6ad5bdafb3f51f2f484d1c0933816cfbadf95e23b8a6f6d514026a6246d",
+      "latency_s": 0.4004,
+      "answer": "A",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3908,
+        "total_tokens": 3909,
+        "prompt_tokens_details": {
+          "cached_tokens": 3865
+        }
+      },
+      "timings": {
+        "cache_n": 3865,
+        "prompt_n": 43,
+        "prompt_ms": 26.794,
+        "prompt_per_token_ms": 0.6231162790697674,
+        "prompt_per_second": 1604.8369037844293,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 3,
+      "layout": "B",
+      "papel": "sequencia",
+      "pergunta": "estado",
+      "timestamp": "2026-09-22T20:27:52.029-03:00",
+      "prompt_sha256": "b3cdb6ad5bdafb3f51f2f484d1c0933816cfbadf95e23b8a6f6d514026a6246d",
+      "latency_s": 0.4002,
+      "answer": "A",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3908,
+        "total_tokens": 3909,
+        "prompt_tokens_details": {
+          "cached_tokens": 3907
+        }
+      },
+      "timings": {
+        "cache_n": 3907,
+        "prompt_n": 1,
+        "prompt_ms": 21.933,
+        "prompt_per_token_ms": 21.933,
+        "prompt_per_second": 45.5933980759586,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 3,
+      "layout": "B",
+      "papel": "sequencia",
+      "pergunta": "pendencia",
+      "timestamp": "2026-09-22T20:27:52.504-03:00",
+      "prompt_sha256": "abdf5d291a6bb7222f3e6846e56dbf017f7215832fa0f5f1cab9dcb44119f60b",
+      "latency_s": 0.4751,
+      "answer": "A",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3913,
+        "total_tokens": 3914,
+        "prompt_tokens_details": {
+          "cached_tokens": 3864
+        }
+      },
+      "timings": {
+        "cache_n": 3864,
+        "prompt_n": 49,
+        "prompt_ms": 53.165,
+        "prompt_per_token_ms": 1.085,
+        "prompt_per_second": 921.6589861751153,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 3,
+      "layout": "B",
+      "papel": "sequencia",
+      "pergunta": "risco",
+      "timestamp": "2026-09-22T20:27:52.995-03:00",
+      "prompt_sha256": "e9e47357fd71733e8c05237173b6e81f512b623bb6efc206ce5088af6c971073",
+      "latency_s": 0.4908,
+      "answer": "D",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3908,
+        "total_tokens": 3909,
+        "prompt_tokens_details": {
+          "cached_tokens": 3866
+        }
+      },
+      "timings": {
+        "cache_n": 3866,
+        "prompt_n": 42,
+        "prompt_ms": 56.457,
+        "prompt_per_token_ms": 1.3442142857142858,
+        "prompt_per_second": 743.9290079175303,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    },
+    {
+      "repeticao": 3,
+      "layout": "B",
+      "papel": "sequencia",
+      "pergunta": "direcao",
+      "timestamp": "2026-09-22T20:27:53.453-03:00",
+      "prompt_sha256": "3908ce1a633a6c8b54e172d69ea4136d79137212a4629baabbe92a15ec84c117",
+      "latency_s": 0.4582,
+      "answer": "A",
+      "usage": {
+        "completion_tokens": 1,
+        "prompt_tokens": 3915,
+        "total_tokens": 3916,
+        "prompt_tokens_details": {
+          "cached_tokens": 3864
+        }
+      },
+      "timings": {
+        "cache_n": 3864,
+        "prompt_n": 51,
+        "prompt_ms": 53.851,
+        "prompt_per_token_ms": 1.0559019607843136,
+        "prompt_per_second": 947.0576219568809,
+        "predicted_n": 1,
+        "predicted_ms": 0.001,
+        "predicted_per_token_ms": 0.0,
+        "predicted_per_second": 0.0
+      }
+    }
+  ],
+  "derivados": {
+    "A": {
+      "uma_sozinha_mediana_s": 0.6875,
+      "quatro_em_sequencia_mediana_s": 1.7432,
+      "razao_quatro_sobre_uma": 2.536,
+      "prompt_n_mediano_na_sequencia": 1.0
+    },
+    "B": {
+      "uma_sozinha_mediana_s": 0.4319,
+      "quatro_em_sequencia_mediana_s": 1.6628,
+      "razao_quatro_sobre_uma": 3.85,
+      "prompt_n_mediano_na_sequencia": 45.5
+    }
+  },
+  "derivados_invalidos_aviso": "Os campos em `derivados` NÃO devem ser usados. Dois defeitos do desenho, vistos depois de rodar: (1) a primeira pergunta da sequência repete a pergunta 'sozinha', então é acerto trivial de cache; (2) nas repetições 2 e 3 o servidor já tinha os prompts no cache de prompts em memória, inclusive no layout A — só a repetição 1 é fria. A leitura válida é a da repetição 1, pergunta nova a pergunta nova.",
+  "leitura_valida_rep1": {
+    "layout_A_pergunta_nova": {
+      "prompt_n": "~3.900 (prefill completo)",
+      "prompt_ms": "~404–416",
+      "latencia_s": "0,66–0,71"
+    },
+    "layout_B_pergunta_nova": {
+      "prompt_n": "42–51 (só a cauda)",
+      "prompt_ms": "26–28",
+      "latencia_s": "0,39"
+    },
+    "ganho_de_prefill": "~94% por pergunta adicional",
+    "ganho_ponta_a_ponta": "~43% por pergunta adicional (0,69 → 0,39 s)",
+    "custo_restante_nao_explicado": "~0,36 s por requisição que não é prefill nem decodificação (predicted_ms=0); causa não medida"
+  }
+}

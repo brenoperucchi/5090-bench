@@ -1,0 +1,2 @@
+    PID     ELAPSED %CPU %MEM   RSS    VSZ CMD
+  12660       01:02 17.0  2.4 1185272 139719432 /mnt/e/llm-bench-t87-runtimes/prism-build/bin/llama-server --model /mnt/e/llm-bench-t87-runtimes/models/bonsai/Ternary-Bonsai-2-27B-PTQ1_0.gguf --mmproj /mnt/e/llm-bench-t87-runtimes/models/bonsai/Ternary-Bonsai-2-27B-mmproj-Q8_0.gguf --host 0.0.0.0 --port 18087 --ctx-size 32768 --n-gpu-layers 999 --flash-attn on --parallel 1 --metrics --no-webui

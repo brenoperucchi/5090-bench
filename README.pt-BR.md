@@ -18,6 +18,8 @@ Os resultados pertencem às configurações e amostras descritas nas fontes.
 | Experimentos, resultados e evidências por fase | [Catálogo de benchmarks](docs/rtx5090/experimentos.md) |
 | Modelos testados e limites de comparação | [Modelos](docs/rtx5090/modelos.md) |
 | Achados consolidados e suas ressalvas | [Catálogo de achados](docs/rtx5090/achados.md) |
+| Síntese do Guardian: runtime, modelos, prompts, teste de mesa e decisões tipadas (21–24/09) | [Registro dos modelos locais do Guardian](docs/achados/REGISTRO-GUARDIAN-MODELOS-LOCAIS-2026-09-24.md) |
+| Registro público detalhado da campanha de setembro | [Registro público de achados](docs/achados/REGISTRO-PUBLICO-LLM-BENCH-2026-09-20.md) |
 | Respostas em inglês a perguntas em português | [Achado PT→EN](docs/achados/ACHADO-qwen3-14b-idioma-template-2026-09-12.md) |
 | Decisões adotadas e recomendações retiradas | [Decisões](docs/decisoes.md) |
 | Método, métricas e como reproduzir | [Metodologia](docs/metodologia.md) |

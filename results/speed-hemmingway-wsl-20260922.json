@@ -1,0 +1,316 @@
+{
+  "schema": "os-runtime-ab-v1",
+  "label": "wsl-hemmingway",
+  "base": "http://127.0.0.1:18196",
+  "props": {
+    "model_path": "/mnt/e/llm-bench-t87-runtimes/models/hemmingway/Altworld_Hemmingway-1-Q4_K_M.gguf",
+    "n_ctx": 16384,
+    "build_info": "b1-1af554f",
+    "total_slots": 1
+  },
+  "aquecimento": {
+    "wall_s": 0.764,
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 27,
+      "prompt_ms": 556.335,
+      "prompt_per_token_ms": 20.605,
+      "prompt_per_second": 48.5319097306479,
+      "predicted_n": 8,
+      "predicted_ms": 203.149,
+      "predicted_per_token_ms": 29.021285714285714,
+      "predicted_per_second": 34.45746717926251
+    },
+    "usage": {
+      "completion_tokens": 8,
+      "prompt_tokens": 27,
+      "total_tokens": 35,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "finish_reason": "length",
+    "content_sha256": "51ae1072caa15f996d2899a80d1175c2e6460570bf0fa994efa5fe631a27089e"
+  },
+  "chamadas": [
+    {
+      "label": "wsl-hemmingway",
+      "repeticao": 1,
+      "tamanho": "curto",
+      "timestamp": "2026-09-22T22:10:29.779-03:00",
+      "prompt_sha256": "70b107038d1d67361aac326eb3b255f59d1d2065086bc21749ca5a28305a745c",
+      "wall_s": 1.5235,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 182.401,
+        "prompt_per_token_ms": 6.755592592592593,
+        "prompt_per_second": 148.025504246139,
+        "predicted_n": 98,
+        "predicted_ms": 1337.984,
+        "predicted_per_token_ms": 13.79364948453608,
+        "predicted_per_second": 72.49713001052329
+      },
+      "usage": {
+        "completion_tokens": 98,
+        "prompt_tokens": 27,
+        "total_tokens": 125,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "content_sha256": "2cfb71ae12a5a072c5af3d97eda2f636b1406e75aa4b93d691490570dab03728"
+    },
+    {
+      "label": "wsl-hemmingway",
+      "repeticao": 1,
+      "tamanho": "medio",
+      "timestamp": "2026-09-22T22:10:34.719-03:00",
+      "prompt_sha256": "61205cf69b3122670a3a39c124ac4b097cef7e33e5fbd109a3de93b416f9d588",
+      "wall_s": 4.9399,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 2671,
+        "prompt_ms": 1086.891,
+        "prompt_per_token_ms": 0.4069228753275927,
+        "prompt_per_second": 2457.4681361792486,
+        "predicted_n": 256,
+        "predicted_ms": 3525.148,
+        "predicted_per_token_ms": 13.82410980392157,
+        "predicted_per_second": 72.33738838766486
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 2671,
+        "total_tokens": 2927,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "4f105be08bd5b2f3094f17baef08debc581954ac1cae3ddc579f2f99e9352a2e"
+    },
+    {
+      "label": "wsl-hemmingway",
+      "repeticao": 1,
+      "tamanho": "longo",
+      "timestamp": "2026-09-22T22:10:40.642-03:00",
+      "prompt_sha256": "fb24d4819ba5977b68a227e9689caccbcd5957822a9717fa921c8dbe77aed71a",
+      "wall_s": 5.9217,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 5952,
+        "prompt_ms": 1820.791,
+        "prompt_per_token_ms": 0.30591246639784947,
+        "prompt_per_second": 3268.9089522081335,
+        "predicted_n": 256,
+        "predicted_ms": 3513.353,
+        "predicted_per_token_ms": 13.777854901960785,
+        "predicted_per_second": 72.5802388772207
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 5952,
+        "total_tokens": 6208,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "257d465274faecd1fc5ce021d8d97c80416f674756f7c69eca525f4da387fcfe"
+    },
+    {
+      "label": "wsl-hemmingway",
+      "repeticao": 2,
+      "tamanho": "curto",
+      "timestamp": "2026-09-22T22:10:42.958-03:00",
+      "prompt_sha256": "70b107038d1d67361aac326eb3b255f59d1d2065086bc21749ca5a28305a745c",
+      "wall_s": 2.3163,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 180.376,
+        "prompt_per_token_ms": 6.680592592592593,
+        "prompt_per_second": 149.68731982081871,
+        "predicted_n": 98,
+        "predicted_ms": 1308.774,
+        "predicted_per_token_ms": 13.492515463917524,
+        "predicted_per_second": 74.11516426823883
+      },
+      "usage": {
+        "completion_tokens": 98,
+        "prompt_tokens": 27,
+        "total_tokens": 125,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "content_sha256": "2cfb71ae12a5a072c5af3d97eda2f636b1406e75aa4b93d691490570dab03728"
+    },
+    {
+      "label": "wsl-hemmingway",
+      "repeticao": 2,
+      "tamanho": "medio",
+      "timestamp": "2026-09-22T22:10:47.489-03:00",
+      "prompt_sha256": "61205cf69b3122670a3a39c124ac4b097cef7e33e5fbd109a3de93b416f9d588",
+      "wall_s": 4.5306,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 2671,
+        "prompt_ms": 900.486,
+        "prompt_per_token_ms": 0.3371344065892924,
+        "prompt_per_second": 2966.176042714712,
+        "predicted_n": 256,
+        "predicted_ms": 3555.093,
+        "predicted_per_token_ms": 13.941541176470588,
+        "predicted_per_second": 71.7280813750864
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 2671,
+        "total_tokens": 2927,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "4f105be08bd5b2f3094f17baef08debc581954ac1cae3ddc579f2f99e9352a2e"
+    },
+    {
+      "label": "wsl-hemmingway",
+      "repeticao": 2,
+      "tamanho": "longo",
+      "timestamp": "2026-09-22T22:10:53.617-03:00",
+      "prompt_sha256": "fb24d4819ba5977b68a227e9689caccbcd5957822a9717fa921c8dbe77aed71a",
+      "wall_s": 6.1279,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 5952,
+        "prompt_ms": 1757.373,
+        "prompt_per_token_ms": 0.295257560483871,
+        "prompt_per_second": 3386.8734753521303,
+        "predicted_n": 256,
+        "predicted_ms": 3641.216,
+        "predicted_per_token_ms": 14.279278431372548,
+        "predicted_per_second": 70.0315498998137
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 5952,
+        "total_tokens": 6208,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "257d465274faecd1fc5ce021d8d97c80416f674756f7c69eca525f4da387fcfe"
+    },
+    {
+      "label": "wsl-hemmingway",
+      "repeticao": 3,
+      "tamanho": "curto",
+      "timestamp": "2026-09-22T22:10:56.074-03:00",
+      "prompt_sha256": "70b107038d1d67361aac326eb3b255f59d1d2065086bc21749ca5a28305a745c",
+      "wall_s": 2.4571,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 273.357,
+        "prompt_per_token_ms": 10.124333333333334,
+        "prompt_per_second": 98.77193560069799,
+        "predicted_n": 98,
+        "predicted_ms": 1348.317,
+        "predicted_per_token_ms": 13.90017525773196,
+        "predicted_per_second": 71.94153897043499
+      },
+      "usage": {
+        "completion_tokens": 98,
+        "prompt_tokens": 27,
+        "total_tokens": 125,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "content_sha256": "2cfb71ae12a5a072c5af3d97eda2f636b1406e75aa4b93d691490570dab03728"
+    },
+    {
+      "label": "wsl-hemmingway",
+      "repeticao": 3,
+      "tamanho": "medio",
+      "timestamp": "2026-09-22T22:11:00.551-03:00",
+      "prompt_sha256": "61205cf69b3122670a3a39c124ac4b097cef7e33e5fbd109a3de93b416f9d588",
+      "wall_s": 4.4766,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 2671,
+        "prompt_ms": 916.946,
+        "prompt_per_token_ms": 0.3432968925496069,
+        "prompt_per_second": 2912.930532441387,
+        "predicted_n": 256,
+        "predicted_ms": 3485.526,
+        "predicted_per_token_ms": 13.668729411764705,
+        "predicted_per_second": 73.1596895274917
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 2671,
+        "total_tokens": 2927,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "4f105be08bd5b2f3094f17baef08debc581954ac1cae3ddc579f2f99e9352a2e"
+    },
+    {
+      "label": "wsl-hemmingway",
+      "repeticao": 3,
+      "tamanho": "longo",
+      "timestamp": "2026-09-22T22:11:06.676-03:00",
+      "prompt_sha256": "fb24d4819ba5977b68a227e9689caccbcd5957822a9717fa921c8dbe77aed71a",
+      "wall_s": 6.1245,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 5952,
+        "prompt_ms": 1834.296,
+        "prompt_per_token_ms": 0.3081814516129032,
+        "prompt_per_second": 3244.841617710555,
+        "predicted_n": 256,
+        "predicted_ms": 3561.574,
+        "predicted_per_token_ms": 13.966956862745098,
+        "predicted_per_second": 71.59755770903539
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 5952,
+        "total_tokens": 6208,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "257d465274faecd1fc5ce021d8d97c80416f674756f7c69eca525f4da387fcfe"
+    }
+  ],
+  "derivados": {
+    "curto": {
+      "pp_tps_mediana": 148.025504246139,
+      "tg_tps_mediana": 72.49713001052329,
+      "prompt_n": 27
+    },
+    "medio": {
+      "pp_tps_mediana": 2912.930532441387,
+      "tg_tps_mediana": 72.33738838766486,
+      "prompt_n": 2671
+    },
+    "longo": {
+      "pp_tps_mediana": 3268.9089522081335,
+      "tg_tps_mediana": 71.59755770903539,
+      "prompt_n": 5952
+    }
+  },
+  "metrica_principal": "timings do servidor (prompt_per_second, predicted_per_second); wall clock é secundário"
+}

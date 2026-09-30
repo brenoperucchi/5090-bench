@@ -1,0 +1,25 @@
+{
+  "schema_version": "t87-p1-sandbox-failure-v1",
+  "harness_version": "t87-p1-harness-v5",
+  "task": "t2_metrics",
+  "seed": 1000,
+  "turn": 13,
+  "generation_count": 13,
+  "diagnostic": {
+    "captured_at": "2026-09-18T20:25:57.992774Z",
+    "ssh": {
+      "pid": 2702288,
+      "alive": false,
+      "returncode": 2,
+      "signal": null,
+      "signal_name": null
+    },
+    "bwrap": {
+      "state": "unknown",
+      "reason": "bwrap runs inside the remote PID namespace and has no independent observable handle after SSH EOF"
+    },
+    "stdout_tail": "",
+    "stderr": "<string>:1: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).\n/bin/bash: line 13: syntax error near unexpected token `;'\n/bin/bash: line 13: `{ cd /home/brenoperucchi/lab/t2_metrics && python3 app.py &; rc=$?; printf '\\n__T87_DONE_1789763157985331809__:%s\\n' \"$rc\"; }'\n",
+    "failure_type": "eof_before_marker"
+  }
+}

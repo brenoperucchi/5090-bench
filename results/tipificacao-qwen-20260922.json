@@ -1,0 +1,244 @@
+{
+  "schema": "typification-eval-v1",
+  "batch_origem": "gold do owner, 2026-09-22, 29 casos julgados um a um",
+  "batch_gerado": "2026-09-22T19:07:57.909Z",
+  "n_casos": 27,
+  "positivos": 2,
+  "rodado_em": "2026-09-22T16:11:34-03:00",
+  "aviso": "accuracy não é a métrica aqui; leia recall do positivo contra a baseline trivial",
+  "bracos": {
+    "qwen": {
+      "threshold": 0.5,
+      "por_pergunta": {
+        "encerra": {
+          "n": 7,
+          "positivos": 1,
+          "tp": 0,
+          "fp": 3,
+          "fn": 1,
+          "tn": 3,
+          "recall_positivo": 0.0,
+          "precisao": 0.0,
+          "accuracy": 0.4286,
+          "accuracy_baseline_sempre_nao": 0.8571,
+          "rank_do_positivo": [
+            7
+          ],
+          "rank_perfeito_seria": [
+            1
+          ]
+        },
+        "quem_decide": {
+          "n": 20,
+          "positivos": 1,
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "tn": 18,
+          "recall_positivo": 1.0,
+          "precisao": 0.5,
+          "accuracy": 0.95,
+          "accuracy_baseline_sempre_nao": 0.95,
+          "rank_do_positivo": [
+            1
+          ],
+          "rank_perfeito_seria": [
+            1
+          ]
+        }
+      },
+      "calibracao": {
+        "confianca_media_acertos": 0.9873,
+        "confianca_media_erros": 0.8697,
+        "n_acertos": 22,
+        "n_erros": 5,
+        "fonte": "campo `confidence` quando existe; senão distância ao limiar (derivada, não calibrada)"
+      },
+      "latencia_s": {
+        "mediana": 0.0551,
+        "total": 1.79
+      },
+      "par_adversarial": {
+        "ace:mfc-exec:2026-09-21T20:15:17.000Z:2026-09-21T20:14:23.000Z": {
+          "papel": "diagnóstico (menciona MN1)",
+          "gold": false,
+          "score": 0.7008844008094236,
+          "predito": true,
+          "acertou": false
+        },
+        "rej:mfc-exec:2026-09-21T20:28:43.000Z:2026-09-21T20:14:23.000Z": {
+          "papel": "encerra (não menciona MN1)",
+          "gold": true,
+          "score": 8.180186429599588e-06,
+          "predito": false,
+          "acertou": false
+        }
+      },
+      "par_adversarial_ambos_certos": false,
+      "predicoes": [
+        {
+          "id": "perg:homehub-exec:2026-09-21T06:44:24.329Z",
+          "score": 0.004889529766608837,
+          "confidence": 0.9951104702333912,
+          "latency_s": 0.2688
+        },
+        {
+          "id": "perg:claude-bridge-exec:2026-09-21T12:57:21.295Z",
+          "score": 1.0259410404195577e-05,
+          "confidence": 0.9999897405895959,
+          "latency_s": 0.0589
+        },
+        {
+          "id": "perg:mfc-exec:2026-09-21T18:54:06.000Z",
+          "score": 1.8849205781538377e-05,
+          "confidence": 0.9999811507942186,
+          "latency_s": 0.0449
+        },
+        {
+          "id": "perg:mfc-exec:2026-09-21T19:21:15.000Z",
+          "score": 0.00036378252481673683,
+          "confidence": 0.9996362174751833,
+          "latency_s": 0.0487
+        },
+        {
+          "id": "perg:mfc-exec:2026-09-21T20:05:49.000Z",
+          "score": 8.799671446111638e-05,
+          "confidence": 0.9999120032855388,
+          "latency_s": 0.0481
+        },
+        {
+          "id": "perg:mfc-exec:2026-09-21T20:13:50.000Z",
+          "score": 0.7248771290573746,
+          "confidence": 0.7248771290573746,
+          "latency_s": 0.0487
+        },
+        {
+          "id": "perg:mfc-exec:2026-09-21T21:27:16.000Z",
+          "score": 0.9999956740910882,
+          "confidence": 0.9999956740910882,
+          "latency_s": 0.0565
+        },
+        {
+          "id": "perg:homehub-exec:2026-09-21T21:34:04.000Z",
+          "score": 0.008416732819746262,
+          "confidence": 0.9915832671802537,
+          "latency_s": 0.0842
+        },
+        {
+          "id": "perg:claude-bridge-exec:2026-09-21T22:16:18.000Z",
+          "score": 8.077154460153798e-06,
+          "confidence": 0.9999919228455398,
+          "latency_s": 0.0443
+        },
+        {
+          "id": "perg:mfc-exec:2026-09-21T23:10:36.000Z",
+          "score": 0.0006861228785134984,
+          "confidence": 0.9993138771214864,
+          "latency_s": 0.0569
+        },
+        {
+          "id": "perg:claude-bridge-exec:2026-09-21T23:19:14.000Z",
+          "score": 0.0017944397868461981,
+          "confidence": 0.9982055602131538,
+          "latency_s": 0.0551
+        },
+        {
+          "id": "perg:mfc-exec:2026-09-22T03:00:53.000Z",
+          "score": 0.0004715833196614459,
+          "confidence": 0.9995284166803385,
+          "latency_s": 0.0864
+        },
+        {
+          "id": "perg:mfc-exec:2026-09-22T04:59:10.000Z",
+          "score": 0.00029269757827019455,
+          "confidence": 0.9997073024217298,
+          "latency_s": 0.0577
+        },
+        {
+          "id": "perg:acervo-exec:2026-09-22T05:29:48.000Z",
+          "score": 0.10935046698269178,
+          "confidence": 0.8906495330173083,
+          "latency_s": 0.0519
+        },
+        {
+          "id": "perg:claude-bridge-exec:2026-09-22T14:46:00.000Z",
+          "score": 0.00025093885184683453,
+          "confidence": 0.9997490611481531,
+          "latency_s": 0.0654
+        },
+        {
+          "id": "perg:mfc-exec:2026-09-22T15:15:03.000Z",
+          "score": 1.611155941944087e-05,
+          "confidence": 0.9999838884405805,
+          "latency_s": 0.0884
+        },
+        {
+          "id": "perg:claude-bridge-exec:2026-09-22T15:17:54.000Z",
+          "score": 0.00038429193499816286,
+          "confidence": 0.9996157080650019,
+          "latency_s": 0.0504
+        },
+        {
+          "id": "perg:claude-bridge-exec:2026-09-22T16:20:31.000Z",
+          "score": 7.37789713291763e-07,
+          "confidence": 0.9999992622102867,
+          "latency_s": 0.0564
+        },
+        {
+          "id": "perg:claude-bridge-exec:2026-09-22T18:28:37.000Z",
+          "score": 6.027680539281047e-05,
+          "confidence": 0.9999397231946072,
+          "latency_s": 0.0485
+        },
+        {
+          "id": "perg:mfc-exec:2026-09-22T18:46:57.000Z",
+          "score": 0.0004942000100352158,
+          "confidence": 0.9995057999899648,
+          "latency_s": 0.0455
+        },
+        {
+          "id": "ace:mfc-exec:2026-09-21T20:15:17.000Z:2026-09-21T20:14:23.000Z",
+          "score": 0.7008844008094236,
+          "confidence": 0.7008844008094236,
+          "latency_s": 0.093
+        },
+        {
+          "id": "rej:mfc-exec:2026-09-21T18:53:22.000Z:2026-09-21T18:52:47.000Z",
+          "score": 0.9234975059267803,
+          "confidence": 0.9234975059267803,
+          "latency_s": 0.0463
+        },
+        {
+          "id": "rej:mfc-exec:2026-09-21T18:53:44.000Z:2026-09-21T18:52:47.000Z",
+          "score": 0.0020404334869882092,
+          "confidence": 0.9979595665130119,
+          "latency_s": 0.0845
+        },
+        {
+          "id": "rej:mfc-exec:2026-09-21T18:54:06.000Z:2026-09-21T18:52:47.000Z",
+          "score": 0.9994068409381741,
+          "confidence": 0.9994068409381741,
+          "latency_s": 0.0494
+        },
+        {
+          "id": "rej:mfc-exec:2026-09-21T20:28:43.000Z:2026-09-21T20:14:23.000Z",
+          "score": 8.180186429599588e-06,
+          "confidence": 0.9999918198135704,
+          "latency_s": 0.0593
+        },
+        {
+          "id": "rej:mfc-exec:2026-09-22T03:54:18.000Z:2026-09-21T20:14:23.000Z",
+          "score": 0.00019420419251325055,
+          "confidence": 0.9998057958074867,
+          "latency_s": 0.039
+        },
+        {
+          "id": "rej:mfc-exec:2026-09-22T03:56:27.000Z:2026-09-21T20:14:23.000Z",
+          "score": 0.1496735870518257,
+          "confidence": 0.8503264129481742,
+          "latency_s": 0.0497
+        }
+      ]
+    }
+  }
+}

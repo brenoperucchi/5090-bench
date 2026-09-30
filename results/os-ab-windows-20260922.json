@@ -1,0 +1,316 @@
+{
+  "schema": "os-runtime-ab-v1",
+  "label": "windows",
+  "base": "http://192.168.0.125:18197",
+  "props": {
+    "model_path": "E:\\ollama\\models\\blobs\\sha256-f5f1dd8920d417aac2718b0bda3403da274301efdd6760b4f0f4b864ff2ad57d",
+    "n_ctx": 16384,
+    "build_info": "b11053-1af554f8f",
+    "total_slots": 1
+  },
+  "aquecimento": {
+    "wall_s": 0.4619,
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 27,
+      "prompt_ms": 298.758,
+      "prompt_per_token_ms": 11.06511111111111,
+      "prompt_per_second": 90.3741489767638,
+      "predicted_n": 8,
+      "predicted_ms": 125.353,
+      "predicted_per_token_ms": 17.907571428571426,
+      "predicted_per_second": 55.842301341012984
+    },
+    "usage": {
+      "completion_tokens": 8,
+      "prompt_tokens": 27,
+      "total_tokens": 35,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "finish_reason": "length",
+    "content_sha256": "51ae1072caa15f996d2899a80d1175c2e6460570bf0fa994efa5fe631a27089e"
+  },
+  "chamadas": [
+    {
+      "label": "windows",
+      "repeticao": 1,
+      "tamanho": "curto",
+      "timestamp": "2026-09-22T22:01:17.645-03:00",
+      "prompt_sha256": "70b107038d1d67361aac326eb3b255f59d1d2065086bc21749ca5a28305a745c",
+      "wall_s": 1.329,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 87.012,
+        "prompt_per_token_ms": 3.2226666666666666,
+        "prompt_per_second": 310.3020273065784,
+        "predicted_n": 87,
+        "predicted_ms": 1126.921,
+        "predicted_per_token_ms": 13.103732558139535,
+        "predicted_per_second": 76.31413382127053
+      },
+      "usage": {
+        "completion_tokens": 87,
+        "prompt_tokens": 27,
+        "total_tokens": 114,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "content_sha256": "a57f3bee9c7ad07c0e200b639d08208cd9b8a926abba8cc56105fd892ad30bc3"
+    },
+    {
+      "label": "windows",
+      "repeticao": 1,
+      "tamanho": "medio",
+      "timestamp": "2026-09-22T22:01:21.945-03:00",
+      "prompt_sha256": "61205cf69b3122670a3a39c124ac4b097cef7e33e5fbd109a3de93b416f9d588",
+      "wall_s": 4.2999,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 2671,
+        "prompt_ms": 807.03,
+        "prompt_per_token_ms": 0.3021452639460876,
+        "prompt_per_second": 3309.6663073243867,
+        "predicted_n": 256,
+        "predicted_ms": 3306.884,
+        "predicted_per_token_ms": 12.968172549019608,
+        "predicted_per_second": 77.11186724420935
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 2671,
+        "total_tokens": 2927,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "5b04d516ebf1031ea8d87b2088dcb687f638c103a45233933e49699164313c76"
+    },
+    {
+      "label": "windows",
+      "repeticao": 1,
+      "tamanho": "longo",
+      "timestamp": "2026-09-22T22:01:27.273-03:00",
+      "prompt_sha256": "fb24d4819ba5977b68a227e9689caccbcd5957822a9717fa921c8dbe77aed71a",
+      "wall_s": 5.3273,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 5952,
+        "prompt_ms": 1696.862,
+        "prompt_per_token_ms": 0.285091061827957,
+        "prompt_per_second": 3507.651182005372,
+        "predicted_n": 256,
+        "predicted_ms": 3402.809,
+        "predicted_per_token_ms": 13.344349019607844,
+        "predicted_per_second": 74.93808791501374
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 5952,
+        "total_tokens": 6208,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "af7cb8dfa7d4cc9fefee8ea72f802cbdcb7e9b31437225b3c2632aad83e10fb6"
+    },
+    {
+      "label": "windows",
+      "repeticao": 2,
+      "tamanho": "curto",
+      "timestamp": "2026-09-22T22:01:28.806-03:00",
+      "prompt_sha256": "70b107038d1d67361aac326eb3b255f59d1d2065086bc21749ca5a28305a745c",
+      "wall_s": 1.5329,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 132.443,
+        "prompt_per_token_ms": 4.905296296296297,
+        "prompt_per_second": 203.861283722054,
+        "predicted_n": 87,
+        "predicted_ms": 1118.981,
+        "predicted_per_token_ms": 13.011406976744185,
+        "predicted_per_second": 76.85563919315878
+      },
+      "usage": {
+        "completion_tokens": 87,
+        "prompt_tokens": 27,
+        "total_tokens": 114,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "content_sha256": "a57f3bee9c7ad07c0e200b639d08208cd9b8a926abba8cc56105fd892ad30bc3"
+    },
+    {
+      "label": "windows",
+      "repeticao": 2,
+      "tamanho": "medio",
+      "timestamp": "2026-09-22T22:01:33.106-03:00",
+      "prompt_sha256": "61205cf69b3122670a3a39c124ac4b097cef7e33e5fbd109a3de93b416f9d588",
+      "wall_s": 4.3001,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 2671,
+        "prompt_ms": 842.894,
+        "prompt_per_token_ms": 0.315572444777237,
+        "prompt_per_second": 3168.8444810379474,
+        "predicted_n": 256,
+        "predicted_ms": 3324.338,
+        "predicted_per_token_ms": 13.036619607843138,
+        "predicted_per_second": 76.70700151428645
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 2671,
+        "total_tokens": 2927,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "5b04d516ebf1031ea8d87b2088dcb687f638c103a45233933e49699164313c76"
+    },
+    {
+      "label": "windows",
+      "repeticao": 2,
+      "tamanho": "longo",
+      "timestamp": "2026-09-22T22:01:38.432-03:00",
+      "prompt_sha256": "fb24d4819ba5977b68a227e9689caccbcd5957822a9717fa921c8dbe77aed71a",
+      "wall_s": 5.325,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 5952,
+        "prompt_ms": 1703.621,
+        "prompt_per_token_ms": 0.2862266465053764,
+        "prompt_per_second": 3493.7348154313668,
+        "predicted_n": 256,
+        "predicted_ms": 3375.499,
+        "predicted_per_token_ms": 13.237250980392156,
+        "predicted_per_second": 75.54438617816211
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 5952,
+        "total_tokens": 6208,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "af7cb8dfa7d4cc9fefee8ea72f802cbdcb7e9b31437225b3c2632aad83e10fb6"
+    },
+    {
+      "label": "windows",
+      "repeticao": 3,
+      "tamanho": "curto",
+      "timestamp": "2026-09-22T22:01:39.865-03:00",
+      "prompt_sha256": "70b107038d1d67361aac326eb3b255f59d1d2065086bc21749ca5a28305a745c",
+      "wall_s": 1.4334,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 107.552,
+        "prompt_per_token_ms": 3.9834074074074075,
+        "prompt_per_second": 251.04135673906575,
+        "predicted_n": 87,
+        "predicted_ms": 1117.652,
+        "predicted_per_token_ms": 12.995953488372093,
+        "predicted_per_second": 76.94702823419097
+      },
+      "usage": {
+        "completion_tokens": 87,
+        "prompt_tokens": 27,
+        "total_tokens": 114,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "content_sha256": "a57f3bee9c7ad07c0e200b639d08208cd9b8a926abba8cc56105fd892ad30bc3"
+    },
+    {
+      "label": "windows",
+      "repeticao": 3,
+      "tamanho": "medio",
+      "timestamp": "2026-09-22T22:01:44.167-03:00",
+      "prompt_sha256": "61205cf69b3122670a3a39c124ac4b097cef7e33e5fbd109a3de93b416f9d588",
+      "wall_s": 4.3015,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 2671,
+        "prompt_ms": 818.234,
+        "prompt_per_token_ms": 0.30633994758517413,
+        "prompt_per_second": 3264.3473627348653,
+        "predicted_n": 256,
+        "predicted_ms": 3317.41,
+        "predicted_per_token_ms": 13.009450980392156,
+        "predicted_per_second": 76.8671945885495
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 2671,
+        "total_tokens": 2927,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "5b04d516ebf1031ea8d87b2088dcb687f638c103a45233933e49699164313c76"
+    },
+    {
+      "label": "windows",
+      "repeticao": 3,
+      "tamanho": "longo",
+      "timestamp": "2026-09-22T22:01:49.494-03:00",
+      "prompt_sha256": "fb24d4819ba5977b68a227e9689caccbcd5957822a9717fa921c8dbe77aed71a",
+      "wall_s": 5.3268,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 5952,
+        "prompt_ms": 1705.443,
+        "prompt_per_token_ms": 0.2865327620967742,
+        "prompt_per_second": 3490.002304386602,
+        "predicted_n": 256,
+        "predicted_ms": 3360.868,
+        "predicted_per_token_ms": 13.179874509803922,
+        "predicted_per_second": 75.87325655158132
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 5952,
+        "total_tokens": 6208,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "af7cb8dfa7d4cc9fefee8ea72f802cbdcb7e9b31437225b3c2632aad83e10fb6"
+    }
+  ],
+  "derivados": {
+    "curto": {
+      "pp_tps_mediana": 251.04135673906575,
+      "tg_tps_mediana": 76.85563919315878,
+      "prompt_n": 27
+    },
+    "medio": {
+      "pp_tps_mediana": 3264.3473627348653,
+      "tg_tps_mediana": 76.8671945885495,
+      "prompt_n": 2671
+    },
+    "longo": {
+      "pp_tps_mediana": 3493.7348154313668,
+      "tg_tps_mediana": 75.54438617816211,
+      "prompt_n": 5952
+    }
+  },
+  "metrica_principal": "timings do servidor (prompt_per_second, predicted_per_second); wall clock é secundário"
+}

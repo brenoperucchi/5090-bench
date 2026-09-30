@@ -1,0 +1,316 @@
+{
+  "schema": "os-runtime-ab-v1",
+  "label": "apex-win",
+  "base": "http://192.168.0.125:18197",
+  "props": {
+    "model_path": "E:\\llm-bench-t87-runtimes\\models\\qwen38-35b-apex\\Qwen3.8-35B-A3B-Distill.APEX-I-MiniPlus-V2.1.gguf",
+    "n_ctx": 16384,
+    "build_info": "b11053-1af554f8f",
+    "total_slots": 1
+  },
+  "aquecimento": {
+    "wall_s": 0.5377,
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 27,
+      "prompt_ms": 284.806,
+      "prompt_per_token_ms": 10.54837037037037,
+      "prompt_per_second": 94.80137356656812,
+      "predicted_n": 8,
+      "predicted_ms": 216.709,
+      "predicted_per_token_ms": 30.958428571428573,
+      "predicted_per_second": 32.30138111476681
+    },
+    "usage": {
+      "completion_tokens": 8,
+      "prompt_tokens": 27,
+      "total_tokens": 35,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "finish_reason": "length",
+    "content_sha256": "51ae1072caa15f996d2899a80d1175c2e6460570bf0fa994efa5fe631a27089e"
+  },
+  "chamadas": [
+    {
+      "label": "apex-win",
+      "repeticao": 1,
+      "tamanho": "curto",
+      "timestamp": "2026-09-23T01:45:16.494-03:00",
+      "prompt_sha256": "70b107038d1d67361aac326eb3b255f59d1d2065086bc21749ca5a28305a745c",
+      "wall_s": 0.6164,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 69.277,
+        "prompt_per_token_ms": 2.5658148148148148,
+        "prompt_per_second": 389.73974046220246,
+        "predicted_n": 96,
+        "predicted_ms": 373.428,
+        "predicted_per_token_ms": 3.930821052631579,
+        "predicted_per_second": 254.399777199353
+      },
+      "usage": {
+        "completion_tokens": 96,
+        "prompt_tokens": 27,
+        "total_tokens": 123,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "content_sha256": "989b2409c29ddbdca371fd67722e5be1ea210e97d0bf982510e48457afc4e82e"
+    },
+    {
+      "label": "apex-win",
+      "repeticao": 1,
+      "tamanho": "medio",
+      "timestamp": "2026-09-23T01:45:18.027-03:00",
+      "prompt_sha256": "61205cf69b3122670a3a39c124ac4b097cef7e33e5fbd109a3de93b416f9d588",
+      "wall_s": 1.5333,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 2671,
+        "prompt_ms": 356.145,
+        "prompt_per_token_ms": 0.13333770123549232,
+        "prompt_per_second": 7499.754313552065,
+        "predicted_n": 256,
+        "predicted_ms": 1055.421,
+        "predicted_per_token_ms": 4.138905882352941,
+        "predicted_per_second": 241.60974625291706
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 2671,
+        "total_tokens": 2927,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "0154b68051e55ca8cad7861e1fd9aa1459eae240c917c309982a71970c62b2f6"
+    },
+    {
+      "label": "apex-win",
+      "repeticao": 1,
+      "tamanho": "longo",
+      "timestamp": "2026-09-23T01:45:19.871-03:00",
+      "prompt_sha256": "fb24d4819ba5977b68a227e9689caccbcd5957822a9717fa921c8dbe77aed71a",
+      "wall_s": 1.843,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 5952,
+        "prompt_ms": 631.09,
+        "prompt_per_token_ms": 0.1060299059139785,
+        "prompt_per_second": 9431.301399166521,
+        "predicted_n": 256,
+        "predicted_ms": 1034.212,
+        "predicted_per_token_ms": 4.055733333333333,
+        "predicted_per_second": 246.5645341574068
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 5952,
+        "total_tokens": 6208,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "0d846beafce7bcd67394030ad233956d8557b9726bdb44925d21669ba2ab73a6"
+    },
+    {
+      "label": "apex-win",
+      "repeticao": 2,
+      "tamanho": "curto",
+      "timestamp": "2026-09-23T01:45:20.588-03:00",
+      "prompt_sha256": "70b107038d1d67361aac326eb3b255f59d1d2065086bc21749ca5a28305a745c",
+      "wall_s": 0.7169,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 73.56,
+        "prompt_per_token_ms": 2.7244444444444444,
+        "prompt_per_second": 367.047308319739,
+        "predicted_n": 96,
+        "predicted_ms": 374.965,
+        "predicted_per_token_ms": 3.9469999999999996,
+        "predicted_per_second": 253.35697998479858
+      },
+      "usage": {
+        "completion_tokens": 96,
+        "prompt_tokens": 27,
+        "total_tokens": 123,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "content_sha256": "989b2409c29ddbdca371fd67722e5be1ea210e97d0bf982510e48457afc4e82e"
+    },
+    {
+      "label": "apex-win",
+      "repeticao": 2,
+      "tamanho": "medio",
+      "timestamp": "2026-09-23T01:45:22.023-03:00",
+      "prompt_sha256": "61205cf69b3122670a3a39c124ac4b097cef7e33e5fbd109a3de93b416f9d588",
+      "wall_s": 1.4347,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 2671,
+        "prompt_ms": 326.755,
+        "prompt_per_token_ms": 0.12233433171096968,
+        "prompt_per_second": 8174.32020933115,
+        "predicted_n": 256,
+        "predicted_ms": 1007.224,
+        "predicted_per_token_ms": 3.9498980392156864,
+        "predicted_per_second": 253.17109203116684
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 2671,
+        "total_tokens": 2927,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "0154b68051e55ca8cad7861e1fd9aa1459eae240c917c309982a71970c62b2f6"
+    },
+    {
+      "label": "apex-win",
+      "repeticao": 2,
+      "tamanho": "longo",
+      "timestamp": "2026-09-23T01:45:23.871-03:00",
+      "prompt_sha256": "fb24d4819ba5977b68a227e9689caccbcd5957822a9717fa921c8dbe77aed71a",
+      "wall_s": 1.8473,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 5952,
+        "prompt_ms": 620.748,
+        "prompt_per_token_ms": 0.10429233870967743,
+        "prompt_per_second": 9588.432020723383,
+        "predicted_n": 256,
+        "predicted_ms": 1023.22,
+        "predicted_per_token_ms": 4.012627450980392,
+        "predicted_per_second": 249.2132679189226
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 5952,
+        "total_tokens": 6208,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "0d846beafce7bcd67394030ad233956d8557b9726bdb44925d21669ba2ab73a6"
+    },
+    {
+      "label": "apex-win",
+      "repeticao": 3,
+      "tamanho": "curto",
+      "timestamp": "2026-09-23T01:45:24.480-03:00",
+      "prompt_sha256": "70b107038d1d67361aac326eb3b255f59d1d2065086bc21749ca5a28305a745c",
+      "wall_s": 0.609,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 62.799,
+        "prompt_per_token_ms": 2.3258888888888887,
+        "prompt_per_second": 429.9431519610185,
+        "predicted_n": 96,
+        "predicted_ms": 375.197,
+        "predicted_per_token_ms": 3.949442105263158,
+        "predicted_per_second": 253.20031876587498
+      },
+      "usage": {
+        "completion_tokens": 96,
+        "prompt_tokens": 27,
+        "total_tokens": 123,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "content_sha256": "989b2409c29ddbdca371fd67722e5be1ea210e97d0bf982510e48457afc4e82e"
+    },
+    {
+      "label": "apex-win",
+      "repeticao": 3,
+      "tamanho": "medio",
+      "timestamp": "2026-09-23T01:45:26.015-03:00",
+      "prompt_sha256": "61205cf69b3122670a3a39c124ac4b097cef7e33e5fbd109a3de93b416f9d588",
+      "wall_s": 1.5346,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 2671,
+        "prompt_ms": 341.131,
+        "prompt_per_token_ms": 0.1277165855484837,
+        "prompt_per_second": 7829.836631675223,
+        "predicted_n": 256,
+        "predicted_ms": 1104.804,
+        "predicted_per_token_ms": 4.332564705882353,
+        "predicted_per_second": 230.81017085383468
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 2671,
+        "total_tokens": 2927,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "0154b68051e55ca8cad7861e1fd9aa1459eae240c917c309982a71970c62b2f6"
+    },
+    {
+      "label": "apex-win",
+      "repeticao": 3,
+      "tamanho": "longo",
+      "timestamp": "2026-09-23T01:45:27.858-03:00",
+      "prompt_sha256": "fb24d4819ba5977b68a227e9689caccbcd5957822a9717fa921c8dbe77aed71a",
+      "wall_s": 1.8428,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 5952,
+        "prompt_ms": 618.969,
+        "prompt_per_token_ms": 0.10399344758064517,
+        "prompt_per_second": 9615.990461557847,
+        "predicted_n": 256,
+        "predicted_ms": 1085.028,
+        "predicted_per_token_ms": 4.255011764705882,
+        "predicted_per_second": 235.0169765204216
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 5952,
+        "total_tokens": 6208,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "0d846beafce7bcd67394030ad233956d8557b9726bdb44925d21669ba2ab73a6"
+    }
+  ],
+  "derivados": {
+    "curto": {
+      "pp_tps_mediana": 389.73974046220246,
+      "tg_tps_mediana": 253.35697998479858,
+      "prompt_n": 27
+    },
+    "medio": {
+      "pp_tps_mediana": 7829.836631675223,
+      "tg_tps_mediana": 241.60974625291706,
+      "prompt_n": 2671
+    },
+    "longo": {
+      "pp_tps_mediana": 9588.432020723383,
+      "tg_tps_mediana": 246.5645341574068,
+      "prompt_n": 5952
+    }
+  },
+  "metrica_principal": "timings do servidor (prompt_per_second, predicted_per_second); wall clock é secundário"
+}

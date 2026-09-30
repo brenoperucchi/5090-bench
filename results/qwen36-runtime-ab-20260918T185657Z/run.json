@@ -1,0 +1,272 @@
+{
+  "schema_version": "qwen36-runtime-ab-run-v1",
+  "status": "complete",
+  "started_at": "2026-09-18T18:56:57.657511Z",
+  "authorization_sha256": "47fc4fad0bb8299e2a5dab71df5f5e34c7d826733341e5afc268fcdef6598ad5",
+  "authorized_generations": 48,
+  "order": [
+    "ollama",
+    "llama_cpp"
+  ],
+  "comparison_valid": true,
+  "comparison_scope": "runtime_plus_artifact_not_pure_runtime",
+  "result_interpretation": "Valid paired A/B under the common prompt manifest. The result compares runtime plus artifact: Ollama tag versus standalone GGUF; it is not a pure runtime effect.",
+  "generation_calls_observed": {
+    "ollama": 24,
+    "llama_cpp": 24,
+    "total": 48
+  },
+  "rejected_generation_requests": {
+    "ollama": 0,
+    "llama_cpp": 0
+  },
+  "events": [
+    {
+      "at": "2026-09-18T18:56:58.554204Z",
+      "event": "validated_llama_flags_before",
+      "pid": "962726"
+    },
+    {
+      "at": "2026-09-18T18:56:58.695279Z",
+      "event": "prompt_manifest_preflight_complete",
+      "calls": 0
+    },
+    {
+      "at": "2026-09-18T18:57:01.472081Z",
+      "event": "llama_stopped",
+      "pid": "962726"
+    },
+    {
+      "at": "2026-09-18T18:58:01.740181Z",
+      "event": "ollama_arm_complete",
+      "calls": 24
+    },
+    {
+      "at": "2026-09-18T18:58:01.751776Z",
+      "event": "ollama_model_unloaded",
+      "calls": 0
+    },
+    {
+      "at": "2026-09-18T18:59:33.671913Z",
+      "event": "failure",
+      "error": "RuntimeError: restarted llama-server did not become healthy (launcher 994768)"
+    },
+    {
+      "at": "2026-09-18T18:59:57.836757Z",
+      "event": "recovery_llama_restarted",
+      "pid": "994768"
+    },
+    {
+      "at": "2026-09-18T19:00:55.240708Z",
+      "event": "resume_after_llama_readiness_timeout",
+      "calls": 0
+    },
+    {
+      "at": "2026-09-18T19:00:55.441276Z",
+      "event": "llama_restarted",
+      "pid": "994768",
+      "flags_identical": true
+    },
+    {
+      "at": "2026-09-18T19:01:37.144794Z",
+      "event": "llama_cpp_arm_complete",
+      "calls": 24
+    }
+  ],
+  "state_before": {
+    "label": "before_stop",
+    "captured_at": "2026-09-18T18:56:57.855507Z",
+    "gpu": "NVIDIA GeForce RTX 5090, 22800 MiB, 32607 MiB, 3 %",
+    "llama_pid": "962726",
+    "llama_process": "/home/brenoperucchi/t87-runtime/codacus-build-final2/bin/llama-server --model /mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf --host 0.0.0.0 --port 18087 --ctx-size 32768 --n-gpu-layers all --parallel 1 --no-webui",
+    "listeners": "LISTEN 0      512           0.0.0.0:18087      0.0.0.0:*    users:((\"llama-server\",pid=962726,fd=11))",
+    "ollama_version": {
+      "version": "0.34.2"
+    },
+    "ollama_ps": {
+      "models": []
+    },
+    "llama_health": {
+      "status": "ok"
+    },
+    "llama_models": {
+      "models": [
+        {
+          "name": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "model": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "modified_at": "",
+          "size": "",
+          "digest": "",
+          "type": "model",
+          "description": "",
+          "tags": [
+            ""
+          ],
+          "capabilities": [
+            "completion"
+          ],
+          "parameters": "",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "",
+            "families": [
+              ""
+            ],
+            "parameter_size": "",
+            "quantization_level": ""
+          }
+        }
+      ],
+      "object": "list",
+      "data": [
+        {
+          "id": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "aliases": [
+            "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf"
+          ],
+          "tags": [],
+          "object": "model",
+          "created": 1789757812,
+          "owned_by": "llamacpp",
+          "meta": {
+            "vocab_type": true,
+            "n_vocab": 248320,
+            "n_ctx": 32768,
+            "n_ctx_train": 262144,
+            "n_embd": 2048,
+            "n_params": 35505251456,
+            "size": 21706498560,
+            "ftype": "Q4_K - Medium"
+          }
+        }
+      ]
+    }
+  },
+  "llama_pid_before": "962726",
+  "llama_flags_before": "/home/brenoperucchi/t87-runtime/codacus-build-final2/bin/llama-server --model /mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf --host 0.0.0.0 --port 18087 --ctx-size 32768 --n-gpu-layers all --parallel 1 --no-webui",
+  "prompt_manifest": {
+    "schema_version": "qwen36-runtime-ab-prompt-manifest-v2",
+    "created_at": "2026-09-18T18:56:58.682083Z",
+    "tokenizer_runtime": "llama_cpp",
+    "tokenizer_endpoint": "http://192.168.0.125:18087/tokenize",
+    "num_ctx": 32768,
+    "num_predict": 256,
+    "context_margin": 1024,
+    "max_prompt_tokens": 31488,
+    "prompt_set_sha256": "63973c2e2842fb03364821b4e969eb42f3b95195b68fd35052f3d1be7b52bddf",
+    "prompts": {
+      "short": {
+        "sha256": "b7d65b743d866892c69a08164830be88980155d6f02bcd4be2e0ebea559c2970",
+        "chars": 57,
+        "llama_token_count": 15,
+        "max_allowed_tokens": 31488
+      },
+      "medium": {
+        "sha256": "174d5c8f9a46620dda7cfa7d6f6e6f5e51a2c4db23e082d40f19caa04a2f8157",
+        "chars": 3737,
+        "llama_token_count": 1485,
+        "max_allowed_tokens": 31488
+      },
+      "long": {
+        "sha256": "5025abf06bb31ca646de0e585b65279c77e62fd4380545fdbeca08df10964521",
+        "chars": 29740,
+        "llama_token_count": 12231,
+        "max_allowed_tokens": 31488
+      },
+      "context_heavy": {
+        "sha256": "537d06774a9f65335df9f0cca0767e41d7ef66064c06a3eb55456cc4604bf91c",
+        "chars": 29740,
+        "llama_token_count": 12231,
+        "max_allowed_tokens": 31488
+      }
+    }
+  },
+  "ollama_unload_control": {
+    "model": "qwen3.6:35b-a3b",
+    "created_at": "2026-09-18T18:57:56.0279369Z",
+    "response": "",
+    "done": true,
+    "done_reason": "unload"
+  },
+  "recovered_from_operational_timeout": {
+    "initial_timeout_seconds": 90,
+    "note": "llama-server cold load exceeded the old readiness window; no generation was issued during the timeout"
+  },
+  "recovery_llama_pid": "994768",
+  "recovery_llama_flags": "/home/brenoperucchi/t87-runtime/codacus-build-final2/bin/llama-server --model /mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf --host 0.0.0.0 --port 18087 --ctx-size 32768 --n-gpu-layers all --parallel 1 --no-webui",
+  "state_after": {
+    "label": "after_run",
+    "captured_at": "2026-09-18T19:01:37.144816Z",
+    "gpu": "NVIDIA GeForce RTX 5090, 22821 MiB, 32607 MiB, 1 %",
+    "llama_pid": "994768",
+    "llama_process": "/home/brenoperucchi/t87-runtime/codacus-build-final2/bin/llama-server --model /mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf --host 0.0.0.0 --port 18087 --ctx-size 32768 --n-gpu-layers all --parallel 1 --no-webui",
+    "listeners": "LISTEN 0      512           0.0.0.0:18087      0.0.0.0:*    users:((\"llama-server\",pid=994768,fd=11))",
+    "ollama_version": {
+      "version": "0.34.2"
+    },
+    "ollama_ps": {
+      "models": []
+    },
+    "llama_health": {
+      "status": "ok"
+    },
+    "llama_models": {
+      "models": [
+        {
+          "name": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "model": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "modified_at": "",
+          "size": "",
+          "digest": "",
+          "type": "model",
+          "description": "",
+          "tags": [
+            ""
+          ],
+          "capabilities": [
+            "completion"
+          ],
+          "parameters": "",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "",
+            "families": [
+              ""
+            ],
+            "parameter_size": "",
+            "quantization_level": ""
+          }
+        }
+      ],
+      "object": "list",
+      "data": [
+        {
+          "id": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "aliases": [
+            "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf"
+          ],
+          "tags": [],
+          "object": "model",
+          "created": 1789758092,
+          "owned_by": "llamacpp",
+          "meta": {
+            "vocab_type": true,
+            "n_vocab": 248320,
+            "n_ctx": 32768,
+            "n_ctx_train": 262144,
+            "n_embd": 2048,
+            "n_params": 35505251456,
+            "size": 21706498560,
+            "ftype": "Q4_K - Medium"
+          }
+        }
+      ]
+    }
+  },
+  "completed_at": "2026-09-18T19:01:37.809452Z",
+  "llama_pid_after_restart": "994768",
+  "llama_flags_after": "/home/brenoperucchi/t87-runtime/codacus-build-final2/bin/llama-server --model /mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf --host 0.0.0.0 --port 18087 --ctx-size 32768 --n-gpu-layers all --parallel 1 --no-webui",
+  "flags_identical": true
+}

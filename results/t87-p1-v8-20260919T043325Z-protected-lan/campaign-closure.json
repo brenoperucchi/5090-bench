@@ -1,0 +1,68 @@
+{
+  "schema_version": "t87-p1-closure-v1",
+  "status": "closed_by_owner",
+  "closed_at": "2026-09-19T05:49:05Z",
+  "owner": "Breno",
+  "campaign": "t87-p1-harness-v8",
+  "series_key": "see preparation.json",
+  "decision": "stop campaign; do not spend remaining generations",
+  "generation_budget": 330,
+  "generations_consumed_v8": 238,
+  "generations_remaining_returned": 92,
+  "prior_history": {
+    "owner_reported_additional_generations": 124,
+    "comparable_to_v8": false,
+    "note": "All prior v4-v7 attempts remain excluded from the P1 statistic."
+  },
+  "validity": {
+    "v8_lab_validity": true,
+    "first_valid_laboratory_state": true,
+    "suite_path": "/opt/spec-wins",
+    "suite_mode": "0700",
+    "suite_owner": "root:root",
+    "agent_can_read_answer_key": false,
+    "dependencies_frozen": true,
+    "grader_wrapper": "/opt/spec-wins/scripts/verify-lab.sh",
+    "reset_wrapper": "/opt/spec-wins/scripts/reset-lab.sh"
+  },
+  "measurement_conclusion": {
+    "variance_of_instrument_measured": false,
+    "pair": "(t87-p1-harness-v8, qwen3.6-35b-a3b)",
+    "observed_behavior": "Across four seeds, t1 and t2 exhausted their configured caps without completing; t3 completed in the three full runs and was not started in the fourth partial run.",
+    "interpretation": "This is a result about the harness/model pair, not a conclusion about the suite alone or about the model independent of runtime configuration.",
+    "final_five_run_dispersion": "not produced"
+  },
+  "external_scorecard_evidence": {
+    "source_description": "public GitHub scorecard reported by the owner; no local copy, URL, or hash was supplied",
+    "model": "qwen3.6-35b-a3b",
+    "reported_scores": {"t1": "6/7", "t2": "8/8", "t3": "0/2", "total": "14/17"},
+    "reported_tool_calls": {"t1": 12, "t2": 26, "t3": "approximately 25"},
+    "reported_duration": "approximately 6.6 minutes",
+    "reported_runtime_configuration": "Codacus fork, profile cache 88 + MTP, approximately 55 tok/s",
+    "local_caps": {"t1": 13, "t2": 27, "t3": 26},
+    "implication": "The published caps match the author's reported calls plus one. The local exhaustion is therefore treated as an efficiency/configuration difference, not as evidence that the local turn budget was too small.",
+    "candidate_configuration_difference": "The local harness recorded cache_prompt=false and did not use the reported profile cache 88 + MTP.",
+    "causal_status": "hypothesis for offline runtime/readme investigation; not experimentally established"
+  },
+  "budget_accounting": {
+    "remaining_generations_spent": 0,
+    "remaining_generations_status": "unused and returned",
+    "partial_scores": [13, 10, 7],
+    "partial_score_range": "6 points; not a final five-run dispersion"
+  },
+  "failure_record": {
+    "reference": "campaign-failure.json",
+    "grader_timeout_task": "t2_metrics",
+    "grader_timeout_seconds": 300,
+    "root_cause": "unknown",
+    "orphaned_process_observed": true,
+    "cleanup_performed": false
+  },
+  "next_campaign_gates": [
+    "Read the fork README/configuration and identify the exact profile-cache-88 and MTP settings before any new generation.",
+    "Add a fast pre-grading :5000 health/ownership check that fails with an explicit cause instead of waiting five minutes.",
+    "Make the reset kill processes/listeners on :5000 independently of the binary path.",
+    "Grade each task immediately after that task and before any subsequent reset.",
+    "Create a new series key and obtain new owner authorization before spending generations."
+  ]
+}

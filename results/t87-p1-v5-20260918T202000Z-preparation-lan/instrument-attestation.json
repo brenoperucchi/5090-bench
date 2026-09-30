@@ -1,0 +1,60 @@
+{
+  "schema_version": "t87-p1-instrument-attestation-v5",
+  "status": "prepared_no_generation",
+  "harness_version": "t87-p1-harness-v5",
+  "authorization": {
+    "path": "docs/en/plans/t87-p1-v5-hardening-and-rerun-authorization-accepted-2026-09-18.md",
+    "sha256": "27e5eddd6b3e5dbaf0c6733d1f087a393f7c4920c1e55bd40b6a5373f64e3bab",
+    "owner": "Breno",
+    "accepted_at": "2026-09-18T20:18:10Z",
+    "new_generation_budget": 330,
+    "prior_lost_generations": 35
+  },
+  "preparation": {
+    "path": "results/t87-p1-v5-20260918T202000Z-preparation-lan/preparation.json",
+    "sha256": "f73ba7895a59ad0dde23b1e163b067876b3fb08d041ff38438051bf8f6cc7a07",
+    "model_post_sent": false
+  },
+  "harness_sha256": "f1661a3e05384544182c4d5c7af3c76a462a1756d499c6a25e4502dcd37df880",
+  "protocol_sha256": "e4c19e5d691cf6aa781dc66c0ba9e1925f459c52eaac397470596d455903ab20",
+  "dependency_bundle_sha256": "7293488bdf2c6ae0d9cdaef39dd8ef019c841f84641026624d8bc1263176aa7f",
+  "prompt_sha256": "1219567023e57f07b268b3cf15f458e8810331efd33b1937d9bb327ab1a5082f",
+  "benchmark_commit": "776e799c7e0a24271e021aca2ea4b1c1b1f10017",
+  "runtime": {
+    "id": "thecodacus/llama.cpp",
+    "commit": "27c54b4bbcefadedcec6397477cc2e866c1db716",
+    "version": "0.3.0-dev (build 10818, commit 27c54b4bb)",
+    "cuda_architecture": "120a-real",
+    "cuda_toolkit_version": "unknown",
+    "compiler": "GNU 13.3.0",
+    "binary_sha256": "37acf8e80c85f91794d9fa0268d34b40dbfa2f4286527a92bdd13dfefdab689b",
+    "flags": "/home/brenoperucchi/t87-runtime/codacus-build-final2/bin/llama-server --model /mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf --host 0.0.0.0 --port 18087 --ctx-size 32768 --n-gpu-layers all --parallel 1 --no-webui"
+  },
+  "endpoint": {
+    "url": "http://192.168.0.125:18087/v1/chat/completions",
+    "route": {
+      "id": "lan",
+      "scheme": "http",
+      "host": "192.168.0.125",
+      "port": 18087,
+      "request_path": "/v1/chat/completions"
+    },
+    "health": {"status": "ok"},
+    "model": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+    "model_sha256": "d372de8e934898a59e6ccfabc3368474711384d8f1fd4d22d87a3f0a45400cdc",
+    "context_size": 32768
+  },
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 5090",
+    "memory_used_mib": 22825,
+    "memory_total_mib": 32607,
+    "utilization_percent": 3,
+    "driver_version": "616.64",
+    "compute_capability": "12.0"
+  },
+  "seeds": [1000, 1017, 1034, 1051, 1068],
+  "reference_turn_caps": {"t1_ratelimit": 13, "t2_metrics": 27, "t3_pipeline": 26},
+  "max_generation_count": 330,
+  "synthetic_warmup": false,
+  "series_key": "{\"benchmark_commit\":\"776e799c7e0a24271e021aca2ea4b1c1b1f10017\",\"harness_version\":\"t87-p1-harness-v5\",\"model_sha256\":\"d372de8e934898a59e6ccfabc3368474711384d8f1fd4d22d87a3f0a45400cdc\",\"route\":{\"host\":\"192.168.0.125\",\"id\":\"lan\",\"port\":18087,\"request_path\":\"/v1/chat/completions\",\"scheme\":\"http\"},\"runtime\":\"thecodacus/llama.cpp\"}"
+}

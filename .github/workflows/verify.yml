@@ -18,3 +18,8 @@ jobs:
           python-version: '3.12'
       - name: Check evidence and documentation links
         run: python tools/inventory.py check
+      - name: Install test runner
+        run: python -m pip install --quiet pytest
+      # pytest also runs the unittest-style tests; some tests use pytest fixtures
+      - name: Test offline measurement and detector contracts
+        run: python -m pytest -q tests

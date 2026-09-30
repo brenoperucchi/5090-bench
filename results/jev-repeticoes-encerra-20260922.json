@@ -1,0 +1,1543 @@
+{
+  "schema": "jev-repeticoes-v1",
+  "proposito": "medir a estabilidade da distribuição de scores entre repetições da mesma chamada",
+  "nao_e": "otimização de limiar — nenhum limiar foi escolhido ou reajustado a partir destes dados",
+  "autorizacao": "owner, 2026-09-22, custo aprovado ~US$0,0004 (28 chamadas)",
+  "relacao_com_evidencia_anterior": "medição NOVA e independente; não substitui a transcrição de tela da sessão anterior (Evidência 2 de H-JEV-JUDGE)",
+  "lote": "/home/brenoperucchi/Devs/claude-bridge/guardian/aval/lote-tipificacao.json",
+  "lote_sha256": "cad606971fd34778149373b58763409abc2dd6a3e93961954d10f6fadfedea65",
+  "estrato": "encerra",
+  "n_casos": 7,
+  "repeticoes": 4,
+  "instrumento": "tools/typification_eval.py --mode jev-repeats",
+  "instrumento_sha256": "89ecb3ce3feadc7067fde31a7ff0ad9d646947bbdf6a6715b343610baabdbfa6",
+  "iniciado_em": "2026-09-22T17:21:30.477-03:00",
+  "terminado_em": "2026-09-22T17:21:49.055-03:00",
+  "chamadas": [
+    {
+      "case_id": "ace:mfc-exec:2026-09-21T20:15:17.000Z:2026-09-21T20:14:23.000Z",
+      "gold": false,
+      "repeticao": 1,
+      "timestamp": "2026-09-22T17:21:30.477-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Quer que eu resolva o warmup de MN1 agora, ou seguimos para a Fase 4 (scheduler em observação, sem ordens) e tratamos o \"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"27 dos 28 pares travam em 60 barras MN1\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "8906cc7e95e83b59e6fcf5121cc436e18877eb692f52309c295f0fc25b6683ab",
+      "http_status": 200,
+      "latency_s": 0.7275,
+      "score": 0.11,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.78,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 446,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.11
+          }
+        },
+        "usage": {
+          "input_tokens": 446,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "rej:mfc-exec:2026-09-21T18:53:22.000Z:2026-09-21T18:52:47.000Z",
+      "gold": false,
+      "repeticao": 1,
+      "timestamp": "2026-09-22T17:21:31.205-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Nao seria melhor sobrescrever do que mesclar? Temos algo importante no local?\"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"O ambiente local tem 160 arquivos modificados e 70 novos, que são dados de produção.\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "e2e15586c759593026f47247bcfd077a5d5045aed128c02cee8ec5cfc7992d5a",
+      "http_status": 200,
+      "latency_s": 0.7184,
+      "score": 0.05,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.9,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 430,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.05
+          }
+        },
+        "usage": {
+          "input_tokens": 430,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "rej:mfc-exec:2026-09-21T18:53:44.000Z:2026-09-21T18:52:47.000Z",
+      "gold": false,
+      "repeticao": 1,
+      "timestamp": "2026-09-22T17:21:31.923-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Nao seria melhor sobrescrever do que mesclar? Temos algo importante no local?\"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"O terminal do Ryzen9 aponta para D:\\MetaTradersWSL\\mfc\\terminal64.exe\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "f0b85ac6689a71ad264c7ce2c9ce02b38fbadec5055b7552f84d9aabe54f6a68",
+      "http_status": 200,
+      "latency_s": 0.6562,
+      "score": 0.13,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.74,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 430,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.13
+          }
+        },
+        "usage": {
+          "input_tokens": 430,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "rej:mfc-exec:2026-09-21T18:54:06.000Z:2026-09-21T18:52:47.000Z",
+      "gold": false,
+      "repeticao": 1,
+      "timestamp": "2026-09-22T17:21:32.580-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Nao seria melhor sobrescrever do que mesclar? Temos algo importante no local?\"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"A arquitetura do Ryzen9 é idêntica à que foi montada localmente\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "999712e0453076375b51d1501d71d164432669789dc59664fc2cbf54475805a0",
+      "http_status": 200,
+      "latency_s": 0.6541,
+      "score": 0.17,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.66,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 425,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.17
+          }
+        },
+        "usage": {
+          "input_tokens": 425,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "rej:mfc-exec:2026-09-21T20:28:43.000Z:2026-09-21T20:14:23.000Z",
+      "gold": true,
+      "repeticao": 1,
+      "timestamp": "2026-09-22T17:21:33.234-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Quer que eu resolva o warmup de MN1 agora, ou seguimos para a Fase 4 (scheduler em observação, sem ordens) e tratamos o \"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"O backtest canônico foi executado contra a instância mfc-backtest com 28 pares, 10 noites candidatas, 6 operadas e 36 ce…\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "74b19d9cec15b7de055ff7dc5b438a421c423d60d373a21212de99dcc6ada5d5",
+      "http_status": 200,
+      "latency_s": 0.702,
+      "score": 0.18,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.64,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 473,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.18
+          }
+        },
+        "usage": {
+          "input_tokens": 473,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "rej:mfc-exec:2026-09-22T03:54:18.000Z:2026-09-21T20:14:23.000Z",
+      "gold": false,
+      "repeticao": 1,
+      "timestamp": "2026-09-22T17:21:33.936-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Quer que eu resolva o warmup de MN1 agora, ou seguimos para a Fase 4 (scheduler em observação, sem ordens) e tratamos o \"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"O backtest usa informação mais \"atrasada\" que a produção, mas a diferença é pequena demais para mudar qualquer conclusão…\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "262becad6bb444475a77d3afb15a8267e395a7064a594e3ba4f407644cd9cd5f",
+      "http_status": 200,
+      "latency_s": 0.6204,
+      "score": 0.07,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.86,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 454,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.07
+          }
+        },
+        "usage": {
+          "input_tokens": 454,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "rej:mfc-exec:2026-09-22T03:56:27.000Z:2026-09-21T20:14:23.000Z",
+      "gold": false,
+      "repeticao": 1,
+      "timestamp": "2026-09-22T17:21:34.557-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Quer que eu resolva o warmup de MN1 agora, ou seguimos para a Fase 4 (scheduler em observação, sem ordens) e tratamos o \"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"A defasagem entre backtest e produção é física e não de calibração\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "efeec379985dec3cc5ebf9e379f44a81015d64c2f791a3d7494da5531968f0e1",
+      "http_status": 200,
+      "latency_s": 0.6791,
+      "score": 0.07,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.86,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 448,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.07
+          }
+        },
+        "usage": {
+          "input_tokens": 448,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "ace:mfc-exec:2026-09-21T20:15:17.000Z:2026-09-21T20:14:23.000Z",
+      "gold": false,
+      "repeticao": 2,
+      "timestamp": "2026-09-22T17:21:35.236-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Quer que eu resolva o warmup de MN1 agora, ou seguimos para a Fase 4 (scheduler em observação, sem ordens) e tratamos o \"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"27 dos 28 pares travam em 60 barras MN1\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "8906cc7e95e83b59e6fcf5121cc436e18877eb692f52309c295f0fc25b6683ab",
+      "http_status": 200,
+      "latency_s": 0.6516,
+      "score": 0.11,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.78,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 446,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.11
+          }
+        },
+        "usage": {
+          "input_tokens": 446,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "rej:mfc-exec:2026-09-21T18:53:22.000Z:2026-09-21T18:52:47.000Z",
+      "gold": false,
+      "repeticao": 2,
+      "timestamp": "2026-09-22T17:21:35.887-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Nao seria melhor sobrescrever do que mesclar? Temos algo importante no local?\"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"O ambiente local tem 160 arquivos modificados e 70 novos, que são dados de produção.\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "e2e15586c759593026f47247bcfd077a5d5045aed128c02cee8ec5cfc7992d5a",
+      "http_status": 200,
+      "latency_s": 0.6555,
+      "score": 0.06,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.88,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 430,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.06
+          }
+        },
+        "usage": {
+          "input_tokens": 430,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "rej:mfc-exec:2026-09-21T18:53:44.000Z:2026-09-21T18:52:47.000Z",
+      "gold": false,
+      "repeticao": 2,
+      "timestamp": "2026-09-22T17:21:36.543-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Nao seria melhor sobrescrever do que mesclar? Temos algo importante no local?\"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"O terminal do Ryzen9 aponta para D:\\MetaTradersWSL\\mfc\\terminal64.exe\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "f0b85ac6689a71ad264c7ce2c9ce02b38fbadec5055b7552f84d9aabe54f6a68",
+      "http_status": 200,
+      "latency_s": 0.6356,
+      "score": 0.13,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.74,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 430,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.13
+          }
+        },
+        "usage": {
+          "input_tokens": 430,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "rej:mfc-exec:2026-09-21T18:54:06.000Z:2026-09-21T18:52:47.000Z",
+      "gold": false,
+      "repeticao": 2,
+      "timestamp": "2026-09-22T17:21:37.179-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Nao seria melhor sobrescrever do que mesclar? Temos algo importante no local?\"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"A arquitetura do Ryzen9 é idêntica à que foi montada localmente\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "999712e0453076375b51d1501d71d164432669789dc59664fc2cbf54475805a0",
+      "http_status": 200,
+      "latency_s": 0.6736,
+      "score": 0.19,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.62,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 425,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.19
+          }
+        },
+        "usage": {
+          "input_tokens": 425,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "rej:mfc-exec:2026-09-21T20:28:43.000Z:2026-09-21T20:14:23.000Z",
+      "gold": true,
+      "repeticao": 2,
+      "timestamp": "2026-09-22T17:21:37.852-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Quer que eu resolva o warmup de MN1 agora, ou seguimos para a Fase 4 (scheduler em observação, sem ordens) e tratamos o \"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"O backtest canônico foi executado contra a instância mfc-backtest com 28 pares, 10 noites candidatas, 6 operadas e 36 ce…\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "74b19d9cec15b7de055ff7dc5b438a421c423d60d373a21212de99dcc6ada5d5",
+      "http_status": 200,
+      "latency_s": 0.6528,
+      "score": 0.2,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.6,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 473,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.2
+          }
+        },
+        "usage": {
+          "input_tokens": 473,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "rej:mfc-exec:2026-09-22T03:54:18.000Z:2026-09-21T20:14:23.000Z",
+      "gold": false,
+      "repeticao": 2,
+      "timestamp": "2026-09-22T17:21:38.505-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Quer que eu resolva o warmup de MN1 agora, ou seguimos para a Fase 4 (scheduler em observação, sem ordens) e tratamos o \"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"O backtest usa informação mais \"atrasada\" que a produção, mas a diferença é pequena demais para mudar qualquer conclusão…\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "262becad6bb444475a77d3afb15a8267e395a7064a594e3ba4f407644cd9cd5f",
+      "http_status": 200,
+      "latency_s": 0.6343,
+      "score": 0.07,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.86,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 454,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.07
+          }
+        },
+        "usage": {
+          "input_tokens": 454,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "rej:mfc-exec:2026-09-22T03:56:27.000Z:2026-09-21T20:14:23.000Z",
+      "gold": false,
+      "repeticao": 2,
+      "timestamp": "2026-09-22T17:21:39.140-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Quer que eu resolva o warmup de MN1 agora, ou seguimos para a Fase 4 (scheduler em observação, sem ordens) e tratamos o \"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"A defasagem entre backtest e produção é física e não de calibração\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "efeec379985dec3cc5ebf9e379f44a81015d64c2f791a3d7494da5531968f0e1",
+      "http_status": 200,
+      "latency_s": 0.6574,
+      "score": 0.08,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.84,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 448,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.08
+          }
+        },
+        "usage": {
+          "input_tokens": 448,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "ace:mfc-exec:2026-09-21T20:15:17.000Z:2026-09-21T20:14:23.000Z",
+      "gold": false,
+      "repeticao": 3,
+      "timestamp": "2026-09-22T17:21:39.797-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Quer que eu resolva o warmup de MN1 agora, ou seguimos para a Fase 4 (scheduler em observação, sem ordens) e tratamos o \"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"27 dos 28 pares travam em 60 barras MN1\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "8906cc7e95e83b59e6fcf5121cc436e18877eb692f52309c295f0fc25b6683ab",
+      "http_status": 200,
+      "latency_s": 0.69,
+      "score": 0.12,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.76,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 446,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.12
+          }
+        },
+        "usage": {
+          "input_tokens": 446,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "rej:mfc-exec:2026-09-21T18:53:22.000Z:2026-09-21T18:52:47.000Z",
+      "gold": false,
+      "repeticao": 3,
+      "timestamp": "2026-09-22T17:21:40.487-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Nao seria melhor sobrescrever do que mesclar? Temos algo importante no local?\"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"O ambiente local tem 160 arquivos modificados e 70 novos, que são dados de produção.\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "e2e15586c759593026f47247bcfd077a5d5045aed128c02cee8ec5cfc7992d5a",
+      "http_status": 200,
+      "latency_s": 0.6497,
+      "score": 0.05,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.9,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 430,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.05
+          }
+        },
+        "usage": {
+          "input_tokens": 430,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "rej:mfc-exec:2026-09-21T18:53:44.000Z:2026-09-21T18:52:47.000Z",
+      "gold": false,
+      "repeticao": 3,
+      "timestamp": "2026-09-22T17:21:41.137-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Nao seria melhor sobrescrever do que mesclar? Temos algo importante no local?\"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"O terminal do Ryzen9 aponta para D:\\MetaTradersWSL\\mfc\\terminal64.exe\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "f0b85ac6689a71ad264c7ce2c9ce02b38fbadec5055b7552f84d9aabe54f6a68",
+      "http_status": 200,
+      "latency_s": 0.6534,
+      "score": 0.1,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.8,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 430,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.1
+          }
+        },
+        "usage": {
+          "input_tokens": 430,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "rej:mfc-exec:2026-09-21T18:54:06.000Z:2026-09-21T18:52:47.000Z",
+      "gold": false,
+      "repeticao": 3,
+      "timestamp": "2026-09-22T17:21:41.791-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Nao seria melhor sobrescrever do que mesclar? Temos algo importante no local?\"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"A arquitetura do Ryzen9 é idêntica à que foi montada localmente\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "999712e0453076375b51d1501d71d164432669789dc59664fc2cbf54475805a0",
+      "http_status": 200,
+      "latency_s": 0.6958,
+      "score": 0.18,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.64,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 425,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.18
+          }
+        },
+        "usage": {
+          "input_tokens": 425,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "rej:mfc-exec:2026-09-21T20:28:43.000Z:2026-09-21T20:14:23.000Z",
+      "gold": true,
+      "repeticao": 3,
+      "timestamp": "2026-09-22T17:21:42.487-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Quer que eu resolva o warmup de MN1 agora, ou seguimos para a Fase 4 (scheduler em observação, sem ordens) e tratamos o \"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"O backtest canônico foi executado contra a instância mfc-backtest com 28 pares, 10 noites candidatas, 6 operadas e 36 ce…\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "74b19d9cec15b7de055ff7dc5b438a421c423d60d373a21212de99dcc6ada5d5",
+      "http_status": 200,
+      "latency_s": 0.765,
+      "score": 0.2,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.6,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 473,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.2
+          }
+        },
+        "usage": {
+          "input_tokens": 473,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "rej:mfc-exec:2026-09-22T03:54:18.000Z:2026-09-21T20:14:23.000Z",
+      "gold": false,
+      "repeticao": 3,
+      "timestamp": "2026-09-22T17:21:43.252-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Quer que eu resolva o warmup de MN1 agora, ou seguimos para a Fase 4 (scheduler em observação, sem ordens) e tratamos o \"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"O backtest usa informação mais \"atrasada\" que a produção, mas a diferença é pequena demais para mudar qualquer conclusão…\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "262becad6bb444475a77d3afb15a8267e395a7064a594e3ba4f407644cd9cd5f",
+      "http_status": 200,
+      "latency_s": 0.7221,
+      "score": 0.07,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.86,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 454,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.07
+          }
+        },
+        "usage": {
+          "input_tokens": 454,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "rej:mfc-exec:2026-09-22T03:56:27.000Z:2026-09-21T20:14:23.000Z",
+      "gold": false,
+      "repeticao": 3,
+      "timestamp": "2026-09-22T17:21:43.974-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Quer que eu resolva o warmup de MN1 agora, ou seguimos para a Fase 4 (scheduler em observação, sem ordens) e tratamos o \"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"A defasagem entre backtest e produção é física e não de calibração\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "efeec379985dec3cc5ebf9e379f44a81015d64c2f791a3d7494da5531968f0e1",
+      "http_status": 200,
+      "latency_s": 0.7758,
+      "score": 0.07,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.86,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 448,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.07
+          }
+        },
+        "usage": {
+          "input_tokens": 448,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "ace:mfc-exec:2026-09-21T20:15:17.000Z:2026-09-21T20:14:23.000Z",
+      "gold": false,
+      "repeticao": 4,
+      "timestamp": "2026-09-22T17:21:44.750-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Quer que eu resolva o warmup de MN1 agora, ou seguimos para a Fase 4 (scheduler em observação, sem ordens) e tratamos o \"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"27 dos 28 pares travam em 60 barras MN1\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "8906cc7e95e83b59e6fcf5121cc436e18877eb692f52309c295f0fc25b6683ab",
+      "http_status": 200,
+      "latency_s": 0.6594,
+      "score": 0.11,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.78,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 446,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.11
+          }
+        },
+        "usage": {
+          "input_tokens": 446,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "rej:mfc-exec:2026-09-21T18:53:22.000Z:2026-09-21T18:52:47.000Z",
+      "gold": false,
+      "repeticao": 4,
+      "timestamp": "2026-09-22T17:21:45.409-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Nao seria melhor sobrescrever do que mesclar? Temos algo importante no local?\"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"O ambiente local tem 160 arquivos modificados e 70 novos, que são dados de produção.\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "e2e15586c759593026f47247bcfd077a5d5045aed128c02cee8ec5cfc7992d5a",
+      "http_status": 200,
+      "latency_s": 0.9187,
+      "score": 0.06,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.88,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 430,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.06
+          }
+        },
+        "usage": {
+          "input_tokens": 430,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "rej:mfc-exec:2026-09-21T18:53:44.000Z:2026-09-21T18:52:47.000Z",
+      "gold": false,
+      "repeticao": 4,
+      "timestamp": "2026-09-22T17:21:46.328-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Nao seria melhor sobrescrever do que mesclar? Temos algo importante no local?\"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"O terminal do Ryzen9 aponta para D:\\MetaTradersWSL\\mfc\\terminal64.exe\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "f0b85ac6689a71ad264c7ce2c9ce02b38fbadec5055b7552f84d9aabe54f6a68",
+      "http_status": 200,
+      "latency_s": 0.7174,
+      "score": 0.14,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.72,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 430,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.14
+          }
+        },
+        "usage": {
+          "input_tokens": 430,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "rej:mfc-exec:2026-09-21T18:54:06.000Z:2026-09-21T18:52:47.000Z",
+      "gold": false,
+      "repeticao": 4,
+      "timestamp": "2026-09-22T17:21:47.046-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Nao seria melhor sobrescrever do que mesclar? Temos algo importante no local?\"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"A arquitetura do Ryzen9 é idêntica à que foi montada localmente\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "999712e0453076375b51d1501d71d164432669789dc59664fc2cbf54475805a0",
+      "http_status": 200,
+      "latency_s": 0.6506,
+      "score": 0.19,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.62,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 425,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.19
+          }
+        },
+        "usage": {
+          "input_tokens": 425,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "rej:mfc-exec:2026-09-21T20:28:43.000Z:2026-09-21T20:14:23.000Z",
+      "gold": true,
+      "repeticao": 4,
+      "timestamp": "2026-09-22T17:21:47.696-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Quer que eu resolva o warmup de MN1 agora, ou seguimos para a Fase 4 (scheduler em observação, sem ordens) e tratamos o \"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"O backtest canônico foi executado contra a instância mfc-backtest com 28 pares, 10 noites candidatas, 6 operadas e 36 ce…\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "74b19d9cec15b7de055ff7dc5b438a421c423d60d373a21212de99dcc6ada5d5",
+      "http_status": 200,
+      "latency_s": 0.7403,
+      "score": 0.19,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.62,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 473,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.19
+          }
+        },
+        "usage": {
+          "input_tokens": 473,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "rej:mfc-exec:2026-09-22T03:54:18.000Z:2026-09-21T20:14:23.000Z",
+      "gold": false,
+      "repeticao": 4,
+      "timestamp": "2026-09-22T17:21:48.437-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Quer que eu resolva o warmup de MN1 agora, ou seguimos para a Fase 4 (scheduler em observação, sem ordens) e tratamos o \"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"O backtest usa informação mais \"atrasada\" que a produção, mas a diferença é pequena demais para mudar qualquer conclusão…\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "262becad6bb444475a77d3afb15a8267e395a7064a594e3ba4f407644cd9cd5f",
+      "http_status": 200,
+      "latency_s": 0.6184,
+      "score": 0.07,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.86,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 454,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.07
+          }
+        },
+        "usage": {
+          "input_tokens": 454,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    },
+    {
+      "case_id": "rej:mfc-exec:2026-09-22T03:56:27.000Z:2026-09-21T20:14:23.000Z",
+      "gold": false,
+      "repeticao": 4,
+      "timestamp": "2026-09-22T17:21:49.055-03:00",
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "parametros_efetivos": {
+        "model": "jev-latest",
+        "question_type": "noul",
+        "question_id": "q",
+        "timeout_s": 60
+      },
+      "payload": {
+        "model": "jev-latest",
+        "state": "OBRIGAÇÃO DO OWNER (pergunta feita a ele):\n\"Quer que eu resolva o warmup de MN1 agora, ou seguimos para a Fase 4 (scheduler em observação, sem ordens) e tratamos o \"\n\nITEM POSTERIOR DA CRONOLOGIA:\n\"A defasagem entre backtest e produção é física e não de calibração\"",
+        "questions": {
+          "q": {
+            "type": "noul",
+            "instructions": "O item posterior ENCERRA a obrigação — isto é, mostra que a escolha foi tomada e executada? Descrever o problema, medir, diagnosticar ou sugerir NÃO encerra.",
+            "criteria": {
+              "true": "O item mostra a escolha tomada e executada — a obrigação deixou de existir",
+              "false": "O item não encerra: é diagnóstico, medição, sugestão ou assunto correlato"
+            }
+          }
+        }
+      },
+      "payload_sha256": "efeec379985dec3cc5ebf9e379f44a81015d64c2f791a3d7494da5531968f0e1",
+      "http_status": 200,
+      "latency_s": 0.6768,
+      "score": 0.07,
+      "confidence_retornada_pelo_jev": null,
+      "margem_padronizada": 0.86,
+      "model_retornado": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 448,
+        "output_tokens": 20
+      },
+      "resposta_bruta": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "q": {
+            "type": "noul",
+            "noul": 0.07
+          }
+        },
+        "usage": {
+          "input_tokens": 448,
+          "output_tokens": 20
+        }
+      },
+      "erro": null
+    }
+  ],
+  "derivados": {
+    "por_caso": {
+      "ace:mfc-exec:2026-09-21T20:15:17.000Z:2026-09-21T20:14:23.000Z": {
+        "gold": false,
+        "n": 4,
+        "media": 0.1125,
+        "min": 0.11,
+        "max": 0.12,
+        "amplitude": 0.01
+      },
+      "rej:mfc-exec:2026-09-21T18:53:22.000Z:2026-09-21T18:52:47.000Z": {
+        "gold": false,
+        "n": 4,
+        "media": 0.055,
+        "min": 0.05,
+        "max": 0.06,
+        "amplitude": 0.01
+      },
+      "rej:mfc-exec:2026-09-21T18:53:44.000Z:2026-09-21T18:52:47.000Z": {
+        "gold": false,
+        "n": 4,
+        "media": 0.125,
+        "min": 0.1,
+        "max": 0.14,
+        "amplitude": 0.04
+      },
+      "rej:mfc-exec:2026-09-21T18:54:06.000Z:2026-09-21T18:52:47.000Z": {
+        "gold": false,
+        "n": 4,
+        "media": 0.1825,
+        "min": 0.17,
+        "max": 0.19,
+        "amplitude": 0.02
+      },
+      "rej:mfc-exec:2026-09-21T20:28:43.000Z:2026-09-21T20:14:23.000Z": {
+        "gold": true,
+        "n": 4,
+        "media": 0.1925,
+        "min": 0.18,
+        "max": 0.2,
+        "amplitude": 0.02,
+        "separavel_por_limiar": false
+      },
+      "rej:mfc-exec:2026-09-22T03:54:18.000Z:2026-09-21T20:14:23.000Z": {
+        "gold": false,
+        "n": 4,
+        "media": 0.07,
+        "min": 0.07,
+        "max": 0.07,
+        "amplitude": 0.0
+      },
+      "rej:mfc-exec:2026-09-22T03:56:27.000Z:2026-09-21T20:14:23.000Z": {
+        "gold": false,
+        "n": 4,
+        "media": 0.0725,
+        "min": 0.07,
+        "max": 0.08,
+        "amplitude": 0.01
+      }
+    },
+    "positivo_score_minimo": 0.18,
+    "negativo_score_maximo": 0.19,
+    "estrato_separavel_em_todas_as_repeticoes": false,
+    "usage_total": {
+      "input_tokens": 12424,
+      "output_tokens": 560
+    },
+    "erros": 0
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "run_id": "t87-p1-harness-v7-20260919T032459Z-845971-run-1-1000",
+  "campaign_id": "t87-p1-harness-v7-20260919T032459Z-845971",
+  "seed": 1000,
+  "harness_version": "t87-p1-harness-v7",
+  "runtime": "thecodacus/llama.cpp",
+  "route": {
+    "id": "lan",
+    "scheme": "http",
+    "host": "192.168.0.125",
+    "port": 18087,
+    "request_path": "/v1/chat/completions"
+  },
+  "series_key": "{\"benchmark_commit\":\"776e799c7e0a24271e021aca2ea4b1c1b1f10017\",\"dependency_fingerprint\":\"e8a842b1702dca9811ce9f2c95e77da2f888b368d94673b534cbc3aac587f453\",\"execution_user\":\"labuser\",\"gpu_free_threshold_mib\":8000,\"harness_version\":\"t87-p1-harness-v7\",\"installed_dependency_fingerprint\":\"e8a842b1702dca9811ce9f2c95e77da2f888b368d94673b534cbc3aac587f453\",\"model_sha256\":\"d372de8e934898a59e6ccfabc3368474711384d8f1fd4d22d87a3f0a45400cdc\",\"python_version\":\"3.13.5\",\"reset_sha256\":\"84bc8a08c66502bfcd6dc7f54ff08e64c96324ff619e9abde6bab036028ee159\",\"route\":{\"host\":\"192.168.0.125\",\"id\":\"lan\",\"port\":18087,\"request_path\":\"/v1/chat/completions\",\"scheme\":\"http\"},\"runtime\":\"thecodacus/llama.cpp\",\"setup_sha256\":\"300969d777a392488f2d5349641f47f129e2969f668b589c59ec2400abe4e823\",\"venv_path\":\"/home/labuser/venv\"}",
+  "environment": {
+    "venv_path": "/home/labuser/venv",
+    "reset_path": "/home/labuser/reset-lab.sh",
+    "task_root": "/home/labuser/lab",
+    "source_path": "/opt/spec-wins",
+    "execution_user": "labuser",
+    "python_version": "3.13.5",
+    "dependency_fingerprint": "e8a842b1702dca9811ce9f2c95e77da2f888b368d94673b534cbc3aac587f453",
+    "installed_dependency_fingerprint": "e8a842b1702dca9811ce9f2c95e77da2f888b368d94673b534cbc3aac587f453",
+    "reset_sha256": "84bc8a08c66502bfcd6dc7f54ff08e64c96324ff619e9abde6bab036028ee159",
+    "setup_sha256": "300969d777a392488f2d5349641f47f129e2969f668b589c59ec2400abe4e823"
+  },
+  "gpu_free_threshold_mib": 8000,
+  "task_dirs": {
+    "t1_ratelimit": "/home/labuser/lab/t1_ratelimit",
+    "t2_metrics": "/home/labuser/lab/t2_metrics",
+    "t3_pipeline": "/home/labuser/lab/t3_pipeline"
+  },
+  "tasks": [
+    {
+      "task": "t1_ratelimit",
+      "status": "incomplete",
+      "generation_count": 13,
+      "grade": {
+        "status": "not_graded"
+      },
+      "transcript": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-1-1000/t1_ratelimit.json"
+    },
+    {
+      "task": "t2_metrics",
+      "status": "incomplete",
+      "generation_count": 27,
+      "grade": {
+        "status": "not_graded"
+      },
+      "transcript": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-1-1000/t2_metrics.json"
+    },
+    {
+      "task": "t3_pipeline",
+      "status": "complete",
+      "generation_count": 23,
+      "grade": {
+        "task": "t3_pipeline",
+        "exit_code": 2,
+        "stdout": "no such work tree: /home/labuser/lab/t3_pipeline\n",
+        "stderr": ""
+      },
+      "transcript": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-1-1000/t3_pipeline.json"
+    }
+  ]
+}

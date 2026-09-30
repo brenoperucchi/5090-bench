@@ -1,0 +1,12 @@
+{
+  "run_id": "t87-p1-harness-v8-20260919T043342Z-1181427-run-4-1051",
+  "reset_path": "/opt/spec-wins/scripts/reset-lab.sh",
+  "source_path": "/opt/spec-wins",
+  "llama_server": "http://192.168.0.125:18087",
+  "command": "LLAMA_SERVER=http://192.168.0.125:18087 sudo -n /opt/spec-wins/scripts/reset-lab.sh",
+  "privilege": "sudo -n",
+  "exit_code": 0,
+  "stdout": "lab/t1_ratelimit: fresh\nlab/t2_metrics: fresh\nlab/t3_pipeline: fresh\nlabuser-owned /tmp leftovers removed\n",
+  "stderr": "",
+  "captured_at": "2026-09-19T04:44:00.739615Z"
+}

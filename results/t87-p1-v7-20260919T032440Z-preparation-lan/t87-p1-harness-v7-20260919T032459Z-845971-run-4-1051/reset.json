@@ -1,0 +1,10 @@
+{
+  "run_id": "t87-p1-harness-v7-20260919T032459Z-845971-run-4-1051",
+  "reset_path": "/home/labuser/reset-lab.sh",
+  "source_path": "/opt/spec-wins",
+  "llama_server": "http://192.168.0.125:18087",
+  "exit_code": 0,
+  "stdout": "lab/t1_ratelimit: limpo\nlab/t2_metrics: limpo\nlab/t3_pipeline: limpo\nsobras em /tmp removidas\ncontexto do modelo apagado (http://192.168.0.125:18087)\n",
+  "stderr": "",
+  "captured_at": "2026-09-19T03:35:26.418869Z"
+}

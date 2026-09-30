@@ -1,0 +1,47 @@
+{
+  "schema_version": "t87-p1-v4-instrument-attestation-v1",
+  "status": "prepared_no_generation",
+  "captured_at": "2026-09-18T19:10:26.373509Z",
+  "authorization_sha256": "18ac9ccbfb058e2abf2f46345b64027b8281af12041c707b5b4735d164930c92",
+  "runtime": {
+    "id": "thecodacus/llama.cpp",
+    "commit": "27c54b4bbcefadedcec6397477cc2e866c1db716",
+    "version": "0.3.0-dev (build 10818, commit 27c54b4bb)",
+    "binary_sha256": "37acf8e80c85f91794d9fa0268d34b40dbfa2f4286527a92bdd13dfefdab689b",
+    "cuda_toolkit": "12.8.93",
+    "cuda_architecture": "120a-real",
+    "compiler": "GNU 13.3.0"
+  },
+  "endpoint": {
+    "url": "http://192.168.0.125:18087",
+    "route": {
+      "id": "lan",
+      "scheme": "http",
+      "host": "192.168.0.125",
+      "port": 18087,
+      "request_path": "/v1/chat/completions"
+    },
+    "health": "ok",
+    "model": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+    "model_sha256": "d372de8e934898a59e6ccfabc3368474711384d8f1fd4d22d87a3f0a45400cdc",
+    "n_ctx": 32768
+  },
+  "llama_server_flags": "/home/brenoperucchi/t87-runtime/codacus-build-final2/bin/llama-server --model /mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf --host 0.0.0.0 --port 18087 --ctx-size 32768 --n-gpu-layers all --parallel 1 --no-webui",
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 5090",
+    "driver": "616.64",
+    "compute_capability": "12.0",
+    "memory_used_mib": 22821,
+    "memory_total_mib": 32607,
+    "utilization_percent": 3
+  },
+  "benchmark": {
+    "commit": "776e799c7e0a24271e021aca2ea4b1c1b1f10017",
+    "seeds": [1000, 1017, 1034, 1051, 1068],
+    "task_sessions": ["t1_ratelimit", "t2_metrics", "t3_pipeline"],
+    "reference_turn_caps": {"t1_ratelimit": 13, "t2_metrics": 27, "t3_pipeline": 26},
+    "maximum_generations": 330,
+    "synthetic_warmup_generations": 0,
+    "model_post_sent": false
+  }
+}

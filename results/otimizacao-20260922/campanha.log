@@ -1,0 +1,50 @@
+[23:25:00] f1-q4-base: subindo q4 em wsl [base]
+[23:27:28] f1-q4-base: geração 73.73 tok/s · prefill longo 3217.1 · aceitação MTP None
+[23:27:33] f1-q4-fa: subindo q4 em wsl [-fa on]
+[23:29:36] f1-q4-fa: geração 74.26 tok/s · prefill longo 3133.1 · aceitação MTP None
+[23:29:41] f1-q4-ub: subindo q4 em wsl [-ub 1024 -b 4096]
+[23:31:46] f1-q4-ub: geração 74.44 tok/s · prefill longo 3468.2 · aceitação MTP None
+[23:31:51] f1-q4-kvq8: subindo q4 em wsl [-ctk q8_0 -ctv q8_0]
+[23:33:53] f1-q4-kvq8: geração 73.57 tok/s · prefill longo 3033.5 · aceitação MTP None
+[23:33:59] f1-nvfp4-base: subindo nvfp4 em wsl [base]
+[23:36:23] f1-nvfp4-base: geração 74.68 tok/s · prefill longo 4095.9 · aceitação MTP None
+[23:36:29] f1-nvfp4-mtp2: subindo nvfp4 em wsl [--spec-type draft-mtp --spec-draft-n-max 2]
+[23:38:26] f1-nvfp4-mtp2: geração 123.55 tok/s · prefill longo 3521.0 · aceitação MTP 0.683
+[23:38:31] f1-nvfp4-mtp3: subindo nvfp4 em wsl [--spec-type draft-mtp --spec-draft-n-max 3]
+[23:40:28] f1-nvfp4-mtp3: geração 122.67 tok/s · prefill longo 3467.5 · aceitação MTP 0.567
+[23:40:28] ADOTADO: comum=[-ub 1024 -b 4096] nvfp4=[--spec-type draft-mtp --spec-draft-n-max 2]
+[23:40:33] f2-q4-wsl: subindo q4 em wsl [-ub 1024 -b 4096]
+[23:42:59] f2-q4-wsl: geração 75.16 tok/s · prefill longo 3491.9 · aceitação MTP None
+[23:43:04] f2-q4-win: subindo q4 em win [-ub 1024 -b 4096]
+[23:53:10] PRODUÇÃO DE VOLTA
+[23:53:10] CAMPANHA CONCLUÍDA
+Traceback (most recent call last):
+  File "/home/brenoperucchi/Devs/llm-bench/tools/optimization_campaign.py", line 188, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/brenoperucchi/Devs/llm-bench/tools/optimization_campaign.py", line 175, in main
+    res[f"f2-{model}-{os_}"] = run(f"f2-{model}-{os_}", os_, model, extra)
+                               ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/brenoperucchi/Devs/llm-bench/tools/optimization_campaign.py", line 105, in run
+    base = start(os_, model, extra)
+  File "/home/brenoperucchi/Devs/llm-bench/tools/optimization_campaign.py", line 77, in start
+    ssh(f"cd /mnt/e/llama-win-b11053 && setsid nohup {WIN_EXE} --model '{m['win']}' --alias {model}-win "
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        f"--host 0.0.0.0 --port 18197 {BASE_FLAGS} {extra} < /dev/null > /tmp/opt-{model}-win.log 2>&1 &")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/brenoperucchi/Devs/llm-bench/tools/optimization_campaign.py", line 44, in ssh
+    p = subprocess.run(["ssh", "-o", "BatchMode=yes", HOST, cmd], capture_output=True, text=True, timeout=timeout)
+  File "/home/linuxbrew/.linuxbrew/Cellar/python@3.14/3.14.6/lib/python3.14/subprocess.py", line 557, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/linuxbrew/.linuxbrew/Cellar/python@3.14/3.14.6/lib/python3.14/subprocess.py", line 1221, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/linuxbrew/.linuxbrew/Cellar/python@3.14/3.14.6/lib/python3.14/subprocess.py", line 2154, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/linuxbrew/.linuxbrew/Cellar/python@3.14/3.14.6/lib/python3.14/subprocess.py", line 1268, in _check_timeout
+    raise TimeoutExpired(
+    ...<2 lines>...
+            stderr=b''.join(stderr_seq) if stderr_seq else None)
+subprocess.TimeoutExpired: Command '['ssh', '-o', 'BatchMode=yes', '192.168.0.125', "cd /mnt/e/llama-win-b11053 && setsid nohup /mnt/e/llama-win-b11053/llama-server.exe --model 'E:\\ollama\\models\\blobs\\sha256-f5f1dd8920d417aac2718b0bda3403da274301efdd6760b4f0f4b864ff2ad57d' --alias q4-win --host 0.0.0.0 --port 18197 -ngl 99 --ctx-size 16384 --jinja --temp 0 --parallel 1 -ub 1024 -b 4096 < /dev/null > /tmp/opt-q4-win.log 2>&1 &"]' timed out after 300 seconds

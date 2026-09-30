@@ -1,0 +1,720 @@
+{
+  "schema": "llm-bench-kl-corpus-v1",
+  "source_root": "/home/brenoperucchi/Devs/llm-bench",
+  "labels_included": false,
+  "included_names": [
+    "answer.md",
+    "metrics.json",
+    "verdict.md"
+  ],
+  "file_count": 141,
+  "bytes": 933379,
+  "sha256": "aa7703458a24847657d224734d0c4827a79a319139364515ef3bce65bb3de68c",
+  "files": [
+    {
+      "path": ".herdr/ask/llm-bench-1/metrics.json",
+      "bytes": 663,
+      "sha256": "cbcc67724e89e8eca2aa8d783959a620a5c0d45370505322e82c799e034c4857"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-10/_snapshot/home/brenoperucchi/Devs/llm-gateway/.herdr/review/llm-6/llm-rev-1/verdict.md",
+      "bytes": 3059,
+      "sha256": "a60f70c2567ed8481253bf0324b473eba1577fccb3c3b68d652b7890d4a4b9b7"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-10/_snapshot/home/brenoperucchi/Devs/llm-gateway/.herdr/review/llm-6/llm-rev-2/verdict.md",
+      "bytes": 4119,
+      "sha256": "3652023dc5e302b5eaadad644876501360e92f164555bd6aeca730eb49de8a73"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-10/llm-bench-scout/answer.md",
+      "bytes": 14424,
+      "sha256": "1308d7cc88ad74fe2cc7e515696947a48a236b2aa2bf76e0cdcdbca521b83cad"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-10/metrics.json",
+      "bytes": 3501,
+      "sha256": "272b1c458cdeda096fe2651963fd4f5a7a9abd2c3c88dd4e278880de05d6bf69"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-11/_snapshot/home/brenoperucchi/Devs/llm-bench/.herdr/review/llm-bench-25/llm-bench-rev-1/verdict.md",
+      "bytes": 3980,
+      "sha256": "eabe371662fffcc84a41c3aefd1a21c1f1b9f603be1bb5b813580e2eb9086fc3"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-11/_snapshot/home/brenoperucchi/Devs/llm-bench/.herdr/review/llm-bench-25/llm-bench-rev-2/verdict.md",
+      "bytes": 12665,
+      "sha256": "faa06f6a10f0cbb694498f52a93f75ac4c933ea0ac14ec0e995e8bbbb328c258"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-11/metrics.json",
+      "bytes": 1964,
+      "sha256": "17ac434d6639f642c653da773398cb51d9c0b6d0c5d5d3ef56bd4c2841cae667"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-12/_snapshot/home/brenoperucchi/Devs/llm-bench/.herdr/review/llm-bench-25/llm-bench-rev-1/verdict.md",
+      "bytes": 3980,
+      "sha256": "eabe371662fffcc84a41c3aefd1a21c1f1b9f603be1bb5b813580e2eb9086fc3"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-12/_snapshot/home/brenoperucchi/Devs/llm-bench/.herdr/review/llm-bench-25/llm-bench-rev-2/verdict.md",
+      "bytes": 12665,
+      "sha256": "faa06f6a10f0cbb694498f52a93f75ac4c933ea0ac14ec0e995e8bbbb328c258"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-12/llm-bench-scout/answer.md",
+      "bytes": 17981,
+      "sha256": "b593a12ed4df0aad4fc73ad2bbdf7fe491108f94d40e401fbcc4ebbc083155c8"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-12/metrics.json",
+      "bytes": 4063,
+      "sha256": "06ebb81ba6206acdddba7aa2c8a08dab36c316bb65d23aac36e9693ca105bbba"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-13/_snapshot/home/brenoperucchi/Devs/llm-bench/.herdr/review/llm-bench-31/llm-bench-rev-1/verdict.md",
+      "bytes": 1716,
+      "sha256": "792dbf67ac2e26fbfc69bfd83667d19ae469b92e55cfe5df581b78526232154c"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-13/_snapshot/home/brenoperucchi/Devs/llm-bench/.herdr/review/llm-bench-31/llm-bench-rev-2/verdict.md",
+      "bytes": 9296,
+      "sha256": "97ea2feb1c92e15119161b17b8d3c7da586f55c86fc344b21ce3b7e7fb54751e"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-13/metrics.json",
+      "bytes": 1360,
+      "sha256": "5dcdae2da9cb9c3e6a7595afa56719bc8826eadf85aceda9f78e83e51e927ca9"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-14/_snapshot/home/brenoperucchi/Devs/llm-bench/.herdr/review/llm-bench-31/llm-bench-rev-1/verdict.md",
+      "bytes": 1716,
+      "sha256": "792dbf67ac2e26fbfc69bfd83667d19ae469b92e55cfe5df581b78526232154c"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-14/_snapshot/home/brenoperucchi/Devs/llm-bench/.herdr/review/llm-bench-31/llm-bench-rev-2/verdict.md",
+      "bytes": 9296,
+      "sha256": "97ea2feb1c92e15119161b17b8d3c7da586f55c86fc344b21ce3b7e7fb54751e"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-14/metrics.json",
+      "bytes": 1360,
+      "sha256": "4c8bb5a2704cb20f3dc53f3278d5b394e7670838d9e48e6f38f51e67254675c0"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-15/_snapshot/home/brenoperucchi/Devs/llm-bench/.herdr/review/llm-bench-31/llm-bench-rev-1/verdict.md",
+      "bytes": 1716,
+      "sha256": "792dbf67ac2e26fbfc69bfd83667d19ae469b92e55cfe5df581b78526232154c"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-15/_snapshot/home/brenoperucchi/Devs/llm-bench/.herdr/review/llm-bench-31/llm-bench-rev-2/verdict.md",
+      "bytes": 9296,
+      "sha256": "97ea2feb1c92e15119161b17b8d3c7da586f55c86fc344b21ce3b7e7fb54751e"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-15/metrics.json",
+      "bytes": 1360,
+      "sha256": "981c662abca1a1cd9c24501757a0e60f17ffdf07a9985415565cb39365336246"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-16/_snapshot/home/brenoperucchi/Devs/llm-bench/.herdr/review/llm-bench-31/llm-bench-rev-1/verdict.md",
+      "bytes": 1716,
+      "sha256": "792dbf67ac2e26fbfc69bfd83667d19ae469b92e55cfe5df581b78526232154c"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-16/_snapshot/home/brenoperucchi/Devs/llm-bench/.herdr/review/llm-bench-31/llm-bench-rev-2/verdict.md",
+      "bytes": 9296,
+      "sha256": "97ea2feb1c92e15119161b17b8d3c7da586f55c86fc344b21ce3b7e7fb54751e"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-16/llm-bench-scout/answer.md",
+      "bytes": 9545,
+      "sha256": "325bd322074d9d562cc54be115b73a939048d885f00725ddc1bfe0620f7a8ff4"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-16/metrics.json",
+      "bytes": 3437,
+      "sha256": "69acb220bb547cf69dd20b6699c1112bd34aa8125954734a235d03b7777a633f"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-2/llm-bench-scout/answer.md",
+      "bytes": 6716,
+      "sha256": "1f6769fba7e54f453b505b014f8dc82834cc0d03317bbfc9ec4fd168e6fa0524"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-2/metrics.json",
+      "bytes": 2072,
+      "sha256": "2e01547c781aae0e5c779543f9ed35448aca201e2c745f7524fd2899185327be"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-3/llm-bench-scout/answer.md",
+      "bytes": 7848,
+      "sha256": "d53c45ac310944b6f5e1c8316c141bc589cc26771892b912fa6e9e7fd7ccbec0"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-3/metrics.json",
+      "bytes": 2073,
+      "sha256": "3b448f39f035068517c36c1835ea8a4411b621c5781ef36322b3888c6077e510"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-4/llm-bench-scout/answer.md",
+      "bytes": 9427,
+      "sha256": "91875c1c766feddc2653e68e76c8b74ae65e002295c52d07b82e20a1809829d2"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-4/metrics.json",
+      "bytes": 2283,
+      "sha256": "f367b6f06fd3e079ba45bdbddb21fa9c964e98d479a4e2b615b9b66ccf69da5f"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-5/llm-bench-scout/answer.md",
+      "bytes": 9988,
+      "sha256": "b180c11ecb931c790223fb43530616b0258c809e62e7dea96e4bb6f6e92dd697"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-5/metrics.json",
+      "bytes": 2354,
+      "sha256": "2bb042dc1281a7e9bf04c7498780e23d3e8ebba4aa075dda68b87187eee2950a"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-6/_snapshot/home/brenoperucchi/Devs/llm-bench/.herdr/review/llm-bench-19/llm-bench-rev-1/verdict.md",
+      "bytes": 3155,
+      "sha256": "fdfa8896163fe8f8dee398b49bb5ae5b8dbbe0ad1dd8da3aa11c3677a53f7eba"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-6/_snapshot/home/brenoperucchi/Devs/llm-bench/.herdr/review/llm-bench-19/llm-bench-rev-2/verdict.md",
+      "bytes": 11212,
+      "sha256": "194396e5d1cc5a7ee4c603080e7a8ce4b43da4eb3f58f79e04d521703e9499a8"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-6/metrics.json",
+      "bytes": 1543,
+      "sha256": "f13a9e54a22d2d16549dbb03ca21e4a527a83dc1e611fb1a45730a675cfab3fb"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-7/_snapshot/home/brenoperucchi/Devs/llm-bench/.herdr/review/llm-bench-19/llm-bench-rev-1/verdict.md",
+      "bytes": 3155,
+      "sha256": "fdfa8896163fe8f8dee398b49bb5ae5b8dbbe0ad1dd8da3aa11c3677a53f7eba"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-7/_snapshot/home/brenoperucchi/Devs/llm-bench/.herdr/review/llm-bench-19/llm-bench-rev-2/verdict.md",
+      "bytes": 11212,
+      "sha256": "194396e5d1cc5a7ee4c603080e7a8ce4b43da4eb3f58f79e04d521703e9499a8"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-7/metrics.json",
+      "bytes": 1514,
+      "sha256": "f92a063997bfd01aad9a8efdc8e20908cc547d2ef68da75a6a95bf8b02817bc8"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-8/_snapshot/home/brenoperucchi/Devs/llm-bench/.herdr/review/llm-bench-19/llm-bench-rev-1/verdict.md",
+      "bytes": 3155,
+      "sha256": "fdfa8896163fe8f8dee398b49bb5ae5b8dbbe0ad1dd8da3aa11c3677a53f7eba"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-8/_snapshot/home/brenoperucchi/Devs/llm-bench/.herdr/review/llm-bench-19/llm-bench-rev-2/verdict.md",
+      "bytes": 11212,
+      "sha256": "194396e5d1cc5a7ee4c603080e7a8ce4b43da4eb3f58f79e04d521703e9499a8"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-8/metrics.json",
+      "bytes": 1748,
+      "sha256": "ae3da4c8a67b5c6e8a5fbcdf06f5b11da8e193819e586dd86149141976b12c8d"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-9/_snapshot/home/brenoperucchi/Devs/llm-bench/.herdr/review/llm-bench-19/llm-bench-rev-1/verdict.md",
+      "bytes": 3155,
+      "sha256": "fdfa8896163fe8f8dee398b49bb5ae5b8dbbe0ad1dd8da3aa11c3677a53f7eba"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-9/_snapshot/home/brenoperucchi/Devs/llm-bench/.herdr/review/llm-bench-19/llm-bench-rev-2/verdict.md",
+      "bytes": 11212,
+      "sha256": "194396e5d1cc5a7ee4c603080e7a8ce4b43da4eb3f58f79e04d521703e9499a8"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-9/llm-bench-scout/answer.md",
+      "bytes": 23072,
+      "sha256": "0079957d8e5f48fc71a011bf0550f6b607b6b469810e70220186582937658758"
+    },
+    {
+      "path": ".herdr/ask/llm-bench-9/metrics.json",
+      "bytes": 3547,
+      "sha256": "fb3ddf04714b5964f6b1324a8394468ab7ea09d0ce5ec25f20187c4ce34e812d"
+    },
+    {
+      "path": ".herdr/review/llm-bench-1/llm-bench-rev/verdict.md",
+      "bytes": 3581,
+      "sha256": "1633ddbd6b2eb20239d3c44c95f352868a8f29ff4edc215600483fd7ae0f55f1"
+    },
+    {
+      "path": ".herdr/review/llm-bench-1/llm-bench-rev-2/verdict.md",
+      "bytes": 19211,
+      "sha256": "c3c7eeebff1f01aecedce9a985fd5b79cb32e43c0caf595851ad3ad228df6e5c"
+    },
+    {
+      "path": ".herdr/review/llm-bench-1/metrics.json",
+      "bytes": 780,
+      "sha256": "c4746e4c2f680fbb26ea05e8526f1e0757f4620bb19640958cb024110388c0ae"
+    },
+    {
+      "path": ".herdr/review/llm-bench-10/llm-bench-rev-1/verdict.md",
+      "bytes": 11438,
+      "sha256": "03a666ae2f6ea6e578a06862be468bcdea4e60d67a00acc7cfe97f3a74a1f811"
+    },
+    {
+      "path": ".herdr/review/llm-bench-10/llm-bench-rev-2/verdict.md",
+      "bytes": 12234,
+      "sha256": "769e8f7dc57d0155001b7ee5dc94b77781ed779be4f456ff7e5d736014c52089"
+    },
+    {
+      "path": ".herdr/review/llm-bench-10/metrics.json",
+      "bytes": 784,
+      "sha256": "9a76e6632f33be6c6ec957ec38fa32590aa167bbe4110d5bc19eb56d0c71fb66"
+    },
+    {
+      "path": ".herdr/review/llm-bench-11/llm-bench-rev-1/verdict.md",
+      "bytes": 8680,
+      "sha256": "8f3527561129f5a37edcc66bac54fb7221627cd4905ddff6134c899e16e530cc"
+    },
+    {
+      "path": ".herdr/review/llm-bench-11/llm-bench-rev-2/verdict.md",
+      "bytes": 10366,
+      "sha256": "684c3e903442b929d2e9b665583504adbce6cdd7091e78d6b69aaa9044dda864"
+    },
+    {
+      "path": ".herdr/review/llm-bench-11/metrics.json",
+      "bytes": 3103,
+      "sha256": "7ca1842699bcc45a4af67d91f27ed342794db92ffc402c97cd356e0c325809cc"
+    },
+    {
+      "path": ".herdr/review/llm-bench-12/llm-bench-rev-1/verdict.md",
+      "bytes": 5230,
+      "sha256": "e4d09699249cafae509c8356a0b5b22c92a6c7f39e95c392561591a30caf0f6f"
+    },
+    {
+      "path": ".herdr/review/llm-bench-12/llm-bench-rev-2/verdict.md",
+      "bytes": 6639,
+      "sha256": "6fe312773b81bc388479165471ee57c9f58ffc7d441043f6b51bcb266ff61290"
+    },
+    {
+      "path": ".herdr/review/llm-bench-12/metrics.json",
+      "bytes": 3102,
+      "sha256": "41a9e1fee27169aa5d76a76b83667d48ec47115981284c3ecb1331b286b5e877"
+    },
+    {
+      "path": ".herdr/review/llm-bench-13/llm-bench-rev-1/verdict.md",
+      "bytes": 5581,
+      "sha256": "139ec36d897cbc93b5b696e5e2d398e63ebffb13ec52c7596b43996e6558df43"
+    },
+    {
+      "path": ".herdr/review/llm-bench-13/llm-bench-rev-2/verdict.md",
+      "bytes": 5858,
+      "sha256": "998857e4246b53bcc2e810bca8d9323a1353d91fbe6750fdcc1ee4efa7832132"
+    },
+    {
+      "path": ".herdr/review/llm-bench-13/metrics.json",
+      "bytes": 3139,
+      "sha256": "f0cb37e34fe86c9b2441ab4f54635f02b2724e82f28ff6892efb80898bc4032d"
+    },
+    {
+      "path": ".herdr/review/llm-bench-14/llm-bench-rev-1/verdict.md",
+      "bytes": 3959,
+      "sha256": "7061fc4439a11ef2fc6cf8a0eec0389e42b3feab43855a59686c3b97b952c599"
+    },
+    {
+      "path": ".herdr/review/llm-bench-14/llm-bench-rev-2/verdict.md",
+      "bytes": 6162,
+      "sha256": "cb81f3648afbef9f5d75a397a9da5aa00b626cf070ee0797c4869c6a853cbf34"
+    },
+    {
+      "path": ".herdr/review/llm-bench-14/metrics.json",
+      "bytes": 3139,
+      "sha256": "50d0d6f09cc3a05ff43e3b01843845b96d38270e259fe9a9f3f441bfe9c3be98"
+    },
+    {
+      "path": ".herdr/review/llm-bench-15/llm-bench-rev-1/verdict.md",
+      "bytes": 9227,
+      "sha256": "a365abd7e77607ba74bdd4d3085d2b17cf14796a2772272544ef1540aa02a00b"
+    },
+    {
+      "path": ".herdr/review/llm-bench-15/llm-bench-rev-2/verdict.md",
+      "bytes": 9023,
+      "sha256": "e8ffa60900632eb6e8055dce2b8be38ca39a2fc9b07a80ffffeea8d55914dacc"
+    },
+    {
+      "path": ".herdr/review/llm-bench-15/metrics.json",
+      "bytes": 3596,
+      "sha256": "80775053861f9507560ad0ede1b821f338f8cceeba942c1d21f3603344be1d36"
+    },
+    {
+      "path": ".herdr/review/llm-bench-16/llm-bench-rev-1/verdict.md",
+      "bytes": 3546,
+      "sha256": "957d8abd7ab5bf5ce961a593d7d1eac05681a523e771ddb47f5df4d5efcc7dd8"
+    },
+    {
+      "path": ".herdr/review/llm-bench-16/llm-bench-rev-2/verdict.md",
+      "bytes": 9984,
+      "sha256": "9a95997dc24dc1d1b6be377bfabfa1f32243dd54410f5c7647d237c79310c0de"
+    },
+    {
+      "path": ".herdr/review/llm-bench-16/metrics.json",
+      "bytes": 3596,
+      "sha256": "49002afe035f5afd6e88ddc84fe2b86b1e457ee2bde251bba59d12470b20df45"
+    },
+    {
+      "path": ".herdr/review/llm-bench-17/llm-bench-rev-1/verdict.md",
+      "bytes": 2760,
+      "sha256": "cb70de047be7a7e35fc3ef8bdc89eb0948f1389debb333ca66f76764f4c4e4fd"
+    },
+    {
+      "path": ".herdr/review/llm-bench-17/llm-bench-rev-2/verdict.md",
+      "bytes": 4449,
+      "sha256": "5cdc854f1cf0e831ede1f3e9a4cb40eac0874bd2b0033e3328bbbaae26b3bc9a"
+    },
+    {
+      "path": ".herdr/review/llm-bench-17/metrics.json",
+      "bytes": 3596,
+      "sha256": "597f793db77c1ffc521f1cfc0b0b30d42e226604b9bbec0ae7d7e10941cba5d4"
+    },
+    {
+      "path": ".herdr/review/llm-bench-18/llm-bench-rev-1/verdict.md",
+      "bytes": 10777,
+      "sha256": "4ef79d1fc4fe0e8bbb746fd2b8cac7a43b5fd7035be6d8d7c0a55b2c3a117d5e"
+    },
+    {
+      "path": ".herdr/review/llm-bench-18/llm-bench-rev-2/verdict.md",
+      "bytes": 13206,
+      "sha256": "7b21133be8fb4695042f99aa0042aa154b24d5b95edeedbf7ff9fd72257768dc"
+    },
+    {
+      "path": ".herdr/review/llm-bench-18/metrics.json",
+      "bytes": 3600,
+      "sha256": "a03b1658e914d7408278faeaf5c53f2a39c1687143edfb49511fa186e49545ad"
+    },
+    {
+      "path": ".herdr/review/llm-bench-19/llm-bench-rev-1/verdict.md",
+      "bytes": 3155,
+      "sha256": "fdfa8896163fe8f8dee398b49bb5ae5b8dbbe0ad1dd8da3aa11c3677a53f7eba"
+    },
+    {
+      "path": ".herdr/review/llm-bench-19/llm-bench-rev-2/verdict.md",
+      "bytes": 11212,
+      "sha256": "194396e5d1cc5a7ee4c603080e7a8ce4b43da4eb3f58f79e04d521703e9499a8"
+    },
+    {
+      "path": ".herdr/review/llm-bench-19/metrics.json",
+      "bytes": 4440,
+      "sha256": "c85319160bde4f740a1f7d29d838fd6d48758345e3e9a23ad9cb982116956083"
+    },
+    {
+      "path": ".herdr/review/llm-bench-2/llm-bench-rev/verdict.md",
+      "bytes": 3369,
+      "sha256": "7a67a44695cb88ace14ca2759e02e7937522e3b783dd6803cac07eecaa60ab3e"
+    },
+    {
+      "path": ".herdr/review/llm-bench-2/llm-bench-rev-2/verdict.md",
+      "bytes": 18391,
+      "sha256": "a5329fe40efcd375c8e26e22d966e8bee69bfaad3e9671e4c154915bdfab24a9"
+    },
+    {
+      "path": ".herdr/review/llm-bench-2/metrics.json",
+      "bytes": 780,
+      "sha256": "7a8e3f2c0fb993a3041767ba0d7249dbfffa216549a39eb79f4e43e71d8f79d5"
+    },
+    {
+      "path": ".herdr/review/llm-bench-20/llm-bench-rev-1/verdict.md",
+      "bytes": 2958,
+      "sha256": "51f1491cb666efebb169d65678dac117432c9638d707f37e8fa4cd5e6298193b"
+    },
+    {
+      "path": ".herdr/review/llm-bench-20/llm-bench-rev-2/verdict.md",
+      "bytes": 12184,
+      "sha256": "f87f73321d3aa88d4f49cf6f8ea6fe5ccf18556d98fababf0ae7a5b064f65da9"
+    },
+    {
+      "path": ".herdr/review/llm-bench-20/metrics.json",
+      "bytes": 4403,
+      "sha256": "b0ae825048d7c868a955c06fca2cdca6c0fa5c461a66bb46723321768faaacff"
+    },
+    {
+      "path": ".herdr/review/llm-bench-21/llm-bench-rev-1/verdict.md",
+      "bytes": 2596,
+      "sha256": "66b4bdad95daa23c60bdbdcbab4c76be439e6805adbf666755ecb72b04f06cd8"
+    },
+    {
+      "path": ".herdr/review/llm-bench-21/llm-bench-rev-2/verdict.md",
+      "bytes": 6428,
+      "sha256": "dd1d1abfe3a0af1e6666252d014ef18e8eb068ac6654c5c1793e9d25a4dec9af"
+    },
+    {
+      "path": ".herdr/review/llm-bench-21/metrics.json",
+      "bytes": 4401,
+      "sha256": "a303de2154327b0cbc52bc490e9546b0a748b0addfbb850aaaa01edc80f933c5"
+    },
+    {
+      "path": ".herdr/review/llm-bench-22/llm-bench-rev-1/verdict.md",
+      "bytes": 6421,
+      "sha256": "d15c70608eed56cdf63a10dc9d96c7b6767b05f1385553ee2a9151f323d78021"
+    },
+    {
+      "path": ".herdr/review/llm-bench-22/llm-bench-rev-2/verdict.md",
+      "bytes": 23514,
+      "sha256": "df009a7a1333b2dd98079ea78470ed5f3d407e03c197f26b05f97c14818ce46d"
+    },
+    {
+      "path": ".herdr/review/llm-bench-22/metrics.json",
+      "bytes": 4498,
+      "sha256": "b8430384bb02afeaf912d11700941827998306d9fb5dd4773c0a9b4c244cacad"
+    },
+    {
+      "path": ".herdr/review/llm-bench-23/llm-bench-rev-1/verdict.md",
+      "bytes": 3601,
+      "sha256": "db5595339f1ae0b5e83ca27767700922b7dba3e6cfc78f77204102742d107c31"
+    },
+    {
+      "path": ".herdr/review/llm-bench-23/llm-bench-rev-2/verdict.md",
+      "bytes": 11472,
+      "sha256": "3207b8f98cde9a55783e7c94379198054e8a63b18788184c6eb08e7b885a7979"
+    },
+    {
+      "path": ".herdr/review/llm-bench-23/metrics.json",
+      "bytes": 4500,
+      "sha256": "2a356a4ec21a0baa0c53f0c1b7e5326f02c56f51e678ad81b474bca4ec8b8981"
+    },
+    {
+      "path": ".herdr/review/llm-bench-24/metrics.json",
+      "bytes": 361,
+      "sha256": "bca998083e79cb04eab2f63a641974db6292c3ec552db6946e98ca284bbd954e"
+    },
+    {
+      "path": ".herdr/review/llm-bench-25/llm-bench-rev-1/verdict.md",
+      "bytes": 3980,
+      "sha256": "eabe371662fffcc84a41c3aefd1a21c1f1b9f603be1bb5b813580e2eb9086fc3"
+    },
+    {
+      "path": ".herdr/review/llm-bench-25/llm-bench-rev-2/verdict.md",
+      "bytes": 12665,
+      "sha256": "faa06f6a10f0cbb694498f52a93f75ac4c933ea0ac14ec0e995e8bbbb328c258"
+    },
+    {
+      "path": ".herdr/review/llm-bench-25/metrics.json",
+      "bytes": 4502,
+      "sha256": "d97497dc403cc32580003f037420f22b6789f2f63e9b516fad9e448c54fbcc2b"
+    },
+    {
+      "path": ".herdr/review/llm-bench-26/metrics.json",
+      "bytes": 381,
+      "sha256": "50973f9b82fda0ab1f1c707ef5783ab8ba8b10c8d5fd02e70db80d37b44bf12c"
+    },
+    {
+      "path": ".herdr/review/llm-bench-27/metrics.json",
+      "bytes": 381,
+      "sha256": "aa0a830cc66563d5c887861e89a2a46c12201fe1454ab3f55ed82520da1b5dc3"
+    },
+    {
+      "path": ".herdr/review/llm-bench-28/metrics.json",
+      "bytes": 381,
+      "sha256": "8ec6d957218c7531af7296d42ff0436ce138b0150387ed22722ab9afc0532b0f"
+    },
+    {
+      "path": ".herdr/review/llm-bench-29/metrics.json",
+      "bytes": 381,
+      "sha256": "3f6b67c7c279bfb5686e4a3951237e129a77fbd24d3072a5ead5b7be4566c4c7"
+    },
+    {
+      "path": ".herdr/review/llm-bench-3/llm-bench-rev/verdict.md",
+      "bytes": 7064,
+      "sha256": "297eb518ba785defe392e042a1611298a11e688f6b7cad3c1e646ed595f94807"
+    },
+    {
+      "path": ".herdr/review/llm-bench-3/llm-bench-rev-2/verdict.md",
+      "bytes": 22761,
+      "sha256": "a313aa389a63ca0bef6e0e8b0079ca1a67fdcc67320284bedf8da2e6c6c85bb4"
+    },
+    {
+      "path": ".herdr/review/llm-bench-3/metrics.json",
+      "bytes": 780,
+      "sha256": "917bcdf5a55570b18709fefac3cc6f5b43fa0b7908c37ba0b9479bd56573ebbe"
+    },
+    {
+      "path": ".herdr/review/llm-bench-30/llm-bench-rev-1/verdict.md",
+      "bytes": 6045,
+      "sha256": "8efb634d997e70a3a56d600891fec7c005f846b0b3cf6ea534a8e30f9ad23f9a"
+    },
+    {
+      "path": ".herdr/review/llm-bench-30/llm-bench-rev-2/verdict.md",
+      "bytes": 15968,
+      "sha256": "ddf1e9c7d6088376ecab23b29590096f5320b67325a1bcd6046fb9d346213ae6"
+    },
+    {
+      "path": ".herdr/review/llm-bench-30/metrics.json",
+      "bytes": 4496,
+      "sha256": "7fb5fa065535f85296a1e1dbe88a2d6a922d89342b3a29d60d9fdf7ea0ac09ac"
+    },
+    {
+      "path": ".herdr/review/llm-bench-31/llm-bench-rev-1/verdict.md",
+      "bytes": 1716,
+      "sha256": "792dbf67ac2e26fbfc69bfd83667d19ae469b92e55cfe5df581b78526232154c"
+    },
+    {
+      "path": ".herdr/review/llm-bench-31/llm-bench-rev-2/verdict.md",
+      "bytes": 9296,
+      "sha256": "97ea2feb1c92e15119161b17b8d3c7da586f55c86fc344b21ce3b7e7fb54751e"
+    },
+    {
+      "path": ".herdr/review/llm-bench-31/metrics.json",
+      "bytes": 4494,
+      "sha256": "252ca17009f805fbfa78a5051d82390e1919149eabac2219f6b796dc2615ce29"
+    },
+    {
+      "path": ".herdr/review/llm-bench-32/llm-bench-rev-1/verdict.md",
+      "bytes": 3668,
+      "sha256": "db2c3223fbc58d025f5cdf22508f5ffc56dc2e15761c3fdb8f480bb0c5afea24"
+    },
+    {
+      "path": ".herdr/review/llm-bench-32/llm-bench-rev-2/verdict.md",
+      "bytes": 9441,
+      "sha256": "6b82d9cfec566a4e352a81de6007f78703da5bae70537e4533ab0340e4738d8a"
+    },
+    {
+      "path": ".herdr/review/llm-bench-32/metrics.json",
+      "bytes": 5786,
+      "sha256": "3bff27652bf87888fc31e67d4647b2db10c709576e28fde9e56b61ff3d40f2a9"
+    },
+    {
+      "path": ".herdr/review/llm-bench-33/llm-bench-rev-1/verdict.md",
+      "bytes": 2112,
+      "sha256": "8ea1379e17a94172888a246717245ffb1f2439bb5720c3a2dc87012c782e8a3d"
+    },
+    {
+      "path": ".herdr/review/llm-bench-33/llm-bench-rev-2/verdict.md",
+      "bytes": 8127,
+      "sha256": "15489b7df4a6592249a894dd09d797e0328e9e0e7c9cde64204219ead44a0d6e"
+    },
+    {
+      "path": ".herdr/review/llm-bench-33/metrics.json",
+      "bytes": 5786,
+      "sha256": "6c049d1fb1d82c0fcb5c12bf16e3de1429948a726d7982ff86aad47596726f21"
+    },
+    {
+      "path": ".herdr/review/llm-bench-34/llm-bench-rev-1/verdict.md",
+      "bytes": 1856,
+      "sha256": "5968d7f76afb7eac584d93c719c89e31ac4cc669ecc6e28c88a63f121e531c73"
+    },
+    {
+      "path": ".herdr/review/llm-bench-34/llm-bench-rev-2/verdict.md",
+      "bytes": 6176,
+      "sha256": "2b0c86dd6c31d081df2e1b3f08721876d8afd6e307cff2b9814c81cac96a561e"
+    },
+    {
+      "path": ".herdr/review/llm-bench-34/metrics.json",
+      "bytes": 5786,
+      "sha256": "a7fc178754f736110b8e00c5578ee96d654bb5a5876edebfff2bacf4bf43ce9d"
+    },
+    {
+      "path": ".herdr/review/llm-bench-35/llm-bench-rev-1/verdict.md",
+      "bytes": 2070,
+      "sha256": "e5e1917f1f6fa9fad829741b7f16a447cb6378c997abfa8cb4066e8b1d2f1709"
+    },
+    {
+      "path": ".herdr/review/llm-bench-35/llm-bench-rev-2/verdict.md",
+      "bytes": 4567,
+      "sha256": "246bfb1a1e16e7c38d8332be8e1584121cadd2e0f87ff03c8b79d05682c80dbf"
+    },
+    {
+      "path": ".herdr/review/llm-bench-35/metrics.json",
+      "bytes": 5786,
+      "sha256": "eae800de27915d0c845ac8d3accee0312c19e885510b608e26497a2b3d6c7f41"
+    },
+    {
+      "path": ".herdr/review/llm-bench-4/llm-bench-rev/verdict.md",
+      "bytes": 5553,
+      "sha256": "ea5fa474509a99609466d5089f47d5d908dd2ab05ea9e33c19ed2e8fec5ecd10"
+    },
+    {
+      "path": ".herdr/review/llm-bench-4/llm-bench-rev-2/verdict.md",
+      "bytes": 21585,
+      "sha256": "a464d7f347f79781eef1e9f82b1e074a5acc8043213e1b7997ff3e94ed4590d2"
+    },
+    {
+      "path": ".herdr/review/llm-bench-4/metrics.json",
+      "bytes": 780,
+      "sha256": "48ce1454c0f7db6dc50db92bfaf37dd2b8db2e0293c02be6282042209d9a5d76"
+    },
+    {
+      "path": ".herdr/review/llm-bench-5/llm-bench-rev/verdict.md",
+      "bytes": 4439,
+      "sha256": "c527ba6950975f6035a24408242c263f2839892baf27e3081a25eb5af4362b6e"
+    },
+    {
+      "path": ".herdr/review/llm-bench-5/llm-bench-rev-2/verdict.md",
+      "bytes": 19057,
+      "sha256": "294aa6affd0fa9042e5fcda6b8e1435ea30e712424e47bcde4598219718c307c"
+    },
+    {
+      "path": ".herdr/review/llm-bench-5/metrics.json",
+      "bytes": 780,
+      "sha256": "31248332d0520f5df7df8e15c4842fd21b710c0000fe888777c033688c9a9b0f"
+    },
+    {
+      "path": ".herdr/review/llm-bench-6/llm-bench-rev/verdict.md",
+      "bytes": 1586,
+      "sha256": "f9d0c86019072c85d3acdedca00f3ebd61f4a5abea69616ea519d23fef7c302d"
+    },
+    {
+      "path": ".herdr/review/llm-bench-6/llm-bench-rev-2/verdict.md",
+      "bytes": 19058,
+      "sha256": "84ab02445ae7b4a4460ecbeaff3fa404950c318ece364f973beedc74c55e97dd"
+    },
+    {
+      "path": ".herdr/review/llm-bench-6/metrics.json",
+      "bytes": 746,
+      "sha256": "0538a1ebd4de1c597dfbcf4a104c91adaef26f82b6165ead7f6deced18d7f9ac"
+    },
+    {
+      "path": ".herdr/review/llm-bench-7/llm-bench-rev/verdict.md",
+      "bytes": 13269,
+      "sha256": "c096baf7bf13a08fbc406eea140c4f0df0bed86f1b5fb3abf1b4f0a62adee81d"
+    },
+    {
+      "path": ".herdr/review/llm-bench-7/llm-bench-rev-2/verdict.md",
+      "bytes": 13731,
+      "sha256": "5b3759409dbf11aa20562792b2962d8a5387a85aa34a0741fcfa44d4944edadf"
+    },
+    {
+      "path": ".herdr/review/llm-bench-7/metrics.json",
+      "bytes": 780,
+      "sha256": "6e2b50afb523a164b9dc16bcec5276620866ebac6874c4781e646ae5e3d7d408"
+    },
+    {
+      "path": ".herdr/review/llm-bench-8/llm-bench-rev-1/verdict.md",
+      "bytes": 18416,
+      "sha256": "6977d9e8762b6ae9507b17b6fc6bfe0fa5d2550f336f755d6ffdf706a0340704"
+    },
+    {
+      "path": ".herdr/review/llm-bench-8/llm-bench-rev-2/verdict.md",
+      "bytes": 18404,
+      "sha256": "21a45b21615ffdf446cc6a54ba1a66fa7bbde3aab8936393ec57120c1d78bdb4"
+    },
+    {
+      "path": ".herdr/review/llm-bench-8/metrics.json",
+      "bytes": 783,
+      "sha256": "c6f02662945c22c2bb33129bd868e699996a847026edf75ba49953ad89eddfcc"
+    },
+    {
+      "path": ".herdr/review/llm-bench-9/llm-bench-rev-1/verdict.md",
+      "bytes": 13966,
+      "sha256": "f187511bedb3847024454f47f38b55696fd9d73d9038859657e5aa59985690d5"
+    },
+    {
+      "path": ".herdr/review/llm-bench-9/llm-bench-rev-2/verdict.md",
+      "bytes": 18151,
+      "sha256": "3b9c1c3114be2ae672227dd3a953699e45eba87508218dad4ce6058b09339a91"
+    },
+    {
+      "path": ".herdr/review/llm-bench-9/metrics.json",
+      "bytes": 783,
+      "sha256": "a56945f52f29f968978642e1a7b097eea10ddd9ba60b183baeb660951a77267a"
+    }
+  ]
+}

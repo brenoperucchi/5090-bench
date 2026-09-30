@@ -1,0 +1,9 @@
+{
+  "schema_version": "t87-p1-campaign-start-v1",
+  "campaign_id": "t87-p1-harness-v8-20260919T043342Z-1181427",
+  "harness_version": "t87-p1-harness-v8",
+  "series_key": "{\"answer_key_protected\":\"true\",\"benchmark_commit\":\"776e799c7e0a24271e021aca2ea4b1c1b1f10017\",\"dependency_fingerprint\":\"e8a842b1702dca9811ce9f2c95e77da2f888b368d94673b534cbc3aac587f453\",\"execution_user\":\"labuser\",\"gpu_free_threshold_mib\":8000,\"grader_command\":\"/opt/spec-wins/scripts/verify-lab.sh\",\"grader_privilege\":\"sudo -n\",\"harness_version\":\"t87-p1-harness-v8\",\"hidden_protected\":\"true\",\"installed_dependency_fingerprint\":\"e8a842b1702dca9811ce9f2c95e77da2f888b368d94673b534cbc3aac587f453\",\"model_sha256\":\"d372de8e934898a59e6ccfabc3368474711384d8f1fd4d22d87a3f0a45400cdc\",\"python_version\":\"3.13.5\",\"reset_command\":\"/opt/spec-wins/scripts/reset-lab.sh\",\"reset_sha256\":\"unknown\",\"route\":{\"host\":\"192.168.0.125\",\"id\":\"lan\",\"port\":18087,\"request_path\":\"/v1/chat/completions\",\"scheme\":\"http\"},\"runtime\":\"thecodacus/llama.cpp\",\"setup_sha256\":\"300969d777a392488f2d5349641f47f129e2969f668b589c59ec2400abe4e823\",\"suite_mode\":\"0700\",\"suite_owner\":\"root:root\",\"suite_path\":\"/opt/spec-wins\",\"venv_path\":\"/home/labuser/venv\"}",
+  "created_at": "2026-09-19T04:33:42.158688Z",
+  "gpu_free_threshold_mib": 8000,
+  "new_generation_budget": 330
+}

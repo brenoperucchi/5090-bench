@@ -1,0 +1,38 @@
+{
+  "run_id": "run-4-1051",
+  "seed": 1051,
+  "task_dirs": {
+    "t1_ratelimit": "/home/brenoperucchi/t87-runtime/spec-wins-v2/run-4-1051/t1_ratelimit",
+    "t2_metrics": "/home/brenoperucchi/t87-runtime/spec-wins-v2/run-4-1051/t2_metrics",
+    "t3_pipeline": "/home/brenoperucchi/t87-runtime/spec-wins-v2/run-4-1051/t3_pipeline"
+  },
+  "tasks": [
+    {
+      "task": "t1_ratelimit",
+      "status": "incomplete",
+      "generation_count": 13,
+      "grade": {
+        "status": "not_graded"
+      },
+      "transcript": "results/t87-p1-v2-2026-09-18-preparation-7/run-4-1051/t1_ratelimit.json"
+    },
+    {
+      "task": "t2_metrics",
+      "status": "incomplete",
+      "generation_count": 27,
+      "grade": {
+        "status": "not_graded"
+      },
+      "transcript": "results/t87-p1-v2-2026-09-18-preparation-7/run-4-1051/t2_metrics.json"
+    },
+    {
+      "task": "t3_pipeline",
+      "status": "incomplete",
+      "generation_count": 26,
+      "grade": {
+        "status": "not_graded"
+      },
+      "transcript": "results/t87-p1-v2-2026-09-18-preparation-7/run-4-1051/t3_pipeline.json"
+    }
+  ]
+}

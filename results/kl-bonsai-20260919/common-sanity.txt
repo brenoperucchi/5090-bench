@@ -1,0 +1,11 @@
+Este é um pequeno texto de controle em português, escrito para representar prosa
+comum e não os artefatos técnicos do projeto. Uma manhã tranquila começa com a
+leitura de um relatório, a comparação de algumas hipóteses e a escolha do próximo
+passo. Quando os dados contradizem uma expectativa, o procedimento correto é
+verificar a medição antes de tirar uma conclusão.
+
+This is a short control passage in ordinary English. A useful experiment keeps
+one variable fixed, records the exact input, and separates loading time from the
+time spent processing each example. A result can be surprising without being
+wrong, but an unexplained mismatch should be investigated before it is used to
+make a decision.

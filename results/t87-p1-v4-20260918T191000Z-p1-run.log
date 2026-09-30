@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/home/brenoperucchi/Devs/llm-bench/tools/t87_spec_wins_harness.py", line 590, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/brenoperucchi/Devs/llm-bench/tools/t87_spec_wins_harness.py", line 585, in main
+    run_campaign(args.out)
+    ~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/brenoperucchi/Devs/llm-bench/tools/t87_spec_wins_harness.py", line 559, in run_campaign
+    run_record["tasks"].append(run_task(task, prompts["preamble"] + "\n\n" + prompts[task], seed, task_dirs, run_out))
+                               ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/brenoperucchi/Devs/llm-bench/tools/t87_spec_wins_harness.py", line 453, in run_task
+    result = run_tool(tool_call, sandbox)
+  File "/home/brenoperucchi/Devs/llm-bench/tools/t87_spec_wins_harness.py", line 378, in run_tool
+    return sandbox.run(inner)
+           ~~~~~~~~~~~^^^^^^^
+  File "/home/brenoperucchi/Devs/llm-bench/tools/t87_spec_wins_harness.py", line 337, in run
+    raise RuntimeError("remote sandbox exited before command marker")
+RuntimeError: remote sandbox exited before command marker

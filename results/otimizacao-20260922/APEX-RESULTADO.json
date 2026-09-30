@@ -1,0 +1,74 @@
+{
+  "apex-wsl": {
+    "tg": 231.82,
+    "pp_longo": 9057.5,
+    "aceitacao_mtp": null,
+    "textos": {
+      "curto-1": "989b2409c29d",
+      "medio-1": "0154b68051e5",
+      "longo-1": "0d846beafce7",
+      "curto-2": "989b2409c29d",
+      "medio-2": "0154b68051e5",
+      "longo-2": "0d846beafce7",
+      "curto-3": "989b2409c29d",
+      "medio-3": "0154b68051e5",
+      "longo-3": "0d846beafce7"
+    },
+    "extra": "-ub 1024 -b 4096",
+    "log_fa": ""
+  },
+  "apex-wsl-mtp": {
+    "tg": 271.93,
+    "pp_longo": 7134.4,
+    "aceitacao_mtp": 0.69,
+    "textos": {
+      "curto-1": "1576023ec469",
+      "medio-1": "4249d08810cf",
+      "longo-1": "8ed8093202d2",
+      "curto-2": "1576023ec469",
+      "medio-2": "4249d08810cf",
+      "longo-2": "8ed8093202d2",
+      "curto-3": "1576023ec469",
+      "medio-3": "4249d08810cf",
+      "longo-3": "8ed8093202d2"
+    },
+    "extra": "-ub 1024 -b 4096 -md /mnt/e/llm-bench-t87-runtimes/models/qwen38-35b-apex/mtp-Qwen3.8-35B-A3B-Distill-Q8_0.gguf --spec-type draft-mtp --spec-draft-n-max 2",
+    "log_fa": ""
+  },
+  "apex-win": {
+    "tg": 244.09,
+    "pp_longo": 9588.4,
+    "aceitacao_mtp": null,
+    "textos": {
+      "curto-1": "989b2409c29d",
+      "medio-1": "0154b68051e5",
+      "longo-1": "0d846beafce7",
+      "curto-2": "989b2409c29d",
+      "medio-2": "0154b68051e5",
+      "longo-2": "0d846beafce7",
+      "curto-3": "989b2409c29d",
+      "medio-3": "0154b68051e5",
+      "longo-3": "0d846beafce7"
+    },
+    "extra": "-ub 1024 -b 4096",
+    "log_fa": ""
+  },
+  "apex-win-mtp": {
+    "tg": 302.44,
+    "pp_longo": 8331.4,
+    "aceitacao_mtp": 0.69,
+    "textos": {
+      "curto-1": "1576023ec469",
+      "medio-1": "4249d08810cf",
+      "longo-1": "8ed8093202d2",
+      "curto-2": "1576023ec469",
+      "medio-2": "4249d08810cf",
+      "longo-2": "8ed8093202d2",
+      "curto-3": "1576023ec469",
+      "medio-3": "4249d08810cf",
+      "longo-3": "8ed8093202d2"
+    },
+    "extra": "-ub 1024 -b 4096 -md 'E:\\llm-bench-t87-runtimes\\models\\qwen38-35b-apex\\mtp-Qwen3.8-35B-A3B-Distill-Q8_0.gguf' --spec-type draft-mtp --spec-draft-n-max 2",
+    "log_fa": ""
+  }
+}

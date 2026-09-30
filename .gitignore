@@ -19,4 +19,19 @@ llm-bench/
 .idea/
 .vscode/
 
-# Resultados e prompts são evidências: devem ser versionados.
+# Resultados e prompts são evidências: devem ser versionados — EXCETO a evidência
+# bruta derivada das cronologias do Guardian (outros projetos: contas, logins,
+# nomes de terceiros). O repositório é PÚBLICO: essa evidência fica só na máquina
+# e o que sai dela é o relatório consolidado em docs/. Decisão do Breno, 24/09/2026.
+results/guardian-*/
+results/jev-hibrido-a2-*/
+results/eikos27-janela-*.log
+.firecrawl/
+dashboard/__pycache__/
+.secrets/
+
+# T87-P1 raw harness metrics: kept on the lab machine, summaries stay in git
+results/t87-p1-*/**/t1_ratelimit.json
+results/t87-p1-*/**/t2_metrics.json
+results/t87-p1-*/**/t3_pipeline.json
+results/t87-p1-*/**/*.checkpoint.jsonl

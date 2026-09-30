@@ -1,0 +1,308 @@
+{
+  "schema_version": "qwen36-runtime-ab-run-v1",
+  "status": "invalidated_before_comparison",
+  "started_at": "2026-09-18T18:25:34.014138Z",
+  "authorization_sha256": "00048f98991a49d96ec23f9c9148dfa638a62cfa4a0bd1100d95652158c895bf",
+  "authorized_generations": 48,
+  "order": [
+    "ollama",
+    "llama_cpp"
+  ],
+  "events": [
+    {
+      "at": "2026-09-18T18:25:34.923613Z",
+      "event": "validated_llama_flags_before",
+      "pid": "794309"
+    },
+    {
+      "at": "2026-09-18T18:25:36.522860Z",
+      "event": "llama_stopped",
+      "pid": "794309"
+    },
+    {
+      "at": "2026-09-18T18:26:42.791006Z",
+      "event": "ollama_arm_complete",
+      "calls": 24
+    },
+    {
+      "at": "2026-09-18T18:26:42.800637Z",
+      "event": "ollama_model_unloaded",
+      "calls": 0
+    },
+    {
+      "at": "2026-09-18T18:28:14.492419Z",
+      "event": "failure",
+      "error": "RuntimeError: restarted llama-server did not become healthy"
+    },
+    {
+      "at": "2026-09-18T18:31:46.071541Z",
+      "event": "resume_after_orchestrator_pid_discovery_failure",
+      "calls": 0
+    },
+    {
+      "at": "2026-09-18T18:31:46.273037Z",
+      "event": "llama_restarted",
+      "pid": "962726",
+      "flags_identical": true
+    },
+    {
+      "at": "2026-09-18T18:34:42.319494Z",
+      "event": "ab_invalidated_before_comparison",
+      "calls": 0,
+      "flags_identical": true
+    }
+  ],
+  "state_before": {
+    "label": "before_stop",
+    "captured_at": "2026-09-18T18:25:34.014380Z",
+    "gpu": "NVIDIA GeForce RTX 5090, 22715 MiB, 32607 MiB, 0 %",
+    "llama_pid": "794309",
+    "llama_process": "/home/brenoperucchi/t87-runtime/codacus-build-final2/bin/llama-server --model /mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf --host 0.0.0.0 --port 18087 --ctx-size 32768 --n-gpu-layers all --parallel 1 --no-webui",
+    "listeners": "LISTEN 0      512           0.0.0.0:18087      0.0.0.0:*    users:((\"llama-server\",pid=794309,fd=11))",
+    "ollama_version": {
+      "version": "0.34.2"
+    },
+    "ollama_ps": {
+      "models": []
+    },
+    "llama_health": {
+      "status": "ok"
+    },
+    "llama_models": {
+      "models": [
+        {
+          "name": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "model": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "modified_at": "",
+          "size": "",
+          "digest": "",
+          "type": "model",
+          "description": "",
+          "tags": [
+            ""
+          ],
+          "capabilities": [
+            "completion"
+          ],
+          "parameters": "",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "",
+            "families": [
+              ""
+            ],
+            "parameter_size": "",
+            "quantization_level": ""
+          }
+        }
+      ],
+      "object": "list",
+      "data": [
+        {
+          "id": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "aliases": [
+            "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf"
+          ],
+          "tags": [],
+          "object": "model",
+          "created": 1789755929,
+          "owned_by": "llamacpp",
+          "meta": {
+            "vocab_type": true,
+            "n_vocab": 248320,
+            "n_ctx": 32768,
+            "n_ctx_train": 262144,
+            "n_embd": 2048,
+            "n_params": 35505251456,
+            "size": 21706498560,
+            "ftype": "Q4_K - Medium"
+          }
+        }
+      ]
+    }
+  },
+  "llama_flags_before": "/home/brenoperucchi/t87-runtime/codacus-build-final2/bin/llama-server --model /mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf --host 0.0.0.0 --port 18087 --ctx-size 32768 --n-gpu-layers all --parallel 1 --no-webui",
+  "ollama_unload_control": {
+    "model": "qwen3.6:35b-a3b",
+    "created_at": "2026-09-18T18:26:37.1121677Z",
+    "response": "",
+    "done": true,
+    "done_reason": "unload"
+  },
+  "error": "RuntimeError: restarted llama-server did not become healthy",
+  "recovery_llama_error": "RuntimeError: restarted llama-server did not become healthy",
+  "state_after": {
+    "label": "after_run",
+    "captured_at": "2026-09-18T18:29:46.375020Z",
+    "gpu": "NVIDIA GeForce RTX 5090, 22684 MiB, 32607 MiB, 1 %",
+    "llama_pid": "794309",
+    "llama_process": "",
+    "listeners": "LISTEN 0      512           0.0.0.0:18087      0.0.0.0:*    users:((\"llama-server\",pid=962726,fd=11))",
+    "ollama_version": {
+      "version": "0.34.2"
+    },
+    "ollama_ps": {
+      "models": []
+    },
+    "llama_health": {
+      "status": "ok"
+    },
+    "llama_models": {
+      "models": [
+        {
+          "name": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "model": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "modified_at": "",
+          "size": "",
+          "digest": "",
+          "type": "model",
+          "description": "",
+          "tags": [
+            ""
+          ],
+          "capabilities": [
+            "completion"
+          ],
+          "parameters": "",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "",
+            "families": [
+              ""
+            ],
+            "parameter_size": "",
+            "quantization_level": ""
+          }
+        }
+      ],
+      "object": "list",
+      "data": [
+        {
+          "id": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "aliases": [
+            "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf"
+          ],
+          "tags": [],
+          "object": "model",
+          "created": 1789756181,
+          "owned_by": "llamacpp",
+          "meta": {
+            "vocab_type": true,
+            "n_vocab": 248320,
+            "n_ctx": 32768,
+            "n_ctx_train": 262144,
+            "n_embd": 2048,
+            "n_params": 35505251456,
+            "size": 21706498560,
+            "ftype": "Q4_K - Medium"
+          }
+        }
+      ]
+    }
+  },
+  "completed_at": "2026-09-18T18:34:42.999150Z",
+  "llama_pid_after_restart": "962726",
+  "llama_flags_after": "/home/brenoperucchi/t87-runtime/codacus-build-final2/bin/llama-server --model /mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf --host 0.0.0.0 --port 18087 --ctx-size 32768 --n-gpu-layers all --parallel 1 --no-webui",
+  "flags_identical": true,
+  "comparison_valid": false,
+  "validity_reason": "same prompt was not delivered to both arms",
+  "comparison_scope": "runtime_plus_artifact_not_pure_runtime",
+  "result_interpretation": "No A/B performance result was produced. Any arm metric is diagnostic only because Ollama used its tag artifact and llama.cpp used a standalone GGUF artifact.",
+  "llama_flags_comparison": {
+    "before": "/home/brenoperucchi/t87-runtime/codacus-build-final2/bin/llama-server --model /mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf --host 0.0.0.0 --port 18087 --ctx-size 32768 --n-gpu-layers all --parallel 1 --no-webui",
+    "after": "/home/brenoperucchi/t87-runtime/codacus-build-final2/bin/llama-server --model /mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf --host 0.0.0.0 --port 18087 --ctx-size 32768 --n-gpu-layers all --parallel 1 --no-webui",
+    "identical": true
+  },
+  "invalidation": {
+    "at": "2026-09-18T18:34:42.319264Z",
+    "reason": "context_heavy prompt exceeded llama.cpp n_ctx=32768 (50384 tokens); llama.cpp returned HTTP 400, while Ollama accepted/truncated the request to prompt_eval_count=16386",
+    "llama_cpp_error": "request (50384 tokens) exceeds the available context size (32768 tokens)",
+    "ollama_observed_prompt_eval_count": 16386,
+    "retry": "not performed; authorized 48-call budget not extended"
+  },
+  "generation_calls_observed": {
+    "ollama": 24,
+    "llama_cpp": 3,
+    "total": 27
+  },
+  "rejected_generation_requests": {
+    "llama_cpp": 1
+  },
+  "non_generation_controls": {
+    "ollama_unload": 1
+  },
+  "llama_cpp_warmup_successful": 3,
+  "llama_cpp_measurements": 0,
+  "state_at_invalidation": {
+    "label": "after_invalidation",
+    "captured_at": "2026-09-18T18:34:42.319500Z",
+    "gpu": "NVIDIA GeForce RTX 5090, 22705 MiB, 32607 MiB, 1 %",
+    "llama_pid": "962726",
+    "llama_process": "/home/brenoperucchi/t87-runtime/codacus-build-final2/bin/llama-server --model /mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf --host 0.0.0.0 --port 18087 --ctx-size 32768 --n-gpu-layers all --parallel 1 --no-webui",
+    "listeners": "LISTEN 0      512           0.0.0.0:18087      0.0.0.0:*    users:((\"llama-server\",pid=962726,fd=11))",
+    "ollama_version": {
+      "version": "0.34.2"
+    },
+    "ollama_ps": {
+      "models": []
+    },
+    "llama_health": {
+      "status": "ok"
+    },
+    "llama_models": {
+      "models": [
+        {
+          "name": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "model": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "modified_at": "",
+          "size": "",
+          "digest": "",
+          "type": "model",
+          "description": "",
+          "tags": [
+            ""
+          ],
+          "capabilities": [
+            "completion"
+          ],
+          "parameters": "",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "",
+            "families": [
+              ""
+            ],
+            "parameter_size": "",
+            "quantization_level": ""
+          }
+        }
+      ],
+      "object": "list",
+      "data": [
+        {
+          "id": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "aliases": [
+            "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf"
+          ],
+          "tags": [],
+          "object": "model",
+          "created": 1789756477,
+          "owned_by": "llamacpp",
+          "meta": {
+            "vocab_type": true,
+            "n_vocab": 248320,
+            "n_ctx": 32768,
+            "n_ctx_train": 262144,
+            "n_embd": 2048,
+            "n_params": 35505251456,
+            "size": 21706498560,
+            "ftype": "Q4_K - Medium"
+          }
+        }
+      ]
+    }
+  }
+}

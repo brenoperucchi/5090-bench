@@ -1,0 +1,208 @@
+{
+  "decisao": {
+    "regras_sha": "be2e98d84eec6718914e21c855c1561448cf12d9545d871de15f4766a6b68e05",
+    "-fa on": {
+      "adotado": false,
+      "tg": [
+        73.73,
+        74.26
+      ],
+      "pp": [
+        3217.1,
+        3133.1
+      ],
+      "texto_identico": true
+    },
+    "-ub 1024 -b 4096": {
+      "adotado": true,
+      "tg": [
+        73.73,
+        74.44
+      ],
+      "pp": [
+        3217.1,
+        3468.2
+      ]
+    },
+    "KV q8_0": {
+      "adotado": false,
+      "motivo": "regra congelada: medido, nunca adotado",
+      "tg": [
+        73.73,
+        73.57
+      ],
+      "pp": [
+        3217.1,
+        3033.5
+      ],
+      "texto_identico": false
+    },
+    "MTP": {
+      "adotado": true,
+      "n_max": "2",
+      "tg_base": 74.68,
+      "tg": {
+        "2": 123.55,
+        "3": 122.67
+      },
+      "aceitacao": {
+        "2": 0.683,
+        "3": 0.567
+      },
+      "texto_identico_ao_sem_mtp": {
+        "2": false,
+        "3": false
+      }
+    },
+    "conjunto_adotado": {
+      "todos": "-ub 1024 -b 4096",
+      "so_nvfp4": "--spec-type draft-mtp --spec-draft-n-max 2"
+    }
+  },
+  "resultados": {
+    "f1-q4-base": {
+      "tg": 73.73,
+      "pp_longo": 3217.1,
+      "aceitacao_mtp": null,
+      "textos": {
+        "curto-1": "a57f3bee9c7a",
+        "medio-1": "5b04d516ebf1",
+        "longo-1": "af7cb8dfa7d4",
+        "curto-2": "a57f3bee9c7a",
+        "medio-2": "5b04d516ebf1",
+        "longo-2": "af7cb8dfa7d4",
+        "curto-3": "a57f3bee9c7a",
+        "medio-3": "5b04d516ebf1",
+        "longo-3": "af7cb8dfa7d4"
+      },
+      "extra": "",
+      "log_fa": ""
+    },
+    "f1-q4-fa": {
+      "tg": 74.26,
+      "pp_longo": 3133.1,
+      "aceitacao_mtp": null,
+      "textos": {
+        "curto-1": "a57f3bee9c7a",
+        "medio-1": "5b04d516ebf1",
+        "longo-1": "af7cb8dfa7d4",
+        "curto-2": "a57f3bee9c7a",
+        "medio-2": "5b04d516ebf1",
+        "longo-2": "af7cb8dfa7d4",
+        "curto-3": "a57f3bee9c7a",
+        "medio-3": "5b04d516ebf1",
+        "longo-3": "af7cb8dfa7d4"
+      },
+      "extra": "-fa on",
+      "log_fa": ""
+    },
+    "f1-q4-ub": {
+      "tg": 74.44,
+      "pp_longo": 3468.2,
+      "aceitacao_mtp": null,
+      "textos": {
+        "curto-1": "a57f3bee9c7a",
+        "medio-1": "92bd1fd33ab7",
+        "longo-1": "b2d0a5196b06",
+        "curto-2": "a57f3bee9c7a",
+        "medio-2": "92bd1fd33ab7",
+        "longo-2": "b2d0a5196b06",
+        "curto-3": "a57f3bee9c7a",
+        "medio-3": "92bd1fd33ab7",
+        "longo-3": "b2d0a5196b06"
+      },
+      "extra": "-ub 1024 -b 4096",
+      "log_fa": ""
+    },
+    "f1-q4-kvq8": {
+      "tg": 73.57,
+      "pp_longo": 3033.5,
+      "aceitacao_mtp": null,
+      "textos": {
+        "curto-1": "a57f3bee9c7a",
+        "medio-1": "78221a6421a3",
+        "longo-1": "f1ccc67e7c4f",
+        "curto-2": "a57f3bee9c7a",
+        "medio-2": "78221a6421a3",
+        "longo-2": "f1ccc67e7c4f",
+        "curto-3": "a57f3bee9c7a",
+        "medio-3": "78221a6421a3",
+        "longo-3": "f1ccc67e7c4f"
+      },
+      "extra": "-ctk q8_0 -ctv q8_0",
+      "log_fa": ""
+    },
+    "f1-nvfp4-base": {
+      "tg": 74.68,
+      "pp_longo": 4095.9,
+      "aceitacao_mtp": null,
+      "textos": {
+        "curto-1": "1f438802b109",
+        "medio-1": "7cfacf23c676",
+        "longo-1": "34c204249b5e",
+        "curto-2": "1f438802b109",
+        "medio-2": "7cfacf23c676",
+        "longo-2": "34c204249b5e",
+        "curto-3": "1f438802b109",
+        "medio-3": "7cfacf23c676",
+        "longo-3": "34c204249b5e"
+      },
+      "extra": "",
+      "log_fa": ""
+    },
+    "f1-nvfp4-mtp2": {
+      "tg": 123.55,
+      "pp_longo": 3521.0,
+      "aceitacao_mtp": 0.683,
+      "textos": {
+        "curto-1": "2211c84f5549",
+        "medio-1": "540a9a0a64d0",
+        "longo-1": "bbc2fcbde5e2",
+        "curto-2": "2211c84f5549",
+        "medio-2": "540a9a0a64d0",
+        "longo-2": "bbc2fcbde5e2",
+        "curto-3": "2211c84f5549",
+        "medio-3": "540a9a0a64d0",
+        "longo-3": "bbc2fcbde5e2"
+      },
+      "extra": "--spec-type draft-mtp --spec-draft-n-max 2",
+      "log_fa": ""
+    },
+    "f1-nvfp4-mtp3": {
+      "tg": 122.67,
+      "pp_longo": 3467.5,
+      "aceitacao_mtp": 0.567,
+      "textos": {
+        "curto-1": "2211c84f5549",
+        "medio-1": "540a9a0a64d0",
+        "longo-1": "bbc2fcbde5e2",
+        "curto-2": "2211c84f5549",
+        "medio-2": "540a9a0a64d0",
+        "longo-2": "bbc2fcbde5e2",
+        "curto-3": "2211c84f5549",
+        "medio-3": "540a9a0a64d0",
+        "longo-3": "bbc2fcbde5e2"
+      },
+      "extra": "--spec-type draft-mtp --spec-draft-n-max 3",
+      "log_fa": ""
+    },
+    "f2-q4-wsl": {
+      "tg": 75.16,
+      "pp_longo": 3491.9,
+      "aceitacao_mtp": null,
+      "textos": {
+        "curto-1": "a57f3bee9c7a",
+        "medio-1": "92bd1fd33ab7",
+        "longo-1": "b2d0a5196b06",
+        "curto-2": "a57f3bee9c7a",
+        "medio-2": "92bd1fd33ab7",
+        "longo-2": "b2d0a5196b06",
+        "curto-3": "a57f3bee9c7a",
+        "medio-3": "92bd1fd33ab7",
+        "longo-3": "b2d0a5196b06"
+      },
+      "extra": "-ub 1024 -b 4096",
+      "log_fa": ""
+    }
+  }
+}

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Benchmark observer</title>
+  <style>
+    :root {
+      --ink: #0b1724; --ink-2: #142536; --paper: #eef3ed; --muted: #7890a8;
+      --cyan: #62d8c7; --amber: #ffb45c; --coral: #ff7168; --line: #294055;
+      --white: #f8fbf6; --mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+      --sans: "Aptos", "Inter Tight", "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--ink); color: var(--paper); font-family: var(--sans); }
+    main { max-width: 1400px; margin: 0 auto; padding: 28px 34px 60px; }
+    .masthead { display: flex; justify-content: space-between; gap: 24px; align-items: end; border-bottom: 1px solid var(--line); padding-bottom: 24px; }
+    .kicker { color: var(--cyan); font: 11px var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+    h1 { font-size: clamp(32px, 5vw, 70px); line-height: .95; letter-spacing: -.055em; margin: 10px 0 0; max-width: 760px; }
+    .lede { color: #b8c7c4; max-width: 390px; line-height: 1.5; margin: 0; }
+    .observer { margin: 24px 0 32px; display: grid; grid-template-columns: 1.5fr 1fr 1fr; border: 1px solid var(--line); background: var(--ink-2); }
+    .observer-cell { padding: 17px 19px; border-right: 1px solid var(--line); min-height: 104px; }
+    .observer-cell:last-child { border-right: 0; }
+    .label { color: var(--muted); font: 10px var(--mono); text-transform: uppercase; letter-spacing: .09em; }
+    .value { margin-top: 9px; font-size: 20px; }
+    .value code, code { font: 12px var(--mono); color: var(--cyan); overflow-wrap: anywhere; }
+    .pulse { display: inline-flex; align-items: center; gap: 8px; color: var(--cyan); }
+    .pulse::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 0 5px #62d8c71c; }
+    .pulse.degraded { color: var(--coral); } .pulse.degraded::before { background: var(--coral); box-shadow: 0 0 0 5px #ff71681c; }
+    .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; border-bottom: 1px solid var(--line); padding-bottom: 11px; margin: 28px 0 14px; }
+    h2 { margin: 0; font-size: 20px; letter-spacing: -.02em; }
+    .section-note { color: var(--muted); font: 11px var(--mono); }
+    .runline { background: #101f2e; border-left: 3px solid var(--amber); padding: 12px 15px; margin-bottom: 24px; display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+    .runline strong { color: var(--amber); font-weight: 600; }
+    .runline.invalidated { border-left-color: var(--coral); }
+    .runline.invalidated strong { color: var(--coral); }
+    .series-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(390px, 1fr)); gap: 18px; align-items: start; }
+    .series { border: 1px solid var(--line); background: #102030; overflow: hidden; }
+    .series.invalid { border-color: #8d4a50; }
+    .series-head { padding: 18px 18px 15px; border-bottom: 1px solid var(--line); }
+    .series-title { font-size: 25px; letter-spacing: -.04em; }
+    .series-meta { margin-top: 9px; color: #aec0bd; font: 11px var(--mono); line-height: 1.6; }
+    .series-meta .route { color: var(--amber); }
+    .validity-badge { display: inline-block; margin-top: 12px; padding: 5px 8px; border: 1px solid var(--coral); color: var(--coral); font: 10px var(--mono); text-transform: uppercase; letter-spacing: .06em; }
+    .validity-note { color: #f2b0aa; font: 11px var(--mono); line-height: 1.5; margin: 12px 0 0; }
+    .series-body { padding: 0 18px 18px; }
+    .countline { display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding: 13px 0; color: #c8d4d1; }
+    .countline strong { color: var(--white); }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 13px; }
+    th { color: var(--muted); font: 10px var(--mono); text-align: left; text-transform: uppercase; letter-spacing: .06em; padding: 10px 0 7px; }
+    td { border-top: 1px solid #22394c; padding: 11px 0; vertical-align: top; }
+    td:not(:first-child), th:not(:first-child) { text-align: right; }
+    td:first-child { color: #c8d4d1; }
+    td code { color: var(--white); font-size: 12px; }
+    .sub { display: block; color: var(--muted); font: 10px var(--mono); margin-top: 3px; }
+    .empty { color: var(--muted); padding: 22px 0; }
+    .lower { display: grid; grid-template-columns: 1.4fr .8fr; gap: 18px; margin-top: 30px; }
+    .panel { border-top: 2px solid var(--cyan); padding-top: 14px; }
+    .panel p, .panel li { color: #b8c7c4; line-height: 1.55; font-size: 14px; }
+    details { border-bottom: 1px solid var(--line); padding: 13px 0; }
+    summary { cursor: pointer; color: var(--white); } details p { margin-bottom: 0; }
+    .footer { margin-top: 44px; color: var(--muted); font: 11px var(--mono); display: flex; justify-content: space-between; gap: 20px; }
+    @media (max-width: 760px) { main { padding: 22px 18px 48px; } .masthead { display: block; } .lede { margin-top: 18px; } .observer, .lower { grid-template-columns: 1fr; } .observer-cell { border-right: 0; border-bottom: 1px solid var(--line); } .observer-cell:last-child { border-bottom: 0; } .series-grid { grid-template-columns: 1fr; } }
+    @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+  </style>
+</head>
+<body>
+<main>
+  <header class="masthead">
+    <div><div class="kicker">llm-bench / observer</div><h1>Benchmark data, with its provenance still attached.</h1></div>
+    <p class="lede">A live read of local benchmark artifacts. The observer state appears before the numbers; runtime and route series never share an axis.</p>
+  </header>
+
+  <section class="observer" aria-label="Observer health">
+    <div class="observer-cell"><div class="label">Observer</div><div id="observer-status" class="value pulse">scanning…</div><div id="observer-note" class="sub"></div></div>
+    <div class="observer-cell"><div class="label">Last good collection</div><div id="last-scan" class="value">—</div><div class="sub">filesystem snapshot</div></div>
+    <div class="observer-cell"><div class="label">Series policy</div><div class="value">isolated</div><div class="sub">no pooled mean / no shared trend</div></div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Current run</h2><span class="section-note">auto-refresh 5s</span></div>
+    <div id="runline" class="runline">No run observed yet.</div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Series ledger</h2><span id="series-count" class="section-note">—</span></div>
+    <div id="series-grid" class="series-grid"><div class="empty">Waiting for a benchmark artifact.</div></div>
+  </section>
+
+  <section class="lower">
+    <div class="panel"><h2>Metric definitions</h2>
+      <details open><summary>Wall time</summary><p>Client-observed seconds for one completed request. Median is computed only inside one series and one prompt class; denominator is shown as successful/attempted measurements.</p></details>
+      <details><summary>Prompt tok/s</summary><p>Runtime-reported prompt evaluation throughput. Ollama and llama.cpp may define internal timing fields differently; it is shown per series and never pooled.</p></details>
+      <details><summary>Decode tok/s</summary><p>Runtime-reported generated-token throughput. Missing runtime counters remain blank, not zero.</p></details>
+      <details><summary>Series key</summary><p>A stable identity containing runtime, logical model and route. Different keys cannot share an average, axis or trend.</p></details>
+    </div>
+    <div class="panel"><h2>Reading the screen</h2><ul><li>Green observer status means the dashboard scan succeeded; it does not mean the benchmark completed.</li><li>Amber run status means work is in flight, not a performance result.</li><li>The current A/B is runtime + artifact, not a pure runtime effect.</li></ul></div>
+  </section>
+  <footer class="footer"><span id="updated">snapshot —</span><span>local read-only observer · no benchmark controls</span></footer>
+</main>
+<script>
+  const $ = (id) => document.getElementById(id);
+  const esc = (v) => String(v ?? "unknown").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+  const fmt = (v, digits=2) => v == null ? "—" : Number(v).toFixed(digits);
+  function render(data) {
+    const o = data.observer || {};
+    const status = $("observer-status");
+    status.className = "value pulse" + (o.status === "healthy" ? "" : " degraded");
+    status.textContent = o.status === "healthy" ? "observer alive" : "observer degraded";
+    $("observer-note").textContent = o.collector || "unknown";
+    $("last-scan").textContent = o.last_successful_scan ? new Date(o.last_successful_scan).toLocaleTimeString() : "unknown";
+    const run = (data.runs || [])[0];
+    if (run) run.observed_event_calls = run.observed_generation_calls ?? run.observed_event_calls;
+    $("runline").className = "runline" + (run && !run.comparison_valid ? " invalidated" : "");
+    $("runline").innerHTML = run
+      ? `<strong>${esc(run.status)}</strong><span>${esc(run.source)}</span><span>${esc(run.observed_event_calls)} event calls / ${esc(run.authorized_generations)} authorized</span><span>heartbeat ${esc(run.heartbeat || "unknown")}</span>`
+      : "No run observed yet.";
+    $("series-count").textContent = `${data.series_count || 0} isolated series`;
+    const grid = $("series-grid");
+    if (!(data.series || []).length) { grid.innerHTML = '<div class="empty">No completed arm artifact yet; the observer is still healthy.</div>'; }
+    else grid.innerHTML = data.series.map(seriesHtml).join("");
+    if (run && !run.comparison_valid) {
+      grid.insertAdjacentHTML("afterbegin", '<div class="validity-note" style="grid-column:1/-1;border:1px solid var(--coral);padding:12px 14px;">These arm artifacts are diagnostic only. The A/B comparison was rejected because both runtimes did not receive the same input.</div>');
+    }
+    $("updated").textContent = `snapshot ${data.generated_at || "—"}`;
+  }
+  function seriesHtml(s) {
+    const route = s.route || {};
+    const artifact = s.artifact_identity || {};
+    const rows = Object.entries(s.prompts || {}).map(([name, p]) => {
+      const m = p.metrics || {};
+      const den = `${p.ok}/${p.attempted}`;
+      return `<tr><td>${esc(name)}<span class="sub">n=${den}</span></td><td><code>${fmt(m.wall_s)}s</code></td><td><code>${fmt(m.prompt_tok_s)} </code></td><td><code>${fmt(m.decode_tok_s)}</code></td></tr>`;
+    }).join("");
+    const artifactId = s.runtime === "ollama" ? (artifact.ollama_tag_digest || "tag digest unknown") : (artifact.llama_gguf_sha256 || "GGUF hash unknown");
+    return `<article class="series"><div class="series-head"><div class="series-title">${esc(s.runtime)}</div><div class="series-meta"><span class="route">${esc(route.id)} · ${esc(route.host)}:${esc(route.port)}</span><br>${esc(s.model_logical_id)}<br>artifact ${esc(artifactId)}<br>key ${esc(s.series_key)}</div></div><div class="series-body"><div class="countline"><span>measured</span><strong>${esc(s.successful_measurements)}/${esc(s.attempted_measurements)}</strong></div><table><thead><tr><th>prompt</th><th>wall median</th><th>prefill</th><th>decode</th></tr></thead><tbody>${rows || '<tr><td colspan="4" class="empty">awaiting arm artifact</td></tr>'}</tbody></table></div></article>`;
+  }
+  async function refresh() { try { const r = await fetch(`/api/snapshot?t=${Date.now()}`, {cache:"no-store"}); render(await r.json()); } catch (e) { $("observer-status").textContent = "observer unreachable"; $("observer-status").className = "value pulse degraded"; } }
+  refresh(); setInterval(refresh, 5000);
+</script>
+</body>
+</html>

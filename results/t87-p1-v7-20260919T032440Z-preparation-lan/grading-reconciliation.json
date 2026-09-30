@@ -1,0 +1,36 @@
+{
+  "schema_version": "t87-p1-v7-grading-reconciliation-v1",
+  "campaign": "t87-p1-v7-20260919T032440Z-preparation-lan",
+  "harness_version": "t87-p1-harness-v7",
+  "harness_sha256": "b5da0fe9508a280cc1a1bc1ce9952b329dafe5502b87ea2a77e49334735df470",
+  "authorized_new_generation_budget": 330,
+  "observed_new_generations": 324,
+  "run_generation_counts": [63, 65, 64, 66, 66],
+  "resets": {
+    "count": 5,
+    "exit_codes": [0, 0, 0, 0, 0],
+    "source": "/opt/spec-wins",
+    "llama_server": "http://192.168.0.125:18087"
+  },
+  "runtime_health": {
+    "sandbox_failures": 0,
+    "gpu_gate_failures": 0,
+    "minimum_observed_free_mib": 9178,
+    "gpu_free_threshold_mib": 8000
+  },
+  "grading_status": "dispersion_unavailable",
+  "grading_failure": {
+    "cause": "The v7 grade() path used the control SSH identity (brenoperucchi) to read /home/labuser/lab/<task>; /home/labuser is mode 700, so every in-campaign grade returned no such work tree.",
+    "impact": "run.json contains no per-run scores. Subsequent resets reused the same labuser task paths, overwriting prior task states; the five scores cannot be reconstructed from the preserved artifacts.",
+    "not_a_model_or_inference_failure": true,
+    "required_fix_before_next_campaign": "Run the grader through the labuser channel before the next reset, or snapshot each completed task tree through an owner-controlled read-only handoff before resetting. Preserve one grade artifact per run/task."
+  },
+  "only_remaining_grade": {
+    "scope": "current labuser task tree after run 5 reset sequence",
+    "score": 7,
+    "denominator": 17,
+    "components": {"t1_ratelimit": "4/7", "t2_metrics": "1/8", "t3_pipeline": "2/2"},
+    "t2_startup_observation": "startup=0; sqlite3.OperationalError in the model-produced db.py, not ModuleNotFoundError"
+  },
+  "conclusion": "The v7 runtime campaign is operationally valid for reset, user, route and GPU conditions, but it produced no auditable five-score dispersion. No new generation or retry is authorized by this reconciliation."
+}

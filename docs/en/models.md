@@ -2,6 +2,11 @@
 
 **English** | [Português (Brasil)](../rtx5090/modelos.md) · [English index](README.md)
 
+> **Historical operational snapshot — through 2026-09-12.**
+> This document describes the earlier Windows/Ollama production baseline.
+> For the current Guardian research campaign and the WSL/llama.cpp environment,
+> see [the current public record](findings/public-record-llm-bench-2026-09-20.md).
+
 Documentary inventory through the [September 12, 2026 handoff](../history/handoff-2026-09-12.md). This is neither a list of current market recommendations nor a live inventory. Tags are preserved as they appear in the artifacts. A model being available, researched, or mentioned in a plan does not mean it was measured. Historical source reports remain in Portuguese.
 
 ## Recorded decision

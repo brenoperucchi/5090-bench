@@ -1,0 +1,37 @@
+{
+  "schema_version": "qwen36-runtime-ab-prompt-manifest-v2",
+  "created_at": "2026-09-18T18:56:58.682083Z",
+  "tokenizer_runtime": "llama_cpp",
+  "tokenizer_endpoint": "http://192.168.0.125:18087/tokenize",
+  "num_ctx": 32768,
+  "num_predict": 256,
+  "context_margin": 1024,
+  "max_prompt_tokens": 31488,
+  "prompt_set_sha256": "63973c2e2842fb03364821b4e969eb42f3b95195b68fd35052f3d1be7b52bddf",
+  "prompts": {
+    "short": {
+      "sha256": "b7d65b743d866892c69a08164830be88980155d6f02bcd4be2e0ebea559c2970",
+      "chars": 57,
+      "llama_token_count": 15,
+      "max_allowed_tokens": 31488
+    },
+    "medium": {
+      "sha256": "174d5c8f9a46620dda7cfa7d6f6e6f5e51a2c4db23e082d40f19caa04a2f8157",
+      "chars": 3737,
+      "llama_token_count": 1485,
+      "max_allowed_tokens": 31488
+    },
+    "long": {
+      "sha256": "5025abf06bb31ca646de0e585b65279c77e62fd4380545fdbeca08df10964521",
+      "chars": 29740,
+      "llama_token_count": 12231,
+      "max_allowed_tokens": 31488
+    },
+    "context_heavy": {
+      "sha256": "537d06774a9f65335df9f0cca0767e41d7ef66064c06a3eb55456cc4604bf91c",
+      "chars": 29740,
+      "llama_token_count": 12231,
+      "max_allowed_tokens": 31488
+    }
+  }
+}

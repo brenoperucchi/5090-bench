@@ -1,0 +1,16 @@
+# Explicit GBNF equivalent for the watcher-guardian-output-v1 contract.
+# Semantic checks that grammar cannot express (path membership, line bounds,
+# literal quote membership, and score/band consistency) remain fail-closed in
+# tools/guardian_candidate_eval.py.
+root ::= "{" ws "\"schema_version\"" ws ":" ws "\"watcher-guardian-output-v1\"" "," ws "\"agent_session\"" ws ":" ws string "," ws "\"suggested_state\"" ws ":" ws state "," ws "\"abstain\"" ws ":" ws boolean "," ws "\"evidence\"" ws ":" ws evidence "," ws "\"confidence\"" ws ":" ws confidence "," ws "\"escalation_requested\"" ws ":" ws boolean ws "}"
+state ::= "\"normal\"" | "\"correction-in-progress\"" | "\"stalled\"" | "\"out-of-scope\"" | "\"unknown\""
+boolean ::= "true" | "false"
+evidence ::= "[" ws "]" | "[" ws evidence-item ("," ws evidence-item)* ws "]"
+evidence-item ::= "{" ws "\"path\"" ws ":" ws string "," ws "\"line_start\"" ws ":" ws integer "," ws "\"line_end\"" ws ":" ws integer "," ws "\"quote\"" ws ":" ws string ws "}"
+confidence ::= "{" ws "\"score\"" ws ":" ws number "," ws "\"band\"" ws ":" ws band "," ws "\"tier\"" ws ":" ws "\"heuristic\"" ws "}"
+band ::= "\"low\"" | "\"review\"" | "\"high\""
+integer ::= "0" | [1-9] [0-9]*
+number ::= "0" | [1-9] [0-9]* "." [0-9]+ | "1" "." "0"+
+string ::= "\"" char* "\""
+char ::= [^"\\\x7F\x00-\x1F] | "\\" (["\\/bfnrt] | "u" [0-9a-fA-F]{4})
+ws ::= [ \t\n\r]*

@@ -1,0 +1,42 @@
+{
+  "runtime": "llama_cpp",
+  "route": {
+    "id": "lan",
+    "scheme": "http",
+    "host": "192.168.0.125",
+    "port": 18087,
+    "path": "/v1/chat/completions"
+  },
+  "series_key": "{\"model\":\"qwen3.6-35b-a3b-q4_k_m\",\"route\":{\"host\":\"192.168.0.125\",\"id\":\"lan\",\"path\":\"/v1/chat/completions\",\"port\":18087,\"scheme\":\"http\"},\"runtime\":\"llama_cpp\"}",
+  "prompts": {
+    "short": {
+      "wall_s": 1.6860115301096812,
+      "prompt_tok_s": 250.9082880025693,
+      "decode_tok_s": 217.77914803089217,
+      "prompt_tokens": 25,
+      "completion_tokens": 256
+    },
+    "medium": {
+      "wall_s": 1.2929536909796298,
+      "prompt_tok_s": 52.82899255111205,
+      "decode_tok_s": 213.23405824551017,
+      "prompt_tokens": 1495,
+      "completion_tokens": 256
+    },
+    "long": {
+      "wall_s": 1.612875368911773,
+      "prompt_tok_s": 40.481322929633336,
+      "decode_tok_s": 206.9558258876579,
+      "prompt_tokens": 12241,
+      "completion_tokens": 256
+    },
+    "context_heavy": {
+      "wall_s": 1.6800808999687433,
+      "prompt_tok_s": 63.108404461764195,
+      "decode_tok_s": 207.3452249207819,
+      "prompt_tokens": 12241,
+      "completion_tokens": 256
+    }
+  }
+}
+/home/brenoperucchi/Devs/llm-bench/results/qwen36-runtime-ab-20260918T185657Z

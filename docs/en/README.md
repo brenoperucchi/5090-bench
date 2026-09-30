@@ -16,6 +16,10 @@ Results apply to the configurations and samples described in their sources.
 | What you want to read | Document |
 |---|---|
 | Ready-to-use assignment for external deep research | [RTX 5090 research brief](research/rtx5090-deep-research-brief.md) |
+| Review of the downloaded research report | [Findings and required revisions](research/rtx5090-deep-research-review.md) |
+| Review of the second research report | [Corrections and remaining gaps](research/rtx5090-deep-research-report-2-review.md) |
+| Remediation sequence and experiment gates | [Research remediation plan](plans/research-remediation-plan.md) |
+| Every improvement measure and its implementation gate | [Master improvement implementation plan](plans/improvement-implementation-plan.md) |
 | Experiments, results, and evidence by phase | [Benchmark catalog](benchmarks.md) |
 | Tested models and comparison limits | [Models](models.md) |
 | All 40 consolidated findings and caveats | [Findings](findings.md) |
@@ -27,6 +31,8 @@ Results apply to the configurations and samples described in their sources.
 | Unanswered questions | [Open questions](open-questions.md) |
 | Source history and file integrity | [Provenance](provenance.md) |
 | Proposed NUM_PARALLEL discriminating test | [Test proposal — not executed](plans/num-parallel-discriminating-test.md) |
+| Lifecycle and spill evidence contracts | [Offline lifecycle/residency contracts](plans/lifecycle-and-spill-evidence.md) |
+| Coding evaluation sandbox contract | [Offline coding task/result contract](plans/coding-evaluation-sandbox.md) |
 | Documenting a new experiment | [Experiment template](templates/experiment.md) |
 
 ## How to interpret the results
@@ -75,6 +81,7 @@ prompts/                Canonical prompt, backup, and historical experiments
 baseline-3080ti/         Earlier GPU baseline and historically located scripts
 artifacts/manifest.json Evidence inventory with SHA-256 hashes
 tools/inventory.py      Offline archive validation
+tools/json_safety.py    Shared finite-JSON safety boundary
 run_chat.py             Quality evaluation using a PT/EN goldset
 bench.py                Generation throughput
 bench_engine_ab.py      Alternating comparison of two endpoints

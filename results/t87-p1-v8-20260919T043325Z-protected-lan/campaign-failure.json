@@ -1,0 +1,56 @@
+{
+  "schema_version": "t87-p1-v8-failure-v1",
+  "status": "stopped_before_retry",
+  "captured_at": "2026-09-19T04:51:58Z",
+  "harness_version": "t87-p1-harness-v8",
+  "preparation": "results/t87-p1-v8-20260919T043325Z-protected-lan/preparation.json",
+  "series_key_sha256": "c5a5a54268c484aaaea116885b8035620a572b4b6c4600168bbe029bbbe74d74",
+  "authorized_new_generation_budget": 330,
+  "consumed_generations": 238,
+  "remaining_authorized_generations": 92,
+  "completed_runs": 3,
+  "partial_run": {
+    "run": 4,
+    "seed": 1051,
+    "tasks_completed": [
+      {"task": "t1_ratelimit", "generations": 13},
+      {"task": "t2_metrics", "generations": 27}
+    ],
+    "task_not_started": "t3_pipeline"
+  },
+  "failure": {
+    "phase": "grading",
+    "task": "t2_metrics",
+    "command": "sudo -n /opt/spec-wins/scripts/verify-lab.sh t2_metrics",
+    "timeout_seconds": 300,
+    "observed_error": "local SSH subprocess timed out after 300 seconds",
+    "inference_or_sandbox_failure": false,
+    "root_cause": "unknown",
+    "evidence": "The harness log contains only subprocess.TimeoutExpired. Read-only observation afterward showed sudo -> verify.sh -> check_t2.py -> app.py, with app.py listening on 0.0.0.0:5000. The evidence does not distinguish a functional checker wait from an application/service wait or another grader condition."
+  },
+  "partial_scores": [
+    {"run": 1, "seed": 1000, "score": 13, "denominator": 17},
+    {"run": 2, "seed": 1017, "score": 10, "denominator": 17},
+    {"run": 3, "seed": 1034, "score": 7, "denominator": 17}
+  ],
+  "partial_dispersion": {
+    "min": 7,
+    "max": 13,
+    "range_points": 6,
+    "interpretation": "The observed prefix spans the published 14/17 versus 17/17 distance, but it is not a valid five-run P1 result and must not be used as the final dispersion verdict."
+  },
+  "remote_process_observation": {
+    "verify_sudo_pid": 1616017,
+    "verify_shell_pid": 1616019,
+    "checker_pid": 1616025,
+    "tail_pid": 1616026,
+    "app_pid": 1616028,
+    "app_listener": "0.0.0.0:5000",
+    "observed_at": "2026-09-19T04:51:58Z",
+    "cleanup_performed": false
+  },
+  "retry": {
+    "performed": false,
+    "reason": "The owner instruction requires diagnosis before another attempt; the grader timeout was not diagnosed sufficiently to justify consuming the remaining 92 generations."
+  }
+}

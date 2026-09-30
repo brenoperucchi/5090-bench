@@ -1,0 +1,19 @@
+{
+  "congelado_em": "2026-09-22T23:22:42-03:00",
+  "congelado_antes_de": "qualquer teste de otimização",
+  "fonte": "results/pesquisa-llama-server-otimizacao-20260922.md",
+  "linha_de_base": "results/os-ab-*, speed-nvfp4-*, speed-hemmingway-* (flags: -ngl 99 --ctx-size 16384 --jinja --temp 0 --parallel 1)",
+  "fase_1_ajustes_isolados": {
+    "qwen3.8 Q4 (WSL)": ["-fa on", "-ub 1024 -b 4096", "-ctk q8_0 -ctv q8_0"],
+    "qwen3.8 NVFP4 (WSL, único arquivo com cabeça MTP)": ["--spec-type draft-mtp --spec-draft-n-max 2", "--spec-type draft-mtp --spec-draft-n-max 3"]
+  },
+  "regras_de_adocao": {
+    "-fa on": "adota se não piorar geração nem prefill em mais de 2% e o texto (temp 0) ficar idêntico",
+    "-ub/-b": "adota se o prefill do prompt longo melhorar >= 3% sem piorar a geração em mais de 2%",
+    "KV q8_0": "MEDIDO, NUNCA adotado nesta rodada: muda a numérica e a qualidade não foi validada; a pesquisa o classifica como ajuste de capacidade",
+    "MTP": "adota o n-max com maior geração se ganhar >= 5% sobre sem-MTP; registra aceitação e se o texto muda (a pesquisa relata saída não idêntica com MTP)",
+    "desempate": "prefere menos flags"
+  },
+  "fase_2": "os 3 modelos × Windows e WSL com o conjunto adotado; MTP só no NVFP4 (os outros arquivos não têm cabeça MTP)",
+  "producao": "derrubada no início, restaurada com a linha exata no fim, autorizada pelo owner em 23:17"
+}

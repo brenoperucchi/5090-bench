@@ -1,0 +1,21 @@
+[23:53:29] f1-q4-base: já medido — geração 73.73 · prefill longo 3217.1
+[23:53:29] f1-q4-fa: já medido — geração 74.26 · prefill longo 3133.1
+[23:53:29] f1-q4-ub: já medido — geração 74.44 · prefill longo 3468.2
+[23:53:29] f1-q4-kvq8: já medido — geração 73.57 · prefill longo 3033.5
+[23:53:29] f1-nvfp4-base: já medido — geração 74.68 · prefill longo 4095.9
+[23:53:29] f1-nvfp4-mtp2: já medido — geração 123.55 · prefill longo 3521.0
+[23:53:29] f1-nvfp4-mtp3: já medido — geração 122.67 · prefill longo 3467.5
+[23:53:29] ADOTADO: comum=[-ub 1024 -b 4096] nvfp4=[--spec-type draft-mtp --spec-draft-n-max 2]
+[23:53:29] f2-q4-wsl: já medido — geração 75.16 · prefill longo 3491.9
+[23:53:34] f2-q4-win: subindo q4 em win [-ub 1024 -b 4096]
+[23:54:17] f2-q4-win: geração 76.33 tok/s · prefill longo 3584.3 · aceitação MTP None
+[23:54:22] f2-nvfp4-wsl: subindo nvfp4 em wsl [-ub 1024 -b 4096 --spec-type draft-mtp --spec-draft-n-max 2]
+[23:56:40] f2-nvfp4-wsl: geração 126.65 tok/s · prefill longo 3493.9 · aceitação MTP 0.68
+[23:56:46] f2-nvfp4-win: subindo nvfp4 em win [-ub 1024 -b 4096 --spec-type draft-mtp --spec-draft-n-max 2]
+[23:57:23] f2-nvfp4-win: geração 125.82 tok/s · prefill longo 4274.9 · aceitação MTP 0.68
+[23:57:29] f2-hemmingway-wsl: subindo hemmingway em wsl [-ub 1024 -b 4096]
+[23:59:55] f2-hemmingway-wsl: geração 72.68 tok/s · prefill longo 3578.7 · aceitação MTP None
+[00:00:01] f2-hemmingway-win: subindo hemmingway em win [-ub 1024 -b 4096]
+[00:00:49] f2-hemmingway-win: geração 74.02 tok/s · prefill longo 3627.9 · aceitação MTP None
+[00:05:55] PRODUÇÃO DE VOLTA
+[00:05:55] CAMPANHA CONCLUÍDA

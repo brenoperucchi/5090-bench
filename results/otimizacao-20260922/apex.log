@@ -1,0 +1,9 @@
+[01:41:21] apex-wsl: subindo apex em wsl [-ub 1024 -b 4096]
+[01:42:48] apex-wsl: geração 231.82 tok/s · prefill longo 9057.5 · aceitação MTP None
+[01:42:53] apex-wsl-mtp: subindo apex em wsl [-ub 1024 -b 4096 -md /mnt/e/llm-bench-t87-runtimes/models/qwen38-35b-apex/mtp-Qwen3.8-35B-A3B-Distill-Q8_0.gguf --spec-type draft-mtp --spec-draft-n-max 2]
+[01:45:00] apex-wsl-mtp: geração 271.93 tok/s · prefill longo 7134.4 · aceitação MTP 0.69
+[01:45:06] apex-win: subindo apex em win [-ub 1024 -b 4096]
+[01:45:27] apex-win: geração 244.09 tok/s · prefill longo 9588.4 · aceitação MTP None
+[01:45:33] apex-win-mtp: subindo apex em win [-ub 1024 -b 4096 -md 'E:\llm-bench-t87-runtimes\models\qwen38-35b-apex\mtp-Qwen3.8-35B-A3B-Distill-Q8_0.gguf' --spec-type draft-mtp --spec-draft-n-max 2]
+[01:45:54] apex-win-mtp: geração 302.44 tok/s · prefill longo 8331.4 · aceitação MTP 0.69
+[01:47:52] PRODUÇÃO DE VOLTA

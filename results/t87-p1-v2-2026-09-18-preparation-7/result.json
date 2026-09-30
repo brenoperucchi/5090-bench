@@ -1,0 +1,196 @@
+{
+  "schema_version": "t87-p1-v2-result-v1",
+  "completed_at": "2026-09-18T16:06:06.395559Z",
+  "runs": [
+    {
+      "run_id": "run-1-1000",
+      "seed": 1000,
+      "task_dirs": {
+        "t1_ratelimit": "/home/brenoperucchi/t87-runtime/spec-wins-v2/run-1-1000/t1_ratelimit",
+        "t2_metrics": "/home/brenoperucchi/t87-runtime/spec-wins-v2/run-1-1000/t2_metrics",
+        "t3_pipeline": "/home/brenoperucchi/t87-runtime/spec-wins-v2/run-1-1000/t3_pipeline"
+      },
+      "tasks": [
+        {
+          "task": "t1_ratelimit",
+          "status": "incomplete",
+          "generation_count": 13,
+          "grade": {
+            "status": "not_graded"
+          },
+          "transcript": "results/t87-p1-v2-2026-09-18-preparation-7/run-1-1000/t1_ratelimit.json"
+        },
+        {
+          "task": "t2_metrics",
+          "status": "incomplete",
+          "generation_count": 27,
+          "grade": {
+            "status": "not_graded"
+          },
+          "transcript": "results/t87-p1-v2-2026-09-18-preparation-7/run-1-1000/t2_metrics.json"
+        },
+        {
+          "task": "t3_pipeline",
+          "status": "incomplete",
+          "generation_count": 26,
+          "grade": {
+            "status": "not_graded"
+          },
+          "transcript": "results/t87-p1-v2-2026-09-18-preparation-7/run-1-1000/t3_pipeline.json"
+        }
+      ]
+    },
+    {
+      "run_id": "run-2-1017",
+      "seed": 1017,
+      "task_dirs": {
+        "t1_ratelimit": "/home/brenoperucchi/t87-runtime/spec-wins-v2/run-2-1017/t1_ratelimit",
+        "t2_metrics": "/home/brenoperucchi/t87-runtime/spec-wins-v2/run-2-1017/t2_metrics",
+        "t3_pipeline": "/home/brenoperucchi/t87-runtime/spec-wins-v2/run-2-1017/t3_pipeline"
+      },
+      "tasks": [
+        {
+          "task": "t1_ratelimit",
+          "status": "incomplete",
+          "generation_count": 13,
+          "grade": {
+            "status": "not_graded"
+          },
+          "transcript": "results/t87-p1-v2-2026-09-18-preparation-7/run-2-1017/t1_ratelimit.json"
+        },
+        {
+          "task": "t2_metrics",
+          "status": "incomplete",
+          "generation_count": 27,
+          "grade": {
+            "status": "not_graded"
+          },
+          "transcript": "results/t87-p1-v2-2026-09-18-preparation-7/run-2-1017/t2_metrics.json"
+        },
+        {
+          "task": "t3_pipeline",
+          "status": "incomplete",
+          "generation_count": 26,
+          "grade": {
+            "status": "not_graded"
+          },
+          "transcript": "results/t87-p1-v2-2026-09-18-preparation-7/run-2-1017/t3_pipeline.json"
+        }
+      ]
+    },
+    {
+      "run_id": "run-3-1034",
+      "seed": 1034,
+      "task_dirs": {
+        "t1_ratelimit": "/home/brenoperucchi/t87-runtime/spec-wins-v2/run-3-1034/t1_ratelimit",
+        "t2_metrics": "/home/brenoperucchi/t87-runtime/spec-wins-v2/run-3-1034/t2_metrics",
+        "t3_pipeline": "/home/brenoperucchi/t87-runtime/spec-wins-v2/run-3-1034/t3_pipeline"
+      },
+      "tasks": [
+        {
+          "task": "t1_ratelimit",
+          "status": "incomplete",
+          "generation_count": 13,
+          "grade": {
+            "status": "not_graded"
+          },
+          "transcript": "results/t87-p1-v2-2026-09-18-preparation-7/run-3-1034/t1_ratelimit.json"
+        },
+        {
+          "task": "t2_metrics",
+          "status": "incomplete",
+          "generation_count": 27,
+          "grade": {
+            "status": "not_graded"
+          },
+          "transcript": "results/t87-p1-v2-2026-09-18-preparation-7/run-3-1034/t2_metrics.json"
+        },
+        {
+          "task": "t3_pipeline",
+          "status": "incomplete",
+          "generation_count": 26,
+          "grade": {
+            "status": "not_graded"
+          },
+          "transcript": "results/t87-p1-v2-2026-09-18-preparation-7/run-3-1034/t3_pipeline.json"
+        }
+      ]
+    },
+    {
+      "run_id": "run-4-1051",
+      "seed": 1051,
+      "task_dirs": {
+        "t1_ratelimit": "/home/brenoperucchi/t87-runtime/spec-wins-v2/run-4-1051/t1_ratelimit",
+        "t2_metrics": "/home/brenoperucchi/t87-runtime/spec-wins-v2/run-4-1051/t2_metrics",
+        "t3_pipeline": "/home/brenoperucchi/t87-runtime/spec-wins-v2/run-4-1051/t3_pipeline"
+      },
+      "tasks": [
+        {
+          "task": "t1_ratelimit",
+          "status": "incomplete",
+          "generation_count": 13,
+          "grade": {
+            "status": "not_graded"
+          },
+          "transcript": "results/t87-p1-v2-2026-09-18-preparation-7/run-4-1051/t1_ratelimit.json"
+        },
+        {
+          "task": "t2_metrics",
+          "status": "incomplete",
+          "generation_count": 27,
+          "grade": {
+            "status": "not_graded"
+          },
+          "transcript": "results/t87-p1-v2-2026-09-18-preparation-7/run-4-1051/t2_metrics.json"
+        },
+        {
+          "task": "t3_pipeline",
+          "status": "incomplete",
+          "generation_count": 26,
+          "grade": {
+            "status": "not_graded"
+          },
+          "transcript": "results/t87-p1-v2-2026-09-18-preparation-7/run-4-1051/t3_pipeline.json"
+        }
+      ]
+    },
+    {
+      "run_id": "run-5-1068",
+      "seed": 1068,
+      "task_dirs": {
+        "t1_ratelimit": "/home/brenoperucchi/t87-runtime/spec-wins-v2/run-5-1068/t1_ratelimit",
+        "t2_metrics": "/home/brenoperucchi/t87-runtime/spec-wins-v2/run-5-1068/t2_metrics",
+        "t3_pipeline": "/home/brenoperucchi/t87-runtime/spec-wins-v2/run-5-1068/t3_pipeline"
+      },
+      "tasks": [
+        {
+          "task": "t1_ratelimit",
+          "status": "incomplete",
+          "generation_count": 13,
+          "grade": {
+            "status": "not_graded"
+          },
+          "transcript": "results/t87-p1-v2-2026-09-18-preparation-7/run-5-1068/t1_ratelimit.json"
+        },
+        {
+          "task": "t2_metrics",
+          "status": "incomplete",
+          "generation_count": 27,
+          "grade": {
+            "status": "not_graded"
+          },
+          "transcript": "results/t87-p1-v2-2026-09-18-preparation-7/run-5-1068/t2_metrics.json"
+        },
+        {
+          "task": "t3_pipeline",
+          "status": "incomplete",
+          "generation_count": 26,
+          "grade": {
+            "status": "not_graded"
+          },
+          "transcript": "results/t87-p1-v2-2026-09-18-preparation-7/run-5-1068/t3_pipeline.json"
+        }
+      ]
+    }
+  ]
+}

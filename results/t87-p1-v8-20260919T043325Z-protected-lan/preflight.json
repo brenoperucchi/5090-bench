@@ -1,0 +1,117 @@
+{
+  "schema_version": "t87-p1-v2-preflight-v1",
+  "captured_at": "2026-09-19T04:33:41.978812Z",
+  "identity": {
+    "health": {
+      "status": "ok"
+    },
+    "models": {
+      "models": [
+        {
+          "name": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "model": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "modified_at": "",
+          "size": "",
+          "digest": "",
+          "type": "model",
+          "description": "",
+          "tags": [
+            ""
+          ],
+          "capabilities": [
+            "completion"
+          ],
+          "parameters": "",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "",
+            "families": [
+              ""
+            ],
+            "parameter_size": "",
+            "quantization_level": ""
+          }
+        }
+      ],
+      "object": "list",
+      "data": [
+        {
+          "id": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "aliases": [
+            "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf"
+          ],
+          "tags": [],
+          "object": "model",
+          "created": 1789792415,
+          "owned_by": "llamacpp",
+          "meta": {
+            "vocab_type": true,
+            "n_vocab": 248320,
+            "n_ctx": 32768,
+            "n_ctx_train": 262144,
+            "n_embd": 2048,
+            "n_params": 35505251456,
+            "size": 21706498560,
+            "ftype": "Q4_K - Medium"
+          }
+        }
+      ]
+    },
+    "captured_at": "2026-09-19T04:33:41.978779Z",
+    "endpoint": "http://192.168.0.125:18087",
+    "route": {
+      "id": "lan",
+      "scheme": "http",
+      "host": "192.168.0.125",
+      "port": 18087,
+      "request_path": "/v1/chat/completions"
+    },
+    "model": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+    "model_sha256": "d372de8e934898a59e6ccfabc3368474711384d8f1fd4d22d87a3f0a45400cdc",
+    "binary_sha256": "37acf8e80c85f91794d9fa0268d34b40dbfa2f4286527a92bdd13dfefdab689b",
+    "gpu_snapshot": "NVIDIA GeForce RTX 5090, 22755 MiB, 32607 MiB, 0 %, 616.64",
+    "gpu_state": {
+      "captured_at": "2026-09-19T04:33:41.957598Z",
+      "threshold_mib": 8000,
+      "observable": true,
+      "query_exit_code": 0,
+      "name": "NVIDIA GeForce RTX 5090",
+      "memory_used_mib": 22755,
+      "memory_free_mib": 9436,
+      "memory_total_mib": 32607,
+      "utilization_gpu_percent": 0,
+      "driver_version": "616.64",
+      "processes": [
+        {
+          "pid": "994768",
+          "process_name": "[Not Found]",
+          "used_memory_mib": "[N/A]"
+        }
+      ],
+      "raw": "NVIDIA GeForce RTX 5090, 22755, 9436, 32607, 0, 616.64\n__T87_GPU_PROCESSES__\n994768, [Not Found], [N/A]",
+      "stderr": "",
+      "contaminated": false,
+      "gate_passed": true
+    },
+    "execution_user": "labuser",
+    "python_version": "3.13.5",
+    "venv_path": "/home/labuser/venv",
+    "dependency_fingerprint": "e8a842b1702dca9811ce9f2c95e77da2f888b368d94673b534cbc3aac587f453",
+    "installed_dependency_fingerprint": "e8a842b1702dca9811ce9f2c95e77da2f888b368d94673b534cbc3aac587f453",
+    "setup_sha256": "300969d777a392488f2d5349641f47f129e2969f668b589c59ec2400abe4e823",
+    "reset_sha256": "unknown",
+    "suite_path": "/opt/spec-wins",
+    "suite_mode": "0700",
+    "suite_owner": "root:root",
+    "answer_key_protected": true,
+    "hidden_protected": true,
+    "grader_command": "/opt/spec-wins/scripts/verify-lab.sh",
+    "reset_command": "/opt/spec-wins/scripts/reset-lab.sh",
+    "grader_privilege": "sudo -n",
+    "runtime": "thecodacus/llama.cpp",
+    "harness_version": "t87-p1-harness-v8",
+    "benchmark_commit": "776e799c7e0a24271e021aca2ea4b1c1b1f10017",
+    "series_key": "{\"answer_key_protected\":\"true\",\"benchmark_commit\":\"776e799c7e0a24271e021aca2ea4b1c1b1f10017\",\"dependency_fingerprint\":\"e8a842b1702dca9811ce9f2c95e77da2f888b368d94673b534cbc3aac587f453\",\"execution_user\":\"labuser\",\"gpu_free_threshold_mib\":8000,\"grader_command\":\"/opt/spec-wins/scripts/verify-lab.sh\",\"grader_privilege\":\"sudo -n\",\"harness_version\":\"t87-p1-harness-v8\",\"hidden_protected\":\"true\",\"installed_dependency_fingerprint\":\"e8a842b1702dca9811ce9f2c95e77da2f888b368d94673b534cbc3aac587f453\",\"model_sha256\":\"d372de8e934898a59e6ccfabc3368474711384d8f1fd4d22d87a3f0a45400cdc\",\"python_version\":\"3.13.5\",\"reset_command\":\"/opt/spec-wins/scripts/reset-lab.sh\",\"reset_sha256\":\"unknown\",\"route\":{\"host\":\"192.168.0.125\",\"id\":\"lan\",\"port\":18087,\"request_path\":\"/v1/chat/completions\",\"scheme\":\"http\"},\"runtime\":\"thecodacus/llama.cpp\",\"setup_sha256\":\"300969d777a392488f2d5349641f47f129e2969f668b589c59ec2400abe4e823\",\"suite_mode\":\"0700\",\"suite_owner\":\"root:root\",\"suite_path\":\"/opt/spec-wins\",\"venv_path\":\"/home/labuser/venv\"}"
+  }
+}

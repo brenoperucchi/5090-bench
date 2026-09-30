@@ -1,0 +1,91 @@
+{
+  "schema": "jev-technical-probe-v1",
+  "endpoint": "https://api.typesafe.ai/v1/systemone",
+  "model_requested": "jev-latest",
+  "started_at": "2026-09-22T15:45:04-03:00",
+  "api_key_length": 107,
+  "note": "sonda técnica: autenticação, formato, latência, custo e erro. Não mede qualidade de decisão e não usa o conjunto de perguntas do Guardian.",
+  "steps": {
+    "reference": {
+      "ok": true,
+      "status": 200,
+      "latency_s": 0.863,
+      "body": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "resolve": {
+            "type": "noul",
+            "noul": 0.74
+          },
+          "natureza": {
+            "type": "choice",
+            "choice": "constatacao",
+            "confidence": 0.99,
+            "probabilities": {
+              "constatacao": 0.99,
+              "acao": 0.01,
+              "intencao": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 422,
+          "output_tokens": 62
+        }
+      },
+      "expected": {
+        "resolve_noul": 0.75,
+        "natureza_choice": "constatacao",
+        "natureza_confidence": 0.86
+      },
+      "got": {
+        "resolve_noul": 0.74,
+        "natureza_choice": "constatacao",
+        "natureza_confidence": 0.99
+      },
+      "matches": {
+        "resolve_noul": false,
+        "natureza_choice": true,
+        "natureza_confidence": false
+      }
+    },
+    "latency": {
+      "n": 5,
+      "min_s": 0.646,
+      "median_s": 0.7,
+      "max_s": 0.828,
+      "usage_amostra": {
+        "input_tokens": 340,
+        "output_tokens": 20
+      }
+    },
+    "bad_credential": {
+      "ok": false,
+      "status": 401,
+      "latency_s": 0.575,
+      "error": "http",
+      "detail": "{\"detail\":{\"error_type\":\"authentication_error\",\"message\":\"Cannot authenticate with the server. Please check your API key and try again.\"}}"
+    },
+    "malformed": {
+      "ok": false,
+      "status": 400,
+      "latency_s": 0.589,
+      "error": "http",
+      "detail": "{\"detail\":{\"error_type\":\"api_usage_error\",\"message\":\"Invalid request.\"}}"
+    },
+    "timeout": {
+      "ok": false,
+      "status": null,
+      "latency_s": 0.003,
+      "error": "url",
+      "detail": "timed out"
+    },
+    "cost": {
+      "usd_por_pergunta_booleana_derivado": 1.346e-05,
+      "base": "US$0,0105 / 780 perguntas, estimativa do claude-bridge",
+      "input_tokens": 340,
+      "output_tokens": 20,
+      "aviso": "valor DERIVADO da estimativa recebida, não uma tarifa confirmada pelo fornecedor"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+State  Recv-Q Send-Q  Local Address:Port  Peer Address:PortProcess                              
+LISTEN 0      511           0.0.0.0:5174       0.0.0.0:*    users:(("node",pid=419,fd=21))      
+LISTEN 0      200           0.0.0.0:5432       0.0.0.0:*                                        
+LISTEN 0      128           0.0.0.0:22         0.0.0.0:*                                        
+LISTEN 0      5           127.0.0.1:5176       0.0.0.0:*    users:(("python3",pid=305,fd=3))    
+LISTEN 0      511         127.0.0.1:5175       0.0.0.0:*    users:(("node",pid=417,fd=20))      
+LISTEN 0      128         127.0.0.1:8091       0.0.0.0:*                                        
+LISTEN 0      2048        127.0.0.1:8890       0.0.0.0:*    users:(("python3",pid=608,fd=6))    
+LISTEN 0      128         127.0.0.1:18080      0.0.0.0:*    users:(("ssh",pid=302,fd=4))        
+LISTEN 0      4096          0.0.0.0:56567      0.0.0.0:*    users:(("tailscaled",pid=301,fd=14))
+LISTEN 0      1000   10.255.255.254:53         0.0.0.0:*                                        
+LISTEN 0      200              [::]:5432          [::]:*                                        
+LISTEN 0      128              [::]:22            [::]:*                                        

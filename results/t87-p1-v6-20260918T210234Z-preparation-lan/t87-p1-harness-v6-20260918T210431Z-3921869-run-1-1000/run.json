@@ -1,0 +1,53 @@
+{
+  "run_id": "t87-p1-harness-v6-20260918T210431Z-3921869-run-1-1000",
+  "campaign_id": "t87-p1-harness-v6-20260918T210431Z-3921869",
+  "seed": 1000,
+  "harness_version": "t87-p1-harness-v6",
+  "runtime": "thecodacus/llama.cpp",
+  "route": {
+    "id": "lan",
+    "scheme": "http",
+    "host": "192.168.0.125",
+    "port": 18087,
+    "request_path": "/v1/chat/completions"
+  },
+  "series_key": "{\"benchmark_commit\":\"776e799c7e0a24271e021aca2ea4b1c1b1f10017\",\"gpu_free_threshold_mib\":8000,\"harness_version\":\"t87-p1-harness-v6\",\"model_sha256\":\"d372de8e934898a59e6ccfabc3368474711384d8f1fd4d22d87a3f0a45400cdc\",\"route\":{\"host\":\"192.168.0.125\",\"id\":\"lan\",\"port\":18087,\"request_path\":\"/v1/chat/completions\",\"scheme\":\"http\"},\"runtime\":\"thecodacus/llama.cpp\"}",
+  "gpu_free_threshold_mib": 8000,
+  "task_dirs": {
+    "t1_ratelimit": "/home/brenoperucchi/t87-runtime/spec-wins-v2/t87-p1-harness-v6-20260918T210431Z-3921869-run-1-1000/t1_ratelimit",
+    "t2_metrics": "/home/brenoperucchi/t87-runtime/spec-wins-v2/t87-p1-harness-v6-20260918T210431Z-3921869-run-1-1000/t2_metrics",
+    "t3_pipeline": "/home/brenoperucchi/t87-runtime/spec-wins-v2/t87-p1-harness-v6-20260918T210431Z-3921869-run-1-1000/t3_pipeline"
+  },
+  "tasks": [
+    {
+      "task": "t1_ratelimit",
+      "status": "complete",
+      "generation_count": 7,
+      "grade": {
+        "task": "t1_ratelimit",
+        "exit_code": 0,
+        "stdout": "--- public suite ---\n3 failed, 5 passed, 1 warning in 0.02s\n--- hidden suite ---\n  PASSED tests/test_hidden_t1.py::test_spec_limit_reached_is_allowed\n  PASSED tests/test_hidden_t1.py::test_half_open_boundary\n  PASSED tests/test_hidden_t1.py::test_did_not_swap_in_legacy\n  PASSED tests/test_hidden_t1.py::test_public_suite_intact\n  FAILED tests/test_hidden_t1.py::test_fractional_window_from_config_and_int_limit_kept\n  FAILED tests/test_hidden_t1.py::test_aware_default_clock_mixes_with_aware_ts\n  FAILED tests/test_hidden_t1.py::test_key_deterministic_and_ordered - Assertio...\n  3 failed, 4 passed, 1 warning in 0.03s\n",
+        "stderr": ""
+      },
+      "transcript": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-1-1000/t1_ratelimit.json"
+    },
+    {
+      "task": "t2_metrics",
+      "status": "incomplete",
+      "generation_count": 27,
+      "grade": {
+        "status": "not_graded"
+      },
+      "transcript": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-1-1000/t2_metrics.json"
+    },
+    {
+      "task": "t3_pipeline",
+      "status": "incomplete",
+      "generation_count": 26,
+      "grade": {
+        "status": "not_graded"
+      },
+      "transcript": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-1-1000/t3_pipeline.json"
+    }
+  ]
+}

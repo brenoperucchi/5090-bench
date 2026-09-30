@@ -1,0 +1,123 @@
+{
+  "schema_version": "t87-p1-v2-preparation-v1",
+  "harness_version": "t87-p1-harness-v5",
+  "status": "prepared_no_generation",
+  "created_at": "2026-09-18T20:24:06.874485Z",
+  "endpoint_identity": {
+    "health": {
+      "status": "ok"
+    },
+    "models": {
+      "models": [
+        {
+          "name": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "model": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "modified_at": "",
+          "size": "",
+          "digest": "",
+          "type": "model",
+          "description": "",
+          "tags": [
+            ""
+          ],
+          "capabilities": [
+            "completion"
+          ],
+          "parameters": "",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "",
+            "families": [
+              ""
+            ],
+            "parameter_size": "",
+            "quantization_level": ""
+          }
+        }
+      ],
+      "object": "list",
+      "data": [
+        {
+          "id": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+          "aliases": [
+            "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf"
+          ],
+          "tags": [],
+          "object": "model",
+          "created": 1789763040,
+          "owned_by": "llamacpp",
+          "meta": {
+            "vocab_type": true,
+            "n_vocab": 248320,
+            "n_ctx": 32768,
+            "n_ctx_train": 262144,
+            "n_embd": 2048,
+            "n_params": 35505251456,
+            "size": 21706498560,
+            "ftype": "Q4_K - Medium"
+          }
+        }
+      ]
+    },
+    "captured_at": "2026-09-18T20:24:06.440973Z",
+    "endpoint": "http://192.168.0.125:18087",
+    "route": {
+      "id": "lan",
+      "scheme": "http",
+      "host": "192.168.0.125",
+      "port": 18087,
+      "request_path": "/v1/chat/completions"
+    },
+    "model": "/mnt/e/llm-bench-t87-p1/models/qwen3.6-35b-a3b-q4_k_m.gguf",
+    "model_sha256": "d372de8e934898a59e6ccfabc3368474711384d8f1fd4d22d87a3f0a45400cdc",
+    "binary_sha256": "37acf8e80c85f91794d9fa0268d34b40dbfa2f4286527a92bdd13dfefdab689b",
+    "gpu_snapshot": "NVIDIA GeForce RTX 5090, 22825 MiB, 32607 MiB, 5 %, 616.64",
+    "runtime": "thecodacus/llama.cpp",
+    "harness_version": "t87-p1-harness-v5",
+    "benchmark_commit": "776e799c7e0a24271e021aca2ea4b1c1b1f10017",
+    "series_key": "{\"benchmark_commit\":\"776e799c7e0a24271e021aca2ea4b1c1b1f10017\",\"harness_version\":\"t87-p1-harness-v5\",\"model_sha256\":\"d372de8e934898a59e6ccfabc3368474711384d8f1fd4d22d87a3f0a45400cdc\",\"route\":{\"host\":\"192.168.0.125\",\"id\":\"lan\",\"port\":18087,\"request_path\":\"/v1/chat/completions\",\"scheme\":\"http\"},\"runtime\":\"thecodacus/llama.cpp\"}"
+  },
+  "route": {
+    "id": "lan",
+    "scheme": "http",
+    "host": "192.168.0.125",
+    "port": 18087,
+    "request_path": "/v1/chat/completions"
+  },
+  "series_key": "{\"benchmark_commit\":\"776e799c7e0a24271e021aca2ea4b1c1b1f10017\",\"harness_version\":\"t87-p1-harness-v5\",\"model_sha256\":\"d372de8e934898a59e6ccfabc3368474711384d8f1fd4d22d87a3f0a45400cdc\",\"route\":{\"host\":\"192.168.0.125\",\"id\":\"lan\",\"port\":18087,\"request_path\":\"/v1/chat/completions\",\"scheme\":\"http\"},\"runtime\":\"thecodacus/llama.cpp\"}",
+  "benchmark_commit": "776e799c7e0a24271e021aca2ea4b1c1b1f10017",
+  "harness_sha256": "23d279f930cff19c91cef366044550abffeb7af59688a2df443a779d3e6e136c",
+  "protocol_sha256": "e4c19e5d691cf6aa781dc66c0ba9e1925f459c52eaac397470596d455903ab20",
+  "dependency_bundle_sha256": "7293488bdf2c6ae0d9cdaef39dd8ef019c841f84641026624d8bc1263176aa7f",
+  "prompt_sha256": "1219567023e57f07b268b3cf15f458e8810331efd33b1937d9bb327ab1a5082f",
+  "task_count": 3,
+  "grader_denominator": 17,
+  "seeds": [
+    1000,
+    1017,
+    1034,
+    1051,
+    1068
+  ],
+  "reference_turn_caps": {
+    "t1_ratelimit": 13,
+    "t2_metrics": 27,
+    "t3_pipeline": 26
+  },
+  "max_generation_count": 330,
+  "sampling": {
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "max_tokens": 4096,
+    "cache_prompt": false
+  },
+  "server_context_size": 32768,
+  "model_post_sent": false,
+  "prompts": {
+    "t1_ratelimit": "00e2f68f36380c77be416c83b4f5c858f26bc8d2d834d93bba63014207ba67e6",
+    "t2_metrics": "a03379e9b2999c7549c8aad89c7566405788c6b39328e1f03c272c60964b4e1b",
+    "t3_pipeline": "46312a4d3db64426bca5dae2af44a9615622404241e379055fea9057756828e2"
+  }
+}

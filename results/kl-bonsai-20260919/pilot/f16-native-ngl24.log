@@ -1,0 +1,12 @@
+0.14.926.475 I cmn          init: llama threadpool init, n_threads = 16
+0.31.603.708 I 
+0.31.603.830 I system_info: n_threads = 16 (n_threads_batch = 16) / 32 | CUDA : ARCHS = 750,800,860,890,900,1200,1210 | USE_GRAPHS = 1 | BLACKWELL_NATIVE_FP4 = 1 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | 
+0.31.606.330 I perplexity: saving all logits to /mnt/e/llm-bench-t87-runtimes/kl-bonsai-20260919/pilot/bonsai-f16-native-ngl24-pilot.logits
+0.31.606.336 I perplexity: tokenizing the input ..
+0.31.893.539 I perplexity: tokenization took 287.196 ms
+0.31.893.740 I perplexity: calculating perplexity over 1 chunks, n_ctx=2048, batch_size=512, n_seq=1
+0.58.383.993 I perplexity: 25.99 seconds per pass - ETA 0.42 minutes
+[1]828674.8567,
+1.00.175.117 I Final estimate: PPL = 828674.8567 +/- 43781.96835
+
+1.00.286.221 W ~llama_context:      CUDA0 compute buffer size of 324.7549 MiB, does not match expectation of 322.0049 MiB

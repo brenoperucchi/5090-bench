@@ -2,6 +2,11 @@
 
 **English** | [Português (Brasil)](../decisoes.md) · [English index](README.md)
 
+> **Historical operational snapshot — through 2026-09-12.**
+> This document describes the earlier Windows/Ollama production baseline.
+> For the current Guardian research campaign and the WSL/llama.cpp environment,
+> see [the current public record](findings/public-record-llm-bench-2026-09-20.md).
+
 State documented through September 12, 2026. This is not a live server query.
 Primary source: the [production decision](../../results/DECISAO-producao-2026-09-09.md),
 read together with the [handoff](../history/handoff-2026-09-12.md) and the report corrections.

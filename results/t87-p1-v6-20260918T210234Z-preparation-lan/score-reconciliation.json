@@ -1,0 +1,39 @@
+{
+  "schema_version": "t87-p1-score-reconciliation-v1",
+  "campaign_result": "result.json",
+  "harness_version": "t87-p1-harness-v6",
+  "harness_sha256": "0e05dd8d2ff84bf221eb00a5c98085cea436e1f91218e3ce62867f245fa41102",
+  "series_key": "{\"benchmark_commit\":\"776e799c7e0a24271e021aca2ea4b1c1b1f10017\",\"gpu_free_threshold_mib\":8000,\"harness_version\":\"t87-p1-harness-v6\",\"model_sha256\":\"d372de8e934898a59e6ccfabc3368474711384d8f1fd4d22d87a3f0a45400cdc\",\"route\":{\"host\":\"192.168.0.125\",\"id\":\"lan\",\"port\":18087,\"request_path\":\"/v1/chat/completions\",\"scheme\":\"http\"},\"runtime\":\"thecodacus/llama.cpp\"}",
+  "new_generation_budget": 330,
+  "new_generations_observed": 307,
+  "prior_lost_generations": 55,
+  "actual_day_total": 362,
+  "authorized_day_ceiling": 385,
+  "gpu_gate": {
+    "threshold_free_mib": 8000,
+    "minimum_observed_free_mib": 9366,
+    "contaminated_runs": 0,
+    "gpu_gate_failures": 0,
+    "process_observation": "[Not Found] (PID was visible; process name/memory were not fully observable)"
+  },
+  "runs": [
+    {"seed": 1000, "generations": 60, "score": 7, "denominator": 17, "task_status": {"t1_ratelimit": "complete", "t2_metrics": "incomplete", "t3_pipeline": "incomplete"}},
+    {"seed": 1017, "generations": 66, "score": 7, "denominator": 17, "task_status": {"t1_ratelimit": "incomplete", "t2_metrics": "incomplete", "t3_pipeline": "incomplete"}},
+    {"seed": 1034, "generations": 49, "score": 5, "denominator": 17, "task_status": {"t1_ratelimit": "incomplete", "t2_metrics": "incomplete", "t3_pipeline": "complete"}},
+    {"seed": 1051, "generations": 66, "score": 7, "denominator": 17, "task_status": {"t1_ratelimit": "incomplete", "t2_metrics": "incomplete", "t3_pipeline": "incomplete"}},
+    {"seed": 1068, "generations": 66, "score": 7, "denominator": 17, "task_status": {"t1_ratelimit": "incomplete", "t2_metrics": "incomplete", "t3_pipeline": "incomplete"}}
+  ],
+  "dispersion": {
+    "scores": [7, 7, 5, 7, 7],
+    "mean": 6.6,
+    "population_standard_deviation": 0.8,
+    "sample_standard_deviation": 0.8944271909999159,
+    "range": 2
+  },
+  "grading_provenance": {
+    "method": "read-only post-campaign invocation of the published remote grader against each preserved task directory; original result.json remains unchanged",
+    "per_run_components": "t1=4/7 hidden checks, t2=1/8 (config_contract_kept=1; startup=0 because the task environment reported ModuleNotFoundError: flask), t3=2/2 for seeds 1000/1017/1051/1068 and 0/2 for seed 1034",
+    "score_interpretation": "The five values are comparable only as the observed v6 runtime+model+artifact campaign output. They are not a valid reproduction of the published 14/17 versus 17/17 comparison because most tasks hit the turn cap without a final message and t2 has an environment startup failure."
+  },
+  "p1_implication": "Observed score range is 2 points, smaller than the 3-point published gap, but the score level and grading completeness are confounded by task completion and the t2 Flask startup failure. Therefore this campaign does not support a clean stability conclusion about 14/17 versus 17/17."
+}

@@ -2,6 +2,16 @@
 
 **English** | [Português (Brasil)](README.pt-BR.md)
 
+## Documentation epochs
+
+> **CURRENT RESEARCH CAMPAIGN — 2026-09-20+**
+> Guardian / WSL Arch / CUDA / llama.cpp forks (Codacus, PrismML) / typed decisions / T87.
+> Latest campaign record: [Guardian synthesis on a local RTX 5090, 2026-09-21 → 24](docs/en/findings/guardian-local-models-2026-09-21-24.md)
+> Previous record: [Public findings record (English)](docs/en/findings/public-record-llm-bench-2026-09-20.md)
+>
+> **HISTORICAL PRODUCTION BASELINE — snapshot 2026-09-12**
+> Windows native / Ollama / `qwen3:14b` + `qwen3.5:9b`.
+
 A collection of performance, quality, and behavioral measurements of local
 LLMs running on **a 32 GB RTX 5090 with Ollama**. It brings together the
 experiments, raw results, scripts, findings, decisions, and corrections
@@ -16,9 +26,14 @@ Results apply to the configurations and samples described in their sources.
 | What you want to read | Document |
 |---|---|
 | Ready-to-use assignment for external deep research | [RTX 5090 research brief](docs/en/research/rtx5090-deep-research-brief.md) |
+| Review of the downloaded research report | [Findings and required revisions](docs/en/research/rtx5090-deep-research-review.md) |
+| Review of the second research report | [Corrections and remaining gaps](docs/en/research/rtx5090-deep-research-report-2-review.md) |
+| Remediation sequence and experiment gates | [Research remediation plan](docs/en/plans/research-remediation-plan.md) |
+| Every improvement measure and its implementation gate | [Master improvement implementation plan](docs/en/plans/improvement-implementation-plan.md) |
 | Experiments, results, and evidence by phase | [Benchmark catalog](docs/en/benchmarks.md) |
 | Tested models and comparison limits | [Models](docs/en/models.md) |
 | All 40 consolidated findings and caveats | [Findings](docs/en/findings.md) |
+| Guardian synthesis: runtime, models, prompts, desk test, typed decisions (21–24/09) | [Guardian local-model record](docs/en/findings/guardian-local-models-2026-09-21-24.md) |
 | Detailed public record of the September campaign | [Public findings record (English)](docs/en/findings/public-record-llm-bench-2026-09-20.md) |
 | English answers to Portuguese questions | [PT→EN finding](docs/en/findings/qwen3-14b-language-template.md) |
 | Adopted decisions and withdrawn recommendations | [Decisions](docs/en/decisions.md) |
@@ -27,6 +42,8 @@ Results apply to the configurations and samples described in their sources.
 | Unanswered questions | [Open questions](docs/en/open-questions.md) |
 | Source history and file integrity | [Provenance](docs/en/provenance.md) |
 | Proposed NUM_PARALLEL discriminating test | [Test proposal — not executed](docs/en/plans/num-parallel-discriminating-test.md) |
+| Lifecycle and spill evidence contracts | [Offline lifecycle/residency contracts](docs/en/plans/lifecycle-and-spill-evidence.md) |
+| Coding evaluation sandbox contract | [Offline coding task/result contract](docs/en/plans/coding-evaluation-sandbox.md) |
 | Documenting a new experiment | [Experiment template](docs/en/templates/experiment.md) |
 
 ## How to interpret the results
@@ -75,6 +92,7 @@ prompts/                Canonical prompt, backup, and historical experiments
 baseline-3080ti/         Earlier GPU baseline and historically located scripts
 artifacts/manifest.json Evidence inventory with SHA-256 hashes
 tools/inventory.py      Offline archive validation
+tools/json_safety.py    Shared finite-JSON safety boundary
 run_chat.py             Quality evaluation using a PT/EN goldset
 bench.py                Generation throughput
 bench_engine_ab.py      Alternating comparison of two endpoints

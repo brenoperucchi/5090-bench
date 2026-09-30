@@ -1,0 +1,80 @@
+{
+  "runtime": "ollama",
+  "route": {
+    "id": "lan",
+    "scheme": "http",
+    "host": "192.168.0.125",
+    "port": 11434,
+    "path": "/api/chat"
+  },
+  "series_key": "{\"model\":\"qwen3.6-35b-a3b-q4_k_m\",\"route\":{\"host\":\"192.168.0.125\",\"id\":\"lan\",\"path\":\"/api/chat\",\"port\":11434,\"scheme\":\"http\"},\"runtime\":\"ollama\"}",
+  "prompts": {
+    "short": {
+      "wall_s": 1.4955920680658892,
+      "prompt_tok_s": 300.45549052363384,
+      "decode_tok_s": 195.23474690408025,
+      "prompt_tokens": 25,
+      "completion_tokens": 256
+    },
+    "medium": {
+      "wall_s": 1.3644234760431573,
+      "prompt_tok_s": 27843.480528188033,
+      "decode_tok_s": 199.67833068915544,
+      "prompt_tokens": 1495,
+      "completion_tokens": 256
+    },
+    "long": {
+      "wall_s": 1.4907700050389394,
+      "prompt_tok_s": 210333.68844290182,
+      "decode_tok_s": 194.950626469269,
+      "prompt_tokens": 12241,
+      "completion_tokens": 256
+    },
+    "context_heavy": {
+      "wall_s": 1.526796694030054,
+      "prompt_tok_s": 267181.9204617718,
+      "decode_tok_s": 203.0816046937236,
+      "prompt_tokens": 16386,
+      "completion_tokens": 256
+    }
+  }
+}
+/home/brenoperucchi/Devs/llm-bench/results/qwen36-runtime-ab-20260918T182534Z
+Traceback (most recent call last):
+  File "/home/brenoperucchi/Devs/llm-bench/tools/run_qwen36_runtime_ab.py", line 243, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/brenoperucchi/Devs/llm-bench/tools/run_qwen36_runtime_ab.py", line 192, in main
+    new_pid, args_after = start_same_llama(command_tokens)
+                          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/brenoperucchi/Devs/llm-bench/tools/run_qwen36_runtime_ab.py", line 130, in start_same_llama
+    raise RuntimeError("restarted llama-server did not become healthy")
+RuntimeError: restarted llama-server did not become healthy
+unexpected run status: failed
+Traceback (most recent call last):
+  File "/home/brenoperucchi/Devs/llm-bench/tools/qwen36_runtime_bench.py", line 282, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/brenoperucchi/Devs/llm-bench/tools/qwen36_runtime_bench.py", line 277, in main
+    run_arm(args.runtime, args.out, args.reps)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/brenoperucchi/Devs/llm-bench/tools/qwen36_runtime_bench.py", line 207, in run_arm
+    raise RuntimeError(f"warmup failed for {runtime}/{name}: {error}")
+RuntimeError: warmup failed for llama_cpp/context_heavy: HTTPError: HTTP Error 400: Bad Request
+Traceback (most recent call last):
+  File "/home/brenoperucchi/Devs/llm-bench/tools/continue_qwen36_runtime_ab.py", line 67, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/brenoperucchi/Devs/llm-bench/tools/continue_qwen36_runtime_ab.py", line 53, in main
+    subprocess.run(
+    ~~~~~~~~~~~~~~^
+        [sys.executable, str(ROOT / "tools/qwen36_runtime_bench.py"), "--runtime", "llama_cpp", "--out", str(run_dir / "llama_cpp"), "--reps", "5"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        check=True,
+        ^^^^^^^^^^^
+    )
+    ^
+  File "/usr/lib/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['/usr/bin/python3', '/home/brenoperucchi/Devs/llm-bench/tools/qwen36_runtime_bench.py', '--runtime', 'llama_cpp', '--out', '/home/brenoperucchi/Devs/llm-bench/results/qwen36-runtime-ab-20260918T182534Z/llama_cpp', '--reps', '5']' returned non-zero exit status 1.

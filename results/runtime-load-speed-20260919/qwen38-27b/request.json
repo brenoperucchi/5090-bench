@@ -1,0 +1,1 @@
+{"prompt":"Explain in one concise paragraph why measuring model load and token decoding separately matters for a local GPU runtime.","n_predict":128,"temperature":0,"seed":42,"cache_prompt":false,"stream":false}

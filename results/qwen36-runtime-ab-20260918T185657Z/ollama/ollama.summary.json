@@ -1,0 +1,41 @@
+{
+  "runtime": "ollama",
+  "route": {
+    "id": "lan",
+    "scheme": "http",
+    "host": "192.168.0.125",
+    "port": 11434,
+    "path": "/api/chat"
+  },
+  "series_key": "{\"model\":\"qwen3.6-35b-a3b-q4_k_m\",\"route\":{\"host\":\"192.168.0.125\",\"id\":\"lan\",\"path\":\"/api/chat\",\"port\":11434,\"scheme\":\"http\"},\"runtime\":\"ollama\"}",
+  "prompts": {
+    "short": {
+      "wall_s": 1.529970255913213,
+      "prompt_tok_s": 300.45187962695894,
+      "decode_tok_s": 187.2192168824929,
+      "prompt_tokens": 25,
+      "completion_tokens": 256
+    },
+    "medium": {
+      "wall_s": 1.401304021012038,
+      "prompt_tok_s": 29148.55037142467,
+      "decode_tok_s": 196.7342120794806,
+      "prompt_tokens": 1495,
+      "completion_tokens": 256
+    },
+    "long": {
+      "wall_s": 1.6066359649412334,
+      "prompt_tok_s": 163291.71335574408,
+      "decode_tok_s": 183.64102770110128,
+      "prompt_tokens": 12241,
+      "completion_tokens": 256
+    },
+    "context_heavy": {
+      "wall_s": 1.6733677460579202,
+      "prompt_tok_s": 194440.47335398302,
+      "decode_tok_s": 176.58618889065937,
+      "prompt_tokens": 12241,
+      "completion_tokens": 256
+    }
+  }
+}
