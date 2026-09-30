@@ -1508,45 +1508,9 @@
       "type": "json"
     },
     {
-      "path": "results/t87-p1-v2-2026-09-18-preparation-7/run-1-1000/t1_ratelimit.json",
-      "bytes": 207833,
-      "sha256": "34c64ea4f86a67e74de57b8a034fccdaa0e89594782cc751d3d4047094b216cd",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v2-2026-09-18-preparation-7/run-1-1000/t2_metrics.json",
-      "bytes": 821714,
-      "sha256": "c04cacb6f5c3cdd46448094915d9c951f6a670743f26929297e21c68c30b6161",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v2-2026-09-18-preparation-7/run-1-1000/t3_pipeline.json",
-      "bytes": 670449,
-      "sha256": "a1f7503c5ddb938a8f8b9c4bd3d8d69124fd6c932ce665ab7431e9155196a20b",
-      "type": "json"
-    },
-    {
       "path": "results/t87-p1-v2-2026-09-18-preparation-7/run-2-1017/run.json",
       "bytes": 1109,
       "sha256": "c3ae329e7ab373315f1131b6f7c2ea6bdcfc9810f74fe29a4cd6acbc28fc2a1b",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v2-2026-09-18-preparation-7/run-2-1017/t1_ratelimit.json",
-      "bytes": 210593,
-      "sha256": "b88d04ea0827987745c54da7f1b1ffa3668a25a75c188d707f73f9b8a401db48",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v2-2026-09-18-preparation-7/run-2-1017/t2_metrics.json",
-      "bytes": 711819,
-      "sha256": "33de4432013443eff048680f499c064e0c4e5799ad6376aa78e4ab88d4b48e06",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v2-2026-09-18-preparation-7/run-2-1017/t3_pipeline.json",
-      "bytes": 741407,
-      "sha256": "878534a305aeadd78c0f8401f3a678ae4fe8bc5f9bc0e77cad262ed2e702ec7b",
       "type": "json"
     },
     {
@@ -1556,69 +1520,15 @@
       "type": "json"
     },
     {
-      "path": "results/t87-p1-v2-2026-09-18-preparation-7/run-3-1034/t1_ratelimit.json",
-      "bytes": 209723,
-      "sha256": "b61109325861a9c092b29d3f9baee1d439ef2c193c7cd4af01bb91db6a47c6f7",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v2-2026-09-18-preparation-7/run-3-1034/t2_metrics.json",
-      "bytes": 1084954,
-      "sha256": "51c4751f5e52c62d954095950a3ec860590293a8e54fe7731eed7dce89e592bb",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v2-2026-09-18-preparation-7/run-3-1034/t3_pipeline.json",
-      "bytes": 889072,
-      "sha256": "3b380d823297a6a414e68ca57bc2e54f7793ef10577aabcb31c7cc4abf55b1dc",
-      "type": "json"
-    },
-    {
       "path": "results/t87-p1-v2-2026-09-18-preparation-7/run-4-1051/run.json",
       "bytes": 1109,
       "sha256": "e966e6f4a7ca784d4aafedac4d14c4efd595a164ef5b739bd10fcdc33ec2e219",
       "type": "json"
     },
     {
-      "path": "results/t87-p1-v2-2026-09-18-preparation-7/run-4-1051/t1_ratelimit.json",
-      "bytes": 254796,
-      "sha256": "13db3fc77768356efc95d5fa6c5862f618ed06ed3c5b522d48467c47b64b1eb1",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v2-2026-09-18-preparation-7/run-4-1051/t2_metrics.json",
-      "bytes": 746858,
-      "sha256": "d94859d776584309426f8bde4de58b962efef4fd90d1fcc0d971f1f3a82af414",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v2-2026-09-18-preparation-7/run-4-1051/t3_pipeline.json",
-      "bytes": 754442,
-      "sha256": "234e9e85d7af0c0e14d80a3807ade9caeadea014adf5faa3bbea28f7958fa319",
-      "type": "json"
-    },
-    {
       "path": "results/t87-p1-v2-2026-09-18-preparation-7/run-5-1068/run.json",
       "bytes": 1109,
       "sha256": "a14bde92d59429dfd1c698441507da9259c438d2845b103955c2440d23a95679",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v2-2026-09-18-preparation-7/run-5-1068/t1_ratelimit.json",
-      "bytes": 234619,
-      "sha256": "034ff42baa687176a8f8cbc2fdefdf1c9ced6f533fb7e740ec9040bbed3e093c",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v2-2026-09-18-preparation-7/run-5-1068/t2_metrics.json",
-      "bytes": 743996,
-      "sha256": "806f0aa9450a3e9badefb4ec7469c3565dfa0f2b922ec94b40796c1fea641364",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v2-2026-09-18-preparation-7/run-5-1068/t3_pipeline.json",
-      "bytes": 733929,
-      "sha256": "9817329b14fc2ab34e61ba16f6bd599452f8b91276ab5d9b32e457f3818a4dd6",
       "type": "json"
     },
     {
@@ -1790,18 +1700,6 @@
       "type": "md"
     },
     {
-      "path": "results/t87-p1-v4-20260918T191000Z-preparation-lan/run-1-1000/t1_ratelimit.json",
-      "bytes": 247251,
-      "sha256": "48172cb99364ab3b704dfa1a7c9043dfe2934437557bcd4bf915b03fb9fb289b",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v4-20260918T191000Z-preparation-lan/run-1-1000/t2_metrics.json",
-      "bytes": 1334100,
-      "sha256": "752750aa941b3b41242c56463f8c1ea8082db46ef96d876ab7f9f9b9ee2da541",
-      "type": "json"
-    },
-    {
       "path": "results/t87-p1-v4-20260918T191000Z-preparation-lan/t1_ratelimit.prompt.sha256",
       "bytes": 79,
       "sha256": "fea66a2b0e1913b3a9fc7be6fc7bbc9c91fdf528a2d5239a6bf7cdcc065dca6e",
@@ -1916,33 +1814,9 @@
       "type": "md"
     },
     {
-      "path": "results/t87-p1-v5-20260918T202500Z-preparation-lan/run-1-1000/t1_ratelimit.checkpoint.jsonl",
-      "bytes": 111445,
-      "sha256": "2637b4ad6282a17386ca68fb89639a032a24673ba50e14c3b1e714fdd8267db6",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v5-20260918T202500Z-preparation-lan/run-1-1000/t1_ratelimit.json",
-      "bytes": 254101,
-      "sha256": "129c4dd0436d4d16bd9c2e62727deaeaeab3a365bd45be42a65ad2322b3a1549",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v5-20260918T202500Z-preparation-lan/run-1-1000/t2_metrics.checkpoint.jsonl",
-      "bytes": 174190,
-      "sha256": "9fb12c011225f3f40e822fcabbd184511da1a2439a981bd3070e20eb74b04ba4",
-      "type": "jsonl"
-    },
-    {
       "path": "results/t87-p1-v5-20260918T202500Z-preparation-lan/run-1-1000/t2_metrics.failure.json",
       "bytes": 1087,
       "sha256": "b61fc477591656516c68598ef6c9cdc87cb19ac18cfe323479137f325292c3ed",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v5-20260918T202500Z-preparation-lan/run-1-1000/t2_metrics.json",
-      "bytes": 368405,
-      "sha256": "46f5ec4c49ff2ca36fe27c48fdbde9f3f77eeca2f68558002f0fd6c5805ce8ec",
       "type": "json"
     },
     {
@@ -2042,81 +1916,9 @@
       "type": "json"
     },
     {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-1-1000/t1_ratelimit.checkpoint.jsonl",
-      "bytes": 79586,
-      "sha256": "c1763caa033e77478d11c13ecdbc2cb0d083c7d2a312f449bd7ce818e0a959e1",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-1-1000/t1_ratelimit.json",
-      "bytes": 254963,
-      "sha256": "1a2cf90978dec9768973ca014cefa2c4b5b1067591f1906d3e188c635706a292",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-1-1000/t2_metrics.checkpoint.jsonl",
-      "bytes": 691219,
-      "sha256": "62d4eb8cd60247d00711381fa5e66b3778703c85ca0b0a46a8d4e5b0ec2f16da",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-1-1000/t2_metrics.json",
-      "bytes": 1440329,
-      "sha256": "6df03eaec04fe7b0b88482e8fa711889f5131519bc9cb5b63b4999bd1c964fa3",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-1-1000/t3_pipeline.checkpoint.jsonl",
-      "bytes": 592758,
-      "sha256": "c4452f03d9760cea1e9669770ae177e9fc0f3dc334ffea716af598aae22eee5f",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-1-1000/t3_pipeline.json",
-      "bytes": 1448088,
-      "sha256": "73ed9827c9d3ad0dfa331077fdbd7ec9494e4b81c49007d06ebff16a86ab6547",
-      "type": "json"
-    },
-    {
       "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-2-1017/run.json",
       "bytes": 2173,
       "sha256": "7a95d2d874896784761cf88f795348127bec6fdc30231c9a63ba3f8411894335",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-2-1017/t1_ratelimit.checkpoint.jsonl",
-      "bytes": 126932,
-      "sha256": "ce0678df38af753963f78b056697e4fcf551c054abd6d0d190485a83c8e843ec",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-2-1017/t1_ratelimit.json",
-      "bytes": 288210,
-      "sha256": "32e0f90745cce502c14dbd235b920db163c0cc85ec02c7a4ae39da358ee4918f",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-2-1017/t2_metrics.checkpoint.jsonl",
-      "bytes": 481270,
-      "sha256": "e426d8cacc23169a0aa1f351561aa113d0c931dcd15f61b87ceb484a826b1cb2",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-2-1017/t2_metrics.json",
-      "bytes": 1252000,
-      "sha256": "7c0a35221feaffc11754c52a10c43a3f7d7b2a7a46cdb0c7ad9a75a24c0493ee",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-2-1017/t3_pipeline.checkpoint.jsonl",
-      "bytes": 628710,
-      "sha256": "592dd5146d01ee4230cfc8730e12fb6a6e3cf25d6179589b83f5d5ccc8cb8668",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-2-1017/t3_pipeline.json",
-      "bytes": 1474471,
-      "sha256": "6fbf7b0a6a7e0a3d96f89a69f692ea3b6063be8410f8c31c1f9d47b41813fde2",
       "type": "json"
     },
     {
@@ -2126,123 +1928,15 @@
       "type": "json"
     },
     {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-3-1034/t1_ratelimit.checkpoint.jsonl",
-      "bytes": 175620,
-      "sha256": "711001836b7704f96bf6b08029fa3943a89c21beb2d7973c1da27509fdd87b28",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-3-1034/t1_ratelimit.json",
-      "bytes": 426554,
-      "sha256": "86e7ee984ce37e08142e13b281322a4cf318854efec5663c1947b0c72be5bc43",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-3-1034/t2_metrics.checkpoint.jsonl",
-      "bytes": 497153,
-      "sha256": "fd1333b12fdb68e0ee4489bdb01846ff52dad53c58743874a2bf24d8c5fc2124",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-3-1034/t2_metrics.json",
-      "bytes": 1198754,
-      "sha256": "0d42500cd82549d54089b059fc8b6bbbb2d7ae985c6cff1a6979f95dd52e61aa",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-3-1034/t3_pipeline.checkpoint.jsonl",
-      "bytes": 93525,
-      "sha256": "1ea2d34c995ce85ca2b6211c1ef8546aa354c998236f31b485e23f79b2f5bb9d",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-3-1034/t3_pipeline.json",
-      "bytes": 296201,
-      "sha256": "0fe05713ce1ba29b5b2ddea2040aeaf059b567eb480f4a3eddb09545d46fa5d6",
-      "type": "json"
-    },
-    {
       "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-4-1051/run.json",
       "bytes": 2173,
       "sha256": "9236e550bdaa3b9ba37c53c9040e15e3ac9e94cdbeef24ce4adad94d1435e242",
       "type": "json"
     },
     {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-4-1051/t1_ratelimit.checkpoint.jsonl",
-      "bytes": 128590,
-      "sha256": "33e913194aab7660383cce8e2c51d490dae5d85057cac0f25a926dae322a916a",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-4-1051/t1_ratelimit.json",
-      "bytes": 277306,
-      "sha256": "ae3737e6c905773d77e277d6416172557ecc606305f98030fc9760270124c400",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-4-1051/t2_metrics.checkpoint.jsonl",
-      "bytes": 742078,
-      "sha256": "0a3c2260795d2a3500b53faf22ebf832ca99ede4ee7374c0aa5250ea7ead8405",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-4-1051/t2_metrics.json",
-      "bytes": 1643107,
-      "sha256": "09175d95a2bd72e5ea3f9def04f553f4aa661c7e3453193e7854af34f664d8a3",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-4-1051/t3_pipeline.checkpoint.jsonl",
-      "bytes": 496327,
-      "sha256": "8e836fc4f4e179cd76d1ea63b004d1899898f315ba24e37b5798422cee2cf879",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-4-1051/t3_pipeline.json",
-      "bytes": 1236447,
-      "sha256": "6ae3937feee3a21c2c4a05b345dc885700cf596b0dfa7e3639964562bc5fbaef",
-      "type": "json"
-    },
-    {
       "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-5-1068/run.json",
       "bytes": 2173,
       "sha256": "9a145656f6d11e285e0e67faa7d12cb39ec24c35891f64662e7dcd0788e1ec4d",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-5-1068/t1_ratelimit.checkpoint.jsonl",
-      "bytes": 132766,
-      "sha256": "1175cd338732ec5eabb25e547673ae75f7e170367ac67722dcaf52b5eb8d0bbd",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-5-1068/t1_ratelimit.json",
-      "bytes": 284261,
-      "sha256": "514d01f64ca1fb1ee36d3ae4e1e4cc2ebb1f8c0e787efc76da22fc79d1a685b7",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-5-1068/t2_metrics.checkpoint.jsonl",
-      "bytes": 577080,
-      "sha256": "3f9bdc23c91ad6f8068d90acafadd6730b5c814472f038842543d63903a5a22d",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-5-1068/t2_metrics.json",
-      "bytes": 1383556,
-      "sha256": "4c1fa905848b9418946fe5420f8b12b908246bfb7f88f4624410f5e4466332e9",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-5-1068/t3_pipeline.checkpoint.jsonl",
-      "bytes": 640231,
-      "sha256": "6216c3d1f7512a316b8854e759ac148913c15b94725180a0b52423c442410e5c",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v6-20260918T210234Z-preparation-lan/t87-p1-harness-v6-20260918T210431Z-3921869-run-5-1068/t3_pipeline.json",
-      "bytes": 1383089,
-      "sha256": "6510b784560f03009d4cd0410b0d04a36801395682af36cf6e9ef4e0579c3102",
       "type": "json"
     },
     {
@@ -2324,42 +2018,6 @@
       "type": "json"
     },
     {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-1-1000/t1_ratelimit.checkpoint.jsonl",
-      "bytes": 131121,
-      "sha256": "f3e8de607fa5b3d7eadc1fc41b8765e2864c7ac806f71ad32320f66974f37a56",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-1-1000/t1_ratelimit.json",
-      "bytes": 290144,
-      "sha256": "0fa4eaf4fe197aaa03502eb56c532c73a28d449a2309e35d726e177e255576bb",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-1-1000/t2_metrics.checkpoint.jsonl",
-      "bytes": 676273,
-      "sha256": "5793a01881f268b6e580c9de7a84381710718b874a97ce1dbc945c0733180f60",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-1-1000/t2_metrics.json",
-      "bytes": 1432755,
-      "sha256": "048b23c4eca4e55db5b5a2bc49ea3441530d8a1eca74b46a654badf6659cf05b",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-1-1000/t3_pipeline.checkpoint.jsonl",
-      "bytes": 554934,
-      "sha256": "e174b7c7d70974544139dd7c030b510c4ca2b3326c359812c39cee76661c1790",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-1-1000/t3_pipeline.json",
-      "bytes": 1269744,
-      "sha256": "a1615549c39f34b39ac53a309b972f09bb8e272435bfe7fc301af6d464cfb4ae",
-      "type": "json"
-    },
-    {
       "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-2-1017/reset.json",
       "bytes": 453,
       "sha256": "060d5e14c69d4d12671788ad48fd028b2f05ef2f8b81f2d01572c19cc628987b",
@@ -2369,42 +2027,6 @@
       "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-2-1017/run.json",
       "bytes": 3144,
       "sha256": "857c39c6d4175cf13c59562b3c84dd4dc10983d7f47aece6dccf8cf4aac973a9",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-2-1017/t1_ratelimit.checkpoint.jsonl",
-      "bytes": 124784,
-      "sha256": "4353588c96a7cd7e378d901406d0bd66b9e23565f0bf6d38aeed149fa9dba2e2",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-2-1017/t1_ratelimit.json",
-      "bytes": 280275,
-      "sha256": "eed7d0a1cd281e19585f6c3db36b8e60f688b4998ed111c5f082283cacfd7be0",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-2-1017/t2_metrics.checkpoint.jsonl",
-      "bytes": 417443,
-      "sha256": "3dc5fc6123052d9eb49f4a58ffb5ebd35725dc1cabce84c893f1aff5394e8c6f",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-2-1017/t2_metrics.json",
-      "bytes": 986933,
-      "sha256": "1ca35329a3f22a0756be3b47e89d94a353a52d9e29a5211939e6b3a36fd7b3fb",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-2-1017/t3_pipeline.checkpoint.jsonl",
-      "bytes": 746315,
-      "sha256": "61aff022b19c31a7a1bf42906be52834bc345ca1e0d3d33c0fb689cbe60f2372",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-2-1017/t3_pipeline.json",
-      "bytes": 1577702,
-      "sha256": "9645589526f786b20f1b8eccbd8d0ff0843c7eae6abe03b66f2ea6f638453f5b",
       "type": "json"
     },
     {
@@ -2420,42 +2042,6 @@
       "type": "json"
     },
     {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-3-1034/t1_ratelimit.checkpoint.jsonl",
-      "bytes": 139138,
-      "sha256": "a9cd087e694ab3ca4e1479749b206f2bae9073f57bf63d7f79583a15ae961cc2",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-3-1034/t1_ratelimit.json",
-      "bytes": 396555,
-      "sha256": "56c1a43c7d4b190a6a1adb42959d4771e08e45fe922557b0e6f17c8f0c3ae287",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-3-1034/t2_metrics.checkpoint.jsonl",
-      "bytes": 630594,
-      "sha256": "37770eba4d9c446bab693be5560117687c3b28db1fd64431f2d29ec5487371f6",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-3-1034/t2_metrics.json",
-      "bytes": 1424401,
-      "sha256": "e21c0d9fed05eb1d20b51b5c834a332a2db62e1bfc13eb54a40a03016ee952a4",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-3-1034/t3_pipeline.checkpoint.jsonl",
-      "bytes": 500401,
-      "sha256": "27d8e85bef23868355c80861fb290d7d741d777b4190a54e55b549787f03c967",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-3-1034/t3_pipeline.json",
-      "bytes": 1240974,
-      "sha256": "8e8d92ba249c1f5d42b9485760b9eeaf7c1876106252e10728a432fcde5a2591",
-      "type": "json"
-    },
-    {
       "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-4-1051/reset.json",
       "bytes": 453,
       "sha256": "9f9734ed1fb4094a0480ba1228c4e8824113ab5617baa5e2fe39a3140fc5ba52",
@@ -2468,42 +2054,6 @@
       "type": "json"
     },
     {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-4-1051/t1_ratelimit.checkpoint.jsonl",
-      "bytes": 148411,
-      "sha256": "50abf89d4b83fba8dc4037097e15f0b5b78f41baeab00c55f4aa1690b6094d4e",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-4-1051/t1_ratelimit.json",
-      "bytes": 382618,
-      "sha256": "38f64e7acd6589c602551f7166a47e4819fb798d1426b2e98301a406dbfd38e6",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-4-1051/t2_metrics.checkpoint.jsonl",
-      "bytes": 626554,
-      "sha256": "2a6e32fee4fe99e704ab483f926c1eb74e7365773960c4a21fe96c0a273b3c06",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-4-1051/t2_metrics.json",
-      "bytes": 1386050,
-      "sha256": "9890c5e8842696dd9c5393117be0abb497044b6929217de222f27220839c5660",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-4-1051/t3_pipeline.checkpoint.jsonl",
-      "bytes": 401419,
-      "sha256": "3e3c10d4743bd900643736adc86089d5e830ecfd14e663b67a24a343359dc465",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-4-1051/t3_pipeline.json",
-      "bytes": 1040794,
-      "sha256": "560e03f6dc365d8dff57ecdd12c285299e7994f7a0287929c34d598a430b1e7e",
-      "type": "json"
-    },
-    {
       "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-5-1068/reset.json",
       "bytes": 453,
       "sha256": "fbddc1a441a5af708d39e25cf151725ce10173cd9e4a6dd51cdfdecbd60c5fce",
@@ -2513,42 +2063,6 @@
       "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-5-1068/run.json",
       "bytes": 3029,
       "sha256": "677fd71ed1582ab2739f5f202a2725055707bdf81f6822ffa54e4bf0f00313e1",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-5-1068/t1_ratelimit.checkpoint.jsonl",
-      "bytes": 131662,
-      "sha256": "95e3be8327a5e0221172b5b019607f465008a061fba2fc31463fc298ca3e7e7b",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-5-1068/t1_ratelimit.json",
-      "bytes": 284341,
-      "sha256": "cb63d0d709faa446ce866ccb50db026e95785143e1002274b303738e37d15c57",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-5-1068/t2_metrics.checkpoint.jsonl",
-      "bytes": 788054,
-      "sha256": "ef5359472be77c6e44a6c0b1205358e5b362b4325b28340c916b15a2a466bf8f",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-5-1068/t2_metrics.json",
-      "bytes": 1620902,
-      "sha256": "2dad81b0bf61f90ee36be32d6125df90fd55070c2da271b98a5a5c9bd2c2c22c",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-5-1068/t3_pipeline.checkpoint.jsonl",
-      "bytes": 543071,
-      "sha256": "82d1c668f0d19b906ae05cffc045364c266c8c22abd1ea2f2e9385fb44a98b9e",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v7-20260919T032440Z-preparation-lan/t87-p1-harness-v7-20260919T032459Z-845971-run-5-1068/t3_pipeline.json",
-      "bytes": 1497188,
-      "sha256": "90adb7a9a7ae5bae2f51d0ad5aabfc800e985ffe9076af86ce1686ab48938d02",
       "type": "json"
     },
     {
@@ -2636,42 +2150,6 @@
       "type": "json"
     },
     {
-      "path": "results/t87-p1-v8-20260919T043325Z-protected-lan/t87-p1-harness-v8-20260919T043342Z-1181427-run-1-1000/t1_ratelimit.checkpoint.jsonl",
-      "bytes": 132780,
-      "sha256": "dd18890071fe43066e58f5b10f2554f407811c4fb905fe7dbee5680615c23841",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v8-20260919T043325Z-protected-lan/t87-p1-harness-v8-20260919T043342Z-1181427-run-1-1000/t1_ratelimit.json",
-      "bytes": 296486,
-      "sha256": "29afe2a53f302cdbd3b1ecf9e4c1fb70fdd34c7133196223c8b1034c217ac382",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v8-20260919T043325Z-protected-lan/t87-p1-harness-v8-20260919T043342Z-1181427-run-1-1000/t2_metrics.checkpoint.jsonl",
-      "bytes": 497562,
-      "sha256": "9e47bfbe43f76563ed8528f86358046279188162c00a05ad90a14f385614e7e7",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v8-20260919T043325Z-protected-lan/t87-p1-harness-v8-20260919T043342Z-1181427-run-1-1000/t2_metrics.json",
-      "bytes": 1146019,
-      "sha256": "dca56d20ccb7437f7d256225fbb7d4c2544c4426788f7bb0e8465dba59a05fc5",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v8-20260919T043325Z-protected-lan/t87-p1-harness-v8-20260919T043342Z-1181427-run-1-1000/t3_pipeline.checkpoint.jsonl",
-      "bytes": 793775,
-      "sha256": "ae473329310c9355f6730ca24bd5d136ef1a908d3fa3a2e3d98f302f8ed3a72b",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v8-20260919T043325Z-protected-lan/t87-p1-harness-v8-20260919T043342Z-1181427-run-1-1000/t3_pipeline.json",
-      "bytes": 1624985,
-      "sha256": "9042180a41b7dc39b7dc43c6b6a7c32bf94767f5a59d711285c70647ef0206f8",
-      "type": "json"
-    },
-    {
       "path": "results/t87-p1-v8-20260919T043325Z-protected-lan/t87-p1-harness-v8-20260919T043342Z-1181427-run-2-1017/reset.json",
       "bytes": 544,
       "sha256": "4020d8730e45c049dd250ed63ee2fa345e5f8d263488c73f038a17a55dc6b599",
@@ -2681,42 +2159,6 @@
       "path": "results/t87-p1-v8-20260919T043325Z-protected-lan/t87-p1-harness-v8-20260919T043342Z-1181427-run-2-1017/run.json",
       "bytes": 4640,
       "sha256": "979e589bc403fee9d0b43ae53112ecc7309ee6c666fbfde3264876d125436e51",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v8-20260919T043325Z-protected-lan/t87-p1-harness-v8-20260919T043342Z-1181427-run-2-1017/t1_ratelimit.checkpoint.jsonl",
-      "bytes": 143096,
-      "sha256": "976ee4bcbda36ca187f7dd6bad73705639ca7cc8a961a050cc436596239ec33b",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v8-20260919T043325Z-protected-lan/t87-p1-harness-v8-20260919T043342Z-1181427-run-2-1017/t1_ratelimit.json",
-      "bytes": 333446,
-      "sha256": "e121703c1da047b9c0ac0a165b9a5540fa6b9fef9f3c28fc0fa446516d3a4622",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v8-20260919T043325Z-protected-lan/t87-p1-harness-v8-20260919T043342Z-1181427-run-2-1017/t2_metrics.checkpoint.jsonl",
-      "bytes": 501654,
-      "sha256": "f1fd37171a0da0f654166a16021d1a70cf848a8b058606d932f77cd91fe767dd",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v8-20260919T043325Z-protected-lan/t87-p1-harness-v8-20260919T043342Z-1181427-run-2-1017/t2_metrics.json",
-      "bytes": 1363995,
-      "sha256": "26824b44a73b6043aebb3c3c4f1b5a6d85a4e01d4299f2bc3ca70583fbe60a80",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v8-20260919T043325Z-protected-lan/t87-p1-harness-v8-20260919T043342Z-1181427-run-2-1017/t3_pipeline.checkpoint.jsonl",
-      "bytes": 682458,
-      "sha256": "f07a4eb21d1b509830e91fbc3c7ddf7dc930fbf276cab2a5703d550c1769f251",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v8-20260919T043325Z-protected-lan/t87-p1-harness-v8-20260919T043342Z-1181427-run-2-1017/t3_pipeline.json",
-      "bytes": 1520366,
-      "sha256": "542bfbfa3c47b408b1d5abe67b956adce1a3c083d076bae2e8db24bce6bf2d63",
       "type": "json"
     },
     {
@@ -2732,69 +2174,9 @@
       "type": "json"
     },
     {
-      "path": "results/t87-p1-v8-20260919T043325Z-protected-lan/t87-p1-harness-v8-20260919T043342Z-1181427-run-3-1034/t1_ratelimit.checkpoint.jsonl",
-      "bytes": 139427,
-      "sha256": "f8c84a32e11201ec7712b1b0fde94e3577873cde913fea89f822c650a4453a8c",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v8-20260919T043325Z-protected-lan/t87-p1-harness-v8-20260919T043342Z-1181427-run-3-1034/t1_ratelimit.json",
-      "bytes": 326123,
-      "sha256": "8dfed5cfd6c41dd23f014525dff47bbceb14044d7ac073eb1539e6a2e0fc0b3c",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v8-20260919T043325Z-protected-lan/t87-p1-harness-v8-20260919T043342Z-1181427-run-3-1034/t2_metrics.checkpoint.jsonl",
-      "bytes": 613555,
-      "sha256": "0566ee497011dfee162e36664b8924892ba18f77fbf9b98205191ba351a57f9c",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v8-20260919T043325Z-protected-lan/t87-p1-harness-v8-20260919T043342Z-1181427-run-3-1034/t2_metrics.json",
-      "bytes": 1318012,
-      "sha256": "eab1c7f433b064141f5662c72da6b8d4691ef761adae0c1db5fc99e0e3a45c05",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v8-20260919T043325Z-protected-lan/t87-p1-harness-v8-20260919T043342Z-1181427-run-3-1034/t3_pipeline.checkpoint.jsonl",
-      "bytes": 640279,
-      "sha256": "e2ba794e95154771da8efcd90a1e35c65313b35bbef48e096e1d6623dee24fc5",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v8-20260919T043325Z-protected-lan/t87-p1-harness-v8-20260919T043342Z-1181427-run-3-1034/t3_pipeline.json",
-      "bytes": 1606688,
-      "sha256": "4f11ab8180b3084c25f14704c80fd99e52dfd7645d6f91bdc173a727d919b240",
-      "type": "json"
-    },
-    {
       "path": "results/t87-p1-v8-20260919T043325Z-protected-lan/t87-p1-harness-v8-20260919T043342Z-1181427-run-4-1051/reset.json",
       "bytes": 544,
       "sha256": "d97566f26a54f6ca08a6c475ae4da71c40a774a6f19a2ab6f30d66f1f4d7d56f",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v8-20260919T043325Z-protected-lan/t87-p1-harness-v8-20260919T043342Z-1181427-run-4-1051/t1_ratelimit.checkpoint.jsonl",
-      "bytes": 125505,
-      "sha256": "8ca104af587d81f637ae91c4914c13388ea946e0e518f1ac83547606b73d279a",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v8-20260919T043325Z-protected-lan/t87-p1-harness-v8-20260919T043342Z-1181427-run-4-1051/t1_ratelimit.json",
-      "bytes": 280866,
-      "sha256": "8f03fce8ebbfbdb83f03a8f5911c58d8bbb20b3e670bdc1952d82866529f0f68",
-      "type": "json"
-    },
-    {
-      "path": "results/t87-p1-v8-20260919T043325Z-protected-lan/t87-p1-harness-v8-20260919T043342Z-1181427-run-4-1051/t2_metrics.checkpoint.jsonl",
-      "bytes": 598647,
-      "sha256": "a1b0a8ff6e8b68e80e08775e06e56f316cd2228b09386ffb4dc0258e36c44dcf",
-      "type": "jsonl"
-    },
-    {
-      "path": "results/t87-p1-v8-20260919T043325Z-protected-lan/t87-p1-harness-v8-20260919T043342Z-1181427-run-4-1051/t2_metrics.json",
-      "bytes": 1312246,
-      "sha256": "bc249d4d3d72144d28fea52baebba74b24a232a4cf498a95ca5ed28594e80eea",
       "type": "json"
     },
     {
