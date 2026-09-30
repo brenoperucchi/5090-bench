@@ -35,3 +35,8 @@ results/t87-p1-*/**/t1_ratelimit.json
 results/t87-p1-*/**/t2_metrics.json
 results/t87-p1-*/**/t3_pipeline.json
 results/t87-p1-*/**/*.checkpoint.jsonl
+
+# Strata track: local-only notes (paths, cleanup commands, scenario map)
+results/strata-20260930/LIMPEZA-E-proposta.md
+results/strata-20260930/strata-iq2_xs.log
+*.local.md

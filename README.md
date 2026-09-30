@@ -6,6 +6,7 @@
 
 > **CURRENT RESEARCH CAMPAIGN — 2026-09-20+**
 > Guardian / WSL Arch / CUDA / llama.cpp forks (Codacus, PrismML) / typed decisions / T87.
+> **Strata track (2026-09-30+):** [Qwen3.8-Flash-Next / Swift 1.5 on Strata, RTX 5090](docs/strata/README.md): 16–27 → 155–220 tok/s on the same GPU; now the local production backend.
 > Latest campaign record: [Guardian synthesis on a local RTX 5090, 2026-09-21 → 24](docs/en/findings/guardian-local-models-2026-09-21-24.md)
 > Previous record: [Public findings record (English)](docs/en/findings/public-record-llm-bench-2026-09-20.md)
 >
