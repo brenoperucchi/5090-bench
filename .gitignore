@@ -49,3 +49,7 @@ results/respostas/
 docs/en/plans/gateway-consumer-coverage-and-product-acceptance.md
 docs/en/plans/t18-owner-acceptance-form.md
 tools/quant_ab_window.sh
+
+# MFC comprehension benchmark: bank and answers are MFC market data (local only, never publish)
+results/mfc-compreensao-*/
+results/strata-20260930/HANDOFF-space-strata.md
