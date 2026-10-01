@@ -1376,6 +1376,30 @@
       "type": "json"
     },
     {
+      "path": "results/strata-20260930/strata0131-coder-r5-20261001.json",
+      "bytes": 16333,
+      "sha256": "d75d3d81da2bc8fa955d410ab4e5fbd0ecc48e2e7630c30814d135d2b2d1336a",
+      "type": "json"
+    },
+    {
+      "path": "results/strata-20260930/strata0131-iq2xs-r5-20261001.json",
+      "bytes": 16331,
+      "sha256": "ef74bec6a1e729316f3bee9a7430ed0853ab387821d03a3e9707e8f3f525c6e1",
+      "type": "json"
+    },
+    {
+      "path": "results/strata-20260930/strata0131-iq3s-96gb-r5-20261001.json",
+      "bytes": 16405,
+      "sha256": "0eaef367a46dc68390bae14b11ea3ff10fa55a215b2c41dc65d0b48f285ed215",
+      "type": "json"
+    },
+    {
+      "path": "results/strata-20260930/strata0131-iq3s-r5-20261001.json",
+      "bytes": 16320,
+      "sha256": "e97b260b3b1479212e03de8d15a6d3d1646c20b69dd9478537c7f24e6a632372",
+      "type": "json"
+    },
+    {
       "path": "results/t87-p1-v2-2026-09-18-preparation-2/preparation.json",
       "bytes": 3121,
       "sha256": "858ff0d62f6b1e422438e03c9ab47b3ce536f181a6537d73bab05c2e25434e94",
