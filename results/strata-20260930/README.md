@@ -64,3 +64,41 @@ Swift 1.5 IQ2_XS (`strata-swift-iq2_xs.json`), decisão do Breno. Cache 18.390 e
 livre, teste de fumaça HTTP 200 `ok`/`stop`. Swift IQ3_XXS medido antes: A2 4,58 (1,3,7 / 5,9,3 / 4,7,7 / 2,1,6),
 síntese 188,7 tok/s, teste curto 159,0/150,0, prefill longo 4.063. Leitura: Swift IQ2, Swift IQ3 e Flash IQ3 são
 equivalentes no A2 dentro do ruído; só a avaliação humana cega ou mais amostras os separariam.
+
+## 96 GB de RAM, recalibração e produção Swift IQ3_XXS (01/10)
+- RAM: 2×32 GB Kingston + 2×16 GB ADATA, DDR4-3200 (antes 64 GB a 2400). Velocidade "limpa" (sem outros
+  programas): `strata0131-96gb-*-limpo-r5-20261001.json`. Medições com o CPU-Z aberto a 100% estão separadas e
+  **inválidas** em `invalidas-cpuz-20261001/`.
+- Swift IQ3_XXS recalibrado (`--calibrate`): `--pcie-frac 0.20 --spec-min-p 0.70` (`…-recal-r5`); depois do ajuste
+  da BIOS: `…-posbios-r5` (geração 163/157, leitura longa 4.175). É a produção desde 01/10 (motor 0.1.31).
+
+## Versões 0.1.32, 0.1.33 e 0.1.34 com o Swift IQ3_XXS (01–02/10)
+Mesma config da produção, só trocando motor e pasta (`E:\strata-013x`), uma versão por vez na GPU. Instrumento de
+velocidade igual (`os_runtime_ab.py`, 5 repetições); mesa Guardian v3-compact (12 respostas, A2).
+
+| motor | geração médio/longo | leitura longo | A2 |
+|---|---|---|---|
+| 0.1.31 | 163,1 / 157,2 | 4.175 | 6,67 |
+| 0.1.32 | 165,6 / 160,9 | 4.123 | 5,50 |
+| 0.1.33 | 165,4 / 159,9 | 4.144 | 5,50 |
+| 0.1.33 + stager antigo (`STRATA_STAGER_THREADS=4`, `STRATA_STAGER_RING=16`) | 169,6 / 163,7 | 4.126 | 5,08 |
+| 0.1.34 | 166,9 / 161,0 | 4.147 | 7,33 |
+| 0.1.34 + `--prefill auto:32768` | 166,1 / 159,8 | 4.147 | 5,58 |
+| 0.1.34 + `auto:32768` + stager antigo | 164,7 / 161,6 | 4.142 | 5,58 |
+
+Leitura: empate. O A2 do mesmo Swift na 0.1.31 foi 4,58 (config antiga, 30/09) e 6,67 (recalibrado, 01/10), então
+variações dessa ordem são ruído de 12 respostas. O benchmark de compreensão de um projeto consumidor (privado, não
+publicado) também não mudou entre versões; ligar o raciocínio do modelo mudou muito mais que qualquer versão.
+
+### Prompts longos (`*-longos-20261002.json`, `run_bench.py` do benchmark da comunidade Strata, 3 execuções)
+| 0.1.34 | leitura 14,7K | leitura 28,9K | geração | VRAM livre mínima |
+|---|---|---|---|---|
+| padrão | 4.704 | 4.790 | 151–164 | 779 MiB |
+| `auto:32768` | 5.525 (+17%) | 6.226 (+30%) | 153–167 | 771 MiB |
+| `auto:32768` + stager | 5.519 | 6.236 | 154–163 | 763 MiB |
+
+O registro do gateway (8.918 pedidos, 30/09) tem mediana de 433 tokens de entrada e máximo de 10.129: nenhum pedido
+acima de 15K, então hoje o ganho é pequeno; como não custou nada mensurável, a produção passou para a 0.1.34 com
+`auto:32768` (decisão do Breno, 02/10 01:29): `E:\strata-0134\strata-swift-iq3_xxs.json`, motor sha256 `f0838bee…7bb4`,
+verificação HTTP 200/stop, 398 MiB de VRAM livre. A 0.1.31 segue instalada em `E:\strata-src` para reverter.
+O PR #440 rodou 262K de contexto numa 5090; ainda não medido aqui.

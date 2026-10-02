@@ -1,0 +1,522 @@
+{
+  "schema": "os-runtime-ab-v1",
+  "label": "strata0134auto32kstager-96gb-swift-iq3xxs",
+  "base": "http://127.0.0.1:18199",
+  "props": {
+    "model_path": "E:\\strata-data\\models-swift\\IQ3_XXS\\Swift-Qwen3.8-Flash-Next-GSQ-RCO-IQ3_XXS-00001-of-00002.gguf",
+    "n_ctx": 32768,
+    "build_info": "Strata 0.1.34",
+    "total_slots": 1
+  },
+  "aquecimento": {
+    "wall_s": 0.2389,
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 27,
+      "prompt_ms": 172.7,
+      "prompt_per_token_ms": 6.396,
+      "prompt_per_second": 156.3,
+      "predicted_n": 8,
+      "predicted_ms": 57.0,
+      "predicted_per_token_ms": 7.125,
+      "predicted_per_second": 140.4,
+      "draft_n": 6,
+      "draft_n_accepted": 6
+    },
+    "usage": {
+      "prompt_tokens": 27,
+      "completion_tokens": 8,
+      "total_tokens": 35,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "finish_reason": "length",
+    "content_sha256": "51ae1072caa15f996d2899a80d1175c2e6460570bf0fa994efa5fe631a27089e"
+  },
+  "chamadas": [
+    {
+      "label": "strata0134auto32kstager-96gb-swift-iq3xxs",
+      "repeticao": 1,
+      "tamanho": "curto",
+      "timestamp": "2026-10-02T00:41:26.519-03:00",
+      "prompt_sha256": "70b107038d1d67361aac326eb3b255f59d1d2065086bc21749ca5a28305a745c",
+      "wall_s": 0.9089,
+      "timings": {
+        "cache_n": 20,
+        "prompt_n": 7,
+        "prompt_ms": 33.6,
+        "prompt_per_token_ms": 4.8,
+        "prompt_per_second": 208.3,
+        "predicted_n": 112,
+        "predicted_ms": 853.8,
+        "predicted_per_token_ms": 7.623,
+        "predicted_per_second": 131.2,
+        "draft_n": 75,
+        "draft_n_accepted": 47
+      },
+      "usage": {
+        "prompt_tokens": 27,
+        "completion_tokens": 112,
+        "total_tokens": 139,
+        "prompt_tokens_details": {
+          "cached_tokens": 20
+        }
+      },
+      "finish_reason": "stop",
+      "content_sha256": "696efa6559e50099b01761f15976970aff1dc49010ebda634ada968490a06dcd"
+    },
+    {
+      "label": "strata0134auto32kstager-96gb-swift-iq3xxs",
+      "repeticao": 1,
+      "tamanho": "medio",
+      "timestamp": "2026-10-02T00:41:29.259-03:00",
+      "prompt_sha256": "61205cf69b3122670a3a39c124ac4b097cef7e33e5fbd109a3de93b416f9d588",
+      "wall_s": 2.7395,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 2671,
+        "prompt_ms": 1061.7,
+        "prompt_per_token_ms": 0.397,
+        "prompt_per_second": 2515.8,
+        "predicted_n": 256,
+        "predicted_ms": 1663.6,
+        "predicted_per_token_ms": 6.498,
+        "predicted_per_second": 153.9,
+        "draft_n": 174,
+        "draft_n_accepted": 131
+      },
+      "usage": {
+        "prompt_tokens": 2671,
+        "completion_tokens": 256,
+        "total_tokens": 2927,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "691114b6d4aa7f43fd0d38eb1646d93e97aca35a01257130c2aae6b7afadb403"
+    },
+    {
+      "label": "strata0134auto32kstager-96gb-swift-iq3xxs",
+      "repeticao": 1,
+      "tamanho": "longo",
+      "timestamp": "2026-10-02T00:41:32.483-03:00",
+      "prompt_sha256": "fb24d4819ba5977b68a227e9689caccbcd5957822a9717fa921c8dbe77aed71a",
+      "wall_s": 3.2233,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 5952,
+        "prompt_ms": 1542.0,
+        "prompt_per_token_ms": 0.259,
+        "prompt_per_second": 3859.9,
+        "predicted_n": 256,
+        "predicted_ms": 1647.5,
+        "predicted_per_token_ms": 6.436,
+        "predicted_per_second": 155.4,
+        "draft_n": 194,
+        "draft_n_accepted": 131
+      },
+      "usage": {
+        "prompt_tokens": 5952,
+        "completion_tokens": 256,
+        "total_tokens": 6208,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "881652165eb8af49132e0e2223afccf196c01199d27f4ed3df4f3ff352b37cef"
+    },
+    {
+      "label": "strata0134auto32kstager-96gb-swift-iq3xxs",
+      "repeticao": 2,
+      "tamanho": "curto",
+      "timestamp": "2026-10-02T00:41:33.459-03:00",
+      "prompt_sha256": "70b107038d1d67361aac326eb3b255f59d1d2065086bc21749ca5a28305a745c",
+      "wall_s": 0.9755,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 118.5,
+        "prompt_per_token_ms": 4.389,
+        "prompt_per_second": 227.8,
+        "predicted_n": 118,
+        "predicted_ms": 854.5,
+        "predicted_per_token_ms": 7.242,
+        "predicted_per_second": 138.1,
+        "draft_n": 78,
+        "draft_n_accepted": 47
+      },
+      "usage": {
+        "prompt_tokens": 27,
+        "completion_tokens": 118,
+        "total_tokens": 145,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "content_sha256": "bb73161214473d7b500d57728f137c0bd5fd65ba6031cb3170ff6c31805f709b"
+    },
+    {
+      "label": "strata0134auto32kstager-96gb-swift-iq3xxs",
+      "repeticao": 2,
+      "tamanho": "medio",
+      "timestamp": "2026-10-02T00:41:36.011-03:00",
+      "prompt_sha256": "61205cf69b3122670a3a39c124ac4b097cef7e33e5fbd109a3de93b416f9d588",
+      "wall_s": 2.5514,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 2671,
+        "prompt_ms": 981.1,
+        "prompt_per_token_ms": 0.367,
+        "prompt_per_second": 2722.5,
+        "predicted_n": 256,
+        "predicted_ms": 1558.3,
+        "predicted_per_token_ms": 6.087,
+        "predicted_per_second": 164.3,
+        "draft_n": 180,
+        "draft_n_accepted": 130
+      },
+      "usage": {
+        "prompt_tokens": 2671,
+        "completion_tokens": 256,
+        "total_tokens": 2927,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "6c47ecc635985781810a2a7713c6c10d8f51484fe2e9322ce857a7cd4cb1051d"
+    },
+    {
+      "label": "strata0134auto32kstager-96gb-swift-iq3xxs",
+      "repeticao": 2,
+      "tamanho": "longo",
+      "timestamp": "2026-10-02T00:41:39.068-03:00",
+      "prompt_sha256": "fb24d4819ba5977b68a227e9689caccbcd5957822a9717fa921c8dbe77aed71a",
+      "wall_s": 3.0574,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 5952,
+        "prompt_ms": 1433.5,
+        "prompt_per_token_ms": 0.241,
+        "prompt_per_second": 4152.1,
+        "predicted_n": 256,
+        "predicted_ms": 1597.2,
+        "predicted_per_token_ms": 6.239,
+        "predicted_per_second": 160.3,
+        "draft_n": 193,
+        "draft_n_accepted": 128
+      },
+      "usage": {
+        "prompt_tokens": 5952,
+        "completion_tokens": 256,
+        "total_tokens": 6208,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "e531d2c3d421eb0f95466a60df7d4d2d5426b7c9abd74c0bd7298651ed81c4b6"
+    },
+    {
+      "label": "strata0134auto32kstager-96gb-swift-iq3xxs",
+      "repeticao": 3,
+      "tamanho": "curto",
+      "timestamp": "2026-10-02T00:41:40.041-03:00",
+      "prompt_sha256": "70b107038d1d67361aac326eb3b255f59d1d2065086bc21749ca5a28305a745c",
+      "wall_s": 0.972,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 116.7,
+        "prompt_per_token_ms": 4.322,
+        "prompt_per_second": 231.4,
+        "predicted_n": 122,
+        "predicted_ms": 852.6,
+        "predicted_per_token_ms": 6.989,
+        "predicted_per_second": 143.1,
+        "draft_n": 77,
+        "draft_n_accepted": 49
+      },
+      "usage": {
+        "prompt_tokens": 27,
+        "completion_tokens": 122,
+        "total_tokens": 149,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "content_sha256": "6871c5a8fcc8b41bcc7add2925d48291dd64ad1d7b81edd532f7e46041dbd7d4"
+    },
+    {
+      "label": "strata0134auto32kstager-96gb-swift-iq3xxs",
+      "repeticao": 3,
+      "tamanho": "medio",
+      "timestamp": "2026-10-02T00:41:42.587-03:00",
+      "prompt_sha256": "61205cf69b3122670a3a39c124ac4b097cef7e33e5fbd109a3de93b416f9d588",
+      "wall_s": 2.5463,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 2671,
+        "prompt_ms": 971.4,
+        "prompt_per_token_ms": 0.364,
+        "prompt_per_second": 2749.6,
+        "predicted_n": 256,
+        "predicted_ms": 1560.4,
+        "predicted_per_token_ms": 6.095,
+        "predicted_per_second": 164.1,
+        "draft_n": 184,
+        "draft_n_accepted": 131
+      },
+      "usage": {
+        "prompt_tokens": 2671,
+        "completion_tokens": 256,
+        "total_tokens": 2927,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "6c47ecc635985781810a2a7713c6c10d8f51484fe2e9322ce857a7cd4cb1051d"
+    },
+    {
+      "label": "strata0134auto32kstager-96gb-swift-iq3xxs",
+      "repeticao": 3,
+      "tamanho": "longo",
+      "timestamp": "2026-10-02T00:41:45.646-03:00",
+      "prompt_sha256": "fb24d4819ba5977b68a227e9689caccbcd5957822a9717fa921c8dbe77aed71a",
+      "wall_s": 3.0585,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 5952,
+        "prompt_ms": 1440.7,
+        "prompt_per_token_ms": 0.242,
+        "prompt_per_second": 4131.3,
+        "predicted_n": 256,
+        "predicted_ms": 1594.9,
+        "predicted_per_token_ms": 6.23,
+        "predicted_per_second": 160.5,
+        "draft_n": 190,
+        "draft_n_accepted": 127
+      },
+      "usage": {
+        "prompt_tokens": 5952,
+        "completion_tokens": 256,
+        "total_tokens": 6208,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "e531d2c3d421eb0f95466a60df7d4d2d5426b7c9abd74c0bd7298651ed81c4b6"
+    },
+    {
+      "label": "strata0134auto32kstager-96gb-swift-iq3xxs",
+      "repeticao": 4,
+      "tamanho": "curto",
+      "timestamp": "2026-10-02T00:41:46.697-03:00",
+      "prompt_sha256": "70b107038d1d67361aac326eb3b255f59d1d2065086bc21749ca5a28305a745c",
+      "wall_s": 1.0508,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 115.1,
+        "prompt_per_token_ms": 4.263,
+        "prompt_per_second": 234.6,
+        "predicted_n": 133,
+        "predicted_ms": 933.2,
+        "predicted_per_token_ms": 7.017,
+        "predicted_per_second": 142.5,
+        "draft_n": 80,
+        "draft_n_accepted": 52
+      },
+      "usage": {
+        "prompt_tokens": 27,
+        "completion_tokens": 133,
+        "total_tokens": 160,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "content_sha256": "96f34748a338a83182ef87b54ad86a2a5480b48a2853f26f9c70cc6ebb86be9f"
+    },
+    {
+      "label": "strata0134auto32kstager-96gb-swift-iq3xxs",
+      "repeticao": 4,
+      "tamanho": "medio",
+      "timestamp": "2026-10-02T00:41:49.236-03:00",
+      "prompt_sha256": "61205cf69b3122670a3a39c124ac4b097cef7e33e5fbd109a3de93b416f9d588",
+      "wall_s": 2.5382,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 2671,
+        "prompt_ms": 973.7,
+        "prompt_per_token_ms": 0.365,
+        "prompt_per_second": 2743.1,
+        "predicted_n": 256,
+        "predicted_ms": 1551.2,
+        "predicted_per_token_ms": 6.059,
+        "predicted_per_second": 165.0,
+        "draft_n": 174,
+        "draft_n_accepted": 130
+      },
+      "usage": {
+        "prompt_tokens": 2671,
+        "completion_tokens": 256,
+        "total_tokens": 2927,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "e7ade828d1a27c1e0d9b9792d659c16afd8cd2a1b82f66ac884a616791c2163c"
+    },
+    {
+      "label": "strata0134auto32kstager-96gb-swift-iq3xxs",
+      "repeticao": 4,
+      "tamanho": "longo",
+      "timestamp": "2026-10-02T00:41:52.288-03:00",
+      "prompt_sha256": "fb24d4819ba5977b68a227e9689caccbcd5957822a9717fa921c8dbe77aed71a",
+      "wall_s": 3.052,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 5952,
+        "prompt_ms": 1432.1,
+        "prompt_per_token_ms": 0.241,
+        "prompt_per_second": 4156.1,
+        "predicted_n": 256,
+        "predicted_ms": 1574.9,
+        "predicted_per_token_ms": 6.152,
+        "predicted_per_second": 162.6,
+        "draft_n": 175,
+        "draft_n_accepted": 131
+      },
+      "usage": {
+        "prompt_tokens": 5952,
+        "completion_tokens": 256,
+        "total_tokens": 6208,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "23fca91e32bf922f30cfeb0dd2c334bb1f4c989d57423f3194fbb4a154b0ec9d"
+    },
+    {
+      "label": "strata0134auto32kstager-96gb-swift-iq3xxs",
+      "repeticao": 5,
+      "tamanho": "curto",
+      "timestamp": "2026-10-02T00:41:53.313-03:00",
+      "prompt_sha256": "70b107038d1d67361aac326eb3b255f59d1d2065086bc21749ca5a28305a745c",
+      "wall_s": 1.0246,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 117.3,
+        "prompt_per_token_ms": 4.344,
+        "prompt_per_second": 230.2,
+        "predicted_n": 133,
+        "predicted_ms": 904.6,
+        "predicted_per_token_ms": 6.802,
+        "predicted_per_second": 147.0,
+        "draft_n": 80,
+        "draft_n_accepted": 53
+      },
+      "usage": {
+        "prompt_tokens": 27,
+        "completion_tokens": 133,
+        "total_tokens": 160,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "content_sha256": "96f34748a338a83182ef87b54ad86a2a5480b48a2853f26f9c70cc6ebb86be9f"
+    },
+    {
+      "label": "strata0134auto32kstager-96gb-swift-iq3xxs",
+      "repeticao": 5,
+      "tamanho": "medio",
+      "timestamp": "2026-10-02T00:41:55.838-03:00",
+      "prompt_sha256": "61205cf69b3122670a3a39c124ac4b097cef7e33e5fbd109a3de93b416f9d588",
+      "wall_s": 2.5243,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 2671,
+        "prompt_ms": 972.3,
+        "prompt_per_token_ms": 0.364,
+        "prompt_per_second": 2747.1,
+        "predicted_n": 256,
+        "predicted_ms": 1535.3,
+        "predicted_per_token_ms": 5.997,
+        "predicted_per_second": 166.7,
+        "draft_n": 183,
+        "draft_n_accepted": 130
+      },
+      "usage": {
+        "prompt_tokens": 2671,
+        "completion_tokens": 256,
+        "total_tokens": 2927,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "6c47ecc635985781810a2a7713c6c10d8f51484fe2e9322ce857a7cd4cb1051d"
+    },
+    {
+      "label": "strata0134auto32kstager-96gb-swift-iq3xxs",
+      "repeticao": 5,
+      "tamanho": "longo",
+      "timestamp": "2026-10-02T00:41:58.866-03:00",
+      "prompt_sha256": "fb24d4819ba5977b68a227e9689caccbcd5957822a9717fa921c8dbe77aed71a",
+      "wall_s": 3.0281,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 5952,
+        "prompt_ms": 1454.3,
+        "prompt_per_token_ms": 0.244,
+        "prompt_per_second": 4092.7,
+        "predicted_n": 256,
+        "predicted_ms": 1547.9,
+        "predicted_per_token_ms": 6.046,
+        "predicted_per_second": 165.4,
+        "draft_n": 182,
+        "draft_n_accepted": 130
+      },
+      "usage": {
+        "prompt_tokens": 5952,
+        "completion_tokens": 256,
+        "total_tokens": 6208,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "length",
+      "content_sha256": "8d141e7c415c6e260471dc164693368f30bba252e3a96431e3252a973ebd4695"
+    }
+  ],
+  "derivados": {
+    "curto": {
+      "pp_tps_mediana": 230.2,
+      "tg_tps_mediana": 142.5,
+      "prompt_n": 7
+    },
+    "medio": {
+      "pp_tps_mediana": 2743.1,
+      "tg_tps_mediana": 164.3,
+      "prompt_n": 2671
+    },
+    "longo": {
+      "pp_tps_mediana": 4131.3,
+      "tg_tps_mediana": 160.5,
+      "prompt_n": 5952
+    }
+  },
+  "metrica_principal": "timings do servidor (prompt_per_second, predicted_per_second); wall clock é secundário"
+}

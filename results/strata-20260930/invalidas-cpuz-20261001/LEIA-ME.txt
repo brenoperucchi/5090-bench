@@ -1,0 +1,2 @@
+Medições de velocidade de 01/10 12:13–12:19 (Strata 0.1.31, 96 GB @3200) feitas com o CPU-Z (pid 1288) usando 100% da CPU.
+NÃO usar para comparar: todos os modelos saíram 13–17% mais lentos. Refazer com a máquina livre.
