@@ -6,8 +6,9 @@ when Strata replaced the WSL llama.cpp server as the local production backend.
 
 ## Current state (2026-10-02)
 
-- **Production:** Swift 1.5 IQ3_XXS on Strata v0.1.31, Windows 11 native, `127.0.0.1:18199`, 32K context, 1 slot,
-  recalibrated for this model (`--pcie-frac 0.20 --spec-min-p 0.70`), `STRATA_IQ_MT_MIN=1`.
+- **Production (since 2026-10-02 01:29):** Swift 1.5 IQ3_XXS on Strata v0.1.34, Windows 11 native, `127.0.0.1:18199`,
+  32K context, 1 slot, recalibrated for this model (`--pcie-frac 0.20 --spec-min-p 0.70`), `--prefill auto:32768`,
+  `STRATA_IQ_MT_MIN=1`. Strata 0.1.31 stays installed as the fallback.
 - **Also installed:** Flash-Next IQ2_XS / IQ3_XXS / IQ3_S, Swift 1.5 IQ2_XS, Coder IQ1_M, Unsloth UD-Q4_K_XL;
   Strata 0.1.32, 0.1.33 and 0.1.34 in separate folders for side-by-side tests.
 - **Hardware:** RTX 5090 32 GB, Ryzen 9 5950X (AVX2), **96 GB DDR4-3200** since 2026-10-01 (was 64 GB @2400), NVMe.
@@ -18,7 +19,7 @@ when Strata replaced the WSL llama.cpp server as the local production backend.
 |---|---|---|
 | Flash-Next on llama.cpp (Codacus fork, UD-IQ3_XXS, experts on CPU), 2026-09-19 | 16–27 tok/s hot | `docs/en/findings/flash-next-context-probe-2026-09-19.md` |
 | Flash-Next IQ2_XS on Strata v0.1.30, calibrated | 155–172 tok/s | `results/strata-20260930/` |
-| Swift 1.5 IQ3_XXS on Strata v0.1.31 (production) | 157–163 tok/s, prompt read ~4,150 tok/s | same |
+| Swift 1.5 IQ3_XXS on Strata v0.1.34 (production) | 157–163 tok/s, prompt read ~4,150 tok/s | same |
 | Unsloth UD-Q4_K_XL on Strata v0.1.31, 96 GB (everything in VRAM+RAM) | 58–67 tok/s | same |
 
 ### Strata versions, same model (Swift 1.5 IQ3_XXS, same config, 96 GB)
@@ -48,7 +49,8 @@ Swift IQ3_XXS, public prompts from the Strata community benchmark, median of 3 r
 | 0.1.34 + `auto:32768` | 5,525 (+17%) | 6,226 (+30%) | 771 MiB |
 
 No gain below ~15K tokens, generation unchanged. Production traffic (gateway log, 8,918 requests) has a median prompt of
-433 tokens and a maximum of 10,129, so production stays on 0.1.31 until long prompts or a larger context are needed.
+433 tokens and a maximum of 10,129, so today the option changes little; it costs nothing measurable and is on in
+production (0.1.34) so that longer prompts or a larger context benefit without another change.
 
 Desk-test indicator across models (A2 = unverified items stated as fact, mean over 12 answers, lower is better;
 indicator only, ρ ≈ 0.7 with human raters): Swift IQ2_XS 4.00 · Swift IQ3_XXS 4.58 · Flash-Next IQ3_XXS 4.92 ·

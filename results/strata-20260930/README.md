@@ -98,5 +98,7 @@ publicado) também não mudou entre versões; ligar o raciocínio do modelo mudo
 | `auto:32768` + stager | 5.519 | 6.236 | 154–163 | 763 MiB |
 
 O registro do gateway (8.918 pedidos, 30/09) tem mediana de 433 tokens de entrada e máximo de 10.129: nenhum pedido
-acima de 15K. Por isso a produção segue na 0.1.31; a 0.1.34 com `auto:32768` fica pronta para quando houver prompts
-longos ou contexto maior (o PR #440 rodou 262K numa 5090).
+acima de 15K, então hoje o ganho é pequeno; como não custou nada mensurável, a produção passou para a 0.1.34 com
+`auto:32768` (decisão do Breno, 02/10 01:29): `E:\strata-0134\strata-swift-iq3_xxs.json`, motor sha256 `f0838bee…7bb4`,
+verificação HTTP 200/stop, 398 MiB de VRAM livre. A 0.1.31 segue instalada em `E:\strata-src` para reverter.
+O PR #440 rodou 262K de contexto numa 5090; ainda não medido aqui.
