@@ -317,6 +317,20 @@ for nome, conteudo in (("benchmarks.json", data), ("catalog.json", {"document": 
     t.replace(WEB / nome)
 print(OUT, {k: len(v) for k, v in data.items() if isinstance(v, list)})
 
+def medicoes_em_producao(sha, ajustes):
+    """Labels de rodada medidos com o mesmo strata.exe (sha256) e os mesmos ajustes de linha de comando da produção."""
+    out = []
+    for m in sorted((ROOT / "results/rodadas").glob("*/manifest.json")):
+        for c in json.load(open(m)).get("configs", []):
+            lab = c.get("label")
+            idf = m.parent / f"{lab}.identity.json"
+            if not lab or not idf.exists(): continue
+            exe = ((json.load(open(idf)).get("engine") or {}).get("binary_sha256"))
+            if exe == sha and resumo_config({"args": (c.get("config") or {}).get("args") or []}) == ajustes:
+                out.append(lab)
+    return out
+
+
 def runtime_atual():
     """Qual runtime está no ar (só leitura): exe/sha/args/config pelo SSH + /v1/status; casa o sha com builds-conhecidos.json.
     Sai em web/data/runtime.json (fora do contrato v1); sem acesso, mantém o último lido."""
@@ -337,7 +351,8 @@ def runtime_atual():
                "build": b, "engine_path": rt.get("engine_path"), "engine_sha256": rt.get("engine_sha256"),
                "config_path": rt.get("config_path"), "config_sha256": rt.get("config_sha256"), "ajustes": cfg,
                "iniciado": rt.get("engine_started"), "uptime_s": st.get("uptime_s"),
-               "requisicoes": (st.get("activity") or {}).get("requests")}
+               "requisicoes": (st.get("activity") or {}).get("requests"),
+               "em_producao": medicoes_em_producao(rt.get("engine_sha256"), cfg)}
         t = WEB / "runtime.json.tmp"; t.write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8"); t.replace(cache)
         return doc
     except Exception as e:
