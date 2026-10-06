@@ -7,9 +7,13 @@ na **RTX 5090 de 32 GB** (Ollama, llama.cpp e, desde 30/09/2026, Strata).
 Reúne experimentos, dados brutos, scripts, decisões e correções registrados
 nesta bancada em setembro de 2026.
 
-> **PRODUÇÃO ATUAL (02/10/2026 em diante)**
-> Windows 11 nativo / [Strata](docs/strata/README.md) v0.1.34 / Swift 1.5 IQ3_XXS
-> (fine-tune do Qwen3.8-Flash-Next), recalibrado, `--prefill auto:32768`, 96 GB de RAM. Strata 0.1.31–0.1.34 medidos lado a lado: sem mudança de qualidade. O Flash-Next passou de 16–27
+> **PRODUÇÃO ATUAL (04/10/2026 em diante)**
+> Windows 11 nativo / [Strata](docs/strata/README.md) v0.1.39 / Swift 1.5 IQ3_XXS
+> (fine-tune do Qwen3.8-Flash-Next), config de produção (`--prefill auto:32768`, `--prompt-cache-root 64`), 96 GB de RAM. Strata 0.1.31–0.1.39 medidos lado a lado: sem mudança de qualidade.
+>
+> **RESPONSABILIDADES (06/10/2026 em diante)** Este repositório (llm-bench) cuida **só de benchmarks**: planejar e rodar
+> medições e publicar dados/resultados. A operação do runtime de produção (iniciar/parar/recuperar, autostart,
+> autenticação, identidade servida) é do dono do gateway (llm-exec); testes que mexem no runtime só em janela concedida por ele. O Flash-Next passou de 16–27
 > tok/s (llama.cpp) para 155–220 tok/s na mesma GPU. O ambiente WSL Arch foi
 > aposentado; o Ollama mantém só o `qwen3-coder:30b`.
 

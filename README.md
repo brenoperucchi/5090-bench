@@ -4,9 +4,13 @@
 
 ## Documentation epochs
 
-> **CURRENT PRODUCTION — 2026-10-02+**
-> Windows 11 native / [Strata](docs/strata/README.md) v0.1.34 / Swift 1.5 IQ3_XXS (Qwen3.8-Flash-Next fine-tune),
-> recalibrated, `--prefill auto:32768`, 96 GB RAM. Strata 0.1.31–0.1.34 measured side by side: no quality change. Flash-Next went from 16–27 tok/s (llama.cpp) to 155–220 tok/s on the same GPU.
+> **CURRENT PRODUCTION — 2026-10-04+**
+> Windows 11 native / [Strata](docs/strata/README.md) v0.1.39 / Swift 1.5 IQ3_XXS (Qwen3.8-Flash-Next fine-tune),
+> production config (`--prefill auto:32768`, `--prompt-cache-root 64`), 96 GB RAM. Strata 0.1.31–0.1.39 measured side by side: no quality change.
+>
+> **OWNERSHIP — 2026-10-06+** This repository (llm-bench) owns **benchmarks only**: planning and running measurements
+> and publishing data/results. Operating the production runtime (start/stop/recover, autostart, auth, served identity)
+> belongs to the gateway owner (llm-exec); runtime-changing tests run only in windows granted there. Flash-Next went from 16–27 tok/s (llama.cpp) to 155–220 tok/s on the same GPU.
 > The WSL Arch environment is retired; Ollama keeps only `qwen3-coder:30b`.
 >
 > **RESEARCH CAMPAIGN — 2026-09-20 → 29**

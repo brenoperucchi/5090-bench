@@ -1,0 +1,35 @@
+{
+ "versao": "0.1.39",
+ "configs": [
+  {
+   "origin": "setup-default",
+   "label": "0139-swift-default",
+   "cfg": "E:\\strata-0139\\bench\\strata-swift-default.json",
+   "papel": "default"
+  },
+  {
+   "origin": "custom-1",
+   "label": "0139-swift-producao",
+   "cfg": "E:\\strata-0139\\bench\\strata-prod-ctx32768.json",
+   "testes": [
+    "velocidade",
+    "velocidade-historica",
+    "mfc",
+    "guardian",
+    "deterministico"
+   ],
+   "papel": "production"
+  },
+  {
+   "origin": "custom-2",
+   "label": "0139-swift-producao-raciocinio",
+   "cfg": "E:\\strata-0139\\bench\\strata-prod-raciocinio-b2000.json",
+   "testes": [
+    "guardian-raciocinio"
+   ],
+   "papel": "unknown"
+  }
+ ],
+ "producao": "E:\\strata-0139\\strata-swift-iq3_xxs.json",
+ "referencia_det": "0.1.38"
+}

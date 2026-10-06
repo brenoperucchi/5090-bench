@@ -53,3 +53,8 @@ tools/quant_ab_window.sh
 # MFC comprehension benchmark: bank and answers are MFC market data (local only, never publish)
 results/mfc-compreensao-*/
 results/strata-20260930/HANDOFF-space-strata.md
+
+# painel local de benchmarks (inclui números privados do MFC/Guardian)
+results/painel/
+results/rodadas/
+web/data/
