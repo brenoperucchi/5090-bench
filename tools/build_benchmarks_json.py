@@ -94,7 +94,10 @@ def producao_atual():
     cache = ROOT / "results/painel/producao.json"
     try:
         import urllib.request, datetime
-        with urllib.request.urlopen("http://127.0.0.1:18199/v1/status", timeout=3) as r:
+        kf = Path("/home/brenoperucchi/.config/strata/prod-lan.key")     # /v1/* exige a chave (nunca impressa)
+        k = kf.read_text().strip() if kf.exists() else ""
+        req = urllib.request.Request("http://192.168.0.125:18199/v1/status", headers={"Authorization": f"Bearer {k}"} if k else {})
+        with urllib.request.urlopen(req, timeout=3) as r:
             st = json.load(r)
         modelo = "Swift 1.5 IQ3_XXS" if "swift" in str(st.get("model")) and "iq3_xxs" in str(st.get("model")) else st.get("model")
         p = {"gpu": "rtx5090", "motor": f"Strata {st['engine']}", "modelo": modelo,
