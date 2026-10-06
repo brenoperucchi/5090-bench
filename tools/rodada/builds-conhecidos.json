@@ -1,0 +1,30 @@
+{
+ "_doc": "sha256 do strata.exe -> o que ele é. Fonte: atestações (llm-exec/llm-bench). Branch/commit do fork vêm do strata-exec; null = não informado.",
+ "f39e83fe6fef04eefbcbd3e6a841fb7034da357b946edccc4611b471f08b6f6b": {
+  "tipo": "fork",
+  "versao": "0.1.40.1",
+  "base": "v0.1.40.1 (82f46a8c, upstream main)",
+  "pr": "#1107",
+  "branch": "prefill-group-gather-short",
+  "commit": "8e216160d79ea290464310563197b0571244e5bc",
+  "repo": "brenoperucchi/Strata",
+  "pr_estado": "aberto, não mergeado no upstream",
+  "compilado": "2026-10-06 07:40 · Release · CUDA 13.0 · sm_120 · portable · llama.cpp 3cf03257"
+ },
+ "e41abc2efd0eb43d630873b38b5b6206e41513cd8cf4c67b6c292e3a1a6c882a": {
+  "tipo": "oficial",
+  "versao": "0.1.40.1",
+  "base": "release oficial",
+  "pr": null,
+  "branch": null,
+  "commit": null
+ },
+ "d4c3a51f60d7a35abab8ab335fb20a0ff325c508a1e59d14a15f22c0d64afd0c": {
+  "tipo": "oficial",
+  "versao": "0.1.39",
+  "base": "release oficial",
+  "pr": null,
+  "branch": null,
+  "commit": null
+ }
+}

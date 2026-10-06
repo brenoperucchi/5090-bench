@@ -71,6 +71,19 @@ def longos():
         out.append(row)
     return out
 
+def resumo_config(cfg):
+    """Ajustes da config que distinguem uma medição da outra: flags com valor que não é caminho, mais o env."""
+    args, partes, i = cfg.get("args") or [], [], 0
+    while i < len(args):
+        k = args[i]; v = args[i + 1] if i + 1 < len(args) and not str(args[i + 1]).startswith("--") else None
+        i += 2 if v is not None else 1
+        if not str(k).startswith("--") or k in ("--max-context", "--serve"): continue
+        if v is not None and ("\\" in v or "/" in v or v.startswith("<")): continue
+        partes.append(f"{k[2:]} {v}" if v is not None else k[2:])
+    partes += [f"{k}={v}" for k, v in (cfg.get("env") or {}).items()]
+    return ", ".join(partes)
+
+
 def rodadas():
     """label -> {versao, modelo} das rodadas únicas, tirados do manifest (build observado no /props e config real)."""
     out = {}
@@ -80,7 +93,8 @@ def rodadas():
             args = " ".join((c.get("config") or {}).get("args") or []).lower()
             modelo = ("Swift 1.5 IQ3_XXS" if "swift" in args and "iq3_xxs" in args else
                       "Flash-Next IQ3_S" if "iq3_s" in args else None)
-            out[c["label"]] = {"versao": c["build"].split()[-1], "modelo": modelo, "papel": c.get("papel")}
+            out[c["label"]] = {"versao": c["build"].split()[-1], "modelo": modelo, "papel": c.get("papel"),
+                               "resumo": resumo_config(c.get("config") or {})}
     return out
 
 
@@ -250,6 +264,8 @@ for row in data["strata_space"]:
     lab = row["label"].split(" · ")[0].removesuffix("-probes")
     if row["fonte"].startswith("llm-bench/results/rodadas/") and (_r.get(lab) or {}).get("papel"):
         row["config_origin"] = _r[lab]["papel"]
+    if row["fonte"].startswith("llm-bench/results/rodadas/") and (_r.get(lab) or {}).get("resumo"):
+        row["label"] = f"{row['label']} · {_r[lab]['resumo']}"
 for row in data["compreensao_mfc"]:
     info = _r.get(row["config"].removeprefix("mfc-"))
     if info and info.get("papel"): row["config_origin"] = info["papel"]
@@ -300,3 +316,33 @@ for nome, conteudo in (("benchmarks.json", data), ("catalog.json", {"document": 
     t.write_text(json.dumps(conteudo, ensure_ascii=False, indent=1, allow_nan=False), encoding="utf-8")
     t.replace(WEB / nome)
 print(OUT, {k: len(v) for k, v in data.items() if isinstance(v, list)})
+
+def runtime_atual():
+    """Qual runtime está no ar (só leitura): exe/sha/args/config pelo SSH + /v1/status; casa o sha com builds-conhecidos.json.
+    Sai em web/data/runtime.json (fora do contrato v1); sem acesso, mantém o último lido."""
+    cache = WEB / "runtime.json"
+    try:
+        import sys, urllib.request, datetime
+        sys.path.insert(0, str(ROOT / "tools/rodada")); import rodada
+        rt = json.loads(rodada.ps(rodada.PS / "runtime.ps1", timeout=60).strip())
+        kf = Path("/home/brenoperucchi/.config/strata/prod-lan.key")
+        k = kf.read_text().strip() if kf.exists() else ""
+        req = urllib.request.Request("http://192.168.0.125:18199/v1/status", headers={"Authorization": f"Bearer {k}"} if k else {})
+        with urllib.request.urlopen(req, timeout=3) as r: st = json.load(r)
+        builds = json.loads((ROOT / "tools/rodada/builds-conhecidos.json").read_text(encoding="utf-8"))
+        b = builds.get(rt.get("engine_sha256") or "") or {"tipo": "desconhecido"}
+        cfg = resumo_config({"args": (rt.get("engine_args") or "").split()})
+        doc = {"lido_em": datetime.datetime.now().astimezone().isoformat(timespec="seconds"),
+               "motor_declarado": st.get("engine"), "modelo": st.get("model"), "contexto": (st.get("context") or {}).get("native"),
+               "build": b, "engine_path": rt.get("engine_path"), "engine_sha256": rt.get("engine_sha256"),
+               "config_path": rt.get("config_path"), "config_sha256": rt.get("config_sha256"), "ajustes": cfg,
+               "iniciado": rt.get("engine_started"), "uptime_s": st.get("uptime_s"),
+               "requisicoes": (st.get("activity") or {}).get("requests")}
+        t = WEB / "runtime.json.tmp"; t.write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8"); t.replace(cache)
+        return doc
+    except Exception as e:
+        print("runtime: não lido agora (fica o último):", type(e).__name__)
+
+
+runtime_atual()
+
