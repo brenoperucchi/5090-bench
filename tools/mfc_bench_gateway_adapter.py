@@ -67,7 +67,9 @@ REASONING_BUDGET = int(__import__("os").environ.get("MFC_REASONING_BUDGET", "0")
 
 def _get_props(url):
     try:
-        with urllib.request.urlopen(url, timeout=10) as r:
+        k = __import__("os").environ.get("STRATA_API_KEY", "").strip()   # 0.1.40+: /props exige a chave
+        req = urllib.request.Request(url, headers={"Authorization": f"Bearer {k}"} if k else {})
+        with urllib.request.urlopen(req, timeout=10) as r:
             return json.loads(r.read().decode())
     except Exception as ex:  # noqa: BLE001 - /props outage, same rule as the MFC script
         return {"erro": repr(ex)[:200]}
@@ -86,9 +88,11 @@ def make_chamar_strata():
             corpo["reasoning_budget_tokens"] = REASONING_BUDGET
         t0, http, b, erro = time.time(), None, None, None
         try:
+            k = __import__("os").environ.get("STRATA_API_KEY", "").strip()   # nunca impressa nem gravada
             req = urllib.request.Request(url, data=json.dumps(corpo).encode(),
                                          headers={"Content-Type": "application/json",
-                                                  "X-Request-ID": str(uuid.uuid4())})
+                                                  "X-Request-ID": str(uuid.uuid4()),
+                                                  **({"Authorization": f"Bearer {k}"} if k else {})})
             with urllib.request.urlopen(req, timeout=900) as r:
                 http, b = r.status, json.loads(r.read().decode())
         except urllib.error.HTTPError as ex:

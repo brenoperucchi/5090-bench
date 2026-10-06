@@ -105,6 +105,10 @@ def producao_atual():
         return json.loads(cache.read_text(encoding="utf-8"))
 
 
+CONTRATO_TAMANHOS = ("short", "medium", "long", "xlong", "probe")
+GPROBE = ("gprobe150", "gprobe300", "gprobe450")
+
+
 def strata_space():
     """Benchmarks of the strata space (public prompts of the Strata community benchmark: short/medium/long/xlong)."""
     out = []
@@ -127,6 +131,12 @@ def strata_space():
         row = {**src(f), "label": d.get("label"), "build": d.get("build_info"), "modelo": modelo,
                "n_ctx": d.get("n_ctx"), "sonda": ("probe" in d["sizes"]) if d.get("schema") == "strata-bench/v1" else ("probe" in f.name)}
         for size, v in d["sizes"].items():
+            if size in GPROBE:                                # sonda formato Guardian (core-v0.1.1, contrato T223): só ms,
+                for chave, campo in (("prompt_ms", "leitura_ms"), ("wall_ms", "wall_ms")):   # nunca tok/s nem diferença
+                    med = (v.get(chave) or {}).get("median")
+                    if isinstance(med, (int, float)) and med >= 0: row[f"{campo}_{size}"] = round(med)
+                continue
+            if size not in CONTRATO_TAMANHOS: continue
             if v.get("prompt_tps"): row[f"leitura_{size}"] = round(v["prompt_tps"]["median"])
             if v.get("decode_tps"): row[f"geracao_{size}"] = round(v["decode_tps"]["median"], 1)
             if v.get("prompt_ms"): row[f"leitura_ms_{size}"] = round(v["prompt_ms"]["median"])
@@ -207,6 +217,15 @@ for m in sorted((ROOT / "results/rodadas").glob("*/manifest.json")):
 # Sonda na MESMA linha da velocidade (como o núcleo strata-bench/v1): junta "<label>-probes" na linha "<label>" da
 # mesma pasta e some com a linha só de sonda. O rótulo diz de onde veio a medição (rodada do llm-bench ou strata-exec).
 _ss = data["strata_space"]
+# gprobe medido à parte (rodada.py --testes gprobe): seus campos ms entram na linha de velocidade da mesma config
+_pk = {(Path(r["fonte"]).parent, r["label"]): r for r in _ss}
+for r in list(_ss):
+    if r["label"].endswith("-gprobe"):
+        irma = _pk.get((Path(r["fonte"]).parent, r["label"][: -len("-gprobe")]))
+        if irma is not None:
+            for k, v in r.items():
+                if "gprobe" in k: irma[k] = v
+            _ss.remove(r)
 _por_chave = {(Path(r["fonte"]).parent, r["label"]): r for r in _ss}
 for r in list(_ss):
     if r.get("sonda") and r["label"].endswith("-probes"):

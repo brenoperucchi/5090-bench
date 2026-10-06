@@ -1,0 +1,48 @@
+{
+ "versao": "0.1.40.1",
+ "_nota": "Plano de qualificação (não executado). Sem 'producao': o rodada.py NÃO religa nada no fim; a produção é do llm-exec. Config padrão derivada da 0.1.39 (setup.py v0.1.40.1 escreve os mesmos args base; conferido por diff das tags, sem rodar o setup). Decisão do Breno 09:55: a produção vai direto para o build do fork (custom-2, papel production); a 0.1.40.1 oficial (custom-1) fica como referência.",
+ "referencia_det": "0.1.39",
+ "configs": [
+  {
+   "origin": "setup-default",
+   "papel": "default",
+   "label": "0140-swift-default",
+   "cfg": "E:\\strata-0140\\bench\\strata-swift-default.json",
+   "testes": [
+    "velocidade",
+    "velocidade-historica",
+    "mfc",
+    "guardian",
+    "gprobe"
+   ]
+  },
+  {
+   "origin": "custom-1",
+   "papel": "unknown",
+   "label": "0140-swift-oficial",
+   "cfg": "E:\\strata-0140\\strata-swift-iq3_xxs.json",
+   "testes": [
+    "velocidade",
+    "velocidade-historica",
+    "mfc",
+    "guardian",
+    "deterministico",
+    "gprobe"
+   ]
+  },
+  {
+   "origin": "custom-2",
+   "papel": "production",
+   "label": "0140-swift-fork",
+   "cfg": "E:\\strata-0140\\strata-swift-iq3_xxs-fork.json",
+   "testes": [
+    "velocidade",
+    "velocidade-historica",
+    "mfc",
+    "guardian",
+    "deterministico",
+    "gprobe"
+   ]
+  }
+ ]
+}

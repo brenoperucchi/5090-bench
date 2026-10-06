@@ -22,6 +22,7 @@ import argparse
 import difflib
 import hashlib
 import json
+import os
 import re
 import sys
 import time
@@ -75,7 +76,10 @@ def http_get(url: str, timeout: float = 30) -> bytes:
 
 def http_post_json(url: str, payload: dict[str, Any], timeout: float) -> tuple[int, dict[str, Any] | None, str]:
     req = urllib.request.Request(
-        url, data=json.dumps(payload).encode("utf-8"), headers={"content-type": "application/json"}
+        url, data=json.dumps(payload).encode("utf-8"),
+        headers={"content-type": "application/json",   # chave de $STRATA_API_KEY, nunca impressa nem gravada
+                 **({"authorization": "Bearer " + os.environ["STRATA_API_KEY"].strip()}
+                    if os.environ.get("STRATA_API_KEY", "").strip() else {})},
     )
     try:
         with urllib.request.urlopen(req, timeout=timeout) as r:

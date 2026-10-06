@@ -52,6 +52,14 @@ class Feito(unittest.TestCase):
         self.assertTrue(rodada.feito("guardian", self.c, self.dir))
 
 
+class Versao(unittest.TestCase):
+    def test_versao_do_motor_casa_com_release(self):
+        # 0.1.40.1: o motor informa "Strata 0.1.40" (rodada de 06/10 pulou a config padrão por isso)
+        src = (ROOT / "tools/rodada/rodada.py").read_text(encoding="utf-8")
+        self.assertIn('".".join(plano["versao"].split(".")[:3])', src)
+        self.assertIn('0.1.40+: /props também exige a chave', src)
+
+
 class Deterministico(unittest.TestCase):
     def test_feito_pelo_arquivo(self):
         with tempfile.TemporaryDirectory() as d:
@@ -123,6 +131,14 @@ class Painel(unittest.TestCase):
         for r in self.d["strata_space"]:
             if "versao" in r:
                 self.assertEqual("Strata " + r["versao"], r.get("build"), r["label"])
+
+    def test_gprobe_so_em_ms(self):
+        # contrato T223: gprobe150/300/450 só como leitura_ms_/wall_ms_ (mediana), nunca tok/s nem misturado ao probe antigo
+        for r in self.d["strata_space"]:
+            for k in r:
+                if "gprobe" in k:
+                    self.assertTrue(k.startswith(("leitura_ms_gprobe", "wall_ms_gprobe")), k)
+                    self.assertGreaterEqual(r[k], 0)
 
     def test_uma_gpu_no_v1(self):
         self.assertEqual(len(self.d["gpus"]), 1)

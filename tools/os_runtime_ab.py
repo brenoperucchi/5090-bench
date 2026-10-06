@@ -31,8 +31,14 @@ SNAPS = {
 SHORT = "Explique em três frases o que é um contêiner de software."
 
 
+def _auth() -> dict:
+    """Chave do servidor (só /v1/*), lida de $STRATA_API_KEY; nunca impressa nem gravada."""
+    k = __import__("os").environ.get("STRATA_API_KEY", "").strip()
+    return {"Authorization": f"Bearer {k}"} if k else {}
+
+
 def get(url: str) -> dict:
-    with urllib.request.urlopen(url, timeout=15) as r:
+    with urllib.request.urlopen(urllib.request.Request(url, headers=_auth()), timeout=15) as r:
         return json.loads(r.read().decode("utf-8"))
 
 
@@ -41,7 +47,7 @@ def call(base: str, prompt: str, max_tokens: int) -> dict:
             "max_tokens": max_tokens, "cache_prompt": False,
             "chat_template_kwargs": {"enable_thinking": False}}
     req = urllib.request.Request(base + "/v1/chat/completions", data=json.dumps(body, ensure_ascii=False).encode(),
-                                 headers={"Content-Type": "application/json"})
+                                 headers={"Content-Type": "application/json", **_auth()})
     t0 = time.perf_counter()
     with urllib.request.urlopen(req, timeout=900) as r:
         d = json.loads(r.read().decode("utf-8"))

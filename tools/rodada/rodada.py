@@ -36,8 +36,11 @@ BASE = "http://127.0.0.1:18199"                     # túnel local até o Strata
 CORE = Path("/home/brenoperucchi/Devs/strata-bench")          # núcleo público (tag core-v0.x)
 LEGACY = Path("/home/brenoperucchi/Devs/strata-space/bench")  # run_bench.py/probes.py (protocol legacy-433)
 MFC = Path("/home/brenoperucchi/Devs/miqueias/MFC/data/v04/handoff_llm_bench")
+KEYFILE = Path("/home/brenoperucchi/.config/strata/prod-lan.key")
+ENV = {**__import__("os").environ, "MFC_TARGET": "strata",
+       **({"STRATA_API_KEY": KEYFILE.read_text().strip()} if KEYFILE.exists() else {})}
 TESTES = ("velocidade", "velocidade-historica", "mfc", "guardian")       # padrão de toda config
-EXTRAS = ("guardian-raciocinio", "deterministico")                    # só nas configs que pedem
+EXTRAS = ("guardian-raciocinio", "deterministico", "gprobe")                    # só nas configs que pedem
 BANCOS = ROOT / "results/rodadas/_bancos"                             # subconjuntos e referências privadas
 def ps(script, *args, timeout=600):
     """Roda um .ps1 do adaptador no host via -EncodedCommand (sem problemas de aspas)."""
@@ -50,32 +53,39 @@ def ps(script, *args, timeout=600):
 
 
 def props():
-    with urllib.request.urlopen(BASE + "/props", timeout=10) as r:
+    k = ENV.get("STRATA_API_KEY", "")                 # 0.1.40+: /props também exige a chave quando há api_key
+    req = urllib.request.Request(BASE + "/props", headers={"Authorization": f"Bearer {k}"} if k else {})
+    with urllib.request.urlopen(req, timeout=10) as r:
         return json.load(r)
 
 
-def velocidade(c, out):
-    """Núcleo público: velocidade (medium/long/xlong) + sondas. Grava <out>/<label>.result.json."""
-    # só com a tag core-v0.x liberada pelo strata-exec (variável explícita); até lá, o legado do PR #433
-    if __import__("os").environ.get("STRATA_BENCH_CORE") == "core-v0" and (CORE / "strata_bench").exists():
-        ident = out / f"{c['label']}.identity.json"          # só chaves do schema público (strata_bench/schema.py IDENTITY)
-        ident.write_text(json.dumps({
-            "machine": {"os": "Windows 11", "cpu": "AMD Ryzen 9 5950X", "cpu_isa": "AVX2", "cores": 16,
-                        "ram_gb": 96, "ram_type": "DDR4", "ram_speed_mts": 3200},
-            "engine": {"version": c["props"].get("build_info", "").split()[-1], "binary_sha256": c["identidade"]["engine_sha256"]},
-        }), encoding="utf-8")
-        cfg_local = out / f"{c['label']}.config.json"           # a config real do server.py, copiada do host
-        subprocess.run(["scp", "-q", f"{HOST}:{c['cfg'].replace(chr(92), '/')}", str(cfg_local)], stdin=subprocess.DEVNULL)
-        r = subprocess.run([sys.executable, "-m", "strata_bench", "run", "--base", BASE, "--config", str(cfg_local),
-                            "--origin", c["origin"], "--sizes", "probe,medium,long,xlong",
-                            "--label", c["label"], "--identity", str(ident), "--out", str(out / "nucleo")], cwd=CORE)
-        return {"nucleo": "strata-bench", "exit": r.returncode}
-    # legado até a tag core-v0: mesmos prompts públicos do PR #433
-    a = subprocess.run([sys.executable, "run_bench.py", "--base", BASE, "--label", c["label"], "--sizes",
-                        "medium,long,xlong", "--out", str(out / f"{c['label']}.json")], cwd=LEGACY)
-    b = subprocess.run([sys.executable, "probes.py", BASE, c["label"] + "-probes", "30", "0",
-                        str(out / f"{c['label']}-probes.json")], cwd=LEGACY)
-    return {"nucleo": "legacy-433", "exit": max(a.returncode, b.returncode)}
+def velocidade(c, out, sizes="probe,medium,long,xlong,gprobe"):
+    """Núcleo público strata-bench (tag core-v0.x): velocidade (medium/long/xlong) + sondas na mesma linha.
+    A config do servidor é copiada do host SEM a api_key; a chave vai por $STRATA_API_KEY (nunca gravada)."""
+    if not (CORE / "strata_bench").exists():
+        return {"erro": "núcleo strata-bench ausente"}
+    ident = out / f"{c['label']}.identity.json"          # só chaves do schema público (strata_bench/schema.py IDENTITY)
+    ident.write_text(json.dumps({
+        "machine": {"os": "Windows 11", "cpu": "AMD Ryzen 9 5950X", "cpu_isa": "AVX2", "cores": 16,
+                    "ram_gb": 96, "ram_type": "DDR4", "ram_speed_mts": 3200},
+        "engine": {"version": c["props"].get("build_info", "").split()[-1], "binary_sha256": c["identidade"]["engine_sha256"]},
+    }), encoding="utf-8")
+    cfg_local = out / f"{c['label']}.config.json"
+    subprocess.run(["scp", "-q", f"{HOST}:{c['cfg'].replace(chr(92), '/')}", str(cfg_local)], stdin=subprocess.DEVNULL)
+    cfg = json.loads(cfg_local.read_text(encoding="utf-8-sig")); cfg.pop("api_key", None)
+    cfg_local.write_text(json.dumps(cfg, ensure_ascii=False, indent=1), encoding="utf-8")
+    r = subprocess.run([sys.executable, "-m", "strata_bench", "run", "--base", BASE, "--config", str(cfg_local),
+                        "--origin", c["origin"], "--sizes", sizes,
+                        "--label", c["label"], "--identity", str(ident), "--out", str(out / "nucleo")], cwd=CORE, env=ENV)
+    return {"nucleo": "strata-bench", "exit": r.returncode}
+
+
+def gprobe(c, out):
+    """Só a sonda formato Guardian (core-v0.1.1+), para completar rodadas feitas antes dela. Grava
+    nucleo/<label>-gprobe.result.json; o gerador junta na linha de velocidade da mesma config."""
+    c2 = dict(c, label=c["label"] + "-gprobe")
+    r = velocidade(c2, out, sizes="gprobe")
+    return r
 
 
 def velocidade_historica(c, out):
@@ -83,7 +93,9 @@ def velocidade_historica(c, out):
     maiores são snapshots do Guardian), para a aba GPU comparar a versão nova com as anteriores no MESMO tamanho."""
     r = subprocess.run([sys.executable, "tools/os_runtime_ab.py", "--label", c["label"], "--base", BASE,
                         "--expect-path", c["props"]["model_path"], "--repeats", "5", "--out", str(out / "privado" / f"{c['label']}.historico.json")],
-                       cwd=ROOT, stdout=subprocess.DEVNULL)
+                       cwd=ROOT, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True, env=ENV)
+    if r.returncode:                                   # guarda o motivo (sem segredos: a chave não sai do ENV)
+        (out / "privado" / f"{c['label']}.historico.erro.log").write_text(r.stderr[-4000:], encoding="utf-8")
     return {"exit": r.returncode}
 
 
@@ -100,9 +112,9 @@ def deterministico(c, out, versao, referencia):
     for banco in ("nd2", "conf"):
         saida = BANCOS / f"ref-det-{versao}-{banco}.jsonl"
         if saida.exists(): saida.rename(saida.with_suffix(".anterior.jsonl"))
-        subprocess.run([sys.executable, str(MFC / "v04_compreensao_autonomo.py"), "rodar", "--banco", str(BANCOS / f"banco-{banco}.jsonl"),
+        subprocess.run([sys.executable, "tools/mfc_bench_gateway_adapter.py", "--script", str(MFC / "v04_compreensao_autonomo.py"), "rodar", "--banco", str(BANCOS / f"banco-{banco}.jsonl"),
                         "--saida", str(saida), "--url", BASE + "/v1/chat/completions", "--modelo", c["props"].get("model_alias") or "strata",
-                        "--props", BASE + "/props", "--caminho-pesos", c["props"]["model_path"], "--repeticoes", "2"], stdout=subprocess.DEVNULL)
+                        "--props", BASE + "/props", "--caminho-pesos", c["props"]["model_path"], "--repeticoes", "2"], stdout=subprocess.DEVNULL, cwd=ROOT, env=ENV)
         def h(f):
             d = {}
             for x in map(json.loads, open(f)): d.setdefault(x["caso"], set()).add(hashlib.sha256(x["texto"].encode()).hexdigest())
@@ -119,10 +131,10 @@ def mfc(c, out):
     """Adaptador privado: compreensão MFC (60 casos × 3, protocolo do MFC). Respostas ficam fora do git."""
     saida = out / "privado" / f"mfc-{c['label']}.jsonl"
     saida.parent.mkdir(parents=True, exist_ok=True)
-    rodar = subprocess.run([sys.executable, str(MFC / "v04_compreensao_autonomo.py"), "rodar", "--banco",
+    rodar = subprocess.run([sys.executable, "tools/mfc_bench_gateway_adapter.py", "--script", str(MFC / "v04_compreensao_autonomo.py"), "rodar", "--banco",
                             str(MFC / "compreensao_banco_dev.jsonl"), "--saida", str(saida), "--url", BASE + "/v1/chat/completions",
                             "--modelo", c["props"].get("model_alias") or "strata", "--props", BASE + "/props",
-                            "--caminho-pesos", c["props"]["model_path"], "--repeticoes", "3"], stdout=subprocess.DEVNULL)
+                            "--caminho-pesos", c["props"]["model_path"], "--repeticoes", "3"], stdout=subprocess.DEVNULL, cwd=ROOT, env=ENV)
     corr = subprocess.run([sys.executable, str(MFC / "v04_compreensao_autonomo.py"), "corrigir", "--banco",
                            str(MFC / "compreensao_banco_dev.jsonl"), "--saida", str(saida), "--repeticoes", "3"],
                           capture_output=True, text=True)
@@ -134,7 +146,7 @@ def guardian(c, out, raciocinio=False):
     """Adaptador privado: mesa Guardian v3-compact (12 respostas) e nota A2. Com raciocinio=True a mesa pede
     enable_thinking=true; o teto de raciocínio vem da config (reasoning_budget_tokens) e max_tokens é 12000."""
     tag = f"rodada-{c['label']}"
-    ps(PS / "mesa.ps1", tag, "true" if raciocinio else "false", timeout=5400)
+    ps(PS / "mesa.ps1", tag, "true" if raciocinio else "false", c["cfg"], timeout=5400)
     runs = ROOT / "results/guardian-synthesis-20260921/runs"
     subprocess.run(["scp", "-q", f"{HOST}:E:/strata-bench/results/guardian-synthesis-20260921/runs/v3-compact~{tag}~*", str(runs)],
                    stdin=subprocess.DEVNULL)
@@ -156,6 +168,14 @@ def feito(teste, c, out):
         except (OSError, ValueError): return False
     if teste == "velocidade-historica":
         return (out / "privado" / f"{L}.historico.json").exists()
+    if teste == "gprobe":
+        r = out / "nucleo" / f"{L}-gprobe.result.json"
+        principal = out / "nucleo" / f"{L}.result.json"
+        try:
+            if "gprobe150" in json.loads(principal.read_text(encoding="utf-8")).get("sizes", {}): return True
+        except (OSError, ValueError):
+            pass
+        return r.exists()
     if teste == "deterministico":
         return (out / "privado" / f"det-{L}.json").exists()
     if teste in ("guardian", "guardian-raciocinio"):
@@ -199,20 +219,23 @@ def main():
             c["identidade"] = json.loads(ps(PS / "identidade.ps1", c["cfg"]).strip().splitlines()[-1])
             c["config"] = {"args": c["identidade"]["args"], "env": c["identidade"]["env"]}
             c["props"] = props()
-            if c["props"].get("build_info", "").split()[-1] != plano["versao"]:
+            vista = c["props"].get("build_info", "").split()[-1]       # o motor diz "0.1.40" na release 0.1.40.1
+            if vista != plano["versao"] and vista != ".".join(plano["versao"].split(".")[:3]):
                 print(f"  versão no ar {c['props'].get('build_info')} != {plano['versao']}; segue", flush=True); continue
             res = (feitos.get(c["label"]) or {}).get("resultados", {})
             for t in sorted(falta[c["label"]], key=lambda t: t == "deterministico"):   # determinístico por último
                 res[t] = {"velocidade": velocidade, "velocidade-historica": velocidade_historica, "mfc": mfc,
                           "guardian": guardian, "guardian-raciocinio": lambda c, o: guardian(c, o, raciocinio=True),
-                          "deterministico": lambda c, o: deterministico(c, o, plano["versao"], plano.get("referencia_det"))}[t](c, out)
+                          "deterministico": lambda c, o: deterministico(c, o, plano["versao"], plano.get("referencia_det")),
+                          "gprobe": gprobe}[t](c, out)
             feitos[c["label"]] = {k: c[k] for k in ("label", "origin", "cfg", "identidade", "config")} | {"papel": c.get("papel", "unknown")} | \
                                  {"build": c["props"].get("build_info"), "resultados": res}
             manifest["configs"] = list(feitos.values())
             mpath.write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
     finally:
-        if derrubou and plano.get("producao"):          # derrubou -> sempre volta a produção e confere
-            ps(PS / "parar.ps1")
+        if derrubou:
+            ps(PS / "parar.ps1")                           # nunca deixa servidor temporário de teste no ar
+        if derrubou and plano.get("producao"):          # derrubou -> volta a produção do plano (se houver) e confere
             for tentativa in (1, 2):
                 print("religando produção:", ps(PS / "subir.ps1", plano["producao"], plano["producao"].replace(".json", "-serve-rodada.log"), timeout=300), flush=True)
                 fumaca = ps(PS / "fumaca.ps1").strip().splitlines()[-1]
