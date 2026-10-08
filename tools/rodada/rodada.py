@@ -156,6 +156,25 @@ def guardian(c, out, raciocinio=False):
     return {"tag": tag}
 
 
+def preparar_servidor(c, existente):
+    """(pronto, derrubou). existente=True: NÃO para nem sobe nada (o dono do runtime já subiu a config do plano);
+    só confere que o processo no ar é o desta config (exe sha256 e caminho da config) antes de medir."""
+    if existente:
+        rt = json.loads(ps(PS / "runtime.ps1").strip().splitlines()[-1])
+        ident = json.loads(ps(PS / "identidade.ps1", c["cfg"]).strip().splitlines()[-1])
+        ok = (rt.get("config_path") or "").lower() == c["cfg"].lower() and rt.get("engine_sha256") == ident.get("engine_sha256")
+        return ok, False
+    ps(PS / "parar.ps1")
+    return "pronto" in ps(PS / "subir.ps1", c["cfg"], c["cfg"].replace(".json", ".rodada.log"), timeout=300), True
+
+
+def sem_teste_que_mexe_no_servidor(testes, existente):
+    """--servidor-existente promete não parar/subir nada. 'deterministico' sobe uma variante própria (det.ps1) e para o servidor:
+    nesse modo ele NÃO roda (regressão 08/10/2026: derrubou a candidata do llm-exec e deixou a variante det no ar)."""
+    if not existente: return list(testes)
+    return [t for t in testes if t != "deterministico"]
+
+
 def feito(teste, c, out):
     """O resultado deste teste para esta config já existe e está completo? (então não roda de novo)"""
     L = c["label"]
@@ -189,17 +208,22 @@ def main():
     ap.add_argument("plano")
     ap.add_argument("--testes", default=",".join(TESTES + EXTRAS))
     ap.add_argument("--verificar", action="store_true", help="só lista o que falta; nunca toca no servidor")
+    ap.add_argument("--servidor-existente", action="store_true",
+                    help="não para nem sobe nada: mede o servidor que o dono do runtime já subiu com a config do plano")
     a = ap.parse_args()
     plano = json.loads(Path(a.plano).read_text(encoding="utf-8"))
     testes = [t for t in a.testes.split(",") if t]
     out = (ROOT / "results/rodadas" / plano["versao"]).resolve()     # uma pasta por versão; retoma o que faltou
     out.mkdir(parents=True, exist_ok=True)
+    (out / "privado").mkdir(exist_ok=True)               # plano curto (sem MFC/mesa) também grava aqui
+    (out / "nucleo").mkdir(exist_ok=True)
     mpath = out / "manifest.json"
     manifest = json.loads(mpath.read_text(encoding="utf-8")) if mpath.exists() else {"versao": plano["versao"], "configs": []}
     feitos = {x["label"]: x for x in manifest["configs"] if not x.get("erro")}
     # --testes filtra também os testes próprios de cada config (ex.: guardian-raciocinio só roda se pedido)
     falta = {c["label"]: [t for t in (c.get("testes") or TESTES) if t in testes and not feito(t, c, out)]
              for c in plano["configs"]}
+    for k in falta: falta[k] = sem_teste_que_mexe_no_servidor(falta[k], a.servidor_existente)
     print("falta:", {k: v for k, v in falta.items() if v} or "nada", flush=True)
     if a.verificar: return
     if not any(falta.values()):
@@ -213,9 +237,9 @@ def main():
         for c in plano["configs"]:
             if not falta[c["label"]]: continue
             print(f"=== {c['label']} ({c['origin']}) {falta[c['label']]} {time.strftime('%H:%M:%S')}", flush=True)
-            ps(PS / "parar.ps1"); derrubou = True
-            if "pronto" not in ps(PS / "subir.ps1", c["cfg"], c["cfg"].replace(".json", ".rodada.log"), timeout=300):
-                print("  servidor não subiu com esta config; segue", flush=True); continue
+            pronto, d = preparar_servidor(c, a.servidor_existente); derrubou = derrubou or d
+            if not pronto:
+                print("  servidor não está no ar com esta config (exe/config); NÃO medido; segue", flush=True); continue
             c["identidade"] = json.loads(ps(PS / "identidade.ps1", c["cfg"]).strip().splitlines()[-1])
             c["config"] = {"args": c["identidade"]["args"], "env": c["identidade"]["env"]}
             c["props"] = props()

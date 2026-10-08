@@ -1,0 +1,21 @@
+{
+ "versao": "0.1.40.1",
+ "_nota": "Teste do fork (0.1.40.1 + PR #1107) com --spec-min-p 0.5 em vez de 0.70. Pedido do Breno 07/10 01:52 via strata-exec. Sem 'producao': o rodada.py NÃO religa nada; a produção (fork, config -fork, exe f39e83fe...) é restaurada pelo llm-exec/combinado com ele. Config nova E:\\strata-0140\\bench\\strata-swift-fork-spec05.json = cópia da -fork trocando só o valor de --spec-min-p.",
+ "referencia_det": "0.1.39",
+ "configs": [
+  {
+   "origin": "custom-1",
+   "papel": "unknown",
+   "label": "0140-swift-fork-spec05",
+   "cfg": "E:\\strata-0140\\bench\\strata-swift-fork-spec05.json",
+   "testes": [
+    "velocidade",
+    "velocidade-historica",
+    "mfc",
+    "guardian",
+    "deterministico",
+    "gprobe"
+   ]
+  }
+ ]
+}

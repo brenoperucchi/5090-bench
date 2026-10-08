@@ -144,5 +144,95 @@ class Painel(unittest.TestCase):
         self.assertEqual(len(self.d["gpus"]), 1)
 
 
+
+class SondaNaAnalise(unittest.TestCase):
+    """Regressão (sumiu 2x): a análise do Strata mostra a sonda Guardian nos cards e no placar, e o JSON da seleção a traz."""
+
+    def _js(self, pagina, corpo):
+        src = (ROOT / pagina).read_text(encoding="utf-8")
+        i = src.index("const strataRankingMetrics="); j = src.index("function renderSpeedRanking(")
+        k = src.index("function analysisMetrics("); l = src.index("function metricValue(")
+        pre = ("const numericMeasurement=v=>typeof v==='number'&&Number.isFinite(v)?v:null;"
+               "const speedRankingMetrics=[];const metric=null;")
+        code = pre + src[i:j] + src[k:l] + corpo
+        r = subprocess.run(["node", "-e", code], capture_output=True, text=True, timeout=30)
+        self.assertEqual(r.returncode, 0, r.stderr)
+        return json.loads(r.stdout)
+
+    def test_sonda_nos_cards_e_no_placar(self):
+        corpo = ("const g=n=>({['leitura_ms_gprobe'+n]:300,['wall_ms_gprobe'+n]:400});"
+                 "const it=()=>({categoria:'strata_space',medicao:{...g(150),...g(300),...g(450),leitura_medium:1,leitura_ms_medium:1}});"
+                 "const items=[it(),it()];"
+                 "console.log(JSON.stringify({cards:analysisMetrics('strata_space',items).map(m=>m.key),placar:rankingMetricsFor(items).map(m=>m.key)}))")
+        for pagina in ("web/index.html", "web/en/index.html"):
+            with self.subTest(pagina=pagina):
+                d = self._js(pagina, corpo)
+                for n in (150, 300, 450):
+                    self.assertIn(f"leitura_ms_gprobe{n}", d["cards"])
+                    self.assertIn(f"wall_ms_gprobe{n}", d["cards"])
+                    self.assertIn(f"leitura_ms_gprobe{n}", d["placar"])
+
+    def test_sem_sonda_em_todas_o_placar_volta_as_metricas_de_tokens(self):
+        corpo = ("const a={categoria:'strata_space',medicao:{leitura_ms_gprobe150:1,leitura_ms_gprobe300:1,leitura_ms_gprobe450:1}};"
+                 "const b={categoria:'strata_space',medicao:{leitura_medium:1}};"
+                 "console.log(JSON.stringify({placar:rankingMetricsFor([a,b]).map(m=>m.key)}))")
+        d = self._js("web/index.html", corpo)
+        self.assertFalse(any("gprobe" in k for k in d["placar"]))
+
+    def test_dados_publicados_tem_sonda_nas_linhas_de_rodada(self):
+        dados = json.loads((ROOT / "web/data/benchmarks.json").read_text(encoding="utf-8"))
+        rodada_0140 = [r for r in dados["strata_space"] if r["label"].startswith("0140-") and "rodada llm-bench" in r["label"]]
+        self.assertTrue(rodada_0140)
+        for r in rodada_0140:
+            self.assertIn("leitura_ms_gprobe150", r, r["label"])
+
+
+class ServidorExistente(unittest.TestCase):
+    """--servidor-existente: o dono do runtime sobe a config; o script só mede e NUNCA para/sobe nada."""
+
+    def _com(self, sha_no_ar, cfg_no_ar, existente):
+        chamadas = []
+        cfg = "E:\\strata-0142\\strata-swift-iq3_xxs-fork.json"
+
+        def fake(script, *args, **kw):
+            n = Path(script).name; chamadas.append(n)
+            if n == "runtime.ps1": return json.dumps({"engine_sha256": sha_no_ar, "config_path": cfg_no_ar})
+            if n == "identidade.ps1": return json.dumps({"engine_sha256": "aaa"})
+            return "pronto"
+        antes, rodada.ps = rodada.ps, fake
+        try:
+            r = rodada.preparar_servidor({"cfg": cfg}, existente)
+        finally:
+            rodada.ps = antes
+        return r, chamadas
+
+    CFG = "E:\\strata-0142\\strata-swift-iq3_xxs-fork.json"
+
+    def test_existente_nao_para_nem_sobe(self):
+        r, ch = self._com("aaa", self.CFG, True)
+        self.assertEqual(r, (True, False))
+        self.assertNotIn("parar.ps1", ch); self.assertNotIn("subir.ps1", ch)
+
+    def test_servidor_de_outro_exe_nao_e_medido(self):
+        r, ch = self._com("bbb", self.CFG, True)
+        self.assertEqual(r, (False, False))
+
+    def test_servidor_de_outra_config_nao_e_medido(self):
+        r, ch = self._com("aaa", "E:\\strata-0140\\strata-swift-iq3_xxs-fork.json", True)
+        self.assertEqual(r, (False, False))
+
+    def test_modo_normal_continua_parando_e_subindo(self):
+        r, ch = self._com("aaa", self.CFG, False)
+        self.assertEqual(r, (True, True))
+        self.assertIn("parar.ps1", ch); self.assertIn("subir.ps1", ch)
+
+
+class SemMexerNoServidor(unittest.TestCase):
+    def test_existente_nao_roda_deterministico(self):
+        self.assertEqual(rodada.sem_teste_que_mexe_no_servidor(["velocidade", "deterministico", "gprobe"], True), ["velocidade", "gprobe"])
+
+    def test_modo_normal_mantem_deterministico(self):
+        self.assertEqual(rodada.sem_teste_que_mexe_no_servidor(["velocidade", "deterministico"], False), ["velocidade", "deterministico"])
+
 if __name__ == "__main__":
     unittest.main()

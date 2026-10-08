@@ -26,5 +26,17 @@
   "pr": null,
   "branch": null,
   "commit": null
+ },
+ "83a2ef6f7fa6ae5ab6bca2e91b084cc9636cae5162eb6a75ad164342e828f4e6": {
+  "tipo": "fork",
+  "versao": "0.1.40.2",
+  "base": "v0.1.40.2 (e8ca9afd, upstream)",
+  "pr": "#1107",
+  "pr_estado": "aberto, mergeable",
+  "branch": "prefill-group-gather-short",
+  "commit": "1a58f780c5d112a10509eb7478778f1712cc41a6",
+  "tag": "fork-0.1.40.2-1107",
+  "repo": "brenoperucchi/Strata",
+  "compilado": "2026-10-07 11:27 · Release · CUDA 13.0 · sm_120 · portable · llama.cpp 3cf03257"
  }
 }

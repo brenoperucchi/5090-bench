@@ -1,0 +1,18 @@
+{
+ "versao": "0.1.40.2",
+ "_nota": "Plano CURTO da troca de produção para o fork 0.1.40.2 + PR #1107 (binário E:\\strata-0142\\engine-fork\\strata.exe sha 83a2ef6f…, commit 1a58f780, tag fork-0.1.40.2-1107). Pedido do Breno via strata-exec 08/10: foco só na troca (velocidade, sondas, gprobe, determinístico vs 0.1.39); MFC e mesa Guardian ficam de fora desta vez. Config de teste = a de produção atual trocando só exe/cwd/log (conferido: args e env idênticos). Sem 'producao': o rodada.py NÃO religa nada; a produção é restaurada/trocada pelo llm-exec. Promovida a produção em 08/10/2026 pelo llm-exec após o gate (atestação ATESTACAO-producao-fork-01402-2026-10-08).",
+ "referencia_det": "0.1.39",
+ "configs": [
+  {
+   "origin": "custom-1",
+   "papel": "production",
+   "label": "0142-swift-fork",
+   "cfg": "E:\\strata-0142\\strata-swift-iq3_xxs-fork.json",
+   "testes": [
+    "velocidade",
+    "gprobe",
+    "deterministico"
+   ]
+  }
+ ]
+}
