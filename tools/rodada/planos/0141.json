@@ -1,0 +1,48 @@
+{
+ "versao": "0.1.41",
+ "_nota": "Rodada COMPLETA (seis testes) na v0.1.41, pedido do Breno via strata-exec 08/10: padrão do setup, oficial com STRATA_PREFILL_CPU_SHARE=0 e fork (PR #1107 sobre v0.1.41) com CPU_SHARE=0. A v0.1.41 liga o CPU prefill share por padrão (NVIDIA, chunks < 1024); por isso as variantes cpu0. Padrão do setup = args do setup.py (conferido: setup.py 0.1.40.2→0.1.41 não muda os argumentos escritos), env vazio, exe oficial: config derivada da cfg-default do strata-exec trocando só args/env/log (a cfg-default deles tem os parâmetros de produção, não os do setup). Sem 'producao': o rodada.py NÃO religa nada; o llm-exec restaura a produção.",
+ "referencia_det": "0.1.39",
+ "configs": [
+  {
+   "origin": "setup-default",
+   "papel": "default",
+   "label": "0141-swift-default",
+   "cfg": "E:\\strata-0141\\bench\\strata-swift-default.json",
+   "testes": [
+    "velocidade",
+    "velocidade-historica",
+    "mfc",
+    "guardian",
+    "gprobe"
+   ]
+  },
+  {
+   "origin": "custom-1",
+   "papel": "unknown",
+   "label": "0141-swift-oficial-cpu0",
+   "cfg": "E:\\strata-0141\\cfg-cpu0.json",
+   "testes": [
+    "velocidade",
+    "velocidade-historica",
+    "mfc",
+    "guardian",
+    "deterministico",
+    "gprobe"
+   ]
+  },
+  {
+   "origin": "custom-2",
+   "papel": "unknown",
+   "label": "0141-swift-fork-cpu0",
+   "cfg": "E:\\strata-0141\\cfg-fork-cpu0.json",
+   "testes": [
+    "velocidade",
+    "velocidade-historica",
+    "mfc",
+    "guardian",
+    "deterministico",
+    "gprobe"
+   ]
+  }
+ ]
+}

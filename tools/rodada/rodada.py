@@ -175,6 +175,12 @@ def sem_teste_que_mexe_no_servidor(testes, existente):
     return [t for t in testes if t != "deterministico"]
 
 
+def sem_gprobe_redundante(testes):
+    """A velocidade do núcleo já mede a gprobe logo depois do aquecimento. O passe separado, rodado depois de MFC/mesa/determinístico,
+    sai 27-34% mais lento (medido na spec05 e na 0141): não rodar os dois na mesma rodada."""
+    return [t for t in testes if not (t == "gprobe" and "velocidade" in testes)]
+
+
 def feito(teste, c, out):
     """O resultado deste teste para esta config já existe e está completo? (então não roda de novo)"""
     L = c["label"]
@@ -223,7 +229,7 @@ def main():
     # --testes filtra também os testes próprios de cada config (ex.: guardian-raciocinio só roda se pedido)
     falta = {c["label"]: [t for t in (c.get("testes") or TESTES) if t in testes and not feito(t, c, out)]
              for c in plano["configs"]}
-    for k in falta: falta[k] = sem_teste_que_mexe_no_servidor(falta[k], a.servidor_existente)
+    for k in falta: falta[k] = sem_gprobe_redundante(sem_teste_que_mexe_no_servidor(falta[k], a.servidor_existente))
     print("falta:", {k: v for k, v in falta.items() if v} or "nada", flush=True)
     if a.verificar: return
     if not any(falta.values()):

@@ -234,5 +234,39 @@ class SemMexerNoServidor(unittest.TestCase):
     def test_modo_normal_mantem_deterministico(self):
         self.assertEqual(rodada.sem_teste_que_mexe_no_servidor(["velocidade", "deterministico"], False), ["velocidade", "deterministico"])
 
+
+class PaginaUnica(unittest.TestCase):
+    """A lista do strata-bench vive só na aba GPU; nenhum id usado pelo JS pode faltar no HTML (bug 08/10: o rodapé #notes saiu junto)."""
+
+    def test_sem_aba_strata_e_ids_do_js_existem(self):
+        import re
+        for pagina in ("web/index.html", "web/en/index.html"):
+            with self.subTest(pagina=pagina):
+                src = (ROOT / pagina).read_text(encoding="utf-8")
+                self.assertNotIn('id="tab-strata"', src)
+                self.assertNotIn('id="panel-strata"', src)
+                lista = re.search(r"function clearDataView\(\)\{.*?for\(const id of \[([^\]]*)\]\)", src, re.S).group(1)
+                for i in re.findall(r"'([^']+)'", lista):
+                    self.assertIn(f'id="{i}"', src, f"clearDataView usa #{i}, que não existe no HTML")
+
+    def test_fonte_diz_o_instrumento(self):
+        for pagina in ("web/index.html", "web/en/index.html"):
+            src = (ROOT / pagina).read_text(encoding="utf-8")
+            self.assertIn("function instrumentoDe(", src)
+            self.assertIn("instrumentos.json", src)
+
+
+class GprobeEmbutida(unittest.TestCase):
+    def test_nao_roda_gprobe_separada_junto_com_velocidade(self):
+        self.assertEqual(rodada.sem_gprobe_redundante(["velocidade", "mfc", "gprobe"]), ["velocidade", "mfc"])
+
+    def test_gprobe_sozinha_continua(self):
+        self.assertEqual(rodada.sem_gprobe_redundante(["gprobe"]), ["gprobe"])
+
+    def test_painel_usa_a_leitura_embutida_quando_ha_as_duas(self):
+        dados = json.loads((ROOT / "web/data/benchmarks.json").read_text(encoding="utf-8"))
+        r = next(x for x in dados["strata_space"] if x["label"].startswith("0141-swift-fork-cpu0 ·"))
+        self.assertLess(r["leitura_ms_gprobe150"], 300)      # embutida 264; o passe tardio dava 354
+
 if __name__ == "__main__":
     unittest.main()

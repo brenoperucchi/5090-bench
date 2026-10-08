@@ -38,5 +38,25 @@
   "tag": "fork-0.1.40.2-1107",
   "repo": "brenoperucchi/Strata",
   "compilado": "2026-10-07 11:27 · Release · CUDA 13.0 · sm_120 · portable · llama.cpp 3cf03257"
+ },
+ "092e29e4c2885e818a2ec6669ef1e3dc85d816e8e984c2920c2af4c94e71821b": {
+  "tipo": "fork",
+  "versao": "0.1.41",
+  "base": "v0.1.41 (fb58e0d, upstream)",
+  "pr": "#1107",
+  "pr_estado": "patch do PR #1107 sobre a tag oficial v0.1.41",
+  "branch": null,
+  "commit": "b7b63c3",
+  "tag": "fork-0.1.41-1107",
+  "repo": "brenoperucchi/Strata",
+  "compilado": "2026-10-08 12:22 · Release · CUDA 13.0 · sm_120 · portable · llama.cpp 3cf03257"
+ },
+ "17dabc6a49746aa22beebdf354923ba5eeb21affc6597c6976ac430e46671518": {
+  "tipo": "oficial",
+  "versao": "0.1.41",
+  "base": "release oficial v0.1.41 (zip)",
+  "pr": null,
+  "branch": null,
+  "commit": null
  }
 }

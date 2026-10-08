@@ -241,7 +241,9 @@ for r in list(_ss):
         irma = _pk.get((Path(r["fonte"]).parent, r["label"][: -len("-gprobe")]))
         if irma is not None:
             for k, v in r.items():
-                if "gprobe" in k: irma[k] = v
+                # a leitura embutida na velocidade (logo depois do aquecimento) vale mais que o passe tardio: depois de MFC/mesa/
+                # determinístico a sonda mede 27-34% mais lenta (spec05 e 0141); o passe separado só entra onde não há a embutida
+                if "gprobe" in k and k not in irma: irma[k] = v
             _ss.remove(r)
 _por_chave = {(Path(r["fonte"]).parent, r["label"]): r for r in _ss}
 for r in list(_ss):
@@ -361,3 +363,19 @@ def runtime_atual():
 
 runtime_atual()
 
+def instrumentos():
+    """sha256 do artefato -> instrumento que o produziu (pelo campo 'schema' do próprio arquivo), para a coluna Fonte.
+    Fora do contrato v1 (fechado): sai em web/data/instrumentos.json."""
+    out = {}
+    base = {"llm-bench": ROOT, "strata-space": SPACE.parents[1]}
+    for row in data["strata_space"]:
+        raiz, _, resto = row["fonte"].partition("/")
+        p = base.get(raiz, ROOT) / resto
+        try: d = json.load(open(p))
+        except Exception: continue
+        out[row["sha256"]] = "strata-bench" if d.get("schema") == "strata-bench/v1" else "legado"
+    t = WEB / "instrumentos.json.tmp"; t.write_text(json.dumps(out, indent=1), encoding="utf-8"); t.replace(WEB / "instrumentos.json")
+    return out
+
+
+print("instrumentos:", {k: list(instrumentos().values()).count(k) for k in ("strata-bench", "legado")})

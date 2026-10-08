@@ -1,0 +1,17 @@
+{
+ "versao": "0.1.40.2",
+ "_nota": "Teste de contexto 128K: mesma candidata/produção 0.1.40.2+#1107 (exe 83a2ef6f…), config = a de produção trocando só --max-context 32768 -> 131072 (e o arquivo de log). Pedido do Breno 08/10 ~02:00, motivado pelo PR Niko1221/Strata#1462 (notebook RTX 5090, Q2_0: queda pequena de 32K para 128K), que NÃO é evidência para o nosso hardware/quant: medir aqui antes de promover. Modo --servidor-existente (o llm-exec sobe/para). Sem determinístico neste modo.",
+ "referencia_det": "0.1.39",
+ "configs": [
+  {
+   "origin": "custom-1",
+   "papel": "unknown",
+   "label": "0142-swift-fork-ctx128k",
+   "cfg": "E:\\strata-0142\\strata-swift-iq3_xxs-fork-ctx128k.json",
+   "testes": [
+    "velocidade",
+    "gprobe"
+   ]
+  }
+ ]
+}
