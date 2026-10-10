@@ -58,3 +58,6 @@ results/strata-20260930/HANDOFF-space-strata.md
 results/painel/
 results/rodadas/
 web/data/
+
+# gate de tool_calls: registro agregado local
+results/gate-tools/
